@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WS2811 &#8211; Busy Ducks</title>
+	<atom:link href="/tag/ws2811/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Mon, 09 Nov 2015 17:55:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>WS2811 &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>RGB Bias Lighting with Arduino (Part 1)</title>
+		<link>/rgb-bias-lighting-with-arduino-part-1/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 09 Nov 2015 17:55:35 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<category><![CDATA[WS2811]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=679</guid>
+
+					<description><![CDATA[We are setting up an arduino with a WS2811 LED strip to do RGB based bias lighting effects.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p>Bias Lighting is a light around your display that helps you perceive contrast and reduces eye stress. It also just looks just plain cool, and create a kind of relaxed vibe.</p>
+<p>There is a lot of theory on optimising bias lighting, but really any light will help quite a bit. So why not see if we can do anything inventive with the bias lighting colour.</p>
+<h1>The Idea</h1>
+<p>Lets use a bias lighting that changes colour, and experiment with:</p>
+<ul>
+<li>Altering the colour to  correspond with the time of a day</li>
+<li>Blink light to warn you that you have a meeting soon</li>
+<li>Having the colour change match the movement of the sun</li>
+<li>Changing the colour to green (or whatever) when its your &#8220;bed time&#8221;</li>
+<li>Using a colour change scheme set to work with your circadian rhythm</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Materials</h1>
+<p>What you will need:</p>
+<ul>
+<li>Some WS2811 LED strips (approx 30cm per monitor)</li>
+<li>An arduino</li>
+<li>Some 3 core wire</li>
+<li>About an hour free time</li>
+<li>Electrical tape</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Results</h1>
+<p>&nbsp;</p>
+<p><iframe loading="lazy" title="RGB Bias lighting on three monitors (using an arduino)." width="940" height="529" src="https://www.youtube.com/embed/_tsl4WFH_8o?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>&nbsp;</p>
+<h1>WS2811 RGB Strips</h1>
+<p>WS2811 strips can be acquired via <a href="http://www.aliexpress.com/w/wholesale-ws2811-led-strip.html" target="_blank" rel="noopener">Ali Express</a> at a reasonable price, they are a strip of RGB LED&#8217;s that are individually addressable (set any LED to any colour).</p>
+<p>Pros&#8217;</p>
+<ul>
+<li>Each chip has an active data repeater that forwards the data signal. Provided the 5v power to the strip is strong, the data signal is propagated to as many chips as you like.</li>
+<li>Very good value</li>
+<li>Strong bright lights</li>
+<li>Fast data channel</li>
+<li>Only requires one GPIO pin.</li>
+</ul>
+<p>Cons&#8217;</p>
+<ul>
+<li>PWM control used for arbitrary colours is not super fast. Use of 7 colours that involve any LED being either full on or gull off produces results that work better for moving items / camera.</li>
+<li>Poor build quality occasionally causes minor issues</li>
+<li>Some visual artefacts from &#8220;fast moving pixels&#8221;.  (that can look very cool if used correctly).</li>
+</ul>
+<p>The strips look like what you see below. They can be cut to length, and have a soldered connection every 30cm or so.  The arrows indicate the direction the data signal is propagated in, your controller (eg an arduino) must be connected to the left most (first) arrow. However the voltage to run the strip can be applied anywhere.</p>
+<p><a href="/wp-content/uploads/2015/11/WS2811_strip.jpg" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-694 size-large" src="/wp-content/uploads/2015/11/WS2811_strip-1024x193.jpg" alt="WS2811_strip" width="640" height="121" srcset="/wp-content/uploads/2015/11/WS2811_strip-1024x193.jpg 1024w, /wp-content/uploads/2015/11/WS2811_strip-300x57.jpg 300w, /wp-content/uploads/2015/11/WS2811_strip-768x145.jpg 768w, /wp-content/uploads/2015/11/WS2811_strip-1536x290.jpg 1536w, /wp-content/uploads/2015/11/WS2811_strip-2048x386.jpg 2048w, /wp-content/uploads/2015/11/WS2811_strip-1568x296.jpg 1568w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>A close up look shows a chip (black part on the left) and three LED&#8217;s, the middle one being red.</p>
+<p style="padding-left: 90px;"><a href="/wp-content/uploads/2015/11/WS2811_single2.jpg" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-696 size-medium" src="/wp-content/uploads/2015/11/WS2811_single2-300x226.jpg" alt="WS2811_single2" width="300" height="226" srcset="/wp-content/uploads/2015/11/WS2811_single2-300x226.jpg 300w, /wp-content/uploads/2015/11/WS2811_single2-1024x770.jpg 1024w, /wp-content/uploads/2015/11/WS2811_single2-768x578.jpg 768w, /wp-content/uploads/2015/11/WS2811_single2.jpg 1391w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>&nbsp;</p>
+<h1>Arduino Setup</h1>
+<p>For effective bias lighting, stick an adhesive LED strip to the back of your monitor, about 5cm from the top. The arduino can be mounted with stick on velcro to what have you. If necessary, connect up multiple sections of LED strips (one for each monitor) using a good 3 core wire.</p>
+<p>The LED strip&#8217;s data line is connected to a single arduino GPIO pin configured as an output.  Its important to note the <span style="text-decoration: underline;">strip has an arrow on it</span>, this arrow shows the direction the data will travel. Your data cable must be connected to the first  LED in the strip (not the last).</p>
+<p>For my three monitors I was able to power the strip directly from my arduino, using only USB power. Though your mileage may vary.</p>
+<p><strong>Setup via USB Power</strong></p>
+<p>If you can get away with it wire up the strips shown in the top diagram. Be aware that your PC or USB hub will be responsible for providing power to a large set of lights.</p>
+<p>Consider some issues with this:</p>
+<ul>
+<li>There will remain a significant current draw on the PC even while its in sleep mode (or running of batteries).  Be aware not all PC power supplies sleep well , they may turn their fans off even though you are drawing enough current to necessitate a low amount of active cooling.</li>
+<li>Your arduinos regulator will may get hot.</li>
+<li>Your USB port may well not be up to task.</li>
+</ul>
+<p><span style="color: #000000;">For these reasons I would advise:</span></p>
+<ul>
+<li><span style="color: #000000;">Connection via a powered USB hub. </span></li>
+<li>Use of a <a href="http://amzn.to/1Qok8qt" target="_blank" rel="noopener">USB Doctor Device</a> to check your current draw is sensible (eg 350mA or below, the 500mA max in the USB spec does not always pan out well)</li>
+<li>Configuring the brightness of the LED output (programmatically) to reduce current draw.</li>
+<li>Don&#8217;t connect the Arduous power jack to a DC wall adapter (see note on ground loops later in this article).</li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/11/rgb_leds_usb.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-688 size-large" src="/wp-content/uploads/2015/11/rgb_leds_usb-1024x371.png" alt="rgb_leds_usb" width="640" height="232" srcset="/wp-content/uploads/2015/11/rgb_leds_usb-1024x371.png 1024w, /wp-content/uploads/2015/11/rgb_leds_usb-300x109.png 300w, /wp-content/uploads/2015/11/rgb_leds_usb-768x278.png 768w, /wp-content/uploads/2015/11/rgb_leds_usb-1536x557.png 1536w, /wp-content/uploads/2015/11/rgb_leds_usb-1568x568.png 1568w, /wp-content/uploads/2015/11/rgb_leds_usb.png 1644w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<p>If your Arduino fails to start, or the strip displays a gaudy set of flashing bright colours, you will need to use external power to run the strip. The cutt-off regarding how long your strip can be, before problems appear varies greatly between different production runs (of the RGB strip, not the arduino).</p>
+<p><strong>Setup via External 5V power supply</strong></p>
+<p>To use an external power supply  to power the strip is not difficult (see image below). But it leaves us with the annoying issue of ground loops (see ground loop section later in this article).</p>
+<p>To use external 5V power:</p>
+<ul>
+<li>Connect the 5V ground to both the arduinos ground and the LED strips ground.</li>
+<li>Set-up a 7V(ish) power for the arduinos DC Jack, and use a cheap buck DC-DC power supply (eg <a href="http://amzn.to/1NlT1ac" target="_blank" rel="noopener">LM2596 module</a>) to drop that voltage down to 5V, which is connected to the LED strips power supply.</li>
+<li>Resist the urge to just get a 5V power supply and connect it to both the arduous 5V pin and the LED strip, unless you have a good regulated 5V supply.</li>
+</ul>
+<p><a href="/wp-content/uploads/2015/11/rgb_leds_dc_jack.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-689 size-large" src="/wp-content/uploads/2015/11/rgb_leds_dc_jack-1024x420.png" alt="rgb_leds_dc_jack" width="640" height="263" srcset="/wp-content/uploads/2015/11/rgb_leds_dc_jack-1024x420.png 1024w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-300x123.png 300w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-768x315.png 768w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-1536x631.png 1536w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-1568x644.png 1568w, /wp-content/uploads/2015/11/rgb_leds_dc_jack.png 1644w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<h2>A little more safety to this circuit</h2>
+<p>The soldering of wiring to the LED strip is often problematic, and the area is often moved / stressed / bent.  This can cause the electrical connection to come loose, short or form an intermittent contact.</p>
+<p>We may want to protect the first LED package in the strip from damage caused by too much current passing though the data line (I suggest using a 330 ohm resistor).  It&#8217;s also not a bad idea to provide a 1000uF decoupling capacitor (use an electrolytic capacitor and watch the polarity). Without this you risk a wiring issue, or power connection issue, damaging the first LED unit on the strip.</p>
+<p>In practice, you may never have a problem without these extra components, and the damage is often repaired easily by removing the first pixel and re-soldering. So the decision is yours, a &#8216;best practice&#8217; version of the above circuits is shown below.</p>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/11/rgb_leds_better.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-690 size-large" src="/wp-content/uploads/2015/11/rgb_leds_better-1024x739.png" alt="rgb_leds_better" width="640" height="462" srcset="/wp-content/uploads/2015/11/rgb_leds_better-1024x739.png 1024w, /wp-content/uploads/2015/11/rgb_leds_better-300x217.png 300w, /wp-content/uploads/2015/11/rgb_leds_better-768x554.png 768w, /wp-content/uploads/2015/11/rgb_leds_better-1536x1109.png 1536w, /wp-content/uploads/2015/11/rgb_leds_better-1568x1132.png 1568w, /wp-content/uploads/2015/11/rgb_leds_better.png 1833w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<h2>Watchout for ground loops</h2>
+<p>If you need more power than just the USB connection you will have to give some thought to protecting your computer from ground loops.</p>
+<p>The possibility of a ground loop exists when your arduino is connected to the PC via a USB cable and both the arduino (or connected circuitry) and the PC are mains connected in some way (even via a plug pack).</p>
+<p>Possible solutions include:</p>
+<ul>
+<li>USB isolator (eg: <a href="http://amzn.to/1Pktq7r" target="_blank" rel="noopener">this one</a>)</li>
+<li>Powering the PC from battery (eg laptop)</li>
+<li>Powering the arduino from battery (eg 6v SLA)</li>
+<li>Powering the arduino and circuitry from a plug-pack and using a wireless connection to communicate to the arduino</li>
+<li>Don&#8217;t connect the usb cable
+<ul>
+<li>Use a network enabled board (the network ports are very well isolated). The <a href="http://www.freetronics.com.au/products/etherten#.VkCYO7crJhE" target="_blank" rel="noopener">etherten </a>is great for this.</li>
+<li>Use wifi via a $5 esp8266 (for example <a href="http://amzn.to/1QdHAY4" target="_blank" rel="noopener">this one</a>)</li>
+<li>Use an infra red serial connection (2400 baud)</li>
+</ul>
+</li>
+<li>Just live with a potential ground loop
+<ul>
+<li>Plug everything into the same wall socket and keep your fingers crossed.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Basic arduino code to test out the LED Strip</h3>
+<p>Now we have to check our electrical project functions as predicted. For this article, and part 2, I will be using the <a href="https://github.com/nethoncho/FastSPI_LED2" target="_blank" rel="noopener">FastSPI_LED2 </a>library from  <a href="http://fastled.io/" target="_blank" rel="noopener">fastled.io</a>.</p>
+<p>This demo code will create the effect shown in the video at the top of this article. If all you wanted was cool looking bias lighting, your&#8217;e done!</p>
+<pre class="font:monospace height-set:true height:500 lang:c++ decode:true ">#include "FastSPI_LED2.h"
+
+//----------------------------------------------------------------------------------------
+//
+// LED stip driver for smooth HUE trnsitions radiating from the middle of the LED strip.
+//
+//----------------------------------------------------------------------------------------
+
+//Alter this to suit your setup
+#define NUM_LEDS 91
+#define PIN_LED 4
+
+//This is where the individual pixel for ever LED is stored.
+//use LEDS.show(); to sync the strip with the data in this array.
+struct CRGB leds[NUM_LEDS];
+
+void setup() 
+{
+	  // sanity check delay - allows reprogramming if accidently blowing power w/leds
+   	delay(2000);
+
+   	//to prevent too high  a power draw use 25% brightness
+   	LEDS.setBrightness(64);
+
+    //setup the LED controller
+    LEDS.addLeds&lt;WS2811, PIN_LED, RGB&gt;(leds, NUM_LEDS);
+}
+
+
+void loop()
+{ 
+  byte hueMiddle=0;
+  byte hueEdge=0;
+  byte hueStep = 48;
+  int maxHue = 255; //NB: hue may not be in the range 0-255, if we use a differnt hsv2rgb function.
+  bool sync = false;
+  
+  while(true)
+  {
+    //pause a second
+    delay(1000);
+
+    //push the hue of the middle part of the bias light forward
+    for(int s=0; s&lt; hueStep; s++)
+    {
+        hueMiddle++;
+        if(hueMiddle &gt;= maxHue)
+        {
+          sync = true;
+          break;
+        }
+        updateStrip(hueMiddle, hueEdge);
+    }
+
+    //have the edge of the bias light catch up to the hue in the middle
+    for(int s=0; s&lt; hueStep; s++)
+    {
+        hueEdge++;
+        if(hueEdge &gt;= maxHue)
+        {
+          sync = true;
+          break;
+        }
+       updateStrip(hueMiddle, hueEdge);
+    }
+
+    // Reached the end of the hue cycle, wrap to the begining.
+    // We do it this way because if the hueMiddle wraps around, but the
+    // hueEdge remains before the end, then a full rainbow is creted
+    // when updateStrip smooths the pixels over the strip
+    if(sync)
+    {
+       hueMiddle = 0;
+       hueEdge = 0;
+       sync = false;
+    } 
+  }
+}
+
+
+// This method creates a smooth transition of pixels, from one hue in the middle
+// to another hue at the edge.
+//
+//note: Could be faster with symetry away from middle.
+//note: Could be faster with integer math.
+//note: Because of the long delay, this does not need to be fast.
+void updateStrip(byte hueMiddle, byte hueEdge)
+{
+    float mid = NUM_LEDS/2;
+    int hueDiff =  hueEdge - hueMiddle;
+    for(int i = 0; i &lt; NUM_LEDS; i++) 
+    {
+        //get the hue for the pixel
+        CRGB pixel;
+        float h = abs(i-mid)/mid; //0 at mid, 1 at edge
+        h *= hueDiff; //0 at mid, hueDiff at edge
+        h += hueMiddle; //hueMiddle at mid, hueEdge at edge
+
+        //set the pixel
+        hsv2rgb_spectrum(CHSV((byte)round(h), 255, 255), pixel);
+        leds[i] = pixel;
+    }
+    delay(150);
+    LEDS.show();
+}
+</pre>
+<p>&nbsp;</p>
+<h3>What&#8217;s next?</h3>
+<p>In a follow-up article (part-2) we will cover syncing your arduino to the computers clock, choosing good colours for different times of the day and using your location to calculate where the sun is (in case you want to tune your your lighting to the time of the day).</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

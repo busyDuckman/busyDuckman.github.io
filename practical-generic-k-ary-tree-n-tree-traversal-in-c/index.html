@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="profile" href="https://gmpg.org/xfn/11">
+<title>Practical Iterative K-ary Tree (aka n-ary, n-tree) Traversal in C#.  A surprisingly useful tool for the average programmer. &#8211; Busy Ducks</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Busy Ducks &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Busy Ducks &raquo; Comments Feed" href="/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="pen-normalize-css" href="/wp-content/themes/pen/assets/css/plugins/normalize.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-animate-css" href="/wp-content/themes/pen/assets/css/plugins/animate.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-base-css" href="/wp-content/themes/pen/assets/css/pen-base.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-typography-css" href="/wp-content/themes/pen/assets/css/pen-typography.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-tables-css" href="/wp-content/themes/pen/assets/css/pen-tables.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-layout-css" href="/wp-content/themes/pen/assets/css/pen-layout.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-loading-css" href="/wp-content/themes/pen/assets/css/pen-loading.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-buttons-css" href="/wp-content/themes/pen/assets/css/pen-buttons.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-comments-css" href="/wp-content/themes/pen/assets/css/pen-comments.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-footer-css" href="/wp-content/themes/pen/assets/css/pen-footer.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-header-css" href="/wp-content/themes/pen/assets/css/pen-header.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-menus-css" href="/wp-content/themes/pen/assets/css/pen-menus.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-navigation-css" href="/wp-content/themes/pen/assets/css/pen-navigation.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-forms-css" href="/wp-content/themes/pen/assets/css/pen-forms.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-content-css" href="/wp-content/themes/pen/assets/css/pen-content.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-thumbnails-css" href="/wp-content/themes/pen/assets/css/pen-thumbnails.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-author-css" href="/wp-content/themes/pen/assets/css/pen-author.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-pagination-css" href="/wp-content/themes/pen/assets/css/pen-pagination.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-share-css" href="/wp-content/themes/pen/assets/css/pen-share.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-widgets-css" href="/wp-content/themes/pen/assets/css/pen-widgets.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-base-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-base-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-bottom-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-bottom-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-author-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-author-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-typography-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-typography-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-tables-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-tables-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-loading-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-loading-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-comments-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-comments-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-footer-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-footer-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-header-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-header-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-menus-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-menus-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-navigation-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-navigation-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-forms-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-forms-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-content-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-content-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-thumbnails-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-thumbnails-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-pagination-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-pagination-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-search-bar-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-search-bar-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-top-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-top-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-widgets-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-widgets-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-css-dark-mode-css" href="/wp-content/themes/pen/assets/css/dark_mode/pen-general-dark-mode.css?ver=1.4.4" type="text/css" media="all">
+<link rel="stylesheet" id="pen-css-css" href="/wp-content/themes/pen/assets/css/pen-general.css?ver=1.4.4" type="text/css" media="all">
+<style id="pen-css-inline-css" type="text/css">body{background-color:#636363;background:#636363;background-image:url('/wp-content/uploads/2015/08/viking_duck.jpg') !important;background-repeat:no-repeat !important;background-position:top center !important;background-size:cover !important}@media (prefers-color-scheme:dark){body{background-color:#636363;background:#636363;background-image:url('/wp-content/uploads/2015/08/viking_duck.jpg') !important;background-repeat:no-repeat !important;background-position:top center !important;background-size:cover !important}body.pen_dark_mode{background-color:#636363;background-image:url('/wp-content/uploads/2015/08/viking_duck.jpg') !important;background-repeat:no-repeat !important;background-position:top center !important;background-size:cover !important}body.pen_dark_mode #page{color:#ffffff}}body.pen_dark_mode{background-color:#636363;background-image:url('/wp-content/uploads/2015/08/viking_duck.jpg') !important;background-repeat:no-repeat !important;background-position:top center !important;background-size:cover !important}body.pen_dark_mode #page{color:#ffffff}body.pen_background_lights_dim.pen_has_background_effect:before,body.pen_background_lights_dim.pen_has_background_image:before{background:rgba(60,60,60,0.85) !important}#page .pen_button,#primary .comments-link a,#primary .comment-list a.comment-edit-link,#primary .comment-list .reply a,#primary button[type="reset"],#primary button[type="submit"],#primary input[type="button"],#primary input[type="reset"],#primary input[type="submit"],#primary .pen_content_footer .tags-links a,#cancel-comment-reply-link,#content .page-links a,#content .comment-navigation a,#content .posts-navigation a,#content .post-navigation a,#content .wp-pagenavi a,#content .wp-pagenavi span,#page .pen_button:focus,#primary .comments-link a:focus,#primary .comment-list a.comment-edit-link:focus,#primary .comment-list .reply a:focus,#primary button[type="reset"]:focus,#primary button[type="submit"]:focus,#primary input[type="button"]:focus,#primary input[type="reset"]:focus,#primary input[type="submit"]:focus,#primary .pen_content_footer .tags-links a:focus,#cancel-comment-reply-link:focus,#content .page-links a:focus,#content .comment-navigation a:focus,#content .posts-navigation a:focus,#content .post-navigation a:focus,#page .pen_button:hover,#primary .comments-link a:hover,#primary .comment-list a.comment-edit-link:hover,#primary .comment-list .reply a:hover,#primary button[type="reset"]:hover,#primary button[type="submit"]:hover,#primary input[type="button"]:hover,#primary input[type="reset"]:hover,#primary input[type="submit"]:hover,#primary .pen_content_footer .tags-links a:hover,#cancel-comment-reply-link:hover,#content .page-links a:hover,#content .comment-navigation a:hover,#content .posts-navigation a:hover,#content .post-navigation a:hover{background-color:#d8b804;background:#d8b804;background:linear-gradient(to bottom,#7f7f7f 0%,#d8b804 100%);border-color:#686868 !important}#page .pen_button:active,#page .pen_button.pen_active,#primary .comments-link a:active,#primary .comment-list a.comment-edit-link:active,#primary .comment-list .reply a:active,#primary button[type="reset"]:active,#primary button[type="submit"]:active,#primary input[type="button"]:active,#primary input[type="reset"]:active,#primary input[type="submit"]:active,#primary .pen_content_footer .tags-links a:active,#cancel-comment-reply-link:active,#content .page-links a:active,#content .comment-navigation a:active,#content .posts-navigation a:active,#content .post-navigation a:active,#content .wp-pagenavi span,#content .wp-pagenavi .current{background:#d8b804}
+#pen_header.pen_not_transparent .pen_header_inner .pen_header_main{background-color:#545454;background:#545454;background:linear-gradient(125deg,#545454 0%,#4f4f4f 100%)}@media (prefers-color-scheme:dark){#pen_header.pen_not_transparent .pen_header_inner .pen_header_main{background-color:#545454;background:#545454;background:linear-gradient(125deg,#545454 0%,#4f4f4f 100%)}body.pen_dark_mode #pen_header.pen_not_transparent .pen_header_inner .pen_header_main{background-color:#545454 !important;background:#545454 !important;background:linear-gradient(125deg,#545454 0%,#4f4f4f 100%) !important}}body.pen_dark_mode #pen_header.pen_not_transparent .pen_header_inner .pen_header_main{background-color:#545454 !important;background:#545454 !important;background:linear-gradient(125deg,#545454 0%,#4f4f4f 100%) !important}
+#pen_navigation.pen_not_transparent,#pen_navigation_mobile{background-color:#606060;background:#606060;background:linear-gradient(125deg,#606060 0%,#0a0a0a 100%)}@media (prefers-color-scheme:dark){#pen_navigation.pen_not_transparent,#pen_navigation_mobile{background-color:#606060;background:#606060;background:linear-gradient(125deg,#606060 0%,#0a0a0a 100%)}body.pen_dark_mode #pen_navigation.pen_not_transparent,body.pen_dark_mode #pen_navigation_mobile{background-color:#0a0a0a !important;background:#0a0a0a !important;background:linear-gradient(125deg,#606060 0%,#0a0a0a 100%) !important}}body.pen_dark_mode #pen_navigation.pen_not_transparent,body.pen_dark_mode #pen_navigation_mobile{background-color:#0a0a0a !important;background:#0a0a0a !important;background:linear-gradient(125deg,#606060 0%,#0a0a0a 100%) !important}#pen_navigation ul#primary-menu ul,#pen_navigation_mobile ul#primary-menu-mobile ul{background-color:#000000;background:#000000}@media (prefers-color-scheme:dark){#pen_navigation ul#primary-menu ul,#pen_navigation_mobile ul#primary-menu-mobile ul{background-color:#000000;background:#000000}body.pen_dark_mode #pen_navigation ul#primary-menu ul,body.pen_dark_mode #pen_navigation_mobile ul#primary-menu-mobile ul{background-color:#000000 !important;background:#000000 !important}}body.pen_dark_mode #pen_navigation ul#primary-menu ul,body.pen_dark_mode #pen_navigation_mobile ul#primary-menu-mobile ul{background-color:#000000 !important;background:#000000 !important}</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://localhost/wp-content/themes/pen/assets/js/plugins/html5.js?ver=3.7.3' id='html5shiv-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/546">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="canonical" href="/practical-generic-k-ary-tree-n-tree-traversal-in-c/">
+<link rel="shortlink" href="/?p=546">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fpractical-generic-k-ary-tree-n-tree-traversal-in-c%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fpractical-generic-k-ary-tree-n-tree-traversal-in-c%2F&#038;format=xml">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<link rel="icon" href="/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png" sizes="32x32">
+<link rel="icon" href="/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-180x180.png">
+<meta name="msapplication-TileImage" content="http://localhost/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-270x270.png">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/rsslatest.xml">	</head>
+	<body class="post-template-default single single-post postid-546 single-format-standard wp-custom-logo not-home pen_dark_mode pen_dark_mode_always pen_dark_mode_switch_right invisible-sidebar-header-primary invisible-sidebar-header-secondary invisible-sidebar-top invisible-sidebar-search-top invisible-sidebar-search-left invisible-sidebar-search-right invisible-sidebar-search-bottom invisible-sidebar-left visible-sidebar-right invisible-sidebar-bottom invisible-sidebar-footer-top invisible-sidebar-footer-left invisible-sidebar-footer-right invisible-sidebar-footer-bottom invisible-sidebar-mobile-menu-top invisible-sidebar-mobile-menu-bottom pen_header_logo_size_height pen_drop_shadow pen_background_lights_dim pen_has_background_image pen_header_sticky pen_header_sticky_minimize pen_round_corners pen_loading_spinner pen_loading_spinner_style_1 pen_list_effect_enlarge_fade pen_header_alignment_center pen_navigation_alignment_left pen_footer_alignment_left pen_main_container_center pen_transform_text_buttons_capitalize pen_transform_text_footer_menu_uppercase pen_content_header_show pen_width_standard pen_sidebar_left_width_20 pen_sidebar_right_width_20 pen_content_thumbnail_rotate pen_content_thumbnail_frame pen_content_thumbnail_right pen_content_thumbnail_thumbnail pen_author_avatar_style_1 pen_singular">
+		<div id="page" class="site">
+		<div class="pen_loading clearfix" role="alert">
+			<div class="pen_icon">
+			</div>
+			<div class="pen_text">
+		Loading...			</div>
+		</div>
+					<div class="pen_wrapper">
+				<a class="screen-reader-shortcut screen-reader-text" href="#content">
+Skip to content				</a>
+				<header id="pen_header" class="site-header pen_logo_show pen_phone_hide pen_connect_hide pen_search_hide pen_button_users_hide pen_navigation_show pen_animate_on_scroll pen_custom_animation_slideInDown pen_not_transparent pen_cart_hide" role="banner">
+					<div class="pen_header_inner">
+						<div class="pen_header_main">
+							<div class="pen_container">
+								<div id="pen_site_title">
+			<span class="pen_logo pen_animate_on_scroll pen_custom_animation_fadeInLeft">
+			<a href="/" class="custom-logo-link" rel="home"><img width="512" height="103" src="/wp-content/uploads/2015/08/cropped-cropped-SiteBanner__wp_small_optimised.png" class="custom-logo" alt="Busy Ducks" srcset="/wp-content/uploads/2015/08/cropped-cropped-SiteBanner__wp_small_optimised.png 512w, /wp-content/uploads/2015/08/cropped-cropped-SiteBanner__wp_small_optimised-300x60.png 300w" sizes="(max-width: 512px) 100vw, 512px"></a>		</span>
+					<span class="pen_site_name">
+			<a href="/" id="site-title" class="pen_sitetitle_hide" rel="home">
+						<span class="site-title pen_element_hidden pen_animate_on_scroll pen_custom_animation_fadeInRight">
+		Busy Ducks				</span>
+					</a>
+		</span>
+										</div>
+								</div>
+<!-- .pen_container -->
+						</div>
+<!-- .pen_header_main -->
+		<nav id="pen_navigation" class="main-navigation pen_hover_1 pen_arrows_1 pen_separator_1 pen_separator_submenu_1 pen_not_transparent" role="navigation" aria-label="Header Menu">
+							<div class="pen_container pen_animate_on_scroll pen_custom_animation_fadeIn">
+				<div class="menu-main-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-1042" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1042"><a href="/category/software/">Software</a></li>
+<li id="menu-item-1040" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-1040">
+<a href="/category/edu/">Educational</a>
+<ul class="sub-menu">
+	<li id="menu-item-1044" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1044"><a href="/category/edu/ai/">Artificial Intelligence</a></li>
+	<li id="menu-item-1045" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1045"><a href="/category/edu/adt/">Data Structures</a></li>
+</ul>
+</li>
+<li id="menu-item-1036" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-1036">
+<a href="/category/programming/">Programming</a>
+<ul class="sub-menu">
+	<li id="menu-item-1038" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1038"><a href="/category/programming/csharp/">C#</a></li>
+	<li id="menu-item-1037" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1037"><a href="/category/programming/arduino/">Arduino</a></li>
+	<li id="menu-item-1039" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1039"><a href="/category/programming/cplusplus/">c++</a></li>
+	<li id="menu-item-1047" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1047"><a href="/category/programming/java/">Java</a></li>
+</ul>
+</li>
+<li id="menu-item-1041" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1041"><a href="/category/projects/">Projects</a></li>
+<li id="menu-item-1043" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1043"><a href="/category/blog/">Blog</a></li>
+<li id="menu-item-1035" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1035">
+<a href="/category/commercial/">Professional Portfolio</a>
+<ul class="sub-menu">
+	<li id="menu-item-1056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1056"><a href="/dr-warren-creemers/">Dr Warren Creemers</a></li>
+	<li id="menu-item-1046" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1046"><a href="/category/commercial/commercial_project_examples/">Project Examples</a></li>
+</ul>
+</li>
+<li id="menu-item-1055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1055"><a href="/links/">Links</a></li>
+</ul></div>			</div>
+						</nav>
+									</div>
+<!-- .pen_header_inner -->
+				</header>
+				<div id="pen_section">
+					<div class="pen_container">
+						<div id="content" class="site-content clearfix">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		<div class="pen_article_wrapper">
+<article id="post-546" class="show pen_article pen_animate_on_scroll pen_custom_animation_fadeInDown pen_header_show post-546 post type-post status-publish format-standard has-post-thumbnail hentry category-csharp category-adt category-edu category-programming category-uncategorized tag-data_structures tag-edcucational tag-programming tag-wdlib">
+	<header class="entry-header pen_content_header">
+<h1 class="entry-title pen_content_title pen_animate_on_scroll pen_custom_animation_fadeIn">Practical Iterative K-ary Tree (aka n-ary, n-tree) Traversal in C#.  A surprisingly useful tool for the average programmer.</h1>		<div class="entry-meta pen_separator_1">
+			<span class="posted-on pen_content_date pen_content_date_published">Posted on <a href="/practical-generic-k-ary-tree-n-tree-traversal-in-c/" rel="bookmark"><time datetime="2015-08-10T15:02:54+00:00">August 10, 2015</time></a></span><span class="byline pen_content_author">by <span class="author vcard"><a class="url fn n" href="/author/duckman/">duckman</a></span></span><span class="cat-links pen_content_categories"><span class="pen_element_hidden">Categories:</span><a href="/category/programming/csharp/" rel="category tag">C#</a>, <a href="/category/edu/adt/" rel="category tag">Data Structures</a>, <a href="/category/edu/" rel="category tag">Educational</a>, <a href="/category/programming/" rel="category tag">Programming</a>, <a href="/category/uncategorized/" rel="category tag">Uncategorized</a></span>		</div>
+				</header><!-- .pen_content_header -->
+	<div class="entry-content pen_content pen_with_thumbnail">
+	<div class="post-thumbnail pen_image_thumbnail pen_thumbnail_size_thumbnail pen_animate_on_scroll pen_custom_animation_swing">
+			<img width="150" height="150" src="/wp-content/uploads/2015/08/viking_duck-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy" srcset="/wp-content/uploads/2015/08/viking_duck-150x150.jpg 150w, /wp-content/uploads/2015/08/viking_duck-300x297.jpg 300w, /wp-content/uploads/2015/08/viking_duck.jpg 512w" sizes="(max-width: 150px) 100vw, 150px">		</div>
+<!-- .post-thumbnail -->	<div class="pen_content_wrapper pen_inside">
+	<h3>Introduction:</h3>
+<p>A lot of components in the C# environment are essentially a K-ary [kay-er-ee] tree. From tree-view nodes, to serialising a type via reflection, to directory listings to menu hierarchies, and so on.</p>
+<p>Often we need to iterate through these types of structures, or our own trees, and we just write some code to do it as needed. This code is often problematic as it&#8217;s non-trivial to do well, because:</p>
+<ul>
+<li>It&#8217;s complex to do certain traversals in an iterative manor. (non recursive);</li>
+<li>Traversal is prone to bugs, as there are many edge cases;</li>
+<li>Software hangs if a circular reference exists and you don&#8217;t catch it;</li>
+<li>Unit-testing of once-off code is often neglected;</li>
+<li>Examining / verifying correct behaviour of tree traversal algorithms is difficult in the debugger.</li>
+</ul>
+<p>Wanting to rid myself of this re-occurring situation I built a few helper methods to do the following traversals iteratively:</p>
+<ul>
+<li>Depth First Pre Order</li>
+<li>Depth First Post Order,</li>
+<li>Breadth First</li>
+</ul>
+<p>The helpers are generic [BYO data type] and dont require a specific interface. You just supply a Func to return a nodes sub nodes. Thus you can drop a working tested algorithm onto whatever situation you encounter.</p>
+<h3>Iteration</h3>
+<p>Example:</p>
+<ul>
+<li>Made using an example data type &#8220;Node&#8221;
+<ul>
+<li>See the unit-tests at the  bottom of the page for implementation</li>
+</ul>
+</li>
+<li>First it shows using a foreach loop on a depth first pre-order iterator</li>
+<li>Then is shows using a breadth-first iterator to convert a tree to an array using Linq.</li>
+</ul>
+<pre class="lang:c# decode:true">/*
+* Test tree
+*                  A
+*                / | \ 
+*              B   C   D
+*            / |       | \
+*          E   F       G   H
+*        / |         / | \
+*       I  J        K  L  M
+*/
+Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+//EXAMPLE 1: Pre-order traversal via foreach loop
+foreach(var node in  Misc.EnumerateNodes(tree, 
+                                    N =&gt; N.Nodes, 
+                                    NodeVisitOrder.DepthFirstPreOrder))
+{
+    Console.Out.Write(node.Item);
+}
+Console.Out.WriteLine();
+//outputs ABEIJFCDGKLMH
+
+//EXAMPLE 2: Creating an array via breadth first traversal 
+string s = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, NodeVisitOrder.BredthFirst)
+                            .Select(N =&gt; N.Item)
+                            .ToArray());
+Console.Out.WriteLine(s);
+//outputs ABCDEFGHIJKLM</pre>
+<p>This was a simplistic example, but it works, its unit-tested, its efficient and non-recursive. It all ties into linq and IEnumerable so many neat tricks are possible.</p>
+<p>Lets examine the crucial line in detail.</p>
+<pre class="lang:c# decode:true">EnumerateNodes(tree, N =&gt; N.Nodes, NodeVisitOrder.DepthFirstPreOrder)
+</pre>
+<ul>
+<li>The first parameter is the root node. This is method is generic, so any class type will do.</li>
+<li>The second is a lambda expression for an enumerable  set of sub-nodes</li>
+<li>The third is the traversal method.</li>
+</ul>
+<p>Another example of how flexible the method is, using DirectoryInfo as the node, and iterating over all subdirectories:</p>
+<ul>
+<li>This time we use the optional forth parameter to enable circular reference checking. this prevents any chance of an infinite loop</li>
+</ul>
+<pre class="lang:c# decode:true">DirectoryInfo root = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+ 
+var dirs = Misc.EnumerateNodes(
+                root,
+                N =&gt; { try { return N.GetDirectories();  } 
+                       catch (Exception) { return null; } },
+                NodeVisitOrder.DepthFirstPreOrder, 
+                CircularRefernceBehaviour.Skip);
+ 
+foreach (var dir in dirs)
+{
+}</pre>
+<h3>Duplication</h3>
+<p>Often you just need to copy one tree structure to another (possibly of a different type):</p>
+<ul>
+<li>Loading a directory structure into a TreeView control</li>
+<li>Turning a tree of commands into Menu Items</li>
+<li>Working with expression parsing  and evaluation</li>
+<li>Just making a deep copy of a tree structure</li>
+</ul>
+<pre class="lang:c# decode:true">/*
+* Test tree
+*                  A
+*                / | \ 
+*              B   C   D
+*            / |       | \
+*          E   F       G   H
+*        / |         / | \
+*       I  J        K  L  M
+*/
+Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+TreeNode n = Misc.RebuildTree(tree,  
+							 N =&gt; N.Nodes, 
+							 N =&gt; new TreeNode("" + N.Item), 
+							 (T, N) =&gt; T.Nodes.AddRange(N.ToArray()));</pre>
+<p>Neeto, one line of code, and our <span style="text-decoration: underline;">tree is duplicated into a TreeView</span> (or whatever) in a efficient, reliable manor.</p>
+<p>RebuildTree takes five parameters:</p>
+<ol>
+<li>The root of the tree to be copied.</li>
+<li>Func for an enumerating sub-nodes in the source structure</li>
+<li>Func to create a new destination  node form a source node
+<ul>
+<li>Just the data of the node, Leave the child nodes unpopulated</li>
+</ul>
+</li>
+<li>Action to add a collection of Nodes to an existing node (destination structure)</li>
+<li>Circular reference checking behaviour</li>
+</ol>
+<h3>Core Algorithms</h3>
+<h4>Depth First Pre-Order</h4>
+<ul>
+<li>Note: visitOk(&#8230;) returns true unless a circular reference is detected.</li>
+<li>This works by feeding al nodes onto a stack, a basic way to resolve the recursion.</li>
+<li>Child nodes are pushed in reverse order, so they are pop&#8217;ed in the correct order.</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Pop();
+	if (visitOk(item, visited, checkType))
+	{
+		yield return item;
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse());
+	}
+}
+</pre>
+<h4>Depth First Post-Order</h4>
+<ul>
+<li>Depth First Post-Order is actually pretty tricky, a few algorithms exist.</li>
+<li>This one initially traverses the entire tree O(n) to fill a stack, then returns each item in the stack.</li>
+<li>The overall time is O(n), with the first iteration being O(n) and all subsequent  iterations being O(1)</li>
+<li>There s a requirement for  extra memory for this to work, but its not too bad.</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+Stack output = new Stack();
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Pop();
+	if (visitOk(item, visited, checkType))
+	{
+		output.Push(item);
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+	}
+}
+foreach (T item in output)
+{
+	yield return item;
+}
+
+</pre>
+<h4>Breadth First</h4>
+<ul>
+<li>This works by feeding al nodes onto a queue, as opposed to the depth first &#8211; pre order, which uses a stack.
+<ul>
+<li>This time Child nodes are not added in reverse order, however</li>
+</ul>
+</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Dequeue();
+	if (visitOk(item, visited, checkType))
+	{
+		yield return item;
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+	}
+}
+break;
+}
+</pre>
+<h3>Source Code:</h3>
+<pre class="height-set:true lang:c# decode:true ">/*
+Available under the BSD 3-Clause License
+Copyright (c) 2015, Dr Warren Creemers All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using WD_toolbox;
+
+namespace WD_toolbox
+{
+    public enum NodeVisitOrder { DepthFirstPreOrder, DepthFirstPostOrder, BredthFirst }
+
+    public enum CircularRefernceBehaviour { DontCheck, ThrowException, Skip }
+
+    public class NodeTraversalException : Exception
+    {
+        public NodeTraversalException(string message) : base(message) { }
+        public NodeTraversalException() : base() { }
+        public static NodeTraversalException VisitedTwice(object item) {return new NodeTraversalException("Node already visied: " + item.ToString());} 
+    }
+
+    public static class Misc
+    {
+        /// &lt;summary&gt;
+        /// Enumerates any Tree/graph in a non-recursive manor.
+        /// Does not check for circularReferences.
+        /// &lt;/summary&gt;
+        /// &lt;param name="node"&gt;Root node.&lt;/param&gt;
+        /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="order"&gt;The visit order.&lt;/param&gt;
+        /// &lt;param name="checkType"&gt;If circular references should be checked, and how to handle them. 
+        /// Note (1): Checks repeated node, which is not nesesiarly a circular reference (but all circulare references have a repeated node).
+        /// Note (2): performance hit reduced if  node generates a good hashcode.
+        /// &lt;/param&gt;
+        public static IEnumerable&lt;T&gt; EnumerateNodes&lt;T&gt;( T node, 
+                                                        Func&lt;T, IEnumerable&lt;T&gt;&gt; getSubNodes,
+                                                        NodeVisitOrder order = NodeVisitOrder.DepthFirstPreOrder,
+                                                        CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where T : class
+        {
+            if (node != null) //assuming null indicats an empty tree
+            {
+                //this acts as a stack or queue to resolve the recursion
+                LinkedList&lt;T&gt; list = new LinkedList&lt;T&gt;();
+                HashSet&lt;T&gt; visited = new HashSet&lt;T&gt;();
+
+                switch (order)
+                {
+                    case NodeVisitOrder.DepthFirstPreOrder:
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Pop();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                yield return item;
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse());
+                            }
+                        }
+                        break;
+
+                    case NodeVisitOrder.DepthFirstPostOrder:
+                        //This has a side effects, the first iteeration is slow (also memory consuming) 
+                        //as the entire structure is copied into a stack 
+                        Stack&lt;T&gt; output = new Stack&lt;T&gt;();
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Pop();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                output.Push(item);
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+                            }
+                        }
+                        foreach (T item in output)
+                        {
+                            yield return item;
+                        }
+                        break;
+
+                    case NodeVisitOrder.BredthFirst:
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Dequeue();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                yield return item;
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+                            }
+                        }
+                        break;
+                }
+            }
+        }
+
+        // Because getSubNodes(T) may return null to indicate no nodes.
+        private static IEnumerable&lt;T&gt; getSubNodesSafe&lt;T&gt;(T node, Func&lt;T, IEnumerable&lt;T&gt;&gt; getSubNodes)
+        {
+            if ((node != null) &amp;&amp; (getSubNodes != null))
+            {
+                IEnumerable&lt;T&gt; subNodes = getSubNodes(node);
+                return (subNodes != null) ? subNodes : new List&lt;T&gt;();
+            }
+            return new List&lt;T&gt;();
+        }
+
+        private static bool visitOk&lt;T&gt;(T item, HashSet&lt;T&gt; visited, CircularRefernceBehaviour checkType)
+        {
+            if (checkType != CircularRefernceBehaviour.DontCheck)
+            {
+                if (visited.Contains(item))
+                {
+                    // error
+                    if (checkType == CircularRefernceBehaviour.ThrowException)
+                    {
+                        throw NodeTraversalException.VisitedTwice(item);
+                    }
+                    return false; //indicate it's not ok to visit (ie skip)
+                }
+
+                //no error
+                visited.Add(item);
+                return true;
+            }
+
+            //no check
+            return true;
+        }
+
+
+        /// &lt;summary&gt;
+        /// Copies a tree structure. (useful in copying a tree structure to a tree view).
+        /// &lt;/summary&gt;
+        /// &lt;typeparam name="A"&gt;The node type of the tree to copy.&lt;/typeparam&gt;
+        /// &lt;typeparam name="B"&gt;The destination node type.&lt;/typeparam&gt;
+        /// /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="newNode"&gt;To create a simple non-recursive copy of a node.&lt;/param&gt;
+        /// &lt;param name="addSubNodes"&gt;&lt;/param&gt;
+        /// &lt;param name="checkType"&gt; Type of circular reference checking to perform.&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static B RebuildTree&lt;A, B&gt;(A srcNode,
+                                           Func&lt;A, IEnumerable&lt;A&gt;&gt; getSubNodes,
+                                           Func&lt;A, B&gt; newNode,
+                                           Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes,
+                                           CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where A : class
+            where B : class
+        {
+            return RebuildTree(srcNode, getSubNodes, newNode, addSubNodes, P =&gt; true, checkType);
+        }
+        
+        /// &lt;summary&gt;
+        /// Copies a tree structure. (useful in copying a tree structure to a tree view).
+        /// &lt;/summary&gt;
+        /// &lt;typeparam name="A"&gt;The node type of the tree to copy.&lt;/typeparam&gt;
+        /// &lt;typeparam name="B"&gt;The destination node type.&lt;/typeparam&gt;
+        /// /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="newNode"&gt;To create a simple non-recursive copy of a node.&lt;/param&gt;
+        /// &lt;param name="addSubNodes"&gt;&lt;/param&gt;
+        /// &lt;param name="where"&gt;&lt;/param&gt;
+        /// &lt;param name="checkType"&gt; Type of circular reference checking to perform.&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static B RebuildTree&lt;A, B&gt;( A srcNode,
+                                           Func&lt;A, IEnumerable&lt;A&gt;&gt; getSubNodes, 
+                                           Func&lt;A, B&gt; newNode,
+                                           Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes,
+                                           Predicate&lt;A&gt; where,
+                                           CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where A : class
+            where B : class
+        {
+
+
+            LinkedList&lt;Tuple&lt;A, B&gt;&gt; list = new LinkedList&lt;Tuple&lt;A, B&gt;&gt;();
+            HashSet&lt;A&gt; visited = new HashSet&lt;A&gt;();
+            B newRootNode = null;
+
+            list.AddLast(new Tuple&lt;A, B&gt;(srcNode, null));
+            while (list.Count &gt; 0)
+            {
+                var tuple = list.Pop();
+                A item = tuple.Item1;
+                B parent = tuple.Item2;
+
+                if (visitOk(item, visited, checkType))
+                {
+                    if (where(item))
+                    {
+                        B newItem = newNode(item);
+                        if (newRootNode == null) //root node
+                        {
+                            newRootNode = newItem;
+                        }
+
+                        safeAddSubNode(parent, newItem, addSubNodes);
+                        
+                        list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse().Select(N =&gt; new Tuple&lt;A, B&gt;(N, newItem)));
+                    }
+                }
+            }
+
+            //done
+            return newRootNode;
+        }
+
+        private static void safeAddSubNode&lt;B&gt;(B parent, B child, Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes)
+        {
+            if ((addSubNodes != null) &amp;&amp; (parent != null) &amp;&amp; (child != null))
+            {
+                addSubNodes(parent, new B[] { child });
+            }
+        }
+    }
+}
+</pre>
+<p>Requires The following Extension class to make LinkedList sane.</p>
+<pre class="height-set:true height:500 lang:c# decode:true ">/*
+Available under the BSD 3-Clause License
+Copyright (c) 2015, Dr Warren Creemers All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/// &lt;summary&gt;
+/// These extensions make usage of the LinkedList more consise.
+/// &lt;/summary&gt;
+public static class LinkedListExtension
+{
+	/// &lt;summary&gt;
+	/// Pops the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the (formerly) last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T Pop&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		T item = list.Last.Value;
+		list.RemoveLast(); //throws InvalidOperationException
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Dequeues the first value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the (formerly) first item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T Dequeue&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		T item = list.First.Value;
+		list.RemoveFirst(); //throws InvalidOperationException
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Gets the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T PeekLast&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		if (list.Count &lt;= 0)
+		{
+			throw new InvalidOperationException("LinkedList is empty (call to PeekLast)");
+		}
+
+		T item = list.Last.Value;
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Gets the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T PeekFirst&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		if (list.Count &lt;= 0)
+		{
+			throw new InvalidOperationException("LinkedList is empty (call to PeekFirst)");
+		}
+
+		T item = list.First.Value;
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Addss items to the end of the list.
+	/// &lt;/summary&gt;
+	/// &lt;param name="items"&gt;Items to add.&lt;/param&gt;
+	public static void AddLastAll&lt;T&gt;(this LinkedList&lt;T&gt; list, IEnumerable&lt;T&gt; items)
+	{
+		foreach (T item in items)
+		{
+			list.AddLast(item);
+		}
+	}
+
+	/// &lt;summary&gt;
+	/// Addss items to the end of the list.
+	/// &lt;/summary&gt;
+	/// &lt;param name="items"&gt;Items to add.&lt;/param&gt;
+	public static void AddFirstAll&lt;T&gt;(this LinkedList&lt;T&gt; list, IEnumerable&lt;T&gt; items)
+	{
+		foreach (T item in items)
+		{
+			list.AddFirst(item);
+		}
+	}
+}</pre>
+<h3>Unit Tests:</h3>
+<pre class="height-set:true height:500 lang:c# decode:true ">       [TestMethod()]
+        public void EnumerateNodesTest()
+        {
+            /*
+            * Test tree
+            *                  A
+            *                / | \ 
+            *              B   C   D
+            *            / |       | \
+            *          E   F       G   H
+            *        / |         / | \
+            *       I  J        K  L  M
+            */
+            Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+            Node&lt;char&gt; coruptTree = Node&lt;char&gt;.TestTree();
+            //point L  to A
+            coruptTree.Nodes[2].Nodes[0].Nodes[1].Nodes.Add(coruptTree); 
+
+            //DepthFirstPreOrder
+            string res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                        NodeVisitOrder.DepthFirstPreOrder, 
+                                                        CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+
+
+
+            //System.Diagnostics.Trace.WriteLine("Hello World");
+            Assert.AreEqual("ABEIJFCDGKLMH", res);
+            
+            //DepthFirstProstOrder
+            res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                    NodeVisitOrder.DepthFirstPostOrder,
+                                                    CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+            Assert.IsTrue(res == "IJEFBCKLMGHDA");
+
+            //BredthFirst
+            res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                 NodeVisitOrder.BredthFirst,
+                                                 CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+            Assert.AreEqual("ABCDEFGHIJKLM", res);
+
+            //just to check no exception thrown
+            TreeNode n = Misc.RebuildTree(tree,  
+                                         N =&gt; N.Nodes, 
+                                         N =&gt; new TreeNode("" + N.Item),
+                                         (T, N) =&gt; T.Nodes.AddRange(N.ToArray()), 
+                                         CircularRefernceBehaviour.ThrowException);
+
+            //Check an exception is thrown for curupted tree
+
+            try
+            {
+                n = Misc.RebuildTree(coruptTree,
+                                             N =&gt; N.Nodes,
+                                             N =&gt; new TreeNode("" + N.Item),
+                                             (T, N) =&gt; T.Nodes.AddRange(N.ToArray()),
+                                             CircularRefernceBehaviour.ThrowException);
+
+                Assert.Fail("Should never reach this line of code");
+            }
+            catch (Exception)
+            {
+            }
+
+            //Just handle a corupt tree by not going backward.
+            n = Misc.RebuildTree(coruptTree,
+                                 N =&gt; N.Nodes,
+                                 N =&gt; new TreeNode("" + N.Item),
+                                 (T, N) =&gt; T.Nodes.AddRange(N.ToArray()),
+                                 CircularRefernceBehaviour.Skip);
+
+            //NB: Infinite loop on fail
+
+        }
+
+        
+
+        public class Node&lt;T&gt;
+        {
+            public List&lt;Node&lt;T&gt;&gt; Nodes = new List&lt;Node&lt;T&gt;&gt;();
+            public T Item;
+            public Node(T item, IList&lt;Node&lt;T&gt;&gt; nodes = null)
+            {
+                Item = item;
+                if (nodes != null)
+                {
+                    Nodes.AddRange(nodes);
+                }
+            }
+
+            private static Node&lt;T&gt; NODE&lt;T&gt;(T item, params Node&lt;T&gt;[] Nodes)
+            {
+                return new Node&lt;T&gt;(item, Nodes);
+            }
+
+            public static Node&lt;char&gt; TestTree()
+            {
+                /*
+                * Test tree
+                *                  A
+                *                / | \ 
+                *              B   C   D
+                *            / |       | \
+                *          E   F       G   H
+                *        / |         / | \
+                *       I  J        K  L  M
+                */
+
+
+                Node&lt;char&gt; tree =
+                    NODE('A',
+                        NODE('B',
+                            NODE('E',
+                                NODE('I'),
+                                NODE('J')
+                                ),
+                            NODE('F')
+                            ),
+                        NODE('C'),
+                        NODE('D',
+                            NODE('G',
+                                NODE('K'),
+                                NODE('L'),
+                                NODE('M')
+                                ),
+                            NODE('H')
+                            )
+                        );
+
+                return tree;
+            }
+        }
+    }</pre>
+<h3>WDLib Library:</h3>
+<p>This is part of my personal toolbox, WDLib (in the misc class, which is abridged for clarity on this page). I am moving to open source the library at the moment.</p>
+<h3>Limitations and Usage:</h3>
+<ul>
+<li>The circular reference check just checks for a repeated node, which is not necessarily a circular reference (but all circular references have a repeated node). This may deny some malformed trees that could otherwise be safely parsed. Checking can always be disabled if this is your intent.</li>
+<li>Be aware the first iteration of the Depth First Post-Order has a O(n) overhead.</li>
+</ul>
+<h3></h3>
+<h3>Contact / Feedback</h3>
+<p>[Sorry I had to remove this, because hundreds of spam emails about SEO]</p>	</div>		<div class="pen_share">
+			<h4>
+		Share this!			</h4>
+			<ul>
+				<li class="pen_facebook">
+							<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%2Fpractical-generic-k-ary-tree-n-tree-traversal-in-c%2F" title="Share on Facebook" target="_blank" class="pen_button pen_button_share">
+						<span>
+		Facebook						</span>
+					</a>
+				</li>
+				<li class="pen_twitter">
+							<a href="https://twitter.com/intent/tweet?text=Practical%20Iterative%20K-ary%20Tree%20%28aka%20n-ary%2C%20n-tree%29%20Traversal%20in%20C%23.%20%20A%20surprisingly%20useful%20tool%20for%20the%20average%20programmer.&#038;url=http%3A%2F%2Flocalhost%2Fpractical-generic-k-ary-tree-n-tree-traversal-in-c%2F" title="Share on Twitter" target="_blank" class="pen_button pen_button_share">
+						<span>
+		Twitter						</span>
+					</a>
+				</li>
+				<li class="pen_linkedin">
+							<a href="https://www.linkedin.com/cws/share?url=http%3A%2F%2Flocalhost%2Fpractical-generic-k-ary-tree-n-tree-traversal-in-c%2F&#038;original_referer=http://localhost/" title="Share on LinkedIn" target="_blank" class="pen_button pen_button_share">
+						<span>
+		LinkedIn						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+<!-- .pen_share -->
+			<div class="pen_author_profile pen_animate_on_scroll pen_custom_animation_fadeIn pen_has_avatar">
+				<div class="pen_author_avatar">
+						<a href="/author/duckman/" aria-label="Avatar">
+				<img alt="" src="http://0.gravatar.com/avatar/c51f609d316eb6e278e4de19725c0808?s=90&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/c51f609d316eb6e278e4de19725c0808?s=180&#038;d=mm&#038;r=g 2x" class="avatar avatar-90 photo" height="90" width="90" loading="lazy">			</a>
+						</div>
+					<div class="pen_author_about pen_no_description">
+					<h2>
+			<a href="/author/duckman/" rel="author internal">duckman</a>			</h2>
+						<div>
+			<a href="http://busyducks.com/" class="pen_author_url">
+			busyducks.com			</a>			</div>
+					</div>
+	</div>
+			</div>
+<!-- .pen_content -->
+		<footer class="entry-footer pen_content_footer">
+		<div class="pen_actions">
+	<span class="tags-links"><span class="pen_heading_tags">Tagged</span><a href="/tag/data_structures/" rel="tag">Data_Structures</a><a href="/tag/edcucational/" rel="tag">Edcucational</a><a href="/tag/programming/" rel="tag">programming</a><a href="/tag/wdlib/" rel="tag">WDLib</a></span>		</div>
+		</footer><!-- .pen_content_footer -->
+	</article><!-- #post-546 -->
+
+			<div id="pen_content_next_previous" class="pen_animate_on_scroll pen_custom_animation_fadeIn pen_custom_animation_delay_1">
+				<h3 class="pen_element_hidden">
+				Keep Reading				</h3>
+				<a href="/10-simple-things-search-engines-could-do-to-save-my-sanity/" title="10 simple things search engines could do to save my sanity" class="pen_content_previous pen_button pen_icon_arrow pen_text_previous pen_animate_on_scroll pen_custom_animation_fadeInRight pen_custom_animation_delay_1"><span class="pen_text">Previous</span></a><a href="/pipe-crawler-robot/" title="Pipe Crawler Robot" class="pen_content_next pen_button pen_icon_arrow pen_text_next pen_animate_on_scroll pen_custom_animation_fadeInLeft pen_custom_animation_delay_1"><span class="pen_text">Next</span></a>			</div>
+						</div>
+	</main>
+</div>
+	<aside id="pen_right" class="sidebar clearfix widget-area pen_animate_on_scroll pen_custom_animation_slideInRight" role="complementary" aria-label="Right Sidebar">
+			<section id="block-15" class="pen_widget_light pen_widget_not_transparent pen_animate_on_scroll pen_custom_animation_fadeIn widget clearfix widget_block widget_search"><form role="search" method="get" action="http://localhost/" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search">
+<label for="wp-block-search__input-1" class="wp-block-search__label">Search</label><div class="wp-block-search__inside-wrapper">
+<input type="search" id="wp-block-search__input-1" class="wp-block-search__input" name="s" value="" placeholder="" required><button type="submit" class="wp-block-search__button ">Search</button>
+</div>
+</form></section><section id="block-17" class="pen_widget_light pen_widget_not_transparent pen_animate_on_scroll pen_custom_animation_fadeIn widget clearfix widget_block"><h2>Featured Posts</h2>
+<p><a href="/openxeen/">Open Xeen</a></p>
+<p><a href="/update-comprehensive-arduino-flash-memory-via-progmem/">Arduino Flash Memory</a></p>
+<p><a href="/arduino-graphing-libraries/">Arduino Graphing Libraries</a></p>
+<p><a href="/ascii-art-arduino-pinouts/">ASCII Art Arduino-Pinouts</a></p>
+<p><a href="/practical-generic-k-ary-tree-n-tree-traversal-in-c/">Practical Generic K-ary Tree Traversal</a></p>
+<p><a href="/paint-coloured-text-on-acrylic/">How Make Coloured Text On Acrylic</a></p>
+<p><a href="/maze-software/">Maze Creation Software</a></p>
+<p><a href="/spice-rack-plans-woodworking/">Spice-Rack Plans-(Woodworking)</a></p>
+<p><a href="/interpreting-the-cascajal-block/">Interpreting the Cascajal-Block</a></p>
+<p></p></section><section id="block-10" class="pen_widget_light pen_widget_not_transparent pen_animate_on_scroll pen_custom_animation_fadeIn widget clearfix widget_block widget_tag_cloud"><p class="aligncenter wp-block-tag-cloud"><a href="/tag/3d-printing/" class="tag-cloud-link tag-link-16 tag-link-position-1" style="font-size: 14pt;" aria-label="3D-Printing (3 items)">3D-Printing</a>
+<a href="/tag/archaeolinguistics/" class="tag-cloud-link tag-link-17 tag-link-position-2" style="font-size: 11.6pt;" aria-label="Archaeolinguistics (2 items)">Archaeolinguistics</a>
+<a href="/tag/arduino/" class="tag-cloud-link tag-link-18 tag-link-position-3" style="font-size: 19pt;" aria-label="Arduino (6 items)">Arduino</a>
+<a href="/tag/art/" class="tag-cloud-link tag-link-19 tag-link-position-4" style="font-size: 8pt;" aria-label="Art (1 item)">Art</a>
+<a href="/tag/bad-humor/" class="tag-cloud-link tag-link-20 tag-link-position-5" style="font-size: 11.6pt;" aria-label="Bad humor (2 items)">Bad humor</a>
+<a href="/tag/bullshit/" class="tag-cloud-link tag-link-21 tag-link-position-6" style="font-size: 8pt;" aria-label="Bullshit (1 item)">Bullshit</a>
+<a href="/tag/cad/" class="tag-cloud-link tag-link-22 tag-link-position-7" style="font-size: 17.6pt;" aria-label="CAD (5 items)">CAD</a>
+<a href="/tag/cam/" class="tag-cloud-link tag-link-23 tag-link-position-8" style="font-size: 19pt;" aria-label="CAM (6 items)">CAM</a>
+<a href="/tag/cascajal-block/" class="tag-cloud-link tag-link-24 tag-link-position-9" style="font-size: 8pt;" aria-label="Cascajal Block (1 item)">Cascajal Block</a>
+<a href="/tag/cnc/" class="tag-cloud-link tag-link-25 tag-link-position-10" style="font-size: 8pt;" aria-label="CNC (1 item)">CNC</a>
+<a href="/tag/computer-vision/" class="tag-cloud-link tag-link-26 tag-link-position-11" style="font-size: 8pt;" aria-label="Computer Vision (1 item)">Computer Vision</a>
+<a href="/tag/crossword/" class="tag-cloud-link tag-link-27 tag-link-position-12" style="font-size: 8pt;" aria-label="Crossword (1 item)">Crossword</a>
+<a href="/tag/datasets/" class="tag-cloud-link tag-link-29 tag-link-position-13" style="font-size: 8pt;" aria-label="Datasets (1 item)">Datasets</a>
+<a href="/tag/data_structures/" class="tag-cloud-link tag-link-28 tag-link-position-14" style="font-size: 8pt;" aria-label="Data_Structures (1 item)">Data_Structures</a>
+<a href="/tag/design/" class="tag-cloud-link tag-link-30 tag-link-position-15" style="font-size: 8pt;" aria-label="Design (1 item)">Design</a>
+<a href="/tag/dictionary/" class="tag-cloud-link tag-link-31 tag-link-position-16" style="font-size: 8pt;" aria-label="Dictionary (1 item)">Dictionary</a>
+<a href="/tag/ducks/" class="tag-cloud-link tag-link-32 tag-link-position-17" style="font-size: 8pt;" aria-label="Ducks (1 item)">Ducks</a>
+<a href="/tag/dxf/" class="tag-cloud-link tag-link-33 tag-link-position-18" style="font-size: 11.6pt;" aria-label="DXF (2 items)">DXF</a>
+<a href="/tag/e-mail/" class="tag-cloud-link tag-link-34 tag-link-position-19" style="font-size: 8pt;" aria-label="e-mail (1 item)">e-mail</a>
+<a href="/tag/eagle-cad/" class="tag-cloud-link tag-link-35 tag-link-position-20" style="font-size: 8pt;" aria-label="Eagle Cad (1 item)">Eagle Cad</a>
+<a href="/tag/edcucational/" class="tag-cloud-link tag-link-36 tag-link-position-21" style="font-size: 19pt;" aria-label="Edcucational (6 items)">Edcucational</a>
+<a href="/tag/elec-trick-s/" class="tag-cloud-link tag-link-37 tag-link-position-22" style="font-size: 8pt;" aria-label="Elec-TRICK-s (1 item)">Elec-TRICK-s</a>
+<a href="/tag/electronics/" class="tag-cloud-link tag-link-38 tag-link-position-23" style="font-size: 19pt;" aria-label="Electronics (6 items)">Electronics</a>
+<a href="/tag/emotion/" class="tag-cloud-link tag-link-39 tag-link-position-24" style="font-size: 8pt;" aria-label="Emotion (1 item)">Emotion</a>
+<a href="/tag/engineering/" class="tag-cloud-link tag-link-40 tag-link-position-25" style="font-size: 8pt;" aria-label="Engineering (1 item)">Engineering</a>
+<a href="/tag/finger-prints/" class="tag-cloud-link tag-link-41 tag-link-position-26" style="font-size: 8pt;" aria-label="Finger Prints (1 item)">Finger Prints</a>
+<a href="/tag/fonts/" class="tag-cloud-link tag-link-42 tag-link-position-27" style="font-size: 11.6pt;" aria-label="Fonts (2 items)">Fonts</a>
+<a href="/tag/graphics/" class="tag-cloud-link tag-link-47 tag-link-position-28" style="font-size: 21pt;" aria-label="Graphics (8 items)">Graphics</a>
+<a href="/tag/humor/" class="tag-cloud-link tag-link-52 tag-link-position-29" style="font-size: 17.6pt;" aria-label="Humor (5 items)">Humor</a>
+<a href="/tag/industry/" class="tag-cloud-link tag-link-56 tag-link-position-30" style="font-size: 11.6pt;" aria-label="Industry (2 items)">Industry</a>
+<a href="/tag/laser_cutter/" class="tag-cloud-link tag-link-58 tag-link-position-31" style="font-size: 16pt;" aria-label="Laser_Cutter (4 items)">Laser_Cutter</a>
+<a href="/tag/linguistics/" class="tag-cloud-link tag-link-59 tag-link-position-32" style="font-size: 14pt;" aria-label="Linguistics (3 items)">Linguistics</a>
+<a href="/tag/list_of/" class="tag-cloud-link tag-link-60 tag-link-position-33" style="font-size: 14pt;" aria-label="List_of (3 items)">List_of</a>
+<a href="/tag/maths/" class="tag-cloud-link tag-link-62 tag-link-position-34" style="font-size: 20pt;" aria-label="Maths (7 items)">Maths</a>
+<a href="/tag/medical/" class="tag-cloud-link tag-link-65 tag-link-position-35" style="font-size: 11.6pt;" aria-label="Medical (2 items)">Medical</a>
+<a href="/tag/observing-society/" class="tag-cloud-link tag-link-73 tag-link-position-36" style="font-size: 16pt;" aria-label="Observing society (4 items)">Observing society</a>
+<a href="/tag/pcb/" class="tag-cloud-link tag-link-77 tag-link-position-37" style="font-size: 11.6pt;" aria-label="PCB (2 items)">PCB</a>
+<a href="/tag/progmem/" class="tag-cloud-link tag-link-78 tag-link-position-38" style="font-size: 11.6pt;" aria-label="Progmem (2 items)">Progmem</a>
+<a href="/tag/programming/" class="tag-cloud-link tag-link-79 tag-link-position-39" style="font-size: 22pt;" aria-label="programming (9 items)">programming</a>
+<a href="/tag/puzzle/" class="tag-cloud-link tag-link-80 tag-link-position-40" style="font-size: 21pt;" aria-label="Puzzle (8 items)">Puzzle</a>
+<a href="/tag/robot/" class="tag-cloud-link tag-link-82 tag-link-position-41" style="font-size: 11.6pt;" aria-label="Robot (2 items)">Robot</a>
+<a href="/tag/rubber-ducks/" class="tag-cloud-link tag-link-83 tag-link-position-42" style="font-size: 11.6pt;" aria-label="Rubber Ducks (2 items)">Rubber Ducks</a>
+<a href="/tag/sample-code/" class="tag-cloud-link tag-link-84 tag-link-position-43" style="font-size: 17.6pt;" aria-label="Sample Code (5 items)">Sample Code</a>
+<a href="/tag/software/" class="tag-cloud-link tag-link-87 tag-link-position-44" style="font-size: 14pt;" aria-label="Software (3 items)">Software</a>
+<a href="/tag/woodwork/" class="tag-cloud-link tag-link-93 tag-link-position-45" style="font-size: 16pt;" aria-label="Woodwork (4 items)">Woodwork</a></p></section><section id="block-11" class="pen_widget_light pen_widget_not_transparent pen_animate_on_scroll pen_custom_animation_fadeIn widget clearfix widget_block widget_recent_entries"><ul class="wp-block-latest-posts__list wp-block-latest-posts">
+<li><a href="/upgrading-robie-the-robot/">Upgrading Robie The Robot.</a></li>
+<li><a href="/parametric-vesa-mount-fixer/">Parametric VESA Mount Fixer.</a></li>
+<li><a href="/what-is-the-difference-between-a-laser-that-will-cut-metals-and-one-that-wont/">What is the difference between a laser that will cut metals and one that won&#8217;t?</a></li>
+<li><a href="/speakingduck-maven-plugin-for-java-resource-bundle-transitional/">SpeakingDuck (Maven plugin for java resource bundle transition.)</a></li>
+<li><a href="/making-a-train-set/">Making a Train Set: Part 1 &#8211; Design and Woodwork.</a></li>
+</ul></section><section id="block-13" class="pen_widget_light pen_widget_not_transparent pen_animate_on_scroll pen_custom_animation_fadeIn widget clearfix widget_block widget_categories"><ul class="wp-block-categories-list wp-block-categories">	<li class="cat-item cat-item-10">
+<a href="/category/programming/arduino/">Arduino</a>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/edu/ai/">Artificial Intelligence</a>
+</li>
+	<li class="cat-item cat-item-2">
+<a href="/category/blog/">Blog</a>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/programming/csharp/">C#</a>
+</li>
+	<li class="cat-item cat-item-3">
+<a href="/category/commercial/">Commercial</a>
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/edu/adt/">Data Structures</a>
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/edu/">Educational</a>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/programming/java/">Java</a>
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/programming/">Programming</a>
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/commercial/commercial_project_examples/" title="Examples of commercial projects and items in development.">Project Examples</a>
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/projects/">Projects</a>
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/software/">Software</a>
+</li>
+	<li class="cat-item cat-item-1">
+<a href="/category/uncategorized/">Uncategorized</a>
+</li>
+</ul></section><section id="block-14" class="pen_widget_light pen_widget_not_transparent pen_animate_on_scroll pen_custom_animation_fadeIn widget clearfix widget_block widget_archive"><ul class=" wp-block-archives-list wp-block-archives">	<li><a href="/2020/04/">April 2020</a></li>
+	<li><a href="/2018/01/">January 2018</a></li>
+	<li><a href="/2017/11/">November 2017</a></li>
+	<li><a href="/2017/08/">August 2017</a></li>
+	<li><a href="/2017/07/">July 2017</a></li>
+	<li><a href="/2017/01/">January 2017</a></li>
+	<li><a href="/2016/11/">November 2016</a></li>
+	<li><a href="/2016/02/">February 2016</a></li>
+	<li><a href="/2015/12/">December 2015</a></li>
+	<li><a href="/2015/11/">November 2015</a></li>
+	<li><a href="/2015/09/">September 2015</a></li>
+	<li><a href="/2015/08/">August 2015</a></li>
+	<li><a href="/2015/07/">July 2015</a></li>
+	<li><a href="/2015/06/">June 2015</a></li>
+	<li><a href="/2015/03/">March 2015</a></li>
+</ul></section>	</aside>
+									</div>
+<!-- #content -->
+					</div>
+<!-- .pen_container -->
+				</div>
+<!-- #pen_section -->
+				<footer id="pen_footer" class="site-footer pen_menu_hide pen_phone_hide pen_connect_hide pen_copyright_show pen_back_to_top_show pen_animate_on_scroll pen_custom_animation_fadeIn pen_not_transparent" role="contentinfo">
+					<div class="pen_container">
+						<div class="pen_footer_inner">
+		<div class="site-info">
+			&copy; Busy Ducks. All rights reserved.		</div>
+<!-- .site-info -->
+									</div>
+					</div>
+				</footer><!-- #pen_footer -->
+			</div>
+<!-- .pen_wrapper -->
+		</div>
+<!-- #page -->
+		<a id="pen_back" href="#page" title="Back to top">
+			<span class="pen_element_hidden">
+		Back to top			</span>
+		</a>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js?ver=1.4.4" id="pen-webfont-js"></script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/plugins/jquery.fittext.js?ver=1.2" id="jquery-fittext-js"></script>
+<script type="text/javascript" id="pen-js-js-extra">
+/* <![CDATA[ */
+var pen_js = {"animation_comments":"fadeInUp","animation_list":"flipInY","animation_list_thumbnails":"fadeIn","animation_content":"fadeInDown","animation_content_thumbnails":"swing","site_footer_display":"1","font_resize":{"site_title":"dynamic"},"text":{"enter_keyword":"Please enter some keywords."}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/pen-scripts.js?ver=1.4.4" id="pen-js-js"></script>
+<script type="text/javascript" id="pen-googlefonts-js-extra">
+/* <![CDATA[ */
+var pen_googlefonts = {"families":["Roboto"]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/pen-google-fonts.js?ver=1.4.4" id="pen-googlefonts-js"></script>
+<script type="text/javascript" id="pen-dark-mode-js-extra">
+/* <![CDATA[ */
+var pen_dark_mode_js = {"is_customize_preview":"","type":"always","allow_switch":"1","text":{"dark_mode":"Dark Mode"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/pen-dark-mode.js?ver=1.4.4" id="pen-dark-mode-js"></script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/plugins/autosize.js?ver=4.0" id="autosize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/plugins/respond.js?ver=1.4.2" id="respond-js"></script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/skip-link-focus-fix.js?ver=1.4.4" id="pen-skip-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=5.8.2" id="comment-reply-js"></script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/plugins/jquery.waypoints.js?ver=4.0.1" id="jquery-waypoints-js"></script>
+<script type="text/javascript" src="/wp-includes/js/imagesloaded.min.js?ver=4.1.4" id="imagesloaded-js"></script>
+<script type="text/javascript" src="/wp-includes/js/masonry.min.js?ver=4.2.2" id="masonry-js"></script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/plugins/modernizr.js?ver=3.6" id="pen-modernizr-js"></script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/pen-header-sticky.js?ver=1.4.4" id="pen-header-sticky-js"></script>
+<script type="text/javascript" src="/wp-includes/js/hoverIntent.min.js?ver=1.10.1" id="hoverIntent-js"></script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/plugins/jquery.superfish.js?ver=1.7.10" id="jquery-superfish-js"></script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/plugins/jquery.easing.js?ver=1.3" id="jquery-easing-js"></script>
+<script type="text/javascript" id="pen-navigation-js-extra">
+/* <![CDATA[ */
+var pen_navigation_js = {"is_customize_preview":"","url_home":"http:\/\/localhost\/","speed":"250","pointer_event":"hover","arrows":"1","easing":{"height":["show","swing"]},"mobile_sticky":"1","mobile":"mobile_tablet","mobile_parents_include":"1","text":{"menu":"Menu"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/pen-navigation.js?ver=1.4.4" id="pen-navigation-js"></script>
+<script type="text/javascript" id="pen-navigation-mobile-sticky-js-extra">
+/* <![CDATA[ */
+var pen_navigation_mobile_sticky_js = {"navigation_mobile":"mobile_tablet"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/pen-navigation-mobile-sticky.js?ver=1.4.4" id="pen-navigation-mobile-sticky-js"></script>
+<script type="text/javascript" src="/wp-content/themes/pen/assets/js/pen-layout-masonry.js?ver=1.4.4" id="pen-layout-masonry-js"></script>
+<script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+	</body>
+</html>

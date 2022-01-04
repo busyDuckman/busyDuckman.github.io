@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Maths &#8211; Busy Ducks</title>
+	<atom:link href="/tag/maths/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Mon, 08 Feb 2016 13:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Maths &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Arduino Graphing Libraries</title>
+		<link>/arduino-graphing-libraries/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 08 Feb 2016 13:58:47 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[GNUPlot]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Graphs]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=754</guid>
+
+					<description><![CDATA[Here is a library to write GNUPlot output from the Arduino. Now the Arduino can produce a graph output that is directly renderable across multiple platforms and cloud services. Does not rely on some gone tomorrow software + lets you edit the plot afterward.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p style="padding-left: 30px;">I believe strongly in plotting the data that I obtain, because plots tell you a story and they don&#8217;t mislead you like summary statistics can.</p>
+<p style="padding-left: 30px;">Often I want to plot data the arduino has acquired, but I find existing solutions don&#8217;t suit my needs. So I went out and made my own solution which writes a GNUPlot script in response to plot commands. I integrated the library with my general Arduino Toolbox (WDArduinoLib) and am releasing it under the GNU 2.0 License.</p>
+<h1>Goals</h1>
+<ul>
+<li>Professional graphics</li>
+<li>Graphs manually editable after plotting for change colours etc.</li>
+<li>Arduino outputs data that  other people can defiantly grab and use (just paste into a cloud based GNUPlot terminal)</li>
+<li>Allow embedded linux system to offload the plotting of graphs from arduino collected data</li>
+<li>Easy straight forward API</li>
+<li>Linux, Windows and Mac compatible.</li>
+<li>Quality API documentation</li>
+</ul>
+<h1>Features</h1>
+<ul>
+<li>Configurable output
+<ul>
+<li>You can use a Serial Port, SD-Card,  Telnet, TCP-IP, IrDA, whatever. So long as it derives from the Arduino Print class (ie has Print and Println()) this library can output a graph to it</li>
+</ul>
+</li>
+<li>Uses <a href="http://www.gnuplot.info/" target="_blank" rel="noopener">GNUPlot</a> as a server to execute the plot script this API outputs.
+<ul>
+<li>GNUPlot is the standard for scientific publication, it outputs presentable graphics ready for both websites, and software manuals.</li>
+<li>GNUPlot has been around forever (1986) and is still actively developed.</li>
+<li>GNUPlot can run on the Raspberry pi, PC, Mac or even online via <a href="http://plotshare.com/" target="_blank" rel="noopener">http://plotshare.com/</a></li>
+</ul>
+</li>
+<li>Extensible
+<ul>
+<li>Easily over-rideable classes to add new plot types or different output terminal (eg Matlab)</li>
+</ul>
+</li>
+<li>Built in quality colour palettes designed for graphing.
+<ul>
+<li>Sample palettes for showing importance, of keeping different coloured categories at the same intensity.</li>
+<li>Spectral palettes , optimised for on-white graphing.</li>
+<li>Colour-blind compatible palettes .</li>
+<li>Can still use arbitrary 24bit RGB colours if you like.</li>
+</ul>
+</li>
+<li>Unit tested library to support quality software development</li>
+<li>Template driven code designed for maximum data flexibility</li>
+<li>Memory Efficient.
+<ul>
+<li>Use of progmem strings supported throughout.</li>
+</ul>
+</li>
+<li>Useful, stable data format that does not rely on someone&#8217;s pet project still existing in 5 years time.</li>
+<li>All input, including text, is validated.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Examples</h1>
+<p style="padding-left: 30px;">This library is simple to use and produces clean results with minimal configuration. I present several basic examples that show the API in use and the results obtained.</p>
+<hr />
+<h2>Example: Basic Line Graph</h2>
+<p style="padding-left: 30px;">Line plots of time series data are probably the most important feature any graphing API targeted for micro-controllers can offer. This code creates such a plot. It demonstrates the use of multiple line styles.</p>
+<pre class="height-set:true height:800 lang:c++ decode:true">//main
+GNUPlotLineGraph gnuLinePlotter(&amp;Serial);
+PlotDampenedSineWaves(gnuLinePlotter);
+
+//method
+void PlotDampenedSineWaves(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Dampened Sine Wave"));
+	plot.setXAxisName(F("Time (Sec)"));
+	plot.setYAxisName(F("Voltage (V)"));
+
+	//setup series
+	plot.setSeriesName(0, F("Slow decay"));
+	plot.getLineApperance(0)-&gt;setLineStyle(LineStyles::SolidLine);
+	plot.getLineApperance(0)-&gt;setLineWidth(4);
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeBlues::Blue1);
+
+
+	plot.setSeriesName(1, F("Medium decay"));
+	plot.getLineApperance(1)-&gt;setLineStyle(LineStyles::DashedLine);
+	plot.getLineApperance(1)-&gt;setLineWidth(3);
+	plot.getLineApperance(1)-&gt;setRGB(GraphColorsSchemeBlues::Blue2);
+
+	plot.setSeriesName(2, F("Quick decay"));
+	plot.getLineApperance(2)-&gt;setLineStyle(LineStyles::DotedLine);
+	plot.getLineApperance(2)-&gt;setLineWidth(2);
+	plot.getLineApperance(2)-&gt;setRGB(GraphColorsSchemeBlues::Blue3);
+	
+        //plot graph
+	for(int i=0; i&lt;=720; i+=3)
+	{
+		float c = cos(DEG_TO_RAD*(float)i); 
+		float y1 = Dampen(i, c, 1, 1.0/360.0); 
+		float y2 = Dampen(i, c, 1, 1.0/240.0); 
+		float y3 = Dampen(i, c, 1, 1.0/180.0); 
+
+		plot.plotDatumXYn(i, y1, y2, y3);
+	}
+	plot.finishGraph();
+}
+
+</pre>
+<p><a href="/wp-content/uploads/2015/12/Damped-Sine-Wave.png" rel="attachment wp-att-757"><img loading="lazy" class="size-full wp-image-757 aligncenter" src="/wp-content/uploads/2015/12/Damped-Sine-Wave.png" alt="Damped Sine Wave" width="800" height="600" srcset="/wp-content/uploads/2015/12/Damped-Sine-Wave.png 800w, /wp-content/uploads/2015/12/Damped-Sine-Wave-300x225.png 300w, /wp-content/uploads/2015/12/Damped-Sine-Wave-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p>&nbsp;</p>
+<hr />
+<h2>Example: Plotting Points (Scatter Plot)</h2>
+<p style="padding-left: 30px;">A scatter plots, with styles colours and trimmings.</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotPointGraph gnuPointPlotter(&amp;Serial);
+PlotPointNoise(gnuPointPlotter);
+
+//method
+void PlotPointNoise(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Sine Waves with Noise"));
+	plot.setXAxisName(F("Time (Sec)"));
+	plot.setYAxisName(F("Voltage (V)"));
+	plot.setShowGrid(true);
+
+	//setup series
+	plot.setSeriesName(0, F("Pin 1"));
+	plot.getLineApperance(0)-&gt;setMarkerStyle(LineMarkers::SquareMarker);
+	plot.getLineApperance(0)-&gt;setRGB(0xff0000);
+
+	plot.setSeriesName(1, F("Pin 2"));
+	plot.getLineApperance(1)-&gt;setMarkerStyle(LineMarkers::CrossMarker);
+	plot.getLineApperance(1)-&gt;setRGB(0x00ff00);
+
+	plot.setSeriesName(2, F("Pin 3"));
+	plot.getLineApperance(2)-&gt;setMarkerStyle(LineMarkers::CircleMarker);
+	plot.getLineApperance(2)-&gt;setRGB(0x0000ff);
+	
+        //plot graph
+	for(int i=0; i&lt;=720; i+=5)
+	{
+		float c = cos(DEG_TO_RAD*(float)i); 
+		float y1 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/240.0); 
+		float y2 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/180.0)-2; 
+		float y3 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/90.0)-4; 
+
+		plot.plotDatumXYn(i, y1, y2, y3);
+	}
+	plot.finishGraph();
+}
+
+</pre>
+<p><a href="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png" rel="attachment wp-att-755"><img loading="lazy" class="size-full wp-image-755 aligncenter" src="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png" alt="Sine Wave with Noise" width="800" height="600" srcset="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png 800w, /wp-content/uploads/2015/12/Sine-Wave-with-Noise-300x225.png 300w, /wp-content/uploads/2015/12/Sine-Wave-with-Noise-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p>&nbsp;</p>
+<hr />
+<h2>Example: Plotting Arbitrary Lines</h2>
+<p style="padding-left: 30px;">Sometimes your not using time series data, and need to plot lines between arbitrary x/y positions. Many solutions for the arduino breakdown at this point. Here I demonstrate such a plot (based on the logarithmic spiral). Note I am using lines with point markers to show the actual points plotted.</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotLineGraph gnuLinePlotter(&amp;Serial);
+PlotLogarithmicSpiral(gnuLinePlotter);
+
+//method
+void PlotLogarithmicSpiral(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Logarithmic Spiral"));
+
+	//setup series
+	plot.setSeriesName(0, F("Spiral"));
+	plot.getLineApperance(0)-&gt;setLineWidth(2);
+	plot.getLineApperance(0)-&gt;setMarkerStyle(LineMarkers::SolidCircleMarker);
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeSpectral::Spectral7);
+		
+	//plot graph
+	float a = 1;
+	float b = 0.1759;
+	for(int i=0; i&lt;(int)(10.0*20.0*M_PI); i+=5)
+	{
+		float t = ((float)i) * 0.1;
+		float rt = a*pow(M_E, b* t);
+		float x = rt*cos(t);
+		float y = rt*sin(t);
+
+		plot.plotDatumXY(x, y);
+	}
+
+	plot.finishGraph();
+}</pre>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/12/Logarithmic-Spiral.png" rel="attachment wp-att-761"><img loading="lazy" class="size-full wp-image-761 aligncenter" src="/wp-content/uploads/2015/12/Logarithmic-Spiral.png" alt="Logarithmic Spiral" width="800" height="600" srcset="/wp-content/uploads/2015/12/Logarithmic-Spiral.png 800w, /wp-content/uploads/2015/12/Logarithmic-Spiral-300x225.png 300w, /wp-content/uploads/2015/12/Logarithmic-Spiral-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<hr />
+<h2>Example: Multi Column Bar Graph.</h2>
+<p style="padding-left: 30px;">Bar graphs, for histograms and such are easy in this API. The example below shows support for multi column graphs, Note: negative values are also supported. The labels for the X-Axis are plotted as standard x values (the plot command is template driven and can support many different types of data).</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotBarGraph gnuBarPlotter(&amp;Serial);
+PlotSampleBarGraph(gnuBarPlotter);
+
+//method
+void PlotSampleBarGraph(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Google Results for Instruments"));
+	plot.setXAxisName(F("Instrument"));
+	plot.setYAxisName(F("# Google Results (millions)"));
+	plot.setShowGrid(true);
+
+	//setup series
+	plot.setSeriesName(0, F("play"));
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeOranges::Orange1);
+	plot.setSeriesName(1, F("teach"));
+	plot.getLineApperance(1)-&gt;setRGB(GraphColorsSchemeBlues::Blue1);
+	plot.setSeriesName(2, F("like"));
+	plot.getLineApperance(2)-&gt;setRGB(GraphColorsSchemeGreens::Green1);
+	plot.setSeriesName(3, F("hate"));
+	plot.getLineApperance(3)-&gt;setRGB(GraphColorsSchemeReds::Red1);
+
+	//plot graph
+	//Dataset compiled by Google-ing "I X the Y"
+	//                instrument	play	teach	like	hate
+	plot.plotDatumXYn("Piano",		173,	25,		211,	21);
+	plot.plotDatumXYn("Guitar",		163,	22,		193,	27);
+	plot.plotDatumXYn("Violin",     41,		2,		43,		1);
+	plot.plotDatumXYn("Drums",		30,		8,		83,		9);
+	
+	plot.finishGraph();
+}</pre>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png" rel="attachment wp-att-762"><img loading="lazy" class="size-full wp-image-762 aligncenter" src="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png" alt="Google Results for Instruments" width="800" height="600" srcset="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png 800w, /wp-content/uploads/2015/12/Google-Results-for-Instruments-300x225.png 300w, /wp-content/uploads/2015/12/Google-Results-for-Instruments-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<h1>Installation</h1>
+<p>&nbsp;</p>
+<ol>
+<li>Get the library from its <a href="https://github.com/busyDuckman/WDArduinoLib" target="_blank" rel="noopener">github repository</a>.</li>
+<li>See the official guide on how to install libraries <a href="https://www.arduino.cc/en/Guide/Libraries" target="_blank" rel="noopener">https://www.arduino.cc/en/Guide/Libraries</a></li>
+<li>Run the provided example sketch</li>
+<li>Install GNUPlot v5.0 or later (<a href="http://www.gnuplot.info/download.html" target="_blank" rel="noopener">here</a>).</li>
+<li>Using the com port viewer, copy the output of sketch into GNUPlot.</li>
+<li>Enjoy!</li>
+</ol>
+<p>It is very possible to get the output generated by this library to GNUPlot automatically. How you achieve this is up to you.</p>
+<p>It is possible to direct the output to a SD card. See the arduino help page on the <a href="https://www.arduino.cc/en/Tutorial/Files" target="_blank" rel="noopener">file class</a>, to create you own file on a SD card. Then pass the open file object in to the constructor for your plotting class (where I used Serial in the examples).</p>
+<h1></h1>
+<h1>Documentation</h1>
+<p style="padding-left: 30px;">Full documentation available <a href="http://www.busyducks.com/downloads/doco/WDArduinoLib/index.html" target="_blank" rel="noopener">here</a>.</p>
+<p>&nbsp;</p>
+<h1>License</h1>
+<p style="padding-left: 30px;">GNU 2.0</p>
+<h1>State</h1>
+<p>Most Features are well tested, but I don&#8217;t warrant or accept liability for any of the functionality in any way.</p>
+<p>NB: some dynamic memory usage , refrain from using malloc during plotting operations to prevent possible heap fragmentation.</p>
+<ul>
+<li>Dynamic memory usage is a design decision I made weighing pro&#8217;s and con&#8217;s of the situation.</li>
+<li>Given &#8216;typical usage&#8217; scenarios of the API it should not cause heap fragmentation.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Road-Map</h1>
+<p>May happen:</p>
+<ul>
+<li>Second x/y axis support</li>
+<li>Matlab support</li>
+<li>3d plots</li>
+<li>Spectrogram</li>
+<li>Support for cloud based rendering for graphs</li>
+<li>Sage support</li>
+<li>Thousands separator (right now I could not deploy it because of a bug in the windows version of GNUPlot).</li>
+</ul>
+<p>Won&#8217;t Happen:</p>
+<ul>
+<li>Real-time visualisation (plenty of other projects to do that already)</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Neat maths trick with an orange. Bonus: the worst duck joke ever!</title>
+		<link>/neat-maths-trick-with-an-orange-bonus-the-worst-duck-joke-ever/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 24 Jun 2015 05:25:05 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Bad humor]]></category>
+		<category><![CDATA[Humor]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[Oranges]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<category><![CDATA[Rubber Ducks]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=375</guid>
+
+					<description><![CDATA[Draw five dots anywhere on an orange with a white board marker.  There is a way to cut the orange exactly in half so that at least four of the dots are visible on one side.  Can you figure out how? Solution in this video.]]></description>
+										<content:encoded><![CDATA[<p>Draw five dots anywhere on an orange with a white board marker.  There is a way to cut the orange exactly in half so that at least four of the dots are visible on one side.  Can you figure out how?</p>
+<p>Solution in this video.</p>
+<p><iframe loading="lazy" title="Maths trick with an orange, great for teaching and parties." width="940" height="529" src="https://www.youtube.com/embed/aabF_IBlLdE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>THE BEST PUZZLES #4 – &#8220;Hexagon&#8221;</title>
+		<link>/hexagon/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 17 Jun 2015 07:27:10 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=267</guid>
+
+					<description><![CDATA[Arrange the numbers 1-19 in the circles, so all the rows of 3 (between orange circles) sum to 22.]]></description>
+										<content:encoded><![CDATA[<p>I have collected (and made) a lot of cool maths &amp; logic puzzles over the years.<br />
+As too many Facebook maths problems today seem uninspired, I have decided to start posting from my collection.</p>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/06/hexagon.jpg"><img loading="lazy" class="alignnone wp-image-268 size-large" src="/wp-content/uploads/2015/06/hexagon-1024x581.jpg" alt="hexagon" width="640" height="363" srcset="/wp-content/uploads/2015/06/hexagon-1024x581.jpg 1024w, /wp-content/uploads/2015/06/hexagon-300x170.jpg 300w, /wp-content/uploads/2015/06/hexagon-768x436.jpg 768w, /wp-content/uploads/2015/06/hexagon-1536x871.jpg 1536w, /wp-content/uploads/2015/06/hexagon-2048x1162.jpg 2048w, /wp-content/uploads/2015/06/hexagon-1568x889.jpg 1568w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>This particular puzzle is from <a href="http://www.amazon.com/gp/product/0486270785/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0486270785&amp;linkCode=as2&amp;tag=busduc-20&amp;linkId=W4CK73JYPZ7MBCOP">The Moscow Puzzles</a>. This book is awesome, sold millions of copies, and is one of the best &#8220;brain teaser&#8221; books ever (first released back in the 1950&#8217;s).<br />
+It&#8217;s not a &#8220;modern self help book&#8221; so nobody is trying to market it, which means it can typically be purchased for around $4. Not bad for a book so full of great puzzles and rustic Russian charm.</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" style="border: none !important; margin: 0px !important;" src="http://ir-na.amazon-adsystem.com/e/ir?t=busduc-20&amp;l=as2&amp;o=1&amp;a=0486270785" alt="" width="1" height="1" border="0" /></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>THE BEST PUZZLES #3 – “Match Fix”</title>
+		<link>/the-best-puzzles-3-match-fix/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 16 Jun 2015 16:46:55 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=263</guid>
+
+					<description><![CDATA[Fix the equation by shifting one match.
+There are two solutions. I will leave them for you to find.]]></description>
+										<content:encoded><![CDATA[<p>I have collected (and made) a lot of cool maths &amp; logic puzzles over the years.<br />
+As too many Facebook maths problems today seem uninspired, I have decided to start posting from my collection.</p>
+<p><a href="/wp-content/uploads/2015/06/1_match_fix.jpg"><img loading="lazy" class="alignnone size-medium wp-image-265" src="/wp-content/uploads/2015/06/1_match_fix-300x189.jpg" alt="1_match_fix" width="300" height="189" srcset="/wp-content/uploads/2015/06/1_match_fix-300x189.jpg 300w, /wp-content/uploads/2015/06/1_match_fix-1024x645.jpg 1024w, /wp-content/uploads/2015/06/1_match_fix-768x484.jpg 768w, /wp-content/uploads/2015/06/1_match_fix-1536x967.jpg 1536w, /wp-content/uploads/2015/06/1_match_fix-2048x1290.jpg 2048w, /wp-content/uploads/2015/06/1_match_fix-1568x988.jpg 1568w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>There are two solutions. I will leave them for you to find.</p>
+<p>This particular puzzle is from <a href="http://www.amazon.com/gp/product/0486270785/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0486270785&amp;linkCode=as2&amp;tag=busduc-20&amp;linkId=W4CK73JYPZ7MBCOP">The Moscow Puzzles</a>. This book is awesome, sold millions of copies, and is one of the best &#8220;brain teaser&#8221; books ever (first released back in the 1950&#8217;s).<br />
+It&#8217;s not a &#8220;modern self help book&#8221; so nobody is trying to market it, which means it can typically be purchased for around $4. Not bad for a book so full of great puzzles and rustic Russian charm.</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" style="border: none !important; margin: 0px !important;" src="http://ir-na.amazon-adsystem.com/e/ir?t=busduc-20&amp;l=as2&amp;o=1&amp;a=0486270785" alt="" width="1" height="1" border="0" /></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Images that use one of every colour + Free Software to make your own.</title>
+		<link>/images-that-use-one-of-every-colour/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 16 Jun 2015 04:57:03 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[C#]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=218</guid>
+
+					<description><![CDATA[Its kinda captivating, an image that uses only one of every colour possible on your computer. It makes for an odd desktop background on a 4K screen.]]></description>
+										<content:encoded><![CDATA[<p>When I got my first 4K screen and looked  at the specs I realised something. We are getting very close to the point where a screen will be able to show every possible (24 bit) pixel colour at once.</p>
+<p>Testing this out on screen with a big colour palate would be kinda boring, so I made some software to take a large image and convert it to use one of every colour.<br />
+I am using  4096 * 4096  = 16,777,216 (or 2<sup>24</sup>) images to do this.</p>
+<p>I played around with a few algorithms, but found the best results came from a very simple idea:</p>
+<ol>
+<li>Start with a image containing all colours.</li>
+<li>Inspect two pixels</li>
+<li>Swap the two pixels, if that would make If the image more like the target.</li>
+<li>Repeat steps 2 &#8211; 4, until the image looks good.</li>
+</ol>
+<p>Immediately I was stunned by the results.</p>
+<ul>
+<li>The Images actually worked, they looked like the source image.</li>
+<li>Parts of the image which where pulled toward a different colour and showed a very interesting (and accurate) image segmentation,</li>
+<li>The algorithm handled both photographs and solid colour cartoons well.</li>
+</ul>
+<h2>Example Images:</h2>
+<p>Firstly these files, produced by this method are are 50mb, and don&#8217;t compress well. I scaled them down for the website. If you want the verbatim image; you will have to download the software and make your own. (BTW: Did you notice the unusual beverage flavor in the vending machine pic, when you see it&#8230;).</p>
+
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/bottles_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/bottles_1024.jpg 1024w, /wp-content/uploads/2015/06/bottles_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/bottles_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/bottles_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/bottles_done_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/bottles_done_1024.jpg 1024w, /wp-content/uploads/2015/06/bottles_done_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/bottles_done_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/bottles_done_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/clackline_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/clackline_1024.jpg 1024w, /wp-content/uploads/2015/06/clackline_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/clackline_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/clackline_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/clackline_done_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/clackline_done_1024.jpg 1024w, /wp-content/uploads/2015/06/clackline_done_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/clackline_done_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/clackline_done_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/mass_fort_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/mass_fort_1024.jpg 1024w, /wp-content/uploads/2015/06/mass_fort_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/mass_fort_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/mass_fort_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/mass_fort_done_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/mass_fort_done_1024.jpg 1024w, /wp-content/uploads/2015/06/mass_fort_done_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/mass_fort_done_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/mass_fort_done_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/cassette-tape_small.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/cassette-tape_small.jpg 1024w, /wp-content/uploads/2015/06/cassette-tape_small-300x300.jpg 300w, /wp-content/uploads/2015/06/cassette-tape_small-150x150.jpg 150w, /wp-content/uploads/2015/06/cassette-tape_small-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/cassette-tape_done_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/cassette-tape_done_1024.jpg 1024w, /wp-content/uploads/2015/06/cassette-tape_done_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/cassette-tape_done_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/cassette-tape_done_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/tasmania_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/tasmania_1024.jpg 1024w, /wp-content/uploads/2015/06/tasmania_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/tasmania_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/tasmania_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/tasmania_done.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/tasmania_done.jpg 1024w, /wp-content/uploads/2015/06/tasmania_done-300x300.jpg 300w, /wp-content/uploads/2015/06/tasmania_done-150x150.jpg 150w, /wp-content/uploads/2015/06/tasmania_done-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/Fly_Agaric_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/Fly_Agaric_1024.jpg 1024w, /wp-content/uploads/2015/06/Fly_Agaric_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/Fly_Agaric_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/Fly_Agaric_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/Fly_Agaric_done.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/Fly_Agaric_done.jpg 1024w, /wp-content/uploads/2015/06/Fly_Agaric_done-300x300.jpg 300w, /wp-content/uploads/2015/06/Fly_Agaric_done-150x150.jpg 150w, /wp-content/uploads/2015/06/Fly_Agaric_done-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+
+<p>&nbsp;</p>
+<h2>Download the software:</h2>
+<p style="padding-left: 30px;">Install file:  <a href="http://www.busyducks.com/Software/ImageOfEveryColor/publish.htm" target="_blank" rel="noopener">here</a><br />
+Oneclick: <a href="http://www.busyducks.com/Software/ImageOfEveryColor_oneclick/publish.htm" target="_blank" rel="noopener">here</a></p>
+<h2></h2>
+<h2>Screen Shot</h2>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/06/application.jpg"><img loading="lazy" class="alignnone wp-image-230 " src="/wp-content/uploads/2015/06/application.jpg" alt="Application Screen Shot" width="819" height="453" srcset="/wp-content/uploads/2015/06/application.jpg 1070w, /wp-content/uploads/2015/06/application-300x166.jpg 300w, /wp-content/uploads/2015/06/application-1024x567.jpg 1024w, /wp-content/uploads/2015/06/application-768x425.jpg 768w" sizes="(max-width: 819px) 100vw, 819px" /></a></p>
+<h2>Software usage note(s):</h2>
+<ul>
+<li>Application works on high DPI screens.</li>
+<li>Some images prefer that I choose one of the pixels in a structured sequential fashion, others prefer both to be picked at random.
+<ul>
+<li>I solved this by doing n iterative rounds, followed by x minutes of random swapping.</li>
+<li>The software lets you set these options.</li>
+<li>Iterative rounds produce good results very quickly, but will leave some lines on cartoons.</li>
+<li>Random rounds are slow to improve the image. A minute is a good buffer to clean up an image, but consider 40+ minutes for cleaner results.</li>
+</ul>
+</li>
+<li>Uses many threads, and hogs the system bus. Will give the CPU a quick workout.</li>
+<li>Can be used in a command line mode, Suit batch processing.
+<ul>
+<li>To do this, provide one optional parameter (directory with images).</li>
+<li>Finds all pictures in directory that don&#8217;t have &#8220;_done&#8221; or &#8220;_ignore&#8221; in the name.</li>
+<li>Saves a new image with _done added to the file name.</li>
+<li>Overrides that image without prompting!</li>
+</ul>
+</li>
+<li>Save as bitmap If you don&#8217;t want the jpeg compression to alter the validity of the &#8220;every single colour&#8221; image.</li>
+</ul>
+<p>On images heavily biased to one colour, the iterative pass may exhaust that colour to the top of its run.<br />
+eg..</p>
+<p><a href="/wp-content/uploads/2015/06/working.jpg"><img loading="lazy" class="alignnone wp-image-240 " src="/wp-content/uploads/2015/06/working.jpg" alt="working" width="779" height="432" srcset="/wp-content/uploads/2015/06/working.jpg 1036w, /wp-content/uploads/2015/06/working-300x166.jpg 300w, /wp-content/uploads/2015/06/working-1024x567.jpg 1024w, /wp-content/uploads/2015/06/working-768x426.jpg 768w" sizes="(max-width: 779px) 100vw, 779px" /></a><a href="/wp-content/uploads/2015/06/working.jpg"> </a></p>
+<p>In this case, set &#8220;Iteration Runs&#8221; to 0. This will disable the iterative passes and go strait to random passes.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Contact / Feedback</h3>
+<p>[contact-form subject=&#8217;All Colour Software (via website)&#8217;][contact-field label=&#8217;Name&#8217; type=&#8217;name&#8217; required=&#8217;1&#8217;/][contact-field label=&#8217;Email&#8217; type=&#8217;email&#8217; required=&#8217;1&#8217;/][contact-field label=&#8217;Type of comment&#8217; type=&#8217;select&#8217; options=&#8217;Support,Bug Report,Feature Request,Sales Enquiry,Other&#8217;/][contact-field label=&#8217;Comment&#8217; type=&#8217;textarea&#8217; required=&#8217;1&#8217;/][/contact-form]</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>THE BEST PUZZLES #2 – “Three Nines”</title>
+		<link>/the-best-puzzles-2-three-nines/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 10 Jun 2015 16:47:27 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=201</guid>
+
+					<description><![CDATA[I have collected (and made) a lot of cool maths &#38; logic puzzles over the years.
+As too many Facebook maths problems today seem uninspired, I have decided to start posting from my collection.]]></description>
+										<content:encoded><![CDATA[<p>I have collected (and made) a lot of cool maths &amp; logic puzzles over the years.<br />
+As too many Facebook maths problems today seem uninspired, I have decided to start posting from my collection.</p>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/06/Three-9s.jpg"><img loading="lazy" class="alignnone wp-image-204 size-full" src="/wp-content/uploads/2015/06/Three-9s.jpg" alt="Three 9s" width="800" height="504" srcset="/wp-content/uploads/2015/06/Three-9s.jpg 800w, /wp-content/uploads/2015/06/Three-9s-300x189.jpg 300w, /wp-content/uploads/2015/06/Three-9s-768x484.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p>Select the text in yellow line below to see the answer.</p>
+<div style="padding: 12px; background-color: #edd400; color: #edd400; line-height: 1.4;">9<sup> 9-9</sup></div>
+<p>&nbsp;</p>
+<p>This particular puzzle is from a great book that I got for free when a local library discarded it.<br />
+<a href="http://www.amazon.com/gp/product/0805854045/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0805854045&amp;linkCode=as2&amp;tag=busduc-20&amp;linkId=6E4HNBX7ATGHGGXU">Teaching Middle School Mathematics [Brumbaugh, Ortiz &amp; Gresham]</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" style="border: none !important; margin: 0px !important;" src="http://ir-na.amazon-adsystem.com/e/ir?t=busduc-20&amp;l=as2&amp;o=1&amp;a=0805854045" alt="" width="1" height="1" border="0" /></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The Best Puzzles #1 &#8211; &#8220;The 7-11 Store clerk&#8221;</title>
+		<link>/the-best-puzzles-1-the-7-11-store-clerk/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 10 Jun 2015 06:03:25 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=188</guid>
+
+					<description><![CDATA[I have collected (and made) a lot of cool maths &#038; logic puzzles over the years.
+As too many Facebook maths problems today seem uninspired, I have decided to start posting from my collection.]]></description>
+										<content:encoded><![CDATA[<p>I have collected (and made) a lot of cool maths &amp; logic puzzles over the years.<br />
+As too many Facebook maths problems today seem uninspired, I have decided to start posting from my collection.<br />
+<a href="/wp-content/uploads/2015/06/7111.jpg"><img loading="lazy" class="alignnone wp-image-196 " src="/wp-content/uploads/2015/06/7111.jpg" alt="" width="534" height="554" srcset="/wp-content/uploads/2015/06/7111.jpg 800w, /wp-content/uploads/2015/06/7111-289x300.jpg 289w, /wp-content/uploads/2015/06/7111-768x797.jpg 768w" sizes="(max-width: 534px) 100vw, 534px" /></a></p>
+<p>&nbsp;</p>
+<p>Select the text in yellow line below to see the answer.</p>
+<div style="padding: 12px; background-color: #edd400; color: #edd400; line-height: 1.4;">$1.20, $1.25, $1.50, and $3.16</div>
+<p>&nbsp;</p>
+<p>This particular puzzle is from a great book that I got for free when a local library discarded it.<br />
+<a href="http://www.amazon.com/gp/product/0805854045/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0805854045&amp;linkCode=as2&amp;tag=busduc-20&amp;linkId=6E4HNBX7ATGHGGXU">Teaching Middle School Mathematics [Brumbaugh, Ortiz &amp; Gresham]</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" style="border: none !important; margin: 0px !important;" src="http://ir-na.amazon-adsystem.com/e/ir?t=busduc-20&amp;l=as2&amp;o=1&amp;a=0805854045" alt="" width="1" height="1" border="0" /></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

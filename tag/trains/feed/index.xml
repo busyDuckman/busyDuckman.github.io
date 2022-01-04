@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Trains &#8211; Busy Ducks</title>
+	<atom:link href="/tag/trains/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Thu, 03 Aug 2017 21:45:22 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Trains &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Making a Train Set: Part 1 &#8211; Design and Woodwork.</title>
+		<link>/making-a-train-set/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 03 Aug 2017 21:45:22 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[CAD]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Laser_Cutter]]></category>
+		<category><![CDATA[Trains]]></category>
+		<category><![CDATA[Woodwork]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=862</guid>
+
+					<description><![CDATA[Recently I have been building a train set, I will blog the progress, in six parts, highlighting how I get certain things done.]]></description>
+										<content:encoded><![CDATA[<h1>Overview</h1>
+<p>Recently I have been building a train set, I will blog the progress, in six parts, highlighting how I get certain things done.</p>
+<ul>
+<li><strong>Part 1 &#8211; Design and Woodwork</strong></li>
+<li>Part 2 &#8211; Electrical design.</li>
+<li>Part 3 &#8211; Mechanical servicing</li>
+<li>Part 4 &#8211; Construction</li>
+<li>Part 5 &#8211; Painting of buildings and natural elements.</li>
+<li>Part 6 &#8211; Embedded computing and setup of DCC controllers.</li>
+</ul>
+<h1></h1>
+<h1>Base Setup</h1>
+<p>Firstly I am designing a track that is movable from a storage hook on a garage, to a pool table in my living. This requires a baseboard, which I constructed with three cross breams, an MDF sheet and Tasmanian oak edging.</p>
+<p>&nbsp;</p>
+<h1>Designing the layout.</h1>
+<p>I used  the Simple Computer Aided Railway Modeller (<a href="https://www.scarm.info/index.php" target="_blank" rel="noopener">SCARM</a>) to plan my layout.  A read over an old German railway construction guide gave me a lot of practical hints as to what made a good layout.</p>
+<p><a href="/wp-content/uploads/2017/08/front.png"><img loading="lazy" class="alignnone size-large wp-image-866" src="/wp-content/uploads/2017/08/front-1024x531.png" alt="" width="640" height="332" srcset="/wp-content/uploads/2017/08/front-1024x531.png 1024w, /wp-content/uploads/2017/08/front-300x156.png 300w, /wp-content/uploads/2017/08/front-768x399.png 768w, /wp-content/uploads/2017/08/front.png 1216w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p style="padding-left: 30px;">Layout as viewed from the front.</p>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2017/08/rear.png"><img loading="lazy" class="alignnone size-large wp-image-867" src="/wp-content/uploads/2017/08/rear-1024x531.png" alt="" width="640" height="332" srcset="/wp-content/uploads/2017/08/rear-1024x531.png 1024w, /wp-content/uploads/2017/08/rear-300x156.png 300w, /wp-content/uploads/2017/08/rear-768x399.png 768w, /wp-content/uploads/2017/08/rear.png 1216w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p style="padding-left: 30px;">layout as viewed from the rear.</p>
+<h1></h1>
+<h1>Setting up the levels for hills and track.</h1>
+<p>The frame work is wood and MDF. Before getting into some neat tricks, lets look at a time lapse.</p>
+<p>&nbsp;</p>
+<p><iframe loading="lazy" title="trainset" width="940" height="529" src="https://www.youtube.com/embed/mskjXSk1HVI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>Steps:</p>
+<ul>
+<li>The track plan is printed 1:1 on a standard printer using 40 pieces of paper, there is a <a href="http://www.scarm.info/blog/advanced-techniques/print-whole-layout-in-1to1-scale/">trick to doing this in SCARM</a>.</li>
+<li>The layout is placed on the board and a toy train is run over it, just to get a feel for what it will be like to interact with.</li>
+<li>Spacers are cut on a table saw, so that the MDF can be set to the correct height for the track.</li>
+<li>Contours are cut from MDF using a jigsaw and the track carver up and placed on top of the MDF.</li>
+<li>Everything is assembled, a brad gun and wood glue is a quick way to get this done. I screw down the MDF, without glue, so I can  run wires later.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Train storage Cabinet.</h1>
+<p>I built a cabinet to hold the trains and keep them dust free.</p>
+<ul>
+<li>It is build like a picture frame, but I used the table saw to create a &#8216;grove cut&#8217; on the frame.</li>
+<li>The grove allows two pieces of acrylic to slide like doors in the frame.</li>
+<li>If your not 100% on table saws, <a href="http://www.powertoolinstitute.com/pti-pages/videos/safetyvideo_3_TableSawSafety_eng-youtube.asp">this video is terrific</a>. (10:20 explains grove cuts).</li>
+<li>Using acrylic instead of glass lets me insert the doors after assembly (acrylic bends)</li>
+<li>The wood is Tasmanian oak (to match the table) and the finish is Linseed oil followed by a glossy furniture polish.
+<ul>
+<li>Frame Cutting  in Tasmanian oak is fraught with random peril. If you cut the long edges first, you can reuse failed cuts for the short edges, saving timber.</li>
+</ul>
+</li>
+</ul>
+
+<a href='/making-a-train-set/olympus-digital-camera/'><img width="940" height="705" src="/wp-content/uploads/2017/08/P1012419-1024x768.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="/wp-content/uploads/2017/08/P1012419-1024x768.jpg 1024w, /wp-content/uploads/2017/08/P1012419-300x225.jpg 300w, /wp-content/uploads/2017/08/P1012419-768x576.jpg 768w, /wp-content/uploads/2017/08/P1012419-1536x1152.jpg 1536w, /wp-content/uploads/2017/08/P1012419-2048x1536.jpg 2048w, /wp-content/uploads/2017/08/P1012419-1568x1176.jpg 1568w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href='/making-a-train-set/olympus-digital-camera-2/'><img width="940" height="705" src="/wp-content/uploads/2017/08/P1012426-1024x768.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="/wp-content/uploads/2017/08/P1012426-1024x768.jpg 1024w, /wp-content/uploads/2017/08/P1012426-300x225.jpg 300w, /wp-content/uploads/2017/08/P1012426-768x576.jpg 768w, /wp-content/uploads/2017/08/P1012426-1536x1152.jpg 1536w, /wp-content/uploads/2017/08/P1012426-2048x1536.jpg 2048w, /wp-content/uploads/2017/08/P1012426-1568x1176.jpg 1568w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href='/making-a-train-set/olympus-digital-camera-4/'><img width="940" height="705" src="/wp-content/uploads/2017/08/P1012413-1024x768.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="/wp-content/uploads/2017/08/P1012413-1024x768.jpg 1024w, /wp-content/uploads/2017/08/P1012413-300x225.jpg 300w, /wp-content/uploads/2017/08/P1012413-768x576.jpg 768w, /wp-content/uploads/2017/08/P1012413-1536x1152.jpg 1536w, /wp-content/uploads/2017/08/P1012413-2048x1536.jpg 2048w, /wp-content/uploads/2017/08/P1012413-1568x1176.jpg 1568w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href='/making-a-train-set/olympus-digital-camera-3/'><img width="940" height="705" src="/wp-content/uploads/2017/08/P1012425-1024x768.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="/wp-content/uploads/2017/08/P1012425-1024x768.jpg 1024w, /wp-content/uploads/2017/08/P1012425-300x225.jpg 300w, /wp-content/uploads/2017/08/P1012425-768x576.jpg 768w, /wp-content/uploads/2017/08/P1012425-1536x1152.jpg 1536w, /wp-content/uploads/2017/08/P1012425-2048x1536.jpg 2048w, /wp-content/uploads/2017/08/P1012425-1568x1176.jpg 1568w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Industry &#8211; Busy Ducks</title>
+	<atom:link href="/tag/industry/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Tue, 24 Jan 2017 13:45:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Industry &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Surface Preparation and Finger Prints. How bad are they?</title>
+		<link>/surface-preparation-and-finger-prints-how-bad-are-they/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 24 Jan 2017 13:45:25 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Finger Prints]]></category>
+		<category><![CDATA[Glue]]></category>
+		<category><![CDATA[Industry]]></category>
+		<category><![CDATA[PCB]]></category>
+		<category><![CDATA[Solder]]></category>
+		<category><![CDATA[Woodwork]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=828</guid>
+
+					<description><![CDATA[In preparing a surface for paint / glue / thermal paste / soldering / whatever, there is one thing to remember. A normal finger print is of similar thickness to cling wrap (0.01mm). A thick (eg post pizza) print, where the ridges are no longer visible, is closer to the thickness of a sheet of paper (0.1mm).
+
+Rule of thumb. If you would you would not be happy with this kind of material on the surface of whatever you are coating, remove your finger prints.]]></description>
+										<content:encoded><![CDATA[<p>In preparing a surface for paint / glue / thermal paste / soldering / whatever, there is one thing to remember. A normal finger print is of similar thickness to cling wrap (0.01mm). A thick (eg post pizza) print, where the ridges are no longer visible, is closer to the thickness of a sheet of paper (0.1mm).</p>
+<p>Rule of thumb. If you would you would not be happy with this kind of material on the surface of whatever you are coating, remove your finger prints.</p>
+<ul>
+<li>So a very thin coat of paint is 0.02mm, but often thicker.  So wash your hands, then it&#8217;s probably OK to touch. But don&#8217;t &#8220;Pizza and Paint&#8221;.</li>
+<li>Thermal paste on your CPU is 0.07mm  to 0.12mm thick, So Pizza hands are a definite problem. A single normal finger print may well produce a small but noticeable effect to cooling. A well handled CPU with a few prints is probably not good, you would not leave scraps of plastic wrap on the CPU after all.</li>
+<li>Some glues may dilute your finger print and not care (super glue). While other (silicone adhesives) will probably bond poorly.</li>
+<li>Solder &#8211; The NASA soldering standards (<a href="https://www.hq.nasa.gov/office/codeq/doctree/canceled/NS87393-Ch5.pdf">NASA_STD_8739 .3</a>) state: <em>&#8220;When handling metal surfaces that are to be soldered is unavoidable, clean, lint-free gloves or finger cots shall be used. &#8220;</em>. Many commercial soldering standards also follow this advise for handling of both solder and parts.
+<ul>
+<li>Whats interesting is that some manufactures are particularly concerned about what is on your hands (moisturisers and hand lotions cited as being particularly problematic to solder).</li>
+<li>The finger print contamination of solder joints is often resolved by just keeping the joint hot until the solder takes. This extra heating burns of enough contaminate to allow solder to flow, but can damage components amongst other problems.</li>
+<li>UPDATE: The new IPC standards (<a href="https://www.ipc.org/4.0_Knowledge/4.1_Standards/IPC-J-STD-001ES.pdf">IPC-J-STD-001ES</a>), which NASA, and many other companies, have adopted, don&#8217;t mention fingers or gloves specifically. They only broadly reference that handling mechanisms stall not contaminate the board or parts.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>10 ways to (actually) make university IT assignments more relevant to industry.</title>
+		<link>/10-ways-to-make-university-it-assignments-more-relevant-to-industry/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 10 Mar 2015 13:38:41 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Humor]]></category>
+		<category><![CDATA[Industry]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=124</guid>
+
+					<description><![CDATA[I was asked how I would make assignments more relevant to industry, my response was not what they expected.]]></description>
+										<content:encoded><![CDATA[<p>A few years ago I returned from the IT industry to teaching in a university. Commenting that the states university courses seemed a little out of touch with industry requirements; I was asked how I would make assignments more relevant to industry. My response was not what they expected.</p>
+<p style="padding-left: 30px;"><strong>1</strong> Change the assignment several times while students are working on it.</p>
+<p style="padding-left: 30px;"><strong>2</strong> Assign 5 new members to the team 2 days before the assignment is due, claiming extra resources are needed. The students are told that &#8216;mythical man month&#8217; does not apply in this case because of awesome management skills.</p>
+<p style="padding-left: 30px;"><strong>3</strong> Have the best programmer in the team designated &#8216;programmer&#8217;. Then have other members fill the roles of &#8216;manager&#8217;, &#8216;second in charge&#8217;, &#8216;systems documenter&#8217;, &#8216;risk analysis officer&#8217;, &#8216;system analyst&#8217; and &#8216;software tester&#8217;.<br />
+Everyone can say the programmer is not an important part of the team and does no real work. Everyone gets more grades than the programmer. Everyone gets to blame the programmer if the assignment is running late.</p>
+<p style="padding-left: 30px;"><strong>4</strong> Request all work be done between 9am to 5pm.<br />
+Anyone arriving to assignment late is docked marks. The non-programmer who stays back latest it awarded the highest grade. Any programmer staying back late is deemed to be behind schedule and has to explain their lapse to the entire team at the next &#8216;scrum&#8217;.</p>
+<p style="padding-left: 30px;"><strong>5</strong> Every week the IT assignment group (except the &#8216;programmer&#8217;) must meet with a MBA student group. The MBA students get to arbitrarily change the IT assignment groups project in anyway they please.</p>
+<p style="padding-left: 30px;"><strong>6</strong> Every fortnight some marketing students explain to the lecturer that IT students are a &#8216;cost center&#8217; while marketing is a &#8216;profit center&#8217;. The lecture will take some marks from the IT students and give them to the marketing students.</p>
+<p style="padding-left: 30px;"><strong>7</strong> The marketing students project is to set new requirements for the IT groups project. The more ambitious the requirement the better their grade. Any requirement that is not delivered by the IT group&#8217;s assignment, is entirely the fault of the IT group.</p>
+<p style="padding-left: 30px;"><strong>8</strong> The IT students will have to complete &#8216;assignment 2.0&#8217; the following year. They will have a team of Indian exchange students to help the programmer. The team also gets a student from the psychology department to be called &#8216;HR officer&#8217;. This student deals with the team so that the IT student who is &#8216;manager&#8217; does not have to get so stressed.</p>
+<p style="padding-left: 30px;"><strong>9</strong> In the final year of study they will have to complete &#8216;assignment 3.0&#8217;. In this year the IT project group will be acquired by another university and will have to integrate their assignment with the assignment from another group in the new university.</p>
+<p style="padding-left: 30px;"><strong>10</strong> If the students in the economics school school fail a test, the MBA student team gets to retrench a non-manager IT student from the project. The retrenched IT student is not trustable, so the student will have his uni login and access cards, secretly disabled. The IT student will discover he/she is no longer part of the team when trying to use their access card, or attempting to login to a computer. This causes campus security to appear and escort the student off the university premises.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

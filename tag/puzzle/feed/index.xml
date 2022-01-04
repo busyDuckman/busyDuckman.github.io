@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Puzzle &#8211; Busy Ducks</title>
+	<atom:link href="/tag/puzzle/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Fri, 03 Jul 2015 09:34:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Puzzle &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Maze Making Software</title>
+		<link>/maze-software/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Fri, 03 Jul 2015 09:34:35 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Maze]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=476</guid>
+
+					<description><![CDATA[This software creates mazes of different sizes and configurable appearance. It is designed for teachers. It can save the output as printable sheets or bitmap images.]]></description>
+										<content:encoded><![CDATA[<h3>Overview</h3>
+<p>This software creates mazes of different sizes and configurable appearance. It is designed for teachers and makers. It can save the output as printable sheets or bitmap images.</p>
+<p>[updated terms]</p>
+<ul>
+<li>This software is provided free to use for all commercial / non-commercial / educational, puzzle publication purposes.</li>
+<li>The code is licensed under the MIT licence</li>
+<li>see <a href="https://github.com/busyDuckman/MazeMaker">https://github.com/busyDuckman/MazeMaker</a></li>
+</ul>
+<p>[how to show appreciation]</p>
+<ul>
+<li>I super appreciate getting some credit for the work, especially if you are printing a book of puzzles. Something like &#8220;puzzles created using Maze Maker software, by Dr Warren Creemers&#8221;.</li>
+<li>If you make something cool with it, I would love to see a photo/link.</li>
+<li>If you make a kids book or something like that, I&#8217;d really get a kick out of getting a free copy. Gestures like that make my day <img src="https://s.w.org/images/core/emoji/13.1.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></li>
+</ul>
+<h3>Screenshot</h3>
+<p><a href="/wp-content/uploads/2015/07/maze.png"><img loading="lazy" class="alignnone wp-image-477 size-full" src="/wp-content/uploads/2015/07/maze.png" alt="maze" width="715" height="453" srcset="/wp-content/uploads/2015/07/maze.png 715w, /wp-content/uploads/2015/07/maze-300x190.png 300w" sizes="(max-width: 715px) 100vw, 715px" /></a></p>
+<h3>Examples of different types of output</h3>
+<p><img loading="lazy" class="alignnone wp-image-480 size-full" src="/wp-content/uploads/2015/07/output_examples1.png" alt="Example Maze" width="640" height="640" srcset="/wp-content/uploads/2015/07/output_examples1.png 640w, /wp-content/uploads/2015/07/output_examples1-300x300.png 300w, /wp-content/uploads/2015/07/output_examples1-150x150.png 150w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<p>Can it do large mazes, like really large mazes?&#8230; <a href="http://www.busyducks.com/Software/_relevant_downloads/big_maze.png" target="_blank" rel="noopener noreferrer">YES</a>.</p>
+<h3>Download</h3>
+<p style="padding-left: 30px;">Install from the latest <a href="https://github.com/busyDuckman/MazeMaker/releases">release on github</a></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Download <a href="https://github.com/busyDuckman/MazeMaker/releases/download/v_0.9/maze_v0.9.zip">zip file</a>.</li>
+<li>Unzip file</li>
+<li>run setup.exe</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 30px;">First created:  2016-9-29<br />
+First published to github: 2019-09-13</p>
+<h3>Limitations:</h3>
+<ul>
+<li>Beta software (minor bugs to iron out, but quite usable)</li>
+<li>Smooth edges when wall width is set to 1 are buggy.</li>
+<li>Even line widths produce a better output.</li>
+</ul>
+<h3>What is done:</h3>
+<ul>
+<li>Generates a valid maze.</li>
+<li>Appearance is configurable.</li>
+<li>Maze size is configurable.</li>
+<li>Printing is enabled (adjust blockSize to alter print output size)</li>
+<li>Zooming in, moving etc (few minor bugs still).</li>
+<li>Support for DPI / block size.</li>
+</ul>
+<h3>Next Release</h3>
+<ul>
+<li>Bug fixes</li>
+<li>Support for graphical inserts</li>
+<li>Ascii output</li>
+</ul>
+<h3>Road Map</h3>
+<ul>
+<li>Will probably combine this with other software I have written to create a puzzle creation suite.</li>
+</ul>
+<h3>Update:</h3>
+<p>I have tentatively started working (April 2019) on a online version of this software, to be open sourced.</p>
+<h3>Contact / Feedback</h3>
+<p>Please leave feedback and bug reports via: <a href="https://github.com/busyDuckman/MazeMaker/issues">https://github.com/busyDuckman/MazeMaker/issues</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Neat maths trick with an orange. Bonus: the worst duck joke ever!</title>
+		<link>/neat-maths-trick-with-an-orange-bonus-the-worst-duck-joke-ever/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 24 Jun 2015 05:25:05 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Bad humor]]></category>
+		<category><![CDATA[Humor]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[Oranges]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<category><![CDATA[Rubber Ducks]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=375</guid>
+
+					<description><![CDATA[Draw five dots anywhere on an orange with a white board marker.  There is a way to cut the orange exactly in half so that at least four of the dots are visible on one side.  Can you figure out how? Solution in this video.]]></description>
+										<content:encoded><![CDATA[<p>Draw five dots anywhere on an orange with a white board marker.  There is a way to cut the orange exactly in half so that at least four of the dots are visible on one side.  Can you figure out how?</p>
+<p>Solution in this video.</p>
+<p><iframe loading="lazy" title="Maths trick with an orange, great for teaching and parties." width="940" height="529" src="https://www.youtube.com/embed/aabF_IBlLdE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Crossword Software (alpha)</title>
+		<link>/crossword-software-alpha/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Sat, 20 Jun 2015 16:25:05 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Crossword]]></category>
+		<category><![CDATA[Dictionary]]></category>
+		<category><![CDATA[Linguistics]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=316</guid>
+
+					<description><![CDATA[Easy to use software to generate crossword puzzles.
+This is still very much alpha software (totally unfinished). I appreciate anyone who wants to kick the tyres and let me know what they think.]]></description>
+										<content:encoded><![CDATA[<h3>Overview</h3>
+<p>Easy to use software to generate crossword puzzles.</p>
+<p>This is still very much alpha software (totally unfinished).  This crossword puzzle generator is provided here for those who would like to kick the tyres and get a preview of some upcoming software.</p>
+<p>&nbsp;</p>
+<h3>Screenshot</h3>
+<p><a href="/wp-content/uploads/2015/06/alpha_screenshot.png"><img loading="lazy" class="alignnone wp-image-321 size-full" src="/wp-content/uploads/2015/06/alpha_screenshot.png" alt="alpha_screenshot" width="821" height="733" srcset="/wp-content/uploads/2015/06/alpha_screenshot.png 821w, /wp-content/uploads/2015/06/alpha_screenshot-300x268.png 300w, /wp-content/uploads/2015/06/alpha_screenshot-768x686.png 768w" sizes="(max-width: 821px) 100vw, 821px" /></a></p>
+<p>&nbsp;</p>
+<h3></h3>
+<h3>Download</h3>
+<p style="padding-left: 30px;">Install file <a href="http://www.busyducks.com/Software/Crossword/publish.htm" target="_blank" rel="noopener">here</a></p>
+<p>&nbsp;</p>
+<h3>Limitations:</h3>
+<ul>
+<li>Apha software (very incomplete)</li>
+<li>Unimplemented menu items are greyed out..</li>
+<li>No way to save a crossword yet.</li>
+</ul>
+<h3>What is done:</h3>
+<ul>
+<li>Generates a valid cross word, generally quickly, but may stall for 20 seconds during generation.
+<ul>
+<li>Not a bug, my algorithm is not finished. If it works itself into a corner, it tries to think its way out instead of backing up a step.</li>
+</ul>
+</li>
+<li>Supports several generation rules.</li>
+<li>&#8220;View Solution&#8221; toggle enabled</li>
+<li>Gives basic clues (just a word definition at the moment)</li>
+<li>Zooming in moving etc (few minor bugs still).</li>
+</ul>
+<h3>Next Release</h3>
+<ul>
+<li>Mark squares that must/must not be used.</li>
+<li>Dictionary management</li>
+<li> Find spot for given word</li>
+<li>Find word(s) for given spot.</li>
+<li>Restrict to words of a certain readership / usage frequency.</li>
+<li>Bitmap backgrounds.</li>
+<li>High DPI screen support.</li>
+</ul>
+<h3>Road Map</h3>
+<ul>
+<li>Proper clues</li>
+<li>Subject areas option for word selection</li>
+<li>Support for visually impaired output</li>
+<li>App(ify) / Touch screen support</li>
+<li>Support for half-toning and newsprint optimisation</li>
+<li>Awesome-sauce graphics options</li>
+<li>Artistic options</li>
+<li>Use one dictionary across a series of crosswords.</li>
+<li>Multiple languages.</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Contact / Feedback</h3>
+<p>[contact-form subject=&#8217;Crossword software (via website)&#8217;][contact-field label=&#8217;Name&#8217; type=&#8217;name&#8217; required=&#8217;1&#8217;/][contact-field label=&#8217;Email&#8217; type=&#8217;email&#8217; required=&#8217;1&#8217;/][contact-field label=&#8217;Type of comment&#8217; type=&#8217;select&#8217; options=&#8217;Support,Bug Report,Feature Request,Sales Enquiry,Other&#8217;/][contact-field label=&#8217;Comment&#8217; type=&#8217;textarea&#8217; required=&#8217;1&#8217;/][/contact-form]</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>THE BEST PUZZLES #4 – &#8220;Hexagon&#8221;</title>
+		<link>/hexagon/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 17 Jun 2015 07:27:10 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=267</guid>
+
+					<description><![CDATA[Arrange the numbers 1-19 in the circles, so all the rows of 3 (between orange circles) sum to 22.]]></description>
+										<content:encoded><![CDATA[<p>I have collected (and made) a lot of cool maths &amp; logic puzzles over the years.<br />
+As too many Facebook maths problems today seem uninspired, I have decided to start posting from my collection.</p>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/06/hexagon.jpg"><img loading="lazy" class="alignnone wp-image-268 size-large" src="/wp-content/uploads/2015/06/hexagon-1024x581.jpg" alt="hexagon" width="640" height="363" srcset="/wp-content/uploads/2015/06/hexagon-1024x581.jpg 1024w, /wp-content/uploads/2015/06/hexagon-300x170.jpg 300w, /wp-content/uploads/2015/06/hexagon-768x436.jpg 768w, /wp-content/uploads/2015/06/hexagon-1536x871.jpg 1536w, /wp-content/uploads/2015/06/hexagon-2048x1162.jpg 2048w, /wp-content/uploads/2015/06/hexagon-1568x889.jpg 1568w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>This particular puzzle is from <a href="http://www.amazon.com/gp/product/0486270785/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0486270785&amp;linkCode=as2&amp;tag=busduc-20&amp;linkId=W4CK73JYPZ7MBCOP">The Moscow Puzzles</a>. This book is awesome, sold millions of copies, and is one of the best &#8220;brain teaser&#8221; books ever (first released back in the 1950&#8217;s).<br />
+It&#8217;s not a &#8220;modern self help book&#8221; so nobody is trying to market it, which means it can typically be purchased for around $4. Not bad for a book so full of great puzzles and rustic Russian charm.</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" style="border: none !important; margin: 0px !important;" src="http://ir-na.amazon-adsystem.com/e/ir?t=busduc-20&amp;l=as2&amp;o=1&amp;a=0486270785" alt="" width="1" height="1" border="0" /></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>THE BEST PUZZLES #3 – “Match Fix”</title>
+		<link>/the-best-puzzles-3-match-fix/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 16 Jun 2015 16:46:55 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=263</guid>
+
+					<description><![CDATA[Fix the equation by shifting one match.
+There are two solutions. I will leave them for you to find.]]></description>
+										<content:encoded><![CDATA[<p>I have collected (and made) a lot of cool maths &amp; logic puzzles over the years.<br />
+As too many Facebook maths problems today seem uninspired, I have decided to start posting from my collection.</p>
+<p><a href="/wp-content/uploads/2015/06/1_match_fix.jpg"><img loading="lazy" class="alignnone size-medium wp-image-265" src="/wp-content/uploads/2015/06/1_match_fix-300x189.jpg" alt="1_match_fix" width="300" height="189" srcset="/wp-content/uploads/2015/06/1_match_fix-300x189.jpg 300w, /wp-content/uploads/2015/06/1_match_fix-1024x645.jpg 1024w, /wp-content/uploads/2015/06/1_match_fix-768x484.jpg 768w, /wp-content/uploads/2015/06/1_match_fix-1536x967.jpg 1536w, /wp-content/uploads/2015/06/1_match_fix-2048x1290.jpg 2048w, /wp-content/uploads/2015/06/1_match_fix-1568x988.jpg 1568w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>There are two solutions. I will leave them for you to find.</p>
+<p>This particular puzzle is from <a href="http://www.amazon.com/gp/product/0486270785/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0486270785&amp;linkCode=as2&amp;tag=busduc-20&amp;linkId=W4CK73JYPZ7MBCOP">The Moscow Puzzles</a>. This book is awesome, sold millions of copies, and is one of the best &#8220;brain teaser&#8221; books ever (first released back in the 1950&#8217;s).<br />
+It&#8217;s not a &#8220;modern self help book&#8221; so nobody is trying to market it, which means it can typically be purchased for around $4. Not bad for a book so full of great puzzles and rustic Russian charm.</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" style="border: none !important; margin: 0px !important;" src="http://ir-na.amazon-adsystem.com/e/ir?t=busduc-20&amp;l=as2&amp;o=1&amp;a=0486270785" alt="" width="1" height="1" border="0" /></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>THE BEST PUZZLES #2 – “Three Nines”</title>
+		<link>/the-best-puzzles-2-three-nines/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 10 Jun 2015 16:47:27 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=201</guid>
+
+					<description><![CDATA[I have collected (and made) a lot of cool maths &#38; logic puzzles over the years.
+As too many Facebook maths problems today seem uninspired, I have decided to start posting from my collection.]]></description>
+										<content:encoded><![CDATA[<p>I have collected (and made) a lot of cool maths &amp; logic puzzles over the years.<br />
+As too many Facebook maths problems today seem uninspired, I have decided to start posting from my collection.</p>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/06/Three-9s.jpg"><img loading="lazy" class="alignnone wp-image-204 size-full" src="/wp-content/uploads/2015/06/Three-9s.jpg" alt="Three 9s" width="800" height="504" srcset="/wp-content/uploads/2015/06/Three-9s.jpg 800w, /wp-content/uploads/2015/06/Three-9s-300x189.jpg 300w, /wp-content/uploads/2015/06/Three-9s-768x484.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p>Select the text in yellow line below to see the answer.</p>
+<div style="padding: 12px; background-color: #edd400; color: #edd400; line-height: 1.4;">9<sup> 9-9</sup></div>
+<p>&nbsp;</p>
+<p>This particular puzzle is from a great book that I got for free when a local library discarded it.<br />
+<a href="http://www.amazon.com/gp/product/0805854045/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0805854045&amp;linkCode=as2&amp;tag=busduc-20&amp;linkId=6E4HNBX7ATGHGGXU">Teaching Middle School Mathematics [Brumbaugh, Ortiz &amp; Gresham]</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" style="border: none !important; margin: 0px !important;" src="http://ir-na.amazon-adsystem.com/e/ir?t=busduc-20&amp;l=as2&amp;o=1&amp;a=0805854045" alt="" width="1" height="1" border="0" /></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The Best Puzzles #1 &#8211; &#8220;The 7-11 Store clerk&#8221;</title>
+		<link>/the-best-puzzles-1-the-7-11-store-clerk/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 10 Jun 2015 06:03:25 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=188</guid>
+
+					<description><![CDATA[I have collected (and made) a lot of cool maths &#038; logic puzzles over the years.
+As too many Facebook maths problems today seem uninspired, I have decided to start posting from my collection.]]></description>
+										<content:encoded><![CDATA[<p>I have collected (and made) a lot of cool maths &amp; logic puzzles over the years.<br />
+As too many Facebook maths problems today seem uninspired, I have decided to start posting from my collection.<br />
+<a href="/wp-content/uploads/2015/06/7111.jpg"><img loading="lazy" class="alignnone wp-image-196 " src="/wp-content/uploads/2015/06/7111.jpg" alt="" width="534" height="554" srcset="/wp-content/uploads/2015/06/7111.jpg 800w, /wp-content/uploads/2015/06/7111-289x300.jpg 289w, /wp-content/uploads/2015/06/7111-768x797.jpg 768w" sizes="(max-width: 534px) 100vw, 534px" /></a></p>
+<p>&nbsp;</p>
+<p>Select the text in yellow line below to see the answer.</p>
+<div style="padding: 12px; background-color: #edd400; color: #edd400; line-height: 1.4;">$1.20, $1.25, $1.50, and $3.16</div>
+<p>&nbsp;</p>
+<p>This particular puzzle is from a great book that I got for free when a local library discarded it.<br />
+<a href="http://www.amazon.com/gp/product/0805854045/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0805854045&amp;linkCode=as2&amp;tag=busduc-20&amp;linkId=6E4HNBX7ATGHGGXU">Teaching Middle School Mathematics [Brumbaugh, Ortiz &amp; Gresham]</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" style="border: none !important; margin: 0px !important;" src="http://ir-na.amazon-adsystem.com/e/ir?t=busduc-20&amp;l=as2&amp;o=1&amp;a=0805854045" alt="" width="1" height="1" border="0" /></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Interpreting the Cascajal Block</title>
+		<link>/interpreting-the-cascajal-block/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 09 Mar 2015 16:21:08 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Archaeolinguistics]]></category>
+		<category><![CDATA[Cascajal Block]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=110</guid>
+
+					<description><![CDATA[There is a significant archaeological artefact, the Cascajal Block, that remains an untranslated mystery.
+
+A quite plausible purpose (and most of the translation) of the Cascajal Block jumped out at me strait away. Here is my translation, that even accounts for the infamous cootie glyph and non standard writing directions.]]></description>
+										<content:encoded><![CDATA[<h3>Background</h3>
+<p>There is a significant archaeological artefact, the Cascajal Block, that remains an untranslated mystery.</p>
+<p>Background:  <a href="http://en.wikipedia.org/wiki/Cascajal_Block" target="_blank" rel="noopener">http://en.wikipedia.org/wiki/Cascajal_Block</a> and <a href="http://www.famsi.org/mayawriting/cascajal/" target="_blank" rel="noopener">famsi.org</a></p>
+<p>A quite plausible purpose (and most of the translation) of the Cascajal Block jumped out at me straight away. After some work, I formulated an interesting hypothesis that accounts for many things, including the infamous cootie glyph and non standard writing directions.</p>
+<p><strong>Upfront:</strong> The skill-set I have in deciphering structured data does not come from linguistics; rather from years of deciphering undocumented file-formats, looking at memory dumps, examining data compression/representation, and reverse engineering data streams.  So, I&#8217;m applying my existing computer science skill set to a different field.  See what you make of my thoughts.</p>
+<h3>Explanation</h3>
+<p>I believe the tablet to be a &#8216;trade ledger&#8217;, used in a bartering economy.</p>
+<p>I colourised it to explain what I believe is going on.</p>
+<ul>
+<li>Outlines show a trade account.</li>
+<li>Glyphs shown with coloured lines are people</li>
+<li>Colour filled glyphs are businesses.</li>
+<li>All other glyphs are trade goods (note they look like food or tools)</li>
+</ul>
+<p><a href="/wp-content/uploads/2015/03/cb-translation.jpg"><img loading="lazy" class=" size-medium wp-image-112 aligncenter" src="/wp-content/uploads/2015/03/cb-translation-182x300.jpg" alt="cb translation" width="182" height="300" srcset="/wp-content/uploads/2015/03/cb-translation-182x300.jpg 182w, /wp-content/uploads/2015/03/cb-translation.jpg 436w" sizes="(max-width: 182px) 100vw, 182px" /></a></p>
+<p>Basic assumption of barter trade. I go in and give a pig, I want a knife in return. The trader says. I wan&#8217;t your pig, but don&#8217;t have a knife. Give me the pig now and I will put a knife aside for you when someone else has one to trade. Let me write this down on the ledger so I don&#8217;t &#8220;forget&#8221;.</p>
+<ul>
+<li>The trader recorded items he/she owed to people by putting a glyph for that person, followed by the items. (red circles)</li>
+<li>When someone owed him something he put the items followed by their names. (green circles)</li>
+<li>When he/she had something complex (e.g. a tool/clothing) &#8216;on order&#8217; from a business, he/she put a picture of the business below the items (blue circles).</li>
+</ul>
+<p>My explanation addresses quite a few things.</p>
+<ul>
+<li>Why the text did not run vertically
+<ul>
+<li>The accounts ran vertically (causing items to go horizontally, like a spreadsheet)</li>
+</ul>
+</li>
+<li>Why information appeared &#8220;grouped into areas&#8221;</li>
+<li>Why the cootie glyph (purple outline) had not been seen before.
+<ul>
+<li>It was used to identify a particular person (therefore unique-ish).</li>
+</ul>
+</li>
+<li>Why the inscription was so light (it was not meant for a monument).</li>
+<li>Why the surface is slightly concave (eg: the block had been rubbed clean and reused often)</li>
+<li>why the sequence of symbols were independent of each other (ie. no language structure)</li>
+<li>why each cluster of glyphs were were in different sizes.
+<ol>
+<li>important debts were in &#8216;bold&#8217;</li>
+<li>It was not written on the same day</li>
+<li>Possibly, different people worked at this trading business.</li>
+</ol>
+</li>
+</ul>
+<p>Why my interpretation holds an internal logical consistency.</p>
+<ul>
+<li>Name glyphs never appear in the trade section and vice versa</li>
+<li>If you look you can see where recording items owed for some people ran out of room and the trader made a new entry.</li>
+<li>food like trade items often shown near people</li>
+<li>tool like trade items are only shown near businesses</li>
+<li>the name glyphs are more intricate than the trade glyphs.</li>
+<li>Looking at the stone tablet directly, I also believe a flat stone was rubbed over paid debts to signify the job was done.</li>
+</ul>
+<p>As this is not my field of research, everything above is pure speculation. I certainly don&#8217;t claim to have &#8216;solved&#8217; anything; I am simply making my speculations public.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

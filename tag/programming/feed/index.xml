@@ -1,0 +1,1898 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>programming &#8211; Busy Ducks</title>
+	<atom:link href="/tag/programming/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Thu, 16 Nov 2017 10:28:29 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>programming &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>SpeakingDuck (Maven plugin for java resource bundle transition.)</title>
+		<link>/speakingduck-maven-plugin-for-java-resource-bundle-transitional/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 16 Nov 2017 10:28:29 +0000</pubDate>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[i18n]]></category>
+		<category><![CDATA[java]]></category>
+		<category><![CDATA[Linguistics]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=896</guid>
+
+					<description><![CDATA[Developing multi-lingual applications in java seems a pain, to me anyway. There are resource bundles and a localisation API &#8211; which are well documented. I wanted to auto translate these bundles, and then have friends look over and refine the translations later. I did not want some heavy weight application to manage properties files etc. &#8230;<br><a href="/speakingduck-maven-plugin-for-java-resource-bundle-transitional/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">SpeakingDuck (Maven plugin for java resource bundle transition.)</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Developing multi-lingual applications in java seems a pain, to me anyway.<br />
+There are resource bundles and a localisation API &#8211; which are <a href="https://docs.oracle.com/javase/tutorial/i18n/intro/steps.html">well documented</a>.</p>
+<p>I wanted to auto translate these bundles, and then have friends look over and refine the translations later.</p>
+<ul>
+<li>I did not want some heavy weight application to manage properties files etc.</li>
+<li>I found some simple auto translation tools, some free-ish, some pay-per-say. But they did not support java resource bundles.
+<ul>
+<li>I liked <a href="https://github.com/soimort/translate-shell">translate shell</a> a lot.</li>
+</ul>
+</li>
+<li>Few tools supported maven</li>
+<li>But nothing just worked</li>
+</ul>
+<p>So I created a quick maven plugin to translate resource bundles, by calling whatever tool you setup.</p>
+<p>Stuk it on github, will attempt to register it with maven.</p>
+<p><a href="https://github.com/busyDuckman/speakingDuck">https://github.com/busyDuckman/speakingDuck</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OpenXeen</title>
+		<link>/openxeen/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Sat, 05 Nov 2016 14:29:49 +0000</pubDate>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Games]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[Xeen]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=816</guid>
+
+					<description><![CDATA[Overview OpenXeen is a game engine rewrite I have been working on for Might and Magic III, IV and V . It&#8217;s opensource and still under development. Currently it brings up monsters, objects, and most of the outdoor environment. Resources: Git: here Wiki: here Development Blog: here State of openXeen features Interested in contributing Xeen &#8230;<br><a href="/openxeen/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">OpenXeen</span></a>]]></description>
+										<content:encoded><![CDATA[<h1>Overview</h1>
+<p>OpenXeen is a game engine rewrite I have been working on for Might and Magic III, IV and V . It&#8217;s opensource and still under development.</p>
+<p>Currently it brings up monsters, objects, and most of the outdoor environment.</p>
+<p><a href="/wp-content/uploads/2016/11/openXeen13.png"><img loading="lazy" class="alignnone size-large wp-image-818" src="/wp-content/uploads/2016/11/openXeen13-1024x683.png" alt="openxeen13" width="640" height="427" srcset="/wp-content/uploads/2016/11/openXeen13-1024x683.png 1024w, /wp-content/uploads/2016/11/openXeen13-300x200.png 300w, /wp-content/uploads/2016/11/openXeen13-768x512.png 768w, /wp-content/uploads/2016/11/openXeen13.png 1306w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>Resources:</p>
+<ul>
+<li>Git: <a href="https://github.com/busyDuckman/OpenXeen">here</a></li>
+<li>Wiki: <a href="https://github.com/busyDuckman/OpenXeen/wiki">here</a></li>
+<li>Development Blog: <a href="https://github.com/busyDuckman/OpenXeen/wiki/A-Development-BLOG-(in-screenshots)">here</a></li>
+<li>State of openXeen <a href="https://github.com/busyDuckman/OpenXeen/wiki/Features">features</a></li>
+<li>Interested in <a href="https://github.com/busyDuckman/OpenXeen/wiki/Contributing">contributing</a></li>
+<li>Xeen development related <a href="https://github.com/busyDuckman/OpenXeen/wiki/Xeen-related-links">links</a></li>
+<li>The <a href="http://xeen.wikia.com/wiki/Xeen_Wiki">xeen wiki</a> (the groundwork reverse engineering project that OpenXeen stands on top of)</li>
+</ul>
+<p>Status:</p>
+<ul>
+<li>Software is not ready for release.</li>
+<li>At the moment it can:
+<ul>
+<li>Parse the cc files and open some graphics and audio files</li>
+<li>Parse some map info</li>
+<li>Create proxies of all files in cc files.</li>
+<li>Display a simple rendering of some xeen components. NB: First run will take some time, proxy files are being created.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Might and magic III (Isles of Terra) support.</h1>
+<p>I have got the MAMIII GUI up, and decoded some sprites. Not much more to show yet.</p>
+<p>I am by no means a proficient at reverse engineering software, however I wrote up a quick primer on how I was using the <a href="https://github.com/busyDuckman/OpenXeen/wiki/A-Development-BLOG-(in-screenshots)#july-17th-2016-reverse-engineering-mm3">cpu logs generated by the dosbox debugger</a>, to recover some MM3 data.</p>
+<p><a href="/wp-content/uploads/2016/11/openXeen12.png"><img loading="lazy" class="alignnone size-large wp-image-819" src="/wp-content/uploads/2016/11/openXeen12-1024x683.png" alt="openxeen12" width="640" height="427" srcset="/wp-content/uploads/2016/11/openXeen12-1024x683.png 1024w, /wp-content/uploads/2016/11/openXeen12-300x200.png 300w, /wp-content/uploads/2016/11/openXeen12-768x512.png 768w, /wp-content/uploads/2016/11/openXeen12.png 1306w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<h1>Related Links</h1>
+<p>Tools:</p>
+<ul>
+<li><a href="http://games.playazlounge.net/#UserUtilities">Xeen Utilities</a></li>
+<li><a href="https://github.com/rwfpl/rewolf-mm3-dumper">MM3 Dumper</a></li>
+</ul>
+<p>Mods:</p>
+<ul>
+<li><a href="http://www.jeffludwig.com/xeen/download.php">respawn mod</a></li>
+</ul>
+<p>Xeen Info Gneral:</p>
+<ul>
+<li>Xeen Wiki: <a href="http://xeen.wikia.com/wiki/Xeen_Wiki">http://xeen.wikia.com/wiki/Xeen_Wiki</a></li>
+<li>CC file format: <a href="http://rewiki.regengedanken.de/wiki/.CC">http://rewiki.regengedanken.de/wiki/.CC</a></li>
+<li>MM3 CC file: <a href="http://rewiki.regengedanken.de/wiki/MM3.CC">http://rewiki.regengedanken.de/wiki/MM3.CC</a></li>
+<li>MM3 CC file LHZ compression: <a href="http://blog.rewolf.pl/blog/?p=1202">http://blog.rewolf.pl/blog/?p=1202</a></li>
+</ul>
+<p>Xeen modding</p>
+<ul>
+<li>MM3 modding page: <a href="http://jeffludwig.com/mm3/resources.php">http://jeffludwig.com/mm3/resources.php</a></li>
+</ul>
+<p>Xeen Cluebooks</p>
+<ul>
+<li>MM3: <a href="http://www.abandonia.com/files/extras/25850_game_extra_1.pdf">http://www.abandonia.com/files/extras/25850_game_extra_1.pdf</a></li>
+<li>WoX: <a href="http://www.abandonia.com/files/extras/26962_Extra%20document_Cluebooks.zip">http://www.abandonia.com/files/extras/26962_Extra%20document_Cluebooks.zip</a></li>
+</ul>
+<p>MM3 Releases</p>
+<ul>
+<li>DOS: <a href="http://www.abandonia.com/en/games/1035/Might+and+Magic+III+-+Isles+of+Terra.html">http://www.abandonia.com/en/games/1035/Might+and+Magic+III+-+Isles+of+Terra.html</a></li>
+<li>Amiga: <a href="http://www.lemonamiga.com/?game_id=3142">http://www.lemonamiga.com/?game_id=3142</a></li>
+<li>SNES</li>
+</ul>
+<p>WoX Releases</p>
+<ul>
+<li>Dos: <a href="http://www.abandonia.com/en/games/482/Might+and+Magic+IV+and+V+-+World+Of+Xeen.html">http://www.abandonia.com/en/games/482/Might+and+Magic+IV+and+V+-+World+Of+Xeen.html</a></li>
+<li>Mac:</li>
+<li>PC-98</li>
+</ul>
+<p>&#8220;Vintage&#8221; Computing:</p>
+<ul>
+<li>File Formats from the C64: <a href="http://petlibrary.tripod.com/formats.htm">http://petlibrary.tripod.com/formats.htm</a></li>
+</ul>
+<p>Reference Code</p>
+<ul>
+<li>LHZ <a href="https://github.com/rwfpl/rewolf-mm3-dumper">https://github.com/rwfpl/rewolf-mm3-dumper</a></li>
+<li>Xbr</li>
+</ul>
+<p>Other WoX Engines:</p>
+<ul>
+<li>DeamMasters Xeen engine in scumvm <a href="https://github.com/dreammaster/scummvm/tree/xeen">https://github.com/dreammaster/scummvm/tree/xeen</a>and <a href="https://github.com/roguevm/roguevm/find/xeen">https://github.com/roguevm/roguevm/find/xeen</a></li>
+</ul>
+<p>Articles on the History of MaM</p>
+<ul>
+<li>5 pages covering the series:<a href="http://www.hardcoregaming101.net/mightandmagic/mightandmagic3.htm">http://www.hardcoregaming101.net/mightandmagic/mightandmagic3.htm</a></li>
+</ul>
+<p>Reverse Engineering Dos Games:</p>
+<ul>
+<li>A good primer <a href="http://wiki.scummvm.org/index.php/HOWTO-Reverse_Engineering">http://wiki.scummvm.org/index.php/HOWTO-Reverse_Engineering</a></li>
+<li>Dosbox 0.74 debug build: <a href="http://source.dosbox.com/dosbox-74-debug.exe">http://source.dosbox.com/dosbox-74-debug.exe</a></li>
+<li>Bridging IRA to dosbox <a href="https://github.com/wjp/idados">https://github.com/wjp/idados</a></li>
+<li>Driving the dosbox debugger: <a href="http://www.vogons.org/viewtopic.php?t=3944">http://www.vogons.org/viewtopic.php?t=3944</a></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>Code Audit, first release &#8211; v0.1.0 alpha</h1>
+<p>(From my <a href="https://github.com/busyDuckman/OpenXeen/wiki/A-Development-BLOG-(in-screenshots)">dev blog</a>)</p>
+<p><a href="/wp-content/uploads/2016/11/loc_chart_v0_1.png"><img loading="lazy" class="alignnone size-large wp-image-820" src="/wp-content/uploads/2016/11/loc_chart_v0_1-1024x716.png" alt="loc_chart_v0_1" width="640" height="448" srcset="/wp-content/uploads/2016/11/loc_chart_v0_1-1024x716.png 1024w, /wp-content/uploads/2016/11/loc_chart_v0_1-300x210.png 300w, /wp-content/uploads/2016/11/loc_chart_v0_1-768x537.png 768w, /wp-content/uploads/2016/11/loc_chart_v0_1.png 1101w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>With this first release I wanted to take stock of where the code is at, where I am heading and what my time is being spent on. I have a job and a family, so openXeen is largely coded in at night or when I can grab 5 minutes. This forces me to code in a manor &#8216;resistant to interruptions&#8217; (finish one logical area at a time, use a fully thought out architecture).</p>
+<p>What I also need to do Is audit how much time I spend on what. Which is where this line of code by package breakdown comes into play. It breaks my 8.8k lines of code down, telling me where my effort has been spent. I aim to update this graph at every delivery milestone. What I learnt:</p>
+<ul>
+<li>1/3 of the code is concerned with reading and loading files contained in the .cc archives (reds)</li>
+<li>1/3 of the code is &#8216;toolbox code&#8217; (oranges), stuff that is not relevant to xeen, and ideally would have been provided by java or a 3rd party library.</li>
+<li>1/6 is in game mechanics (blues), arguably this is an over investment in mechanics early on. But I am prioritising having a &#8216;game&#8217; by the end of the year, not a tech demo.</li>
+<li>1/6 is in rendering (greens). The rendering code has been kept as simple as possible. I love to write rendering engines, and know this is a trap. You spend far too much time on rendering &#8216;goodies&#8217;, then your engine was built without respect to the actual game (because the game did not exist yet) and you have nothing to show in your render. Your&#8217;e exhausted, and sometimes coded into a corner.</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Arduino Graphing Libraries</title>
+		<link>/arduino-graphing-libraries/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 08 Feb 2016 13:58:47 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[GNUPlot]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Graphs]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=754</guid>
+
+					<description><![CDATA[Here is a library to write GNUPlot output from the Arduino. Now the Arduino can produce a graph output that is directly renderable across multiple platforms and cloud services. Does not rely on some gone tomorrow software + lets you edit the plot afterward.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p style="padding-left: 30px;">I believe strongly in plotting the data that I obtain, because plots tell you a story and they don&#8217;t mislead you like summary statistics can.</p>
+<p style="padding-left: 30px;">Often I want to plot data the arduino has acquired, but I find existing solutions don&#8217;t suit my needs. So I went out and made my own solution which writes a GNUPlot script in response to plot commands. I integrated the library with my general Arduino Toolbox (WDArduinoLib) and am releasing it under the GNU 2.0 License.</p>
+<h1>Goals</h1>
+<ul>
+<li>Professional graphics</li>
+<li>Graphs manually editable after plotting for change colours etc.</li>
+<li>Arduino outputs data that  other people can defiantly grab and use (just paste into a cloud based GNUPlot terminal)</li>
+<li>Allow embedded linux system to offload the plotting of graphs from arduino collected data</li>
+<li>Easy straight forward API</li>
+<li>Linux, Windows and Mac compatible.</li>
+<li>Quality API documentation</li>
+</ul>
+<h1>Features</h1>
+<ul>
+<li>Configurable output
+<ul>
+<li>You can use a Serial Port, SD-Card,  Telnet, TCP-IP, IrDA, whatever. So long as it derives from the Arduino Print class (ie has Print and Println()) this library can output a graph to it</li>
+</ul>
+</li>
+<li>Uses <a href="http://www.gnuplot.info/" target="_blank" rel="noopener">GNUPlot</a> as a server to execute the plot script this API outputs.
+<ul>
+<li>GNUPlot is the standard for scientific publication, it outputs presentable graphics ready for both websites, and software manuals.</li>
+<li>GNUPlot has been around forever (1986) and is still actively developed.</li>
+<li>GNUPlot can run on the Raspberry pi, PC, Mac or even online via <a href="http://plotshare.com/" target="_blank" rel="noopener">http://plotshare.com/</a></li>
+</ul>
+</li>
+<li>Extensible
+<ul>
+<li>Easily over-rideable classes to add new plot types or different output terminal (eg Matlab)</li>
+</ul>
+</li>
+<li>Built in quality colour palettes designed for graphing.
+<ul>
+<li>Sample palettes for showing importance, of keeping different coloured categories at the same intensity.</li>
+<li>Spectral palettes , optimised for on-white graphing.</li>
+<li>Colour-blind compatible palettes .</li>
+<li>Can still use arbitrary 24bit RGB colours if you like.</li>
+</ul>
+</li>
+<li>Unit tested library to support quality software development</li>
+<li>Template driven code designed for maximum data flexibility</li>
+<li>Memory Efficient.
+<ul>
+<li>Use of progmem strings supported throughout.</li>
+</ul>
+</li>
+<li>Useful, stable data format that does not rely on someone&#8217;s pet project still existing in 5 years time.</li>
+<li>All input, including text, is validated.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Examples</h1>
+<p style="padding-left: 30px;">This library is simple to use and produces clean results with minimal configuration. I present several basic examples that show the API in use and the results obtained.</p>
+<hr />
+<h2>Example: Basic Line Graph</h2>
+<p style="padding-left: 30px;">Line plots of time series data are probably the most important feature any graphing API targeted for micro-controllers can offer. This code creates such a plot. It demonstrates the use of multiple line styles.</p>
+<pre class="height-set:true height:800 lang:c++ decode:true">//main
+GNUPlotLineGraph gnuLinePlotter(&amp;Serial);
+PlotDampenedSineWaves(gnuLinePlotter);
+
+//method
+void PlotDampenedSineWaves(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Dampened Sine Wave"));
+	plot.setXAxisName(F("Time (Sec)"));
+	plot.setYAxisName(F("Voltage (V)"));
+
+	//setup series
+	plot.setSeriesName(0, F("Slow decay"));
+	plot.getLineApperance(0)-&gt;setLineStyle(LineStyles::SolidLine);
+	plot.getLineApperance(0)-&gt;setLineWidth(4);
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeBlues::Blue1);
+
+
+	plot.setSeriesName(1, F("Medium decay"));
+	plot.getLineApperance(1)-&gt;setLineStyle(LineStyles::DashedLine);
+	plot.getLineApperance(1)-&gt;setLineWidth(3);
+	plot.getLineApperance(1)-&gt;setRGB(GraphColorsSchemeBlues::Blue2);
+
+	plot.setSeriesName(2, F("Quick decay"));
+	plot.getLineApperance(2)-&gt;setLineStyle(LineStyles::DotedLine);
+	plot.getLineApperance(2)-&gt;setLineWidth(2);
+	plot.getLineApperance(2)-&gt;setRGB(GraphColorsSchemeBlues::Blue3);
+	
+        //plot graph
+	for(int i=0; i&lt;=720; i+=3)
+	{
+		float c = cos(DEG_TO_RAD*(float)i); 
+		float y1 = Dampen(i, c, 1, 1.0/360.0); 
+		float y2 = Dampen(i, c, 1, 1.0/240.0); 
+		float y3 = Dampen(i, c, 1, 1.0/180.0); 
+
+		plot.plotDatumXYn(i, y1, y2, y3);
+	}
+	plot.finishGraph();
+}
+
+</pre>
+<p><a href="/wp-content/uploads/2015/12/Damped-Sine-Wave.png" rel="attachment wp-att-757"><img loading="lazy" class="size-full wp-image-757 aligncenter" src="/wp-content/uploads/2015/12/Damped-Sine-Wave.png" alt="Damped Sine Wave" width="800" height="600" srcset="/wp-content/uploads/2015/12/Damped-Sine-Wave.png 800w, /wp-content/uploads/2015/12/Damped-Sine-Wave-300x225.png 300w, /wp-content/uploads/2015/12/Damped-Sine-Wave-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p>&nbsp;</p>
+<hr />
+<h2>Example: Plotting Points (Scatter Plot)</h2>
+<p style="padding-left: 30px;">A scatter plots, with styles colours and trimmings.</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotPointGraph gnuPointPlotter(&amp;Serial);
+PlotPointNoise(gnuPointPlotter);
+
+//method
+void PlotPointNoise(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Sine Waves with Noise"));
+	plot.setXAxisName(F("Time (Sec)"));
+	plot.setYAxisName(F("Voltage (V)"));
+	plot.setShowGrid(true);
+
+	//setup series
+	plot.setSeriesName(0, F("Pin 1"));
+	plot.getLineApperance(0)-&gt;setMarkerStyle(LineMarkers::SquareMarker);
+	plot.getLineApperance(0)-&gt;setRGB(0xff0000);
+
+	plot.setSeriesName(1, F("Pin 2"));
+	plot.getLineApperance(1)-&gt;setMarkerStyle(LineMarkers::CrossMarker);
+	plot.getLineApperance(1)-&gt;setRGB(0x00ff00);
+
+	plot.setSeriesName(2, F("Pin 3"));
+	plot.getLineApperance(2)-&gt;setMarkerStyle(LineMarkers::CircleMarker);
+	plot.getLineApperance(2)-&gt;setRGB(0x0000ff);
+	
+        //plot graph
+	for(int i=0; i&lt;=720; i+=5)
+	{
+		float c = cos(DEG_TO_RAD*(float)i); 
+		float y1 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/240.0); 
+		float y2 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/180.0)-2; 
+		float y3 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/90.0)-4; 
+
+		plot.plotDatumXYn(i, y1, y2, y3);
+	}
+	plot.finishGraph();
+}
+
+</pre>
+<p><a href="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png" rel="attachment wp-att-755"><img loading="lazy" class="size-full wp-image-755 aligncenter" src="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png" alt="Sine Wave with Noise" width="800" height="600" srcset="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png 800w, /wp-content/uploads/2015/12/Sine-Wave-with-Noise-300x225.png 300w, /wp-content/uploads/2015/12/Sine-Wave-with-Noise-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p>&nbsp;</p>
+<hr />
+<h2>Example: Plotting Arbitrary Lines</h2>
+<p style="padding-left: 30px;">Sometimes your not using time series data, and need to plot lines between arbitrary x/y positions. Many solutions for the arduino breakdown at this point. Here I demonstrate such a plot (based on the logarithmic spiral). Note I am using lines with point markers to show the actual points plotted.</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotLineGraph gnuLinePlotter(&amp;Serial);
+PlotLogarithmicSpiral(gnuLinePlotter);
+
+//method
+void PlotLogarithmicSpiral(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Logarithmic Spiral"));
+
+	//setup series
+	plot.setSeriesName(0, F("Spiral"));
+	plot.getLineApperance(0)-&gt;setLineWidth(2);
+	plot.getLineApperance(0)-&gt;setMarkerStyle(LineMarkers::SolidCircleMarker);
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeSpectral::Spectral7);
+		
+	//plot graph
+	float a = 1;
+	float b = 0.1759;
+	for(int i=0; i&lt;(int)(10.0*20.0*M_PI); i+=5)
+	{
+		float t = ((float)i) * 0.1;
+		float rt = a*pow(M_E, b* t);
+		float x = rt*cos(t);
+		float y = rt*sin(t);
+
+		plot.plotDatumXY(x, y);
+	}
+
+	plot.finishGraph();
+}</pre>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/12/Logarithmic-Spiral.png" rel="attachment wp-att-761"><img loading="lazy" class="size-full wp-image-761 aligncenter" src="/wp-content/uploads/2015/12/Logarithmic-Spiral.png" alt="Logarithmic Spiral" width="800" height="600" srcset="/wp-content/uploads/2015/12/Logarithmic-Spiral.png 800w, /wp-content/uploads/2015/12/Logarithmic-Spiral-300x225.png 300w, /wp-content/uploads/2015/12/Logarithmic-Spiral-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<hr />
+<h2>Example: Multi Column Bar Graph.</h2>
+<p style="padding-left: 30px;">Bar graphs, for histograms and such are easy in this API. The example below shows support for multi column graphs, Note: negative values are also supported. The labels for the X-Axis are plotted as standard x values (the plot command is template driven and can support many different types of data).</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotBarGraph gnuBarPlotter(&amp;Serial);
+PlotSampleBarGraph(gnuBarPlotter);
+
+//method
+void PlotSampleBarGraph(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Google Results for Instruments"));
+	plot.setXAxisName(F("Instrument"));
+	plot.setYAxisName(F("# Google Results (millions)"));
+	plot.setShowGrid(true);
+
+	//setup series
+	plot.setSeriesName(0, F("play"));
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeOranges::Orange1);
+	plot.setSeriesName(1, F("teach"));
+	plot.getLineApperance(1)-&gt;setRGB(GraphColorsSchemeBlues::Blue1);
+	plot.setSeriesName(2, F("like"));
+	plot.getLineApperance(2)-&gt;setRGB(GraphColorsSchemeGreens::Green1);
+	plot.setSeriesName(3, F("hate"));
+	plot.getLineApperance(3)-&gt;setRGB(GraphColorsSchemeReds::Red1);
+
+	//plot graph
+	//Dataset compiled by Google-ing "I X the Y"
+	//                instrument	play	teach	like	hate
+	plot.plotDatumXYn("Piano",		173,	25,		211,	21);
+	plot.plotDatumXYn("Guitar",		163,	22,		193,	27);
+	plot.plotDatumXYn("Violin",     41,		2,		43,		1);
+	plot.plotDatumXYn("Drums",		30,		8,		83,		9);
+	
+	plot.finishGraph();
+}</pre>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png" rel="attachment wp-att-762"><img loading="lazy" class="size-full wp-image-762 aligncenter" src="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png" alt="Google Results for Instruments" width="800" height="600" srcset="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png 800w, /wp-content/uploads/2015/12/Google-Results-for-Instruments-300x225.png 300w, /wp-content/uploads/2015/12/Google-Results-for-Instruments-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<h1>Installation</h1>
+<p>&nbsp;</p>
+<ol>
+<li>Get the library from its <a href="https://github.com/busyDuckman/WDArduinoLib" target="_blank" rel="noopener">github repository</a>.</li>
+<li>See the official guide on how to install libraries <a href="https://www.arduino.cc/en/Guide/Libraries" target="_blank" rel="noopener">https://www.arduino.cc/en/Guide/Libraries</a></li>
+<li>Run the provided example sketch</li>
+<li>Install GNUPlot v5.0 or later (<a href="http://www.gnuplot.info/download.html" target="_blank" rel="noopener">here</a>).</li>
+<li>Using the com port viewer, copy the output of sketch into GNUPlot.</li>
+<li>Enjoy!</li>
+</ol>
+<p>It is very possible to get the output generated by this library to GNUPlot automatically. How you achieve this is up to you.</p>
+<p>It is possible to direct the output to a SD card. See the arduino help page on the <a href="https://www.arduino.cc/en/Tutorial/Files" target="_blank" rel="noopener">file class</a>, to create you own file on a SD card. Then pass the open file object in to the constructor for your plotting class (where I used Serial in the examples).</p>
+<h1></h1>
+<h1>Documentation</h1>
+<p style="padding-left: 30px;">Full documentation available <a href="http://www.busyducks.com/downloads/doco/WDArduinoLib/index.html" target="_blank" rel="noopener">here</a>.</p>
+<p>&nbsp;</p>
+<h1>License</h1>
+<p style="padding-left: 30px;">GNU 2.0</p>
+<h1>State</h1>
+<p>Most Features are well tested, but I don&#8217;t warrant or accept liability for any of the functionality in any way.</p>
+<p>NB: some dynamic memory usage , refrain from using malloc during plotting operations to prevent possible heap fragmentation.</p>
+<ul>
+<li>Dynamic memory usage is a design decision I made weighing pro&#8217;s and con&#8217;s of the situation.</li>
+<li>Given &#8216;typical usage&#8217; scenarios of the API it should not cause heap fragmentation.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Road-Map</h1>
+<p>May happen:</p>
+<ul>
+<li>Second x/y axis support</li>
+<li>Matlab support</li>
+<li>3d plots</li>
+<li>Spectrogram</li>
+<li>Support for cloud based rendering for graphs</li>
+<li>Sage support</li>
+<li>Thousands separator (right now I could not deploy it because of a bug in the windows version of GNUPlot).</li>
+</ul>
+<p>Won&#8217;t Happen:</p>
+<ul>
+<li>Real-time visualisation (plenty of other projects to do that already)</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>ASCII-Art Arduino Pinouts</title>
+		<link>/ascii-art-arduino-pinouts/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 16 Nov 2015 18:09:31 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=704</guid>
+
+					<description><![CDATA[Managing arduino projects can be a nightmare because its hard to keep track of your hardware setup in your code comments.  To enable easy documentation of pin assignments, I created a couple of ASCII art arduino pin-outs.
+
+These come complete with ports, PWM and coms all marked. Simply paste as a comment into your code and marvel at your new found organisation.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p style="padding-left: 30px;">Managing arduino projects can be a nightmare because you only see the software side in your code documentation, the hardware is hard to keep track off.</p>
+<p style="padding-left: 30px;">To enable easy documentation of pin assignments, I created a couple of ASCII art arduinos; complete with ports, PWM and coms all marked. Simply paste as a comment into your code and marvel at your new found organisation.</p>
+<p style="padding-left: 30px;">I suggest altering the image (eg. a letter or X in the [ ]) to keep track of the pins you ended up using.</p>
+<p style="padding-left: 30px;">Find this project on <a href="https://github.com/busyDuckman/ascii-art-arduinos">gitHub</a></p>
+<h1>Plain Text &#8211; Arduino Pinout</h1>
+<p style="padding-left: 30px;">Here is copy/paste-able Arduino Pinout ASCII art ready to go (tip: you can use the copy button, at the top of each ASCII art piece, to make the process easy).<br />
+<em>     <span style="color: #999999;">I place them in the Creatice Commons [Creative Commons Attribution (BY) license]. </span></em><br />
+<span style="color: #999999;"><em>     Attribution via the url: &#8220;http://busyducks.com/ascii-art-arduinos&#8221;</em></span></p>
+<pre class="lang:c++ decode:true">                                      +-----+
+         +----[PWR]-------------------| USB |--+
+         |                            +-----+  |
+         |         GND/RST2  [ ][ ]            |
+         |       MOSI2/SCK2  [ ][ ]  A5/SCL[ ] |   C5 
+         |          5V/MISO2 [ ][ ]  A4/SDA[ ] |   C4 
+         |                             AREF[ ] |
+         |                              GND[ ] |
+         | [ ]N/C                    SCK/13[ ] |   B5
+         | [ ]IOREF                 MISO/12[ ] |   .
+         | [ ]RST                   MOSI/11[ ]~|   .
+         | [ ]3V3    +---+               10[ ]~|   .
+         | [ ]5v    -| A |-               9[ ]~|   .
+         | [ ]GND   -| R |-               8[ ] |   B0
+         | [ ]GND   -| D |-                    |
+         | [ ]Vin   -| U |-               7[ ] |   D7
+         |          -| I |-               6[ ]~|   .
+         | [ ]A0    -| N |-               5[ ]~|   .
+         | [ ]A1    -| O |-               4[ ] |   .
+         | [ ]A2     +---+           INT1/3[ ]~|   .
+         | [ ]A3                     INT0/2[ ] |   .
+         | [ ]A4/SDA  RST SCK MISO     TX&gt;1[ ] |   .
+         | [ ]A5/SCL  [ ] [ ] [ ]      RX&lt;0[ ] |   D0
+         |            [ ] [ ] [ ]              |
+         |  UNO_R3    GND MOSI 5V  ____________/
+          \_______________________/
+		  
+		  http://busyducks.com/ascii-art-arduinos</pre>
+<pre class="lang:c++ decode:true ">                                      +-----+
+         +----[PWR]-------------------| USB |--+
+         |                            +-----+  |
+         |           GND/RST2  [ ] [ ]         |
+         |         MOSI2/SCK2  [ ] [ ]  SCL[ ] |   D0
+         |            5V/MISO2 [ ] [ ]  SDA[ ] |   D1
+         |                             AREF[ ] |
+         |                              GND[ ] |
+         | [ ]N/C                        13[ ]~|   B7
+         | [ ]IOREF                      12[ ]~|   B6
+         | [ ]RST                        11[ ]~|   B5
+         | [ ]3V3      +----------+      10[ ]~|   B4
+         | [ ]5v       | ARDUINO  |       9[ ]~|   H6
+         | [ ]GND      |   MEGA   |       8[ ]~|   H5
+         | [ ]GND      +----------+            |
+         | [ ]Vin                         7[ ]~|   H4
+         |                                6[ ]~|   H3
+         | [ ]A0                          5[ ]~|   E3
+         | [ ]A1                          4[ ]~|   G5
+         | [ ]A2                     INT5/3[ ]~|   E5
+         | [ ]A3                     INT4/2[ ]~|   E4
+         | [ ]A4                       TX&gt;1[ ]~|   E1
+         | [ ]A5                       RX&lt;0[ ]~|   E0
+         | [ ]A6                               |   
+         | [ ]A7                     TX3/14[ ] |   J1
+         |                           RX3/15[ ] |   J0
+         | [ ]A8                     TX2/16[ ] |   H1         
+         | [ ]A9                     RX2/17[ ] |   H0
+         | [ ]A10               TX1/INT3/18[ ] |   D3         
+         | [ ]A11               RX1/INT2/19[ ] |   D2
+         | [ ]A12           I2C-SDA/INT1/20[ ] |   D1         
+         | [ ]A13           I2C-SCL/INT0/21[ ] |   D0
+         | [ ]A14                              |            
+         | [ ]A15                              |   Ports:
+         |                RST SCK MISO         |    22=A0  23=A1   
+         |         ICSP   [ ] [ ] [ ]          |    24=A2  25=A3   
+         |                [ ] [ ] [ ]          |    26=A4  27=A5   
+         |                GND MOSI 5V          |    28=A6  29=A7   
+         | G                                   |    30=C7  31=C6   
+         | N 5 5 4 4 4 4 4 3 3 3 3 3 2 2 2 2 5 |    32=C5  33=C4   
+         | D 2 0 8 6 4 2 0 8 6 4 2 0 8 6 4 2 V |    34=C3  35=C2   
+         |         ~ ~                         |    36=C1  37=C0   
+         | @ # # # # # # # # # # # # # # # # @ |    38=D7  39=G2    
+         | @ # # # # # # # # # # # # # # # # @ |    40=G1  41=G0   
+         |           ~                         |    42=L7  43=L6   
+         | G 5 5 4 4 4 4 4 3 3 3 3 3 2 2 2 2 5 |    44=L5  45=L4   
+         | N 3 1 9 7 5 3 1 9 7 5 3 1 9 7 5 3 V |    46=L3  47=L2   
+         | D                                   |    48=L1  49=L0    SPI:
+         |                                     |    50=B3  51=B2     50=MISO 51=MOSI
+         |     2560                ____________/    52=B1  53=B0     52=SCK  53=SS 
+          \_______________________/         
+         
+         http://busyducks.com/ascii-art-arduinos</pre>
+<p style="padding-left: 30px;">You may notice that the clean layout of these diagrams makes them very readable, personally I feel many graphical versions present too much information at once.</p>
+<h3>Some Updates (new models)</h3>
+<p style="padding-left: 30px;">This idea seems to have caught on quickly, so I will keep the art coming.</p>
+<p style="padding-left: 30px;">Redit user <em>plasticluthier</em> adapted a nano version <a href="https://www.reddit.com/r/arduino/comments/3tb0d2/i_made_some_asciiart_arduinos_to_paste_in/" target="_blank" rel="noopener">here</a>, I thought that was spiffy, so I fixed an error tweaked it a bit and added chips and ports.</p>
+<pre class="lang:c++ decode:true">                      +-----+
+         +------------| USB |------------+
+         |            +-----+            |
+    B5   | [ ]D13/SCK        MISO/D12[ ] |   B4
+         | [ ]3.3V           MOSI/D11[ ]~|   B3
+         | [ ]V.ref     ___    SS/D10[ ]~|   B2
+    C0   | [ ]A0       / N \       D9[ ]~|   B1
+    C1   | [ ]A1      /  A  \      D8[ ] |   B0
+    C2   | [ ]A2      \  N  /      D7[ ] |   D7
+    C3   | [ ]A3       \_0_/       D6[ ]~|   D6
+    C4   | [ ]A4/SDA               D5[ ]~|   D5
+    C5   | [ ]A5/SCL               D4[ ] |   D4
+         | [ ]A6              INT1/D3[ ]~|   D3
+         | [ ]A7              INT0/D2[ ] |   D2
+         | [ ]5V                  GND[ ] |     
+    C6   | [ ]RST                 RST[ ] |   C6
+         | [ ]GND   5V MOSI GND   TX1[ ] |   D0
+         | [ ]Vin   [ ] [ ] [ ]   RX1[ ] |   D1
+         |          [ ] [ ] [ ]          |
+         |          MISO SCK RST         |
+         | NANO-V3                       |
+         +-------------------------------+
+         
+         http://busyducks.com/ascii-art-arduinos</pre>
+<p style="padding-left: 30px;">I have a Pro Mini project coming up, so knocked one of these out as well.</p>
+<pre class="lang:c++ decode:true">		                  D0   D1   RST
+		   GND  GND  VCC  RX   TX   /DTR
+        +--------------------------------+
+        |  [ ]  [ ]  [ ]  [ ]  [ ]  [ ]  |
+        |              FTDI              |
+    D1  | [ ]1/TX                 RAW[ ] |    
+    D0  | [ ]0/RX                 GND[ ] |    
+        | [ ]RST        SCL/A5[ ] RST[ ] |   C6
+        | [ ]GND        SDA/A4[ ] VCC[ ] |    
+    D2  | [ ]2/INT0    ___         A3[ ] |   C3
+    D3  |~[ ]3/INT1   /   \        A2[ ] |   C2
+    D4  | [ ]4       /PRO  \       A1[ ] |   C1
+    D5  |~[ ]5       \ MINI/       A0[ ] |   C0
+    D6  |~[ ]6        \___/    SCK/13[ ] |   B5
+    D7  | [ ]7          A7[ ] MISO/12[ ] |   B4
+    B0  | [ ]8          A6[ ] MOSI/11[ ]~|   B3
+    B1  |~[ ]9                  SS/10[ ]~|   B2
+        |           [RST-BTN]            |    
+        +--------------------------------+  
+		
+		http://busyducks.com/ascii-art-arduinos</pre>
+<h1>How to use them</h1>
+<p style="padding-left: 30px;">Just fill in the spaces, either with an X, or with a reference letter which you document below the ASCII art.</p>
+<p style="padding-left: 30px;">They can be pasted into code comments, (use /* and */ in the arduino IDE to create a block comment). They can also be useful in forums, when you need a quick arduino diagram, but don&#8217;t want to fire up an image editor.</p>
+<p><a href="/wp-content/uploads/2015/11/Arduino_UNO_pinout.png"><img loading="lazy" class="alignnone wp-image-705 size-full" src="/wp-content/uploads/2015/11/Arduino_UNO_pinout.png" alt="Arduino_UNO_pinout" width="473" height="533" srcset="/wp-content/uploads/2015/11/Arduino_UNO_pinout.png 473w, /wp-content/uploads/2015/11/Arduino_UNO_pinout-266x300.png 266w" sizes="(max-width: 473px) 100vw, 473px" /></a></p>
+<p><a href="/wp-content/uploads/2015/11/Arduino_mega_pinout2.png"><img loading="lazy" class="alignnone size-full wp-image-714" src="/wp-content/uploads/2015/11/Arduino_mega_pinout2.png" alt="Arduino_mega_pinout2" width="585" height="786" srcset="/wp-content/uploads/2015/11/Arduino_mega_pinout2.png 585w, /wp-content/uploads/2015/11/Arduino_mega_pinout2-223x300.png 223w" sizes="(max-width: 585px) 100vw, 585px" /></a></p>
+<p>&nbsp;</p>
+<p>This is a snippet from a recent project. The sketch starts out with comments that set-out how the hardware is setup, this helps me a lot when I have to look at it again in a years time. Its also great if I want to share the code, as people don&#8217;t need to dig-around in the code to see how to connect the arduino to other devices.</p>
+<pre class="height-set:true height:600 lang:c++ decode:true" title="Exaple usage in an arduino sketch">/*
+
+                                      +-----+
+         +----[PWR]-------------------| USB |--+
+         |                            +-----+  |
+         |           GND/RST2  [ ] [ ]         |
+         |         MOSI2/SCK2  [ ] [ ]  SCL[ ] |   C5
+         |            5V/MISO2 [ ] [ ]  SDA[ ] |   C4
+         |                             AREF[ ] |
+         |                              GND[ ] |
+         | [ ]N/C                    SCK/13[A] |   B5
+         | [ ]v.ref                 MISO/12[A] |   .
+         | [ ]RST                   MOSI/11[A]~|   .
+         | [ ]3V3    +---+               10[ ]~|   .
+         | [ ]5v     | A |                9[ ]~|   .
+         | [ ]GND   -| R |-               8[B] |   B0
+         | [ ]GND   -| D |-                    |
+         | [ ]Vin   -| U |-               7[A] |   D7
+         |          -| I |-               6[A]~|   .
+         | [ ]A0    -| N |-               5[C]~|   .
+         | [ ]A1    -| O |-               4[A] |   .
+         | [ ]A2     +---+           INT1/3[A]~|   .
+         | [ ]A3                     INT0/2[ ] |   .
+         | [ ]A4      RST SCK MISO     TX&gt;1[ ] |   .
+         | [ ]A5      [ ] [ ] [ ]      RX&lt;0[ ] |   D0
+         |            [ ] [ ] [ ]              |
+         |  UNO_R3    GND MOSI 5V  ____________/
+          \_______________________/
+		  
+		  http://busyducks.com/ascii-art-arduinos
+*/
+
+//------------------------------------------------------------------ 
+// [A]		Adafruit music shield
+//------------------------------------------------------------------ 
+// Connect CLK, MISO and MOSI to hardware SPI pins. 
+// SPI Clock, shared with SD card
+#define CLK_PIN (13)       
+// Input data, from VS1053/SD card
+#define MISO_PIN (12)      
+// Output data, to VS1053/SD card
+#define MOSI_PIN (11)      
+
+// VS1053 reset pin (unused!)
+#define SHIELD_RESET_PIN  (-1)   
+// VS1053 chip select pin (output)
+#define SHIELD_CS_PIN     (7)      
+// VS1053 Data/command select pin (output)
+#define SHIELD_DCS_PIN    (6)      
+// Card chip select pin
+#define CARDCS_PIN (4)     
+// VS1053 Data request, ideally an Interrupt pin
+#define DREQ_PIN (3)       
+
+//------------------------------------------------------------------  
+// [B]		WS2811 LED stip
+//------------------------------------------------------------------ 
+#define LED_STIP_PIN  (8)
+
+//------------------------------------------------------------------  
+// [C]		Servo Motor
+//------------------------------------------------------------------ 
+#define SERVO_PIN (5)</pre>
+<p>&nbsp;</p>
+<h1>Related Projects (based on this work)</h1>
+<ul>
+<li>I modified a version of this for <a href="http://casual-effects.com/markdeep/" target="_blank" rel="noopener">markdeep</a> and made it available for download  <a href="http://busyducks.com/downloads/random_blog_stuff/ascii_art_arduino_markdeep.zip" target="_blank" rel="noopener">here</a>.
+<ul>
+<li>There is a unofficial mirror (by <a class="author may-blank id-t2_6hpwy" href="https://www.reddit.com/user/vanderZwan">vanderZwan</a>) of the markdeep work <a href="http://blindedcyclops.neocities.org/asciiino/arduino.md.html" target="_blank" rel="noopener">here</a></li>
+</ul>
+</li>
+<li>A console version, by paulfantom, for terminal users is available <a href="https://github.com/paulfantom/Arduino-colors" target="_blank" rel="noopener">here</a>.</li>
+</ul>
+<p style="padding-left: 30px;"><a href="http://busyducks.com/downloads/random_blog_stuff/ascii_art_arduino_markdeep.zip"><img loading="lazy" class="alignnone wp-image-731 size-full" src="/wp-content/uploads/2015/11/md-ascii-arduino.png" alt="md-ascii-arduino" width="411" height="492" srcset="/wp-content/uploads/2015/11/md-ascii-arduino.png 411w, /wp-content/uploads/2015/11/md-ascii-arduino-251x300.png 251w" sizes="(max-width: 411px) 100vw, 411px" /></a></p>
+<p style="padding-left: 90px;"><strong>Our markdeep version (click image to download)</strong></p>
+<p>&nbsp;</p>
+<h2>Stay Up To date and Provide Feedback</h2>
+<ul>
+<li>Contribute  to the project on <a href="https://github.com/busyDuckman/ascii-art-arduinos">https://github.com/busyDuckman/ascii-art-arduinos</a></li>
+<li>I will check back on the facebook page for any comments, like the page to stay up to date.
+<ul>
+<li><a href="https://www.facebook.com/BusyDucks/" target="_blank" rel="noopener">https://www.facebook.com/BusyDucks/</a></li>
+</ul>
+</li>
+<li>I set up a redirected URL <a href="http://busyducks.com/ascii-art-arduinos" target="_blank" rel="noopener">http://busyducks.com/ascii-art-arduinos</a>  that is both the CC-BY attribution line, and will always redirect to the latest version of these ascii art arduinos.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Version History</h1>
+<ul>
+<li>18-11-2015   markdeep version added (as suggested by vanderZwan <a href="https://www.reddit.com/r/arduino/comments/3tb0d2/i_made_some_asciiart_arduinos_to_paste_in/" target="_blank" rel="noopener">here</a>)</li>
+<li>19-11-2015   typos fixed (as noted by oroki <a href="https://www.reddit.com/r/arduino/comments/3tb0d2/i_made_some_asciiart_arduinos_to_paste_in/" target="_blank" rel="noopener">here</a>)</li>
+<li>21-112015    Added nano (derived from <em>plasticluthier&#8217;s contributions</em> ) &amp;  Pro Mini</li>
+<li>1-12-2015     Fixed typo&#8217;s spotted by Basile Laderchi. Also minor visual tweak to the arduino CPU.</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>RGB Bias Lighting with Arduino (Part 1)</title>
+		<link>/rgb-bias-lighting-with-arduino-part-1/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 09 Nov 2015 17:55:35 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<category><![CDATA[WS2811]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=679</guid>
+
+					<description><![CDATA[We are setting up an arduino with a WS2811 LED strip to do RGB based bias lighting effects.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p>Bias Lighting is a light around your display that helps you perceive contrast and reduces eye stress. It also just looks just plain cool, and create a kind of relaxed vibe.</p>
+<p>There is a lot of theory on optimising bias lighting, but really any light will help quite a bit. So why not see if we can do anything inventive with the bias lighting colour.</p>
+<h1>The Idea</h1>
+<p>Lets use a bias lighting that changes colour, and experiment with:</p>
+<ul>
+<li>Altering the colour to  correspond with the time of a day</li>
+<li>Blink light to warn you that you have a meeting soon</li>
+<li>Having the colour change match the movement of the sun</li>
+<li>Changing the colour to green (or whatever) when its your &#8220;bed time&#8221;</li>
+<li>Using a colour change scheme set to work with your circadian rhythm</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Materials</h1>
+<p>What you will need:</p>
+<ul>
+<li>Some WS2811 LED strips (approx 30cm per monitor)</li>
+<li>An arduino</li>
+<li>Some 3 core wire</li>
+<li>About an hour free time</li>
+<li>Electrical tape</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Results</h1>
+<p>&nbsp;</p>
+<p><iframe loading="lazy" title="RGB Bias lighting on three monitors (using an arduino)." width="940" height="529" src="https://www.youtube.com/embed/_tsl4WFH_8o?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>&nbsp;</p>
+<h1>WS2811 RGB Strips</h1>
+<p>WS2811 strips can be acquired via <a href="http://www.aliexpress.com/w/wholesale-ws2811-led-strip.html" target="_blank" rel="noopener">Ali Express</a> at a reasonable price, they are a strip of RGB LED&#8217;s that are individually addressable (set any LED to any colour).</p>
+<p>Pros&#8217;</p>
+<ul>
+<li>Each chip has an active data repeater that forwards the data signal. Provided the 5v power to the strip is strong, the data signal is propagated to as many chips as you like.</li>
+<li>Very good value</li>
+<li>Strong bright lights</li>
+<li>Fast data channel</li>
+<li>Only requires one GPIO pin.</li>
+</ul>
+<p>Cons&#8217;</p>
+<ul>
+<li>PWM control used for arbitrary colours is not super fast. Use of 7 colours that involve any LED being either full on or gull off produces results that work better for moving items / camera.</li>
+<li>Poor build quality occasionally causes minor issues</li>
+<li>Some visual artefacts from &#8220;fast moving pixels&#8221;.  (that can look very cool if used correctly).</li>
+</ul>
+<p>The strips look like what you see below. They can be cut to length, and have a soldered connection every 30cm or so.  The arrows indicate the direction the data signal is propagated in, your controller (eg an arduino) must be connected to the left most (first) arrow. However the voltage to run the strip can be applied anywhere.</p>
+<p><a href="/wp-content/uploads/2015/11/WS2811_strip.jpg" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-694 size-large" src="/wp-content/uploads/2015/11/WS2811_strip-1024x193.jpg" alt="WS2811_strip" width="640" height="121" srcset="/wp-content/uploads/2015/11/WS2811_strip-1024x193.jpg 1024w, /wp-content/uploads/2015/11/WS2811_strip-300x57.jpg 300w, /wp-content/uploads/2015/11/WS2811_strip-768x145.jpg 768w, /wp-content/uploads/2015/11/WS2811_strip-1536x290.jpg 1536w, /wp-content/uploads/2015/11/WS2811_strip-2048x386.jpg 2048w, /wp-content/uploads/2015/11/WS2811_strip-1568x296.jpg 1568w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>A close up look shows a chip (black part on the left) and three LED&#8217;s, the middle one being red.</p>
+<p style="padding-left: 90px;"><a href="/wp-content/uploads/2015/11/WS2811_single2.jpg" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-696 size-medium" src="/wp-content/uploads/2015/11/WS2811_single2-300x226.jpg" alt="WS2811_single2" width="300" height="226" srcset="/wp-content/uploads/2015/11/WS2811_single2-300x226.jpg 300w, /wp-content/uploads/2015/11/WS2811_single2-1024x770.jpg 1024w, /wp-content/uploads/2015/11/WS2811_single2-768x578.jpg 768w, /wp-content/uploads/2015/11/WS2811_single2.jpg 1391w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>&nbsp;</p>
+<h1>Arduino Setup</h1>
+<p>For effective bias lighting, stick an adhesive LED strip to the back of your monitor, about 5cm from the top. The arduino can be mounted with stick on velcro to what have you. If necessary, connect up multiple sections of LED strips (one for each monitor) using a good 3 core wire.</p>
+<p>The LED strip&#8217;s data line is connected to a single arduino GPIO pin configured as an output.  Its important to note the <span style="text-decoration: underline;">strip has an arrow on it</span>, this arrow shows the direction the data will travel. Your data cable must be connected to the first  LED in the strip (not the last).</p>
+<p>For my three monitors I was able to power the strip directly from my arduino, using only USB power. Though your mileage may vary.</p>
+<p><strong>Setup via USB Power</strong></p>
+<p>If you can get away with it wire up the strips shown in the top diagram. Be aware that your PC or USB hub will be responsible for providing power to a large set of lights.</p>
+<p>Consider some issues with this:</p>
+<ul>
+<li>There will remain a significant current draw on the PC even while its in sleep mode (or running of batteries).  Be aware not all PC power supplies sleep well , they may turn their fans off even though you are drawing enough current to necessitate a low amount of active cooling.</li>
+<li>Your arduinos regulator will may get hot.</li>
+<li>Your USB port may well not be up to task.</li>
+</ul>
+<p><span style="color: #000000;">For these reasons I would advise:</span></p>
+<ul>
+<li><span style="color: #000000;">Connection via a powered USB hub. </span></li>
+<li>Use of a <a href="http://amzn.to/1Qok8qt" target="_blank" rel="noopener">USB Doctor Device</a> to check your current draw is sensible (eg 350mA or below, the 500mA max in the USB spec does not always pan out well)</li>
+<li>Configuring the brightness of the LED output (programmatically) to reduce current draw.</li>
+<li>Don&#8217;t connect the Arduous power jack to a DC wall adapter (see note on ground loops later in this article).</li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/11/rgb_leds_usb.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-688 size-large" src="/wp-content/uploads/2015/11/rgb_leds_usb-1024x371.png" alt="rgb_leds_usb" width="640" height="232" srcset="/wp-content/uploads/2015/11/rgb_leds_usb-1024x371.png 1024w, /wp-content/uploads/2015/11/rgb_leds_usb-300x109.png 300w, /wp-content/uploads/2015/11/rgb_leds_usb-768x278.png 768w, /wp-content/uploads/2015/11/rgb_leds_usb-1536x557.png 1536w, /wp-content/uploads/2015/11/rgb_leds_usb-1568x568.png 1568w, /wp-content/uploads/2015/11/rgb_leds_usb.png 1644w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<p>If your Arduino fails to start, or the strip displays a gaudy set of flashing bright colours, you will need to use external power to run the strip. The cutt-off regarding how long your strip can be, before problems appear varies greatly between different production runs (of the RGB strip, not the arduino).</p>
+<p><strong>Setup via External 5V power supply</strong></p>
+<p>To use an external power supply  to power the strip is not difficult (see image below). But it leaves us with the annoying issue of ground loops (see ground loop section later in this article).</p>
+<p>To use external 5V power:</p>
+<ul>
+<li>Connect the 5V ground to both the arduinos ground and the LED strips ground.</li>
+<li>Set-up a 7V(ish) power for the arduinos DC Jack, and use a cheap buck DC-DC power supply (eg <a href="http://amzn.to/1NlT1ac" target="_blank" rel="noopener">LM2596 module</a>) to drop that voltage down to 5V, which is connected to the LED strips power supply.</li>
+<li>Resist the urge to just get a 5V power supply and connect it to both the arduous 5V pin and the LED strip, unless you have a good regulated 5V supply.</li>
+</ul>
+<p><a href="/wp-content/uploads/2015/11/rgb_leds_dc_jack.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-689 size-large" src="/wp-content/uploads/2015/11/rgb_leds_dc_jack-1024x420.png" alt="rgb_leds_dc_jack" width="640" height="263" srcset="/wp-content/uploads/2015/11/rgb_leds_dc_jack-1024x420.png 1024w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-300x123.png 300w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-768x315.png 768w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-1536x631.png 1536w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-1568x644.png 1568w, /wp-content/uploads/2015/11/rgb_leds_dc_jack.png 1644w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<h2>A little more safety to this circuit</h2>
+<p>The soldering of wiring to the LED strip is often problematic, and the area is often moved / stressed / bent.  This can cause the electrical connection to come loose, short or form an intermittent contact.</p>
+<p>We may want to protect the first LED package in the strip from damage caused by too much current passing though the data line (I suggest using a 330 ohm resistor).  It&#8217;s also not a bad idea to provide a 1000uF decoupling capacitor (use an electrolytic capacitor and watch the polarity). Without this you risk a wiring issue, or power connection issue, damaging the first LED unit on the strip.</p>
+<p>In practice, you may never have a problem without these extra components, and the damage is often repaired easily by removing the first pixel and re-soldering. So the decision is yours, a &#8216;best practice&#8217; version of the above circuits is shown below.</p>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/11/rgb_leds_better.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-690 size-large" src="/wp-content/uploads/2015/11/rgb_leds_better-1024x739.png" alt="rgb_leds_better" width="640" height="462" srcset="/wp-content/uploads/2015/11/rgb_leds_better-1024x739.png 1024w, /wp-content/uploads/2015/11/rgb_leds_better-300x217.png 300w, /wp-content/uploads/2015/11/rgb_leds_better-768x554.png 768w, /wp-content/uploads/2015/11/rgb_leds_better-1536x1109.png 1536w, /wp-content/uploads/2015/11/rgb_leds_better-1568x1132.png 1568w, /wp-content/uploads/2015/11/rgb_leds_better.png 1833w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<h2>Watchout for ground loops</h2>
+<p>If you need more power than just the USB connection you will have to give some thought to protecting your computer from ground loops.</p>
+<p>The possibility of a ground loop exists when your arduino is connected to the PC via a USB cable and both the arduino (or connected circuitry) and the PC are mains connected in some way (even via a plug pack).</p>
+<p>Possible solutions include:</p>
+<ul>
+<li>USB isolator (eg: <a href="http://amzn.to/1Pktq7r" target="_blank" rel="noopener">this one</a>)</li>
+<li>Powering the PC from battery (eg laptop)</li>
+<li>Powering the arduino from battery (eg 6v SLA)</li>
+<li>Powering the arduino and circuitry from a plug-pack and using a wireless connection to communicate to the arduino</li>
+<li>Don&#8217;t connect the usb cable
+<ul>
+<li>Use a network enabled board (the network ports are very well isolated). The <a href="http://www.freetronics.com.au/products/etherten#.VkCYO7crJhE" target="_blank" rel="noopener">etherten </a>is great for this.</li>
+<li>Use wifi via a $5 esp8266 (for example <a href="http://amzn.to/1QdHAY4" target="_blank" rel="noopener">this one</a>)</li>
+<li>Use an infra red serial connection (2400 baud)</li>
+</ul>
+</li>
+<li>Just live with a potential ground loop
+<ul>
+<li>Plug everything into the same wall socket and keep your fingers crossed.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Basic arduino code to test out the LED Strip</h3>
+<p>Now we have to check our electrical project functions as predicted. For this article, and part 2, I will be using the <a href="https://github.com/nethoncho/FastSPI_LED2" target="_blank" rel="noopener">FastSPI_LED2 </a>library from  <a href="http://fastled.io/" target="_blank" rel="noopener">fastled.io</a>.</p>
+<p>This demo code will create the effect shown in the video at the top of this article. If all you wanted was cool looking bias lighting, your&#8217;e done!</p>
+<pre class="font:monospace height-set:true height:500 lang:c++ decode:true ">#include "FastSPI_LED2.h"
+
+//----------------------------------------------------------------------------------------
+//
+// LED stip driver for smooth HUE trnsitions radiating from the middle of the LED strip.
+//
+//----------------------------------------------------------------------------------------
+
+//Alter this to suit your setup
+#define NUM_LEDS 91
+#define PIN_LED 4
+
+//This is where the individual pixel for ever LED is stored.
+//use LEDS.show(); to sync the strip with the data in this array.
+struct CRGB leds[NUM_LEDS];
+
+void setup() 
+{
+	  // sanity check delay - allows reprogramming if accidently blowing power w/leds
+   	delay(2000);
+
+   	//to prevent too high  a power draw use 25% brightness
+   	LEDS.setBrightness(64);
+
+    //setup the LED controller
+    LEDS.addLeds&lt;WS2811, PIN_LED, RGB&gt;(leds, NUM_LEDS);
+}
+
+
+void loop()
+{ 
+  byte hueMiddle=0;
+  byte hueEdge=0;
+  byte hueStep = 48;
+  int maxHue = 255; //NB: hue may not be in the range 0-255, if we use a differnt hsv2rgb function.
+  bool sync = false;
+  
+  while(true)
+  {
+    //pause a second
+    delay(1000);
+
+    //push the hue of the middle part of the bias light forward
+    for(int s=0; s&lt; hueStep; s++)
+    {
+        hueMiddle++;
+        if(hueMiddle &gt;= maxHue)
+        {
+          sync = true;
+          break;
+        }
+        updateStrip(hueMiddle, hueEdge);
+    }
+
+    //have the edge of the bias light catch up to the hue in the middle
+    for(int s=0; s&lt; hueStep; s++)
+    {
+        hueEdge++;
+        if(hueEdge &gt;= maxHue)
+        {
+          sync = true;
+          break;
+        }
+       updateStrip(hueMiddle, hueEdge);
+    }
+
+    // Reached the end of the hue cycle, wrap to the begining.
+    // We do it this way because if the hueMiddle wraps around, but the
+    // hueEdge remains before the end, then a full rainbow is creted
+    // when updateStrip smooths the pixels over the strip
+    if(sync)
+    {
+       hueMiddle = 0;
+       hueEdge = 0;
+       sync = false;
+    } 
+  }
+}
+
+
+// This method creates a smooth transition of pixels, from one hue in the middle
+// to another hue at the edge.
+//
+//note: Could be faster with symetry away from middle.
+//note: Could be faster with integer math.
+//note: Because of the long delay, this does not need to be fast.
+void updateStrip(byte hueMiddle, byte hueEdge)
+{
+    float mid = NUM_LEDS/2;
+    int hueDiff =  hueEdge - hueMiddle;
+    for(int i = 0; i &lt; NUM_LEDS; i++) 
+    {
+        //get the hue for the pixel
+        CRGB pixel;
+        float h = abs(i-mid)/mid; //0 at mid, 1 at edge
+        h *= hueDiff; //0 at mid, hueDiff at edge
+        h += hueMiddle; //hueMiddle at mid, hueEdge at edge
+
+        //set the pixel
+        hsv2rgb_spectrum(CHSV((byte)round(h), 255, 255), pixel);
+        leds[i] = pixel;
+    }
+    delay(150);
+    LEDS.show();
+}
+</pre>
+<p>&nbsp;</p>
+<h3>What&#8217;s next?</h3>
+<p>In a follow-up article (part-2) we will cover syncing your arduino to the computers clock, choosing good colours for different times of the day and using your location to calculate where the sun is (in case you want to tune your your lighting to the time of the day).</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Practical Iterative K-ary Tree (aka n-ary, n-tree) Traversal in C#.  A surprisingly useful tool for the average programmer.</title>
+		<link>/practical-generic-k-ary-tree-n-tree-traversal-in-c/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 10 Aug 2015 15:02:54 +0000</pubDate>
+				<category><![CDATA[C#]]></category>
+		<category><![CDATA[Data Structures]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Data_Structures]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[WDLib]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=546</guid>
+
+					<description><![CDATA[Introduction: A lot of components in the C# environment are essentially a K-ary [kay-er-ee] tree. From tree-view nodes, to serialising a type via reflection, to directory listings to menu hierarchies, and so on. Often we need to iterate through these types of structures, or our own trees, and we just write some code to do &#8230;<br><a href="/practical-generic-k-ary-tree-n-tree-traversal-in-c/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">Practical Iterative K-ary Tree (aka n-ary, n-tree) Traversal in C#.  A surprisingly useful tool for the average programmer.</span></a>]]></description>
+										<content:encoded><![CDATA[<h3>Introduction:</h3>
+<p>A lot of components in the C# environment are essentially a K-ary [kay-er-ee] tree. From tree-view nodes, to serialising a type via reflection, to directory listings to menu hierarchies, and so on.</p>
+<p>Often we need to iterate through these types of structures, or our own trees, and we just write some code to do it as needed. This code is often problematic as it&#8217;s non-trivial to do well, because:</p>
+<ul>
+<li>It&#8217;s complex to do certain traversals in an iterative manor. (non recursive);</li>
+<li>Traversal is prone to bugs, as there are many edge cases;</li>
+<li>Software hangs if a circular reference exists and you don&#8217;t catch it;</li>
+<li>Unit-testing of once-off code is often neglected;</li>
+<li>Examining / verifying correct behaviour of tree traversal algorithms is difficult in the debugger.</li>
+</ul>
+<p>Wanting to rid myself of this re-occurring situation I built a few helper methods to do the following traversals iteratively:</p>
+<ul>
+<li>Depth First Pre Order</li>
+<li>Depth First Post Order,</li>
+<li>Breadth First</li>
+</ul>
+<p>The helpers are generic [BYO data type] and dont require a specific interface. You just supply a Func to return a nodes sub nodes. Thus you can drop a working tested algorithm onto whatever situation you encounter.</p>
+<h3>Iteration</h3>
+<p>Example:</p>
+<ul>
+<li>Made using an example data type &#8220;Node&#8221;
+<ul>
+<li>See the unit-tests at the  bottom of the page for implementation</li>
+</ul>
+</li>
+<li>First it shows using a foreach loop on a depth first pre-order iterator</li>
+<li>Then is shows using a breadth-first iterator to convert a tree to an array using Linq.</li>
+</ul>
+<pre class="lang:c# decode:true">/*
+* Test tree
+*                  A
+*                / | \ 
+*              B   C   D
+*            / |       | \
+*          E   F       G   H
+*        / |         / | \
+*       I  J        K  L  M
+*/
+Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+//EXAMPLE 1: Pre-order traversal via foreach loop
+foreach(var node in  Misc.EnumerateNodes(tree, 
+                                    N =&gt; N.Nodes, 
+                                    NodeVisitOrder.DepthFirstPreOrder))
+{
+    Console.Out.Write(node.Item);
+}
+Console.Out.WriteLine();
+//outputs ABEIJFCDGKLMH
+
+//EXAMPLE 2: Creating an array via breadth first traversal 
+string s = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, NodeVisitOrder.BredthFirst)
+                            .Select(N =&gt; N.Item)
+                            .ToArray());
+Console.Out.WriteLine(s);
+//outputs ABCDEFGHIJKLM</pre>
+<p>This was a simplistic example, but it works, its unit-tested, its efficient and non-recursive. It all ties into linq and IEnumerable so many neat tricks are possible.</p>
+<p>Lets examine the crucial line in detail.</p>
+<pre class="lang:c# decode:true">EnumerateNodes(tree, N =&gt; N.Nodes, NodeVisitOrder.DepthFirstPreOrder)
+</pre>
+<ul>
+<li>The first parameter is the root node. This is method is generic, so any class type will do.</li>
+<li>The second is a lambda expression for an enumerable  set of sub-nodes</li>
+<li>The third is the traversal method.</li>
+</ul>
+<p>Another example of how flexible the method is, using DirectoryInfo as the node, and iterating over all subdirectories:</p>
+<ul>
+<li>This time we use the optional forth parameter to enable circular reference checking. this prevents any chance of an infinite loop</li>
+</ul>
+<pre class="lang:c# decode:true">DirectoryInfo root = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+ 
+var dirs = Misc.EnumerateNodes(
+                root,
+                N =&gt; { try { return N.GetDirectories();  } 
+                       catch (Exception) { return null; } },
+                NodeVisitOrder.DepthFirstPreOrder, 
+                CircularRefernceBehaviour.Skip);
+ 
+foreach (var dir in dirs)
+{
+}</pre>
+<h3>Duplication</h3>
+<p>Often you just need to copy one tree structure to another (possibly of a different type):</p>
+<ul>
+<li>Loading a directory structure into a TreeView control</li>
+<li>Turning a tree of commands into Menu Items</li>
+<li>Working with expression parsing  and evaluation</li>
+<li>Just making a deep copy of a tree structure</li>
+</ul>
+<pre class="lang:c# decode:true">/*
+* Test tree
+*                  A
+*                / | \ 
+*              B   C   D
+*            / |       | \
+*          E   F       G   H
+*        / |         / | \
+*       I  J        K  L  M
+*/
+Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+TreeNode n = Misc.RebuildTree(tree,  
+							 N =&gt; N.Nodes, 
+							 N =&gt; new TreeNode("" + N.Item), 
+							 (T, N) =&gt; T.Nodes.AddRange(N.ToArray()));</pre>
+<p>Neeto, one line of code, and our <span style="text-decoration: underline;">tree is duplicated into a TreeView</span> (or whatever) in a efficient, reliable manor.</p>
+<p>RebuildTree takes five parameters:</p>
+<ol>
+<li>The root of the tree to be copied.</li>
+<li>Func for an enumerating sub-nodes in the source structure</li>
+<li>Func to create a new destination  node form a source node
+<ul>
+<li>Just the data of the node, Leave the child nodes unpopulated</li>
+</ul>
+</li>
+<li>Action to add a collection of Nodes to an existing node (destination structure)</li>
+<li>Circular reference checking behaviour</li>
+</ol>
+<h3>Core Algorithms</h3>
+<h4>Depth First Pre-Order</h4>
+<ul>
+<li>Note: visitOk(&#8230;) returns true unless a circular reference is detected.</li>
+<li>This works by feeding al nodes onto a stack, a basic way to resolve the recursion.</li>
+<li>Child nodes are pushed in reverse order, so they are pop&#8217;ed in the correct order.</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Pop();
+	if (visitOk(item, visited, checkType))
+	{
+		yield return item;
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse());
+	}
+}
+</pre>
+<h4>Depth First Post-Order</h4>
+<ul>
+<li>Depth First Post-Order is actually pretty tricky, a few algorithms exist.</li>
+<li>This one initially traverses the entire tree O(n) to fill a stack, then returns each item in the stack.</li>
+<li>The overall time is O(n), with the first iteration being O(n) and all subsequent  iterations being O(1)</li>
+<li>There s a requirement for  extra memory for this to work, but its not too bad.</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+Stack output = new Stack();
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Pop();
+	if (visitOk(item, visited, checkType))
+	{
+		output.Push(item);
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+	}
+}
+foreach (T item in output)
+{
+	yield return item;
+}
+
+</pre>
+<h4>Breadth First</h4>
+<ul>
+<li>This works by feeding al nodes onto a queue, as opposed to the depth first &#8211; pre order, which uses a stack.
+<ul>
+<li>This time Child nodes are not added in reverse order, however</li>
+</ul>
+</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Dequeue();
+	if (visitOk(item, visited, checkType))
+	{
+		yield return item;
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+	}
+}
+break;
+}
+</pre>
+<h3>Source Code:</h3>
+<pre class="height-set:true lang:c# decode:true ">/*
+Available under the BSD 3-Clause License
+Copyright (c) 2015, Dr Warren Creemers All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using WD_toolbox;
+
+namespace WD_toolbox
+{
+    public enum NodeVisitOrder { DepthFirstPreOrder, DepthFirstPostOrder, BredthFirst }
+
+    public enum CircularRefernceBehaviour { DontCheck, ThrowException, Skip }
+
+    public class NodeTraversalException : Exception
+    {
+        public NodeTraversalException(string message) : base(message) { }
+        public NodeTraversalException() : base() { }
+        public static NodeTraversalException VisitedTwice(object item) {return new NodeTraversalException("Node already visied: " + item.ToString());} 
+    }
+
+    public static class Misc
+    {
+        /// &lt;summary&gt;
+        /// Enumerates any Tree/graph in a non-recursive manor.
+        /// Does not check for circularReferences.
+        /// &lt;/summary&gt;
+        /// &lt;param name="node"&gt;Root node.&lt;/param&gt;
+        /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="order"&gt;The visit order.&lt;/param&gt;
+        /// &lt;param name="checkType"&gt;If circular references should be checked, and how to handle them. 
+        /// Note (1): Checks repeated node, which is not nesesiarly a circular reference (but all circulare references have a repeated node).
+        /// Note (2): performance hit reduced if  node generates a good hashcode.
+        /// &lt;/param&gt;
+        public static IEnumerable&lt;T&gt; EnumerateNodes&lt;T&gt;( T node, 
+                                                        Func&lt;T, IEnumerable&lt;T&gt;&gt; getSubNodes,
+                                                        NodeVisitOrder order = NodeVisitOrder.DepthFirstPreOrder,
+                                                        CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where T : class
+        {
+            if (node != null) //assuming null indicats an empty tree
+            {
+                //this acts as a stack or queue to resolve the recursion
+                LinkedList&lt;T&gt; list = new LinkedList&lt;T&gt;();
+                HashSet&lt;T&gt; visited = new HashSet&lt;T&gt;();
+
+                switch (order)
+                {
+                    case NodeVisitOrder.DepthFirstPreOrder:
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Pop();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                yield return item;
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse());
+                            }
+                        }
+                        break;
+
+                    case NodeVisitOrder.DepthFirstPostOrder:
+                        //This has a side effects, the first iteeration is slow (also memory consuming) 
+                        //as the entire structure is copied into a stack 
+                        Stack&lt;T&gt; output = new Stack&lt;T&gt;();
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Pop();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                output.Push(item);
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+                            }
+                        }
+                        foreach (T item in output)
+                        {
+                            yield return item;
+                        }
+                        break;
+
+                    case NodeVisitOrder.BredthFirst:
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Dequeue();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                yield return item;
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+                            }
+                        }
+                        break;
+                }
+            }
+        }
+
+        // Because getSubNodes(T) may return null to indicate no nodes.
+        private static IEnumerable&lt;T&gt; getSubNodesSafe&lt;T&gt;(T node, Func&lt;T, IEnumerable&lt;T&gt;&gt; getSubNodes)
+        {
+            if ((node != null) &amp;&amp; (getSubNodes != null))
+            {
+                IEnumerable&lt;T&gt; subNodes = getSubNodes(node);
+                return (subNodes != null) ? subNodes : new List&lt;T&gt;();
+            }
+            return new List&lt;T&gt;();
+        }
+
+        private static bool visitOk&lt;T&gt;(T item, HashSet&lt;T&gt; visited, CircularRefernceBehaviour checkType)
+        {
+            if (checkType != CircularRefernceBehaviour.DontCheck)
+            {
+                if (visited.Contains(item))
+                {
+                    // error
+                    if (checkType == CircularRefernceBehaviour.ThrowException)
+                    {
+                        throw NodeTraversalException.VisitedTwice(item);
+                    }
+                    return false; //indicate it's not ok to visit (ie skip)
+                }
+
+                //no error
+                visited.Add(item);
+                return true;
+            }
+
+            //no check
+            return true;
+        }
+
+
+        /// &lt;summary&gt;
+        /// Copies a tree structure. (useful in copying a tree structure to a tree view).
+        /// &lt;/summary&gt;
+        /// &lt;typeparam name="A"&gt;The node type of the tree to copy.&lt;/typeparam&gt;
+        /// &lt;typeparam name="B"&gt;The destination node type.&lt;/typeparam&gt;
+        /// /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="newNode"&gt;To create a simple non-recursive copy of a node.&lt;/param&gt;
+        /// &lt;param name="addSubNodes"&gt;&lt;/param&gt;
+        /// &lt;param name="checkType"&gt; Type of circular reference checking to perform.&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static B RebuildTree&lt;A, B&gt;(A srcNode,
+                                           Func&lt;A, IEnumerable&lt;A&gt;&gt; getSubNodes,
+                                           Func&lt;A, B&gt; newNode,
+                                           Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes,
+                                           CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where A : class
+            where B : class
+        {
+            return RebuildTree(srcNode, getSubNodes, newNode, addSubNodes, P =&gt; true, checkType);
+        }
+        
+        /// &lt;summary&gt;
+        /// Copies a tree structure. (useful in copying a tree structure to a tree view).
+        /// &lt;/summary&gt;
+        /// &lt;typeparam name="A"&gt;The node type of the tree to copy.&lt;/typeparam&gt;
+        /// &lt;typeparam name="B"&gt;The destination node type.&lt;/typeparam&gt;
+        /// /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="newNode"&gt;To create a simple non-recursive copy of a node.&lt;/param&gt;
+        /// &lt;param name="addSubNodes"&gt;&lt;/param&gt;
+        /// &lt;param name="where"&gt;&lt;/param&gt;
+        /// &lt;param name="checkType"&gt; Type of circular reference checking to perform.&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static B RebuildTree&lt;A, B&gt;( A srcNode,
+                                           Func&lt;A, IEnumerable&lt;A&gt;&gt; getSubNodes, 
+                                           Func&lt;A, B&gt; newNode,
+                                           Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes,
+                                           Predicate&lt;A&gt; where,
+                                           CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where A : class
+            where B : class
+        {
+
+
+            LinkedList&lt;Tuple&lt;A, B&gt;&gt; list = new LinkedList&lt;Tuple&lt;A, B&gt;&gt;();
+            HashSet&lt;A&gt; visited = new HashSet&lt;A&gt;();
+            B newRootNode = null;
+
+            list.AddLast(new Tuple&lt;A, B&gt;(srcNode, null));
+            while (list.Count &gt; 0)
+            {
+                var tuple = list.Pop();
+                A item = tuple.Item1;
+                B parent = tuple.Item2;
+
+                if (visitOk(item, visited, checkType))
+                {
+                    if (where(item))
+                    {
+                        B newItem = newNode(item);
+                        if (newRootNode == null) //root node
+                        {
+                            newRootNode = newItem;
+                        }
+
+                        safeAddSubNode(parent, newItem, addSubNodes);
+                        
+                        list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse().Select(N =&gt; new Tuple&lt;A, B&gt;(N, newItem)));
+                    }
+                }
+            }
+
+            //done
+            return newRootNode;
+        }
+
+        private static void safeAddSubNode&lt;B&gt;(B parent, B child, Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes)
+        {
+            if ((addSubNodes != null) &amp;&amp; (parent != null) &amp;&amp; (child != null))
+            {
+                addSubNodes(parent, new B[] { child });
+            }
+        }
+    }
+}
+</pre>
+<p>Requires The following Extension class to make LinkedList sane.</p>
+<pre class="height-set:true height:500 lang:c# decode:true ">/*
+Available under the BSD 3-Clause License
+Copyright (c) 2015, Dr Warren Creemers All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/// &lt;summary&gt;
+/// These extensions make usage of the LinkedList more consise.
+/// &lt;/summary&gt;
+public static class LinkedListExtension
+{
+	/// &lt;summary&gt;
+	/// Pops the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the (formerly) last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T Pop&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		T item = list.Last.Value;
+		list.RemoveLast(); //throws InvalidOperationException
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Dequeues the first value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the (formerly) first item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T Dequeue&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		T item = list.First.Value;
+		list.RemoveFirst(); //throws InvalidOperationException
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Gets the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T PeekLast&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		if (list.Count &lt;= 0)
+		{
+			throw new InvalidOperationException("LinkedList is empty (call to PeekLast)");
+		}
+
+		T item = list.Last.Value;
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Gets the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T PeekFirst&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		if (list.Count &lt;= 0)
+		{
+			throw new InvalidOperationException("LinkedList is empty (call to PeekFirst)");
+		}
+
+		T item = list.First.Value;
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Addss items to the end of the list.
+	/// &lt;/summary&gt;
+	/// &lt;param name="items"&gt;Items to add.&lt;/param&gt;
+	public static void AddLastAll&lt;T&gt;(this LinkedList&lt;T&gt; list, IEnumerable&lt;T&gt; items)
+	{
+		foreach (T item in items)
+		{
+			list.AddLast(item);
+		}
+	}
+
+	/// &lt;summary&gt;
+	/// Addss items to the end of the list.
+	/// &lt;/summary&gt;
+	/// &lt;param name="items"&gt;Items to add.&lt;/param&gt;
+	public static void AddFirstAll&lt;T&gt;(this LinkedList&lt;T&gt; list, IEnumerable&lt;T&gt; items)
+	{
+		foreach (T item in items)
+		{
+			list.AddFirst(item);
+		}
+	}
+}</pre>
+<h3>Unit Tests:</h3>
+<pre class="height-set:true height:500 lang:c# decode:true ">       [TestMethod()]
+        public void EnumerateNodesTest()
+        {
+            /*
+            * Test tree
+            *                  A
+            *                / | \ 
+            *              B   C   D
+            *            / |       | \
+            *          E   F       G   H
+            *        / |         / | \
+            *       I  J        K  L  M
+            */
+            Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+            Node&lt;char&gt; coruptTree = Node&lt;char&gt;.TestTree();
+            //point L  to A
+            coruptTree.Nodes[2].Nodes[0].Nodes[1].Nodes.Add(coruptTree); 
+
+            //DepthFirstPreOrder
+            string res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                        NodeVisitOrder.DepthFirstPreOrder, 
+                                                        CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+
+
+
+            //System.Diagnostics.Trace.WriteLine("Hello World");
+            Assert.AreEqual("ABEIJFCDGKLMH", res);
+            
+            //DepthFirstProstOrder
+            res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                    NodeVisitOrder.DepthFirstPostOrder,
+                                                    CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+            Assert.IsTrue(res == "IJEFBCKLMGHDA");
+
+            //BredthFirst
+            res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                 NodeVisitOrder.BredthFirst,
+                                                 CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+            Assert.AreEqual("ABCDEFGHIJKLM", res);
+
+            //just to check no exception thrown
+            TreeNode n = Misc.RebuildTree(tree,  
+                                         N =&gt; N.Nodes, 
+                                         N =&gt; new TreeNode("" + N.Item),
+                                         (T, N) =&gt; T.Nodes.AddRange(N.ToArray()), 
+                                         CircularRefernceBehaviour.ThrowException);
+
+            //Check an exception is thrown for curupted tree
+
+            try
+            {
+                n = Misc.RebuildTree(coruptTree,
+                                             N =&gt; N.Nodes,
+                                             N =&gt; new TreeNode("" + N.Item),
+                                             (T, N) =&gt; T.Nodes.AddRange(N.ToArray()),
+                                             CircularRefernceBehaviour.ThrowException);
+
+                Assert.Fail("Should never reach this line of code");
+            }
+            catch (Exception)
+            {
+            }
+
+            //Just handle a corupt tree by not going backward.
+            n = Misc.RebuildTree(coruptTree,
+                                 N =&gt; N.Nodes,
+                                 N =&gt; new TreeNode("" + N.Item),
+                                 (T, N) =&gt; T.Nodes.AddRange(N.ToArray()),
+                                 CircularRefernceBehaviour.Skip);
+
+            //NB: Infinite loop on fail
+
+        }
+
+        
+
+        public class Node&lt;T&gt;
+        {
+            public List&lt;Node&lt;T&gt;&gt; Nodes = new List&lt;Node&lt;T&gt;&gt;();
+            public T Item;
+            public Node(T item, IList&lt;Node&lt;T&gt;&gt; nodes = null)
+            {
+                Item = item;
+                if (nodes != null)
+                {
+                    Nodes.AddRange(nodes);
+                }
+            }
+
+            private static Node&lt;T&gt; NODE&lt;T&gt;(T item, params Node&lt;T&gt;[] Nodes)
+            {
+                return new Node&lt;T&gt;(item, Nodes);
+            }
+
+            public static Node&lt;char&gt; TestTree()
+            {
+                /*
+                * Test tree
+                *                  A
+                *                / | \ 
+                *              B   C   D
+                *            / |       | \
+                *          E   F       G   H
+                *        / |         / | \
+                *       I  J        K  L  M
+                */
+
+
+                Node&lt;char&gt; tree =
+                    NODE('A',
+                        NODE('B',
+                            NODE('E',
+                                NODE('I'),
+                                NODE('J')
+                                ),
+                            NODE('F')
+                            ),
+                        NODE('C'),
+                        NODE('D',
+                            NODE('G',
+                                NODE('K'),
+                                NODE('L'),
+                                NODE('M')
+                                ),
+                            NODE('H')
+                            )
+                        );
+
+                return tree;
+            }
+        }
+    }</pre>
+<h3>WDLib Library:</h3>
+<p>This is part of my personal toolbox, WDLib (in the misc class, which is abridged for clarity on this page). I am moving to open source the library at the moment.</p>
+<h3>Limitations and Usage:</h3>
+<ul>
+<li>The circular reference check just checks for a repeated node, which is not necessarily a circular reference (but all circular references have a repeated node). This may deny some malformed trees that could otherwise be safely parsed. Checking can always be disabled if this is your intent.</li>
+<li>Be aware the first iteration of the Depth First Post-Order has a O(n) overhead.</li>
+</ul>
+<h3></h3>
+<h3>Contact / Feedback</h3>
+<p>[Sorry I had to remove this, because hundreds of spam emails about SEO]</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>A List of projects for .NET that are better than a poke in the eye.</title>
+		<link>/a-list-of-projects-for-net-that-are-better-than-a-poke-in-the-eye/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Fri, 19 Jun 2015 04:20:28 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[C#]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=305</guid>
+
+					<description><![CDATA[I propose "would you rather use this API or have a poke in the eye" as the new selection criteria for 3rd party projects. Here is what passes my poke in the eye test.]]></description>
+										<content:encoded><![CDATA[<p>I propose &#8220;would you rather use this API or have a poke in the eye&#8221; as the new selection criteria for 3rd party projects.</p>
+<p>Here is what passes my poke in the eye test.</p>
+<h3>Json.net</h3>
+<ul>
+<li>XML seemed to rub a lot of people the wrong way on its meteoric rise to &#8220;total serialisation format domination&#8221;</li>
+<li>Json is like someone turned the list of bad things about XML into a design specification document.</li>
+<li>Newtonsofts port to c# has been popular. <a href="http://www.newtonsoft.com/json" target="_blank" rel="noopener">here</a></li>
+<li>There are some gotchas and a few inelegant areas, but overall its a very good option for serialisation</li>
+<li>Boasts fast performance like a teenager with a play-station</li>
+</ul>
+<p>&nbsp;</p>
+<h3>NuGet</h3>
+<ul>
+<li>Bridges many of the issues associated with using 3rd party libraries in your code.</li>
+<li>You probably already know about it.</li>
+<li><a href="https://www.nuget.org/" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>Zedgraph</h3>
+<ul>
+<li>Plots, quick dirty reliable</li>
+<li>Examples</li>
+<li><a href="http://zedgraph.sourceforge.net/" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>Markdown</h3>
+<ul>
+<li>Because &#8220;the software should output valid html&#8221; is a system requirement that makes you frown.</li>
+<li>Because you often need to output something as &#8220;plain text or html&#8221;</li>
+<li>Because its just plain awesome</li>
+<li>Originally made for Perl  <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">here</a></li>
+<li>Ported to C# by different people. eg <a href="https://code.google.com/p/markdownsharp/" target="_blank" rel="noopener">markdownsharp</a></li>
+<li>There is also an <a href="http://markdownpad.com/" target="_blank" rel="noopener">editor</a>,</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Objectlistview</h3>
+<ul>
+<li>A list view that you wish was part of c#</li>
+<li>So pretty, you will blush at client presentations</li>
+<li>Highly configurable</li>
+<li>Well documented</li>
+<li><a href="http://objectlistview.sourceforge.net/cs/index.html" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>This Ribbon thing on Code Project</h3>
+<ul>
+<li>&#8220;Is there a good free ribbon for c#&#8221;&#8230; YES</li>
+<li><a href="http://www.codeproject.com/Articles/364272/Easily-Add-a-Ribbon-into-a-WinForms-Application-Cs" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>SFML.Net</h3>
+<ul>
+<li class="r">There are a lot of 2D graphics libraries So I recommend writing your own wrapper so you don&#8217;t get coded into a corner.</li>
+<li class="r">SFML.NET is the current hotness for me.</li>
+<li class="r">Up and going in one sitting</li>
+<li class="r">Minimal head scratching.</li>
+<li class="r">Well thought out.</li>
+<li class="r">See more <a href="http://www.sfml-dev.org/download/sfml.net/" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>Aforge.NET</h3>
+<ul>
+<li>It&#8217;s been around for a while, production seems to have stalle as of a year ago.
+<ul>
+<li><a href="http://accord-framework.net/" target="_blank" rel="noopener">Accord.NET</a> is pickling up where Aforge left off.</li>
+</ul>
+</li>
+<li>Plays nicely with the software development process.</li>
+<li>Get it <a href="http://www.aforgenet.com/" target="_blank" rel="noopener">here</a>.</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Colin Greens Fast replacement for System.Random</h3>
+<ul>
+<li>There are lots of random number packages, but sometimes you Just want a drop in replacement for System.Random that&#8217;s faster.</li>
+<li>This works and its all in one .cs file so you can just add it into your toolbox and forget about it.</li>
+<li>Well documented, no license, no stress.</li>
+<li>Get it <a href="http://www.codeproject.com/Articles/9187/A-fast-equivalent-for-System-Random" target="_blank" rel="noopener">here</a>.</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Images that use one of every colour + Free Software to make your own.</title>
+		<link>/images-that-use-one-of-every-colour/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 16 Jun 2015 04:57:03 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[C#]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=218</guid>
+
+					<description><![CDATA[Its kinda captivating, an image that uses only one of every colour possible on your computer. It makes for an odd desktop background on a 4K screen.]]></description>
+										<content:encoded><![CDATA[<p>When I got my first 4K screen and looked  at the specs I realised something. We are getting very close to the point where a screen will be able to show every possible (24 bit) pixel colour at once.</p>
+<p>Testing this out on screen with a big colour palate would be kinda boring, so I made some software to take a large image and convert it to use one of every colour.<br />
+I am using  4096 * 4096  = 16,777,216 (or 2<sup>24</sup>) images to do this.</p>
+<p>I played around with a few algorithms, but found the best results came from a very simple idea:</p>
+<ol>
+<li>Start with a image containing all colours.</li>
+<li>Inspect two pixels</li>
+<li>Swap the two pixels, if that would make If the image more like the target.</li>
+<li>Repeat steps 2 &#8211; 4, until the image looks good.</li>
+</ol>
+<p>Immediately I was stunned by the results.</p>
+<ul>
+<li>The Images actually worked, they looked like the source image.</li>
+<li>Parts of the image which where pulled toward a different colour and showed a very interesting (and accurate) image segmentation,</li>
+<li>The algorithm handled both photographs and solid colour cartoons well.</li>
+</ul>
+<h2>Example Images:</h2>
+<p>Firstly these files, produced by this method are are 50mb, and don&#8217;t compress well. I scaled them down for the website. If you want the verbatim image; you will have to download the software and make your own. (BTW: Did you notice the unusual beverage flavor in the vending machine pic, when you see it&#8230;).</p>
+
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/bottles_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/bottles_1024.jpg 1024w, /wp-content/uploads/2015/06/bottles_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/bottles_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/bottles_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/bottles_done_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/bottles_done_1024.jpg 1024w, /wp-content/uploads/2015/06/bottles_done_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/bottles_done_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/bottles_done_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/clackline_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/clackline_1024.jpg 1024w, /wp-content/uploads/2015/06/clackline_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/clackline_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/clackline_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/clackline_done_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/clackline_done_1024.jpg 1024w, /wp-content/uploads/2015/06/clackline_done_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/clackline_done_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/clackline_done_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/mass_fort_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/mass_fort_1024.jpg 1024w, /wp-content/uploads/2015/06/mass_fort_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/mass_fort_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/mass_fort_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/mass_fort_done_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/mass_fort_done_1024.jpg 1024w, /wp-content/uploads/2015/06/mass_fort_done_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/mass_fort_done_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/mass_fort_done_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/cassette-tape_small.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/cassette-tape_small.jpg 1024w, /wp-content/uploads/2015/06/cassette-tape_small-300x300.jpg 300w, /wp-content/uploads/2015/06/cassette-tape_small-150x150.jpg 150w, /wp-content/uploads/2015/06/cassette-tape_small-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/cassette-tape_done_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/cassette-tape_done_1024.jpg 1024w, /wp-content/uploads/2015/06/cassette-tape_done_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/cassette-tape_done_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/cassette-tape_done_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/tasmania_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/tasmania_1024.jpg 1024w, /wp-content/uploads/2015/06/tasmania_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/tasmania_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/tasmania_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/tasmania_done.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/tasmania_done.jpg 1024w, /wp-content/uploads/2015/06/tasmania_done-300x300.jpg 300w, /wp-content/uploads/2015/06/tasmania_done-150x150.jpg 150w, /wp-content/uploads/2015/06/tasmania_done-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/Fly_Agaric_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/Fly_Agaric_1024.jpg 1024w, /wp-content/uploads/2015/06/Fly_Agaric_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/Fly_Agaric_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/Fly_Agaric_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/Fly_Agaric_done.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/Fly_Agaric_done.jpg 1024w, /wp-content/uploads/2015/06/Fly_Agaric_done-300x300.jpg 300w, /wp-content/uploads/2015/06/Fly_Agaric_done-150x150.jpg 150w, /wp-content/uploads/2015/06/Fly_Agaric_done-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+
+<p>&nbsp;</p>
+<h2>Download the software:</h2>
+<p style="padding-left: 30px;">Install file:  <a href="http://www.busyducks.com/Software/ImageOfEveryColor/publish.htm" target="_blank" rel="noopener">here</a><br />
+Oneclick: <a href="http://www.busyducks.com/Software/ImageOfEveryColor_oneclick/publish.htm" target="_blank" rel="noopener">here</a></p>
+<h2></h2>
+<h2>Screen Shot</h2>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/06/application.jpg"><img loading="lazy" class="alignnone wp-image-230 " src="/wp-content/uploads/2015/06/application.jpg" alt="Application Screen Shot" width="819" height="453" srcset="/wp-content/uploads/2015/06/application.jpg 1070w, /wp-content/uploads/2015/06/application-300x166.jpg 300w, /wp-content/uploads/2015/06/application-1024x567.jpg 1024w, /wp-content/uploads/2015/06/application-768x425.jpg 768w" sizes="(max-width: 819px) 100vw, 819px" /></a></p>
+<h2>Software usage note(s):</h2>
+<ul>
+<li>Application works on high DPI screens.</li>
+<li>Some images prefer that I choose one of the pixels in a structured sequential fashion, others prefer both to be picked at random.
+<ul>
+<li>I solved this by doing n iterative rounds, followed by x minutes of random swapping.</li>
+<li>The software lets you set these options.</li>
+<li>Iterative rounds produce good results very quickly, but will leave some lines on cartoons.</li>
+<li>Random rounds are slow to improve the image. A minute is a good buffer to clean up an image, but consider 40+ minutes for cleaner results.</li>
+</ul>
+</li>
+<li>Uses many threads, and hogs the system bus. Will give the CPU a quick workout.</li>
+<li>Can be used in a command line mode, Suit batch processing.
+<ul>
+<li>To do this, provide one optional parameter (directory with images).</li>
+<li>Finds all pictures in directory that don&#8217;t have &#8220;_done&#8221; or &#8220;_ignore&#8221; in the name.</li>
+<li>Saves a new image with _done added to the file name.</li>
+<li>Overrides that image without prompting!</li>
+</ul>
+</li>
+<li>Save as bitmap If you don&#8217;t want the jpeg compression to alter the validity of the &#8220;every single colour&#8221; image.</li>
+</ul>
+<p>On images heavily biased to one colour, the iterative pass may exhaust that colour to the top of its run.<br />
+eg..</p>
+<p><a href="/wp-content/uploads/2015/06/working.jpg"><img loading="lazy" class="alignnone wp-image-240 " src="/wp-content/uploads/2015/06/working.jpg" alt="working" width="779" height="432" srcset="/wp-content/uploads/2015/06/working.jpg 1036w, /wp-content/uploads/2015/06/working-300x166.jpg 300w, /wp-content/uploads/2015/06/working-1024x567.jpg 1024w, /wp-content/uploads/2015/06/working-768x426.jpg 768w" sizes="(max-width: 779px) 100vw, 779px" /></a><a href="/wp-content/uploads/2015/06/working.jpg"> </a></p>
+<p>In this case, set &#8220;Iteration Runs&#8221; to 0. This will disable the iterative passes and go strait to random passes.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Contact / Feedback</h3>
+<p>[contact-form subject=&#8217;All Colour Software (via website)&#8217;][contact-field label=&#8217;Name&#8217; type=&#8217;name&#8217; required=&#8217;1&#8217;/][contact-field label=&#8217;Email&#8217; type=&#8217;email&#8217; required=&#8217;1&#8217;/][contact-field label=&#8217;Type of comment&#8217; type=&#8217;select&#8217; options=&#8217;Support,Bug Report,Feature Request,Sales Enquiry,Other&#8217;/][contact-field label=&#8217;Comment&#8217; type=&#8217;textarea&#8217; required=&#8217;1&#8217;/][/contact-form]</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>10 ways to (actually) make university IT assignments more relevant to industry.</title>
+		<link>/10-ways-to-make-university-it-assignments-more-relevant-to-industry/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 10 Mar 2015 13:38:41 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Humor]]></category>
+		<category><![CDATA[Industry]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=124</guid>
+
+					<description><![CDATA[I was asked how I would make assignments more relevant to industry, my response was not what they expected.]]></description>
+										<content:encoded><![CDATA[<p>A few years ago I returned from the IT industry to teaching in a university. Commenting that the states university courses seemed a little out of touch with industry requirements; I was asked how I would make assignments more relevant to industry. My response was not what they expected.</p>
+<p style="padding-left: 30px;"><strong>1</strong> Change the assignment several times while students are working on it.</p>
+<p style="padding-left: 30px;"><strong>2</strong> Assign 5 new members to the team 2 days before the assignment is due, claiming extra resources are needed. The students are told that &#8216;mythical man month&#8217; does not apply in this case because of awesome management skills.</p>
+<p style="padding-left: 30px;"><strong>3</strong> Have the best programmer in the team designated &#8216;programmer&#8217;. Then have other members fill the roles of &#8216;manager&#8217;, &#8216;second in charge&#8217;, &#8216;systems documenter&#8217;, &#8216;risk analysis officer&#8217;, &#8216;system analyst&#8217; and &#8216;software tester&#8217;.<br />
+Everyone can say the programmer is not an important part of the team and does no real work. Everyone gets more grades than the programmer. Everyone gets to blame the programmer if the assignment is running late.</p>
+<p style="padding-left: 30px;"><strong>4</strong> Request all work be done between 9am to 5pm.<br />
+Anyone arriving to assignment late is docked marks. The non-programmer who stays back latest it awarded the highest grade. Any programmer staying back late is deemed to be behind schedule and has to explain their lapse to the entire team at the next &#8216;scrum&#8217;.</p>
+<p style="padding-left: 30px;"><strong>5</strong> Every week the IT assignment group (except the &#8216;programmer&#8217;) must meet with a MBA student group. The MBA students get to arbitrarily change the IT assignment groups project in anyway they please.</p>
+<p style="padding-left: 30px;"><strong>6</strong> Every fortnight some marketing students explain to the lecturer that IT students are a &#8216;cost center&#8217; while marketing is a &#8216;profit center&#8217;. The lecture will take some marks from the IT students and give them to the marketing students.</p>
+<p style="padding-left: 30px;"><strong>7</strong> The marketing students project is to set new requirements for the IT groups project. The more ambitious the requirement the better their grade. Any requirement that is not delivered by the IT group&#8217;s assignment, is entirely the fault of the IT group.</p>
+<p style="padding-left: 30px;"><strong>8</strong> The IT students will have to complete &#8216;assignment 2.0&#8217; the following year. They will have a team of Indian exchange students to help the programmer. The team also gets a student from the psychology department to be called &#8216;HR officer&#8217;. This student deals with the team so that the IT student who is &#8216;manager&#8217; does not have to get so stressed.</p>
+<p style="padding-left: 30px;"><strong>9</strong> In the final year of study they will have to complete &#8216;assignment 3.0&#8217;. In this year the IT project group will be acquired by another university and will have to integrate their assignment with the assignment from another group in the new university.</p>
+<p style="padding-left: 30px;"><strong>10</strong> If the students in the economics school school fail a test, the MBA student team gets to retrench a non-manager IT student from the project. The retrenched IT student is not trustable, so the student will have his uni login and access cards, secretly disabled. The IT student will discover he/she is no longer part of the team when trying to use their access card, or attempting to login to a computer. This causes campus security to appear and escort the student off the university premises.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

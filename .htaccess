@@ -1,0 +1,26 @@
+RewriteEngine on
+ErrorDocument 401 /wp_4_1/opps/
+ErrorDocument 400 /wp_4_1/opps/
+ErrorDocument 403 /wp_4_1/opps/
+ErrorDocument 404 /wp_4_1/opps/
+ErrorDocument 500 /wp_4_1/opps/
+
+Options -Indexes
+
+Redirect /ascii-art-arduinos /wp_4_1/2015/11/16/ascii-art-arduino-pinouts/
+Redirect /ASCII-ART-ARDUINOS /wp_4_1/2015/11/16/ascii-art-arduino-pinouts/
+Redirect /speaking-duck /wp_4_1/2017/11/16/speakingduck-maven-plugin-for-java-resource-bundle-transitional/
+
+RewriteEngine on
+ErrorDocument 401 /wp_4_1/opps/
+ErrorDocument 400 /wp_4_1/opps/
+ErrorDocument 403 /wp_4_1/opps/
+ErrorDocument 404 /wp_4_1/opps/
+ErrorDocument 500 /wp_4_1/opps/
+
+Options -Indexes
+
+Redirect /ascii-art-arduinos /wp_4_1/2015/11/16/ascii-art-arduino-pinouts/
+Redirect /ASCII-ART-ARDUINOS /wp_4_1/2015/11/16/ascii-art-arduino-pinouts/
+Redirect /speaking-duck /wp_4_1/2017/11/16/speakingduck-maven-plugin-for-java-resource-bundle-transitional/
+

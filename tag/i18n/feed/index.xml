@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>i18n &#8211; Busy Ducks</title>
+	<atom:link href="/tag/i18n/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Thu, 16 Nov 2017 10:28:29 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>i18n &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>SpeakingDuck (Maven plugin for java resource bundle transition.)</title>
+		<link>/speakingduck-maven-plugin-for-java-resource-bundle-transitional/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 16 Nov 2017 10:28:29 +0000</pubDate>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[i18n]]></category>
+		<category><![CDATA[java]]></category>
+		<category><![CDATA[Linguistics]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=896</guid>
+
+					<description><![CDATA[Developing multi-lingual applications in java seems a pain, to me anyway. There are resource bundles and a localisation API &#8211; which are well documented. I wanted to auto translate these bundles, and then have friends look over and refine the translations later. I did not want some heavy weight application to manage properties files etc. &#8230;<br><a href="/speakingduck-maven-plugin-for-java-resource-bundle-transitional/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">SpeakingDuck (Maven plugin for java resource bundle transition.)</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Developing multi-lingual applications in java seems a pain, to me anyway.<br />
+There are resource bundles and a localisation API &#8211; which are <a href="https://docs.oracle.com/javase/tutorial/i18n/intro/steps.html">well documented</a>.</p>
+<p>I wanted to auto translate these bundles, and then have friends look over and refine the translations later.</p>
+<ul>
+<li>I did not want some heavy weight application to manage properties files etc.</li>
+<li>I found some simple auto translation tools, some free-ish, some pay-per-say. But they did not support java resource bundles.
+<ul>
+<li>I liked <a href="https://github.com/soimort/translate-shell">translate shell</a> a lot.</li>
+</ul>
+</li>
+<li>Few tools supported maven</li>
+<li>But nothing just worked</li>
+</ul>
+<p>So I created a quick maven plugin to translate resource bundles, by calling whatever tool you setup.</p>
+<p>Stuk it on github, will attempt to register it with maven.</p>
+<p><a href="https://github.com/busyDuckman/speakingDuck">https://github.com/busyDuckman/speakingDuck</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

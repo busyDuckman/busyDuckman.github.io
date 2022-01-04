@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Cascajal Block &#8211; Busy Ducks</title>
+	<atom:link href="/tag/cascajal-block/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Mon, 09 Mar 2015 16:21:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Cascajal Block &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Interpreting the Cascajal Block</title>
+		<link>/interpreting-the-cascajal-block/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 09 Mar 2015 16:21:08 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Archaeolinguistics]]></category>
+		<category><![CDATA[Cascajal Block]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=110</guid>
+
+					<description><![CDATA[There is a significant archaeological artefact, the Cascajal Block, that remains an untranslated mystery.
+
+A quite plausible purpose (and most of the translation) of the Cascajal Block jumped out at me strait away. Here is my translation, that even accounts for the infamous cootie glyph and non standard writing directions.]]></description>
+										<content:encoded><![CDATA[<h3>Background</h3>
+<p>There is a significant archaeological artefact, the Cascajal Block, that remains an untranslated mystery.</p>
+<p>Background:  <a href="http://en.wikipedia.org/wiki/Cascajal_Block" target="_blank" rel="noopener">http://en.wikipedia.org/wiki/Cascajal_Block</a> and <a href="http://www.famsi.org/mayawriting/cascajal/" target="_blank" rel="noopener">famsi.org</a></p>
+<p>A quite plausible purpose (and most of the translation) of the Cascajal Block jumped out at me straight away. After some work, I formulated an interesting hypothesis that accounts for many things, including the infamous cootie glyph and non standard writing directions.</p>
+<p><strong>Upfront:</strong> The skill-set I have in deciphering structured data does not come from linguistics; rather from years of deciphering undocumented file-formats, looking at memory dumps, examining data compression/representation, and reverse engineering data streams.  So, I&#8217;m applying my existing computer science skill set to a different field.  See what you make of my thoughts.</p>
+<h3>Explanation</h3>
+<p>I believe the tablet to be a &#8216;trade ledger&#8217;, used in a bartering economy.</p>
+<p>I colourised it to explain what I believe is going on.</p>
+<ul>
+<li>Outlines show a trade account.</li>
+<li>Glyphs shown with coloured lines are people</li>
+<li>Colour filled glyphs are businesses.</li>
+<li>All other glyphs are trade goods (note they look like food or tools)</li>
+</ul>
+<p><a href="/wp-content/uploads/2015/03/cb-translation.jpg"><img loading="lazy" class=" size-medium wp-image-112 aligncenter" src="/wp-content/uploads/2015/03/cb-translation-182x300.jpg" alt="cb translation" width="182" height="300" srcset="/wp-content/uploads/2015/03/cb-translation-182x300.jpg 182w, /wp-content/uploads/2015/03/cb-translation.jpg 436w" sizes="(max-width: 182px) 100vw, 182px" /></a></p>
+<p>Basic assumption of barter trade. I go in and give a pig, I want a knife in return. The trader says. I wan&#8217;t your pig, but don&#8217;t have a knife. Give me the pig now and I will put a knife aside for you when someone else has one to trade. Let me write this down on the ledger so I don&#8217;t &#8220;forget&#8221;.</p>
+<ul>
+<li>The trader recorded items he/she owed to people by putting a glyph for that person, followed by the items. (red circles)</li>
+<li>When someone owed him something he put the items followed by their names. (green circles)</li>
+<li>When he/she had something complex (e.g. a tool/clothing) &#8216;on order&#8217; from a business, he/she put a picture of the business below the items (blue circles).</li>
+</ul>
+<p>My explanation addresses quite a few things.</p>
+<ul>
+<li>Why the text did not run vertically
+<ul>
+<li>The accounts ran vertically (causing items to go horizontally, like a spreadsheet)</li>
+</ul>
+</li>
+<li>Why information appeared &#8220;grouped into areas&#8221;</li>
+<li>Why the cootie glyph (purple outline) had not been seen before.
+<ul>
+<li>It was used to identify a particular person (therefore unique-ish).</li>
+</ul>
+</li>
+<li>Why the inscription was so light (it was not meant for a monument).</li>
+<li>Why the surface is slightly concave (eg: the block had been rubbed clean and reused often)</li>
+<li>why the sequence of symbols were independent of each other (ie. no language structure)</li>
+<li>why each cluster of glyphs were were in different sizes.
+<ol>
+<li>important debts were in &#8216;bold&#8217;</li>
+<li>It was not written on the same day</li>
+<li>Possibly, different people worked at this trading business.</li>
+</ol>
+</li>
+</ul>
+<p>Why my interpretation holds an internal logical consistency.</p>
+<ul>
+<li>Name glyphs never appear in the trade section and vice versa</li>
+<li>If you look you can see where recording items owed for some people ran out of room and the trader made a new entry.</li>
+<li>food like trade items often shown near people</li>
+<li>tool like trade items are only shown near businesses</li>
+<li>the name glyphs are more intricate than the trade glyphs.</li>
+<li>Looking at the stone tablet directly, I also believe a flat stone was rubbed over paid debts to signify the job was done.</li>
+</ul>
+<p>As this is not my field of research, everything above is pure speculation. I certainly don&#8217;t claim to have &#8216;solved&#8217; anything; I am simply making my speculations public.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

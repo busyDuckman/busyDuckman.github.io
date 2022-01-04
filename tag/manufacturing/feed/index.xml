@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Manufacturing &#8211; Busy Ducks</title>
+	<atom:link href="/tag/manufacturing/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Fri, 26 Jan 2018 04:12:23 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Manufacturing &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>What is the difference between a laser that will cut metals and one that won&#8217;t?</title>
+		<link>/what-is-the-difference-between-a-laser-that-will-cut-metals-and-one-that-wont/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Fri, 26 Jan 2018 04:12:23 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Laser_Cutter]]></category>
+		<category><![CDATA[Manufacturing]]></category>
+		<category><![CDATA[Metal-work]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=905</guid>
+
+					<description><![CDATA[A friend who recently acquired a CO2 laser cutter for his school recently sent me a message. "What is the difference between a laser that will cut metals and one that won't?". I thought this is a good question, as the answer will help with understanding how to work with many materials.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p>A friend who recently acquired a CO2 laser cutter for his school sent me a message. &#8220;What is the difference between a laser that will cut metals and one that won&#8217;t?&#8221;. I thought this is a good question, as the answer will help with understanding how to work with many materials.</p>
+<p>But before the answer will make sense, we need to revisit the basics of how a laser cutter works in more detail.</p>
+<figure id="attachment_906" aria-describedby="caption-attachment-906" style="width: 300px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o.jpg"><img loading="lazy" class="wp-image-906 size-medium" src="/wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-300x242.jpg" alt="" width="300" height="242" srcset="/wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-300x242.jpg 300w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-1024x827.jpg 1024w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-768x620.jpg 768w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-1536x1240.jpg 1536w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-1568x1266.jpg 1568w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o.jpg 1624w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-906" class="wp-caption-text">Nick Bannon (left) and Myself (right) [amongst others not pictured], setting up the laser cutting area at the Perth Aritifactoty &#8211; 2013.</figcaption></figure>
+<p>&nbsp;</p>
+<h1>How the laser cutter works: 101</h1>
+<p>The common C02 laser cutter can be thought of as &#8220;thick&#8221; beam of IR light that moves out of a laser tube, bounces of mirrors until to get to the head. In the head it passes through a lens that focuses the beam, such that it is strong enough to ablate certain material though heat. A jet of air clears debris, and if upgraded from the piddly inbuilt compressor, will minimise scorching on materials like wood. The fact the beam is wide means that it can be bounced around off mirrors wit out imparting too much energy to one spot, such that it burns though a mirror, or the lens.</p>
+<p>&nbsp;</p>
+<h1>How the laser cutter works: 102</h1>
+<figure id="attachment_907" aria-describedby="caption-attachment-907" style="width: 229px" class="wp-caption alignright"><a href="/wp-content/uploads/2018/01/laser-cutter.jpg"><img loading="lazy" class="wp-image-907 size-medium" src="/wp-content/uploads/2018/01/laser-cutter-229x300.jpg" alt="Laser cutter beam focus" width="229" height="300" srcset="/wp-content/uploads/2018/01/laser-cutter-229x300.jpg 229w, /wp-content/uploads/2018/01/laser-cutter-780x1024.jpg 780w, /wp-content/uploads/2018/01/laser-cutter-768x1008.jpg 768w, /wp-content/uploads/2018/01/laser-cutter-1170x1536.jpg 1170w, /wp-content/uploads/2018/01/laser-cutter-1561x2048.jpg 1561w, /wp-content/uploads/2018/01/laser-cutter-1568x2058.jpg 1568w, /wp-content/uploads/2018/01/laser-cutter-scaled.jpg 1951w" sizes="(max-width: 229px) 100vw, 229px" /></a><figcaption id="caption-attachment-907" class="wp-caption-text">A CO2 laser produces an Infra red beam that is more intense in the centre. The beam is focused through a quartz lens.</figcaption></figure>
+<p>Now think of a laser cut in slow motion and zoomed in massively.  The laser hits a material. The focal point is probably beneath the surface and the beam is still a bit wide (less hot).</p>
+<p>The area at the surface vaporises and a little pilot hole forms. This hole is like the first domino, the material near it is now deformed. This deformed material (sub millimetre area) is like the plastic left in the sun, less robust and more sensitive to light. The cut now picks up momentum and deepens as a “pool of vaporising material eating into the ground”. The air stream is ejecting loose material and anything &#8216;molten&#8217; that was not instantly vaporised.</p>
+<p>The ability to cut well is a balance of many factors, primarily the right laser strength, air flow and movement speed &#8211; for a given material at a certain thickness.</p>
+<p>Relevant to later discussions with metal, is getting a good movement speed.</p>
+<ul>
+<li>Slow enough that the pit will work all the way through, before the beam moves on.</li>
+<li>Fast enough that the material is not given too much heat (see diagram to right, not all the beam is vaporising goodness and its not all equal in strengths.
+<ul>
+<li>From the parts of the beam not near the focal point that are not hot enough .</li>
+<li>From outer areas of the beam not as intense</li>
+</ul>
+</li>
+<li>Different lenses will help with thicker materials, butt you first limitation is you will need more power for thicker materials. Otherwise you will need to move at a slow speed that brings many other problems of heat dissipation.</li>
+</ul>
+<p>Reading the above may lead you to think you will need to get the most powerful laser cutter you can afford, for those times when you want to do a thick material. But&#8230; power is a two edged sword. The laser will only fire at a minimum of say 40%. So your 120W laser that will get you through 20mm acrylic, won’t be any good for etching designs on clothing (it will punch straight through at it minimum of 48W).</p>
+<h1>Problems that will affect metal</h1>
+<ul>
+<li>Many metals are reflective of IR beams (C02 lasers), preventing even etching of the surface.
+<ul>
+<li>NB: other lasers, such as solid state lasers which work with a different wavelength will be several times more efficient than C02 lasers for most metals.</li>
+</ul>
+</li>
+<li>Metal is a heat sink, it will draw heat away from the cut. Preventing the laser beam from melting any of the metal, or forming the initial pit.</li>
+<li>Many metals are not cool/safe in gaseous form. You may need venting.</li>
+</ul>
+<h2>Etching metal</h2>
+<p>Your enemy for etching, is not the heat conductivity of the metal, it’s the fact it reflects.<br />
+On cutters around your size it is often possible to etch certain metal. You will need to paint the surface with something (there are products that are sold for this purpose, but some people just use black $3 fiddly bit paint from buntings). The pit will form in the paint and you will get sufficient heat in to mark the metal. But then go no further down.</p>
+<p>&nbsp;</p>
+<h2>Cutting metal</h2>
+<p>Generally laser cut metal is not ablated/vaporised (turned to gas) like other materials. It is instead it is melted (turned to liquid), and blown out of the way by forced airflow. This is sometimes referred to as ‘melt and blow’ cutting. It is messy and provides issues that can damage a machine:</p>
+<ul>
+<li>Bits of molten metal can settle on the lens, this will absorb heat that the lens would otherwise transmit. The lens will now heat up and be damaged / burnt though.</li>
+<li>The metal / molten metal can reflect focused beam of light back at the lens. This can damage the lens, because the amount of IR radiation passing though it is now double.
+<ul>
+<li>The focused light can even propagate back along the mirrors and into the laser tube (damaging the very expensive parts of the machine).</li>
+</ul>
+</li>
+</ul>
+<p>Its worth mentioning that metal needs a lot more power to get the piloting pit going. And the pit is not a nice vaporised area with laser friendly material next to it. It’s a stubborn pool of liquid that sits in the way of your laser. This means cutting requires bigger lasers, or one or more assisting technologies to reduce the necessitated “bigness” of your laser.</p>
+<p>Such assisting technologies, for CO2 lasers, may include.</p>
+<ul>
+<li>High pressure gas, to blow the molten metal out of the hole.</li>
+<li>Blowing Oxygen or Nitrogen into the cut to make things more efficient.</li>
+<li>Using a more focused beam to get the metal to melt before heat dissipation sets in.</li>
+<li>A lens that moves, so that the focal point travels with your pit as it goes down.</li>
+</ul>
+<h1>As some lasers can be coerced into cutting metal, why is it not more common?</h1>
+<p>Firstly, the risk to the machine means many operators don&#8217;t feel it is worth it.</p>
+<p>But there are other issues:</p>
+<ul>
+<li>Solid state lasers are becoming more popular for cutting metal over the use of a large C02 Laser.</li>
+<li>The cut speed of lasers on metal can be slow, and the depth of cut limited.</li>
+<li>Tuning air/ laser/ lens /speed parameters is more difficult, and the results are not always a clean cut for inexperienced operators.</li>
+</ul>
+<p>But more importantly there are many <span style="text-decoration: underline;">more attractive  alternatives</span> for cutting of metal, including water jet cutting and CNC milling.</p>
+<p>&nbsp;</p>
+<h1>Further reading:</h1>
+<p>For clarity I simplified and glossed over some less important concepts in the above explanation.</p>
+<p>The following industry articles explore things in more depth:</p>
+<ul>
+<li>Laser comparison – cutting speed and rate of feed. <a href="http://jmtusa.com/laser-comparison-cutting-speed-and-rate-of-feed/">http://jmtusa.com/laser-comparison-cutting-speed-and-rate-of-feed/</a></li>
+<li>Lasing reflective metals <a href="http://www.fsmdirect.com/cutting/laser-cutting/326-lasing-reflective-metals">http://www.fsmdirect.com/cutting/laser-cutting/326-lasing-reflective-metals</a></li>
+<li>Back to basics: The subtle science of burr-free laser cutting. <a href="https://www.thefabricator.com/article/lasercutting/back-to-basics-the-subtle-science-of-burr-free-laser-cutting">https://www.thefabricator.com/article/lasercutting/back-to-basics-the-subtle-science-of-burr-free-laser-cutting</a></li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

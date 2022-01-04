@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WDLib &#8211; Busy Ducks</title>
+	<atom:link href="/tag/wdlib/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Mon, 10 Aug 2015 15:02:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>WDLib &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Practical Iterative K-ary Tree (aka n-ary, n-tree) Traversal in C#.  A surprisingly useful tool for the average programmer.</title>
+		<link>/practical-generic-k-ary-tree-n-tree-traversal-in-c/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 10 Aug 2015 15:02:54 +0000</pubDate>
+				<category><![CDATA[C#]]></category>
+		<category><![CDATA[Data Structures]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Data_Structures]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[WDLib]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=546</guid>
+
+					<description><![CDATA[Introduction: A lot of components in the C# environment are essentially a K-ary [kay-er-ee] tree. From tree-view nodes, to serialising a type via reflection, to directory listings to menu hierarchies, and so on. Often we need to iterate through these types of structures, or our own trees, and we just write some code to do &#8230;<br><a href="/practical-generic-k-ary-tree-n-tree-traversal-in-c/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">Practical Iterative K-ary Tree (aka n-ary, n-tree) Traversal in C#.  A surprisingly useful tool for the average programmer.</span></a>]]></description>
+										<content:encoded><![CDATA[<h3>Introduction:</h3>
+<p>A lot of components in the C# environment are essentially a K-ary [kay-er-ee] tree. From tree-view nodes, to serialising a type via reflection, to directory listings to menu hierarchies, and so on.</p>
+<p>Often we need to iterate through these types of structures, or our own trees, and we just write some code to do it as needed. This code is often problematic as it&#8217;s non-trivial to do well, because:</p>
+<ul>
+<li>It&#8217;s complex to do certain traversals in an iterative manor. (non recursive);</li>
+<li>Traversal is prone to bugs, as there are many edge cases;</li>
+<li>Software hangs if a circular reference exists and you don&#8217;t catch it;</li>
+<li>Unit-testing of once-off code is often neglected;</li>
+<li>Examining / verifying correct behaviour of tree traversal algorithms is difficult in the debugger.</li>
+</ul>
+<p>Wanting to rid myself of this re-occurring situation I built a few helper methods to do the following traversals iteratively:</p>
+<ul>
+<li>Depth First Pre Order</li>
+<li>Depth First Post Order,</li>
+<li>Breadth First</li>
+</ul>
+<p>The helpers are generic [BYO data type] and dont require a specific interface. You just supply a Func to return a nodes sub nodes. Thus you can drop a working tested algorithm onto whatever situation you encounter.</p>
+<h3>Iteration</h3>
+<p>Example:</p>
+<ul>
+<li>Made using an example data type &#8220;Node&#8221;
+<ul>
+<li>See the unit-tests at the  bottom of the page for implementation</li>
+</ul>
+</li>
+<li>First it shows using a foreach loop on a depth first pre-order iterator</li>
+<li>Then is shows using a breadth-first iterator to convert a tree to an array using Linq.</li>
+</ul>
+<pre class="lang:c# decode:true">/*
+* Test tree
+*                  A
+*                / | \ 
+*              B   C   D
+*            / |       | \
+*          E   F       G   H
+*        / |         / | \
+*       I  J        K  L  M
+*/
+Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+//EXAMPLE 1: Pre-order traversal via foreach loop
+foreach(var node in  Misc.EnumerateNodes(tree, 
+                                    N =&gt; N.Nodes, 
+                                    NodeVisitOrder.DepthFirstPreOrder))
+{
+    Console.Out.Write(node.Item);
+}
+Console.Out.WriteLine();
+//outputs ABEIJFCDGKLMH
+
+//EXAMPLE 2: Creating an array via breadth first traversal 
+string s = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, NodeVisitOrder.BredthFirst)
+                            .Select(N =&gt; N.Item)
+                            .ToArray());
+Console.Out.WriteLine(s);
+//outputs ABCDEFGHIJKLM</pre>
+<p>This was a simplistic example, but it works, its unit-tested, its efficient and non-recursive. It all ties into linq and IEnumerable so many neat tricks are possible.</p>
+<p>Lets examine the crucial line in detail.</p>
+<pre class="lang:c# decode:true">EnumerateNodes(tree, N =&gt; N.Nodes, NodeVisitOrder.DepthFirstPreOrder)
+</pre>
+<ul>
+<li>The first parameter is the root node. This is method is generic, so any class type will do.</li>
+<li>The second is a lambda expression for an enumerable  set of sub-nodes</li>
+<li>The third is the traversal method.</li>
+</ul>
+<p>Another example of how flexible the method is, using DirectoryInfo as the node, and iterating over all subdirectories:</p>
+<ul>
+<li>This time we use the optional forth parameter to enable circular reference checking. this prevents any chance of an infinite loop</li>
+</ul>
+<pre class="lang:c# decode:true">DirectoryInfo root = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+ 
+var dirs = Misc.EnumerateNodes(
+                root,
+                N =&gt; { try { return N.GetDirectories();  } 
+                       catch (Exception) { return null; } },
+                NodeVisitOrder.DepthFirstPreOrder, 
+                CircularRefernceBehaviour.Skip);
+ 
+foreach (var dir in dirs)
+{
+}</pre>
+<h3>Duplication</h3>
+<p>Often you just need to copy one tree structure to another (possibly of a different type):</p>
+<ul>
+<li>Loading a directory structure into a TreeView control</li>
+<li>Turning a tree of commands into Menu Items</li>
+<li>Working with expression parsing  and evaluation</li>
+<li>Just making a deep copy of a tree structure</li>
+</ul>
+<pre class="lang:c# decode:true">/*
+* Test tree
+*                  A
+*                / | \ 
+*              B   C   D
+*            / |       | \
+*          E   F       G   H
+*        / |         / | \
+*       I  J        K  L  M
+*/
+Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+TreeNode n = Misc.RebuildTree(tree,  
+							 N =&gt; N.Nodes, 
+							 N =&gt; new TreeNode("" + N.Item), 
+							 (T, N) =&gt; T.Nodes.AddRange(N.ToArray()));</pre>
+<p>Neeto, one line of code, and our <span style="text-decoration: underline;">tree is duplicated into a TreeView</span> (or whatever) in a efficient, reliable manor.</p>
+<p>RebuildTree takes five parameters:</p>
+<ol>
+<li>The root of the tree to be copied.</li>
+<li>Func for an enumerating sub-nodes in the source structure</li>
+<li>Func to create a new destination  node form a source node
+<ul>
+<li>Just the data of the node, Leave the child nodes unpopulated</li>
+</ul>
+</li>
+<li>Action to add a collection of Nodes to an existing node (destination structure)</li>
+<li>Circular reference checking behaviour</li>
+</ol>
+<h3>Core Algorithms</h3>
+<h4>Depth First Pre-Order</h4>
+<ul>
+<li>Note: visitOk(&#8230;) returns true unless a circular reference is detected.</li>
+<li>This works by feeding al nodes onto a stack, a basic way to resolve the recursion.</li>
+<li>Child nodes are pushed in reverse order, so they are pop&#8217;ed in the correct order.</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Pop();
+	if (visitOk(item, visited, checkType))
+	{
+		yield return item;
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse());
+	}
+}
+</pre>
+<h4>Depth First Post-Order</h4>
+<ul>
+<li>Depth First Post-Order is actually pretty tricky, a few algorithms exist.</li>
+<li>This one initially traverses the entire tree O(n) to fill a stack, then returns each item in the stack.</li>
+<li>The overall time is O(n), with the first iteration being O(n) and all subsequent  iterations being O(1)</li>
+<li>There s a requirement for  extra memory for this to work, but its not too bad.</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+Stack output = new Stack();
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Pop();
+	if (visitOk(item, visited, checkType))
+	{
+		output.Push(item);
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+	}
+}
+foreach (T item in output)
+{
+	yield return item;
+}
+
+</pre>
+<h4>Breadth First</h4>
+<ul>
+<li>This works by feeding al nodes onto a queue, as opposed to the depth first &#8211; pre order, which uses a stack.
+<ul>
+<li>This time Child nodes are not added in reverse order, however</li>
+</ul>
+</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Dequeue();
+	if (visitOk(item, visited, checkType))
+	{
+		yield return item;
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+	}
+}
+break;
+}
+</pre>
+<h3>Source Code:</h3>
+<pre class="height-set:true lang:c# decode:true ">/*
+Available under the BSD 3-Clause License
+Copyright (c) 2015, Dr Warren Creemers All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using WD_toolbox;
+
+namespace WD_toolbox
+{
+    public enum NodeVisitOrder { DepthFirstPreOrder, DepthFirstPostOrder, BredthFirst }
+
+    public enum CircularRefernceBehaviour { DontCheck, ThrowException, Skip }
+
+    public class NodeTraversalException : Exception
+    {
+        public NodeTraversalException(string message) : base(message) { }
+        public NodeTraversalException() : base() { }
+        public static NodeTraversalException VisitedTwice(object item) {return new NodeTraversalException("Node already visied: " + item.ToString());} 
+    }
+
+    public static class Misc
+    {
+        /// &lt;summary&gt;
+        /// Enumerates any Tree/graph in a non-recursive manor.
+        /// Does not check for circularReferences.
+        /// &lt;/summary&gt;
+        /// &lt;param name="node"&gt;Root node.&lt;/param&gt;
+        /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="order"&gt;The visit order.&lt;/param&gt;
+        /// &lt;param name="checkType"&gt;If circular references should be checked, and how to handle them. 
+        /// Note (1): Checks repeated node, which is not nesesiarly a circular reference (but all circulare references have a repeated node).
+        /// Note (2): performance hit reduced if  node generates a good hashcode.
+        /// &lt;/param&gt;
+        public static IEnumerable&lt;T&gt; EnumerateNodes&lt;T&gt;( T node, 
+                                                        Func&lt;T, IEnumerable&lt;T&gt;&gt; getSubNodes,
+                                                        NodeVisitOrder order = NodeVisitOrder.DepthFirstPreOrder,
+                                                        CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where T : class
+        {
+            if (node != null) //assuming null indicats an empty tree
+            {
+                //this acts as a stack or queue to resolve the recursion
+                LinkedList&lt;T&gt; list = new LinkedList&lt;T&gt;();
+                HashSet&lt;T&gt; visited = new HashSet&lt;T&gt;();
+
+                switch (order)
+                {
+                    case NodeVisitOrder.DepthFirstPreOrder:
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Pop();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                yield return item;
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse());
+                            }
+                        }
+                        break;
+
+                    case NodeVisitOrder.DepthFirstPostOrder:
+                        //This has a side effects, the first iteeration is slow (also memory consuming) 
+                        //as the entire structure is copied into a stack 
+                        Stack&lt;T&gt; output = new Stack&lt;T&gt;();
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Pop();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                output.Push(item);
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+                            }
+                        }
+                        foreach (T item in output)
+                        {
+                            yield return item;
+                        }
+                        break;
+
+                    case NodeVisitOrder.BredthFirst:
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Dequeue();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                yield return item;
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+                            }
+                        }
+                        break;
+                }
+            }
+        }
+
+        // Because getSubNodes(T) may return null to indicate no nodes.
+        private static IEnumerable&lt;T&gt; getSubNodesSafe&lt;T&gt;(T node, Func&lt;T, IEnumerable&lt;T&gt;&gt; getSubNodes)
+        {
+            if ((node != null) &amp;&amp; (getSubNodes != null))
+            {
+                IEnumerable&lt;T&gt; subNodes = getSubNodes(node);
+                return (subNodes != null) ? subNodes : new List&lt;T&gt;();
+            }
+            return new List&lt;T&gt;();
+        }
+
+        private static bool visitOk&lt;T&gt;(T item, HashSet&lt;T&gt; visited, CircularRefernceBehaviour checkType)
+        {
+            if (checkType != CircularRefernceBehaviour.DontCheck)
+            {
+                if (visited.Contains(item))
+                {
+                    // error
+                    if (checkType == CircularRefernceBehaviour.ThrowException)
+                    {
+                        throw NodeTraversalException.VisitedTwice(item);
+                    }
+                    return false; //indicate it's not ok to visit (ie skip)
+                }
+
+                //no error
+                visited.Add(item);
+                return true;
+            }
+
+            //no check
+            return true;
+        }
+
+
+        /// &lt;summary&gt;
+        /// Copies a tree structure. (useful in copying a tree structure to a tree view).
+        /// &lt;/summary&gt;
+        /// &lt;typeparam name="A"&gt;The node type of the tree to copy.&lt;/typeparam&gt;
+        /// &lt;typeparam name="B"&gt;The destination node type.&lt;/typeparam&gt;
+        /// /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="newNode"&gt;To create a simple non-recursive copy of a node.&lt;/param&gt;
+        /// &lt;param name="addSubNodes"&gt;&lt;/param&gt;
+        /// &lt;param name="checkType"&gt; Type of circular reference checking to perform.&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static B RebuildTree&lt;A, B&gt;(A srcNode,
+                                           Func&lt;A, IEnumerable&lt;A&gt;&gt; getSubNodes,
+                                           Func&lt;A, B&gt; newNode,
+                                           Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes,
+                                           CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where A : class
+            where B : class
+        {
+            return RebuildTree(srcNode, getSubNodes, newNode, addSubNodes, P =&gt; true, checkType);
+        }
+        
+        /// &lt;summary&gt;
+        /// Copies a tree structure. (useful in copying a tree structure to a tree view).
+        /// &lt;/summary&gt;
+        /// &lt;typeparam name="A"&gt;The node type of the tree to copy.&lt;/typeparam&gt;
+        /// &lt;typeparam name="B"&gt;The destination node type.&lt;/typeparam&gt;
+        /// /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="newNode"&gt;To create a simple non-recursive copy of a node.&lt;/param&gt;
+        /// &lt;param name="addSubNodes"&gt;&lt;/param&gt;
+        /// &lt;param name="where"&gt;&lt;/param&gt;
+        /// &lt;param name="checkType"&gt; Type of circular reference checking to perform.&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static B RebuildTree&lt;A, B&gt;( A srcNode,
+                                           Func&lt;A, IEnumerable&lt;A&gt;&gt; getSubNodes, 
+                                           Func&lt;A, B&gt; newNode,
+                                           Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes,
+                                           Predicate&lt;A&gt; where,
+                                           CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where A : class
+            where B : class
+        {
+
+
+            LinkedList&lt;Tuple&lt;A, B&gt;&gt; list = new LinkedList&lt;Tuple&lt;A, B&gt;&gt;();
+            HashSet&lt;A&gt; visited = new HashSet&lt;A&gt;();
+            B newRootNode = null;
+
+            list.AddLast(new Tuple&lt;A, B&gt;(srcNode, null));
+            while (list.Count &gt; 0)
+            {
+                var tuple = list.Pop();
+                A item = tuple.Item1;
+                B parent = tuple.Item2;
+
+                if (visitOk(item, visited, checkType))
+                {
+                    if (where(item))
+                    {
+                        B newItem = newNode(item);
+                        if (newRootNode == null) //root node
+                        {
+                            newRootNode = newItem;
+                        }
+
+                        safeAddSubNode(parent, newItem, addSubNodes);
+                        
+                        list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse().Select(N =&gt; new Tuple&lt;A, B&gt;(N, newItem)));
+                    }
+                }
+            }
+
+            //done
+            return newRootNode;
+        }
+
+        private static void safeAddSubNode&lt;B&gt;(B parent, B child, Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes)
+        {
+            if ((addSubNodes != null) &amp;&amp; (parent != null) &amp;&amp; (child != null))
+            {
+                addSubNodes(parent, new B[] { child });
+            }
+        }
+    }
+}
+</pre>
+<p>Requires The following Extension class to make LinkedList sane.</p>
+<pre class="height-set:true height:500 lang:c# decode:true ">/*
+Available under the BSD 3-Clause License
+Copyright (c) 2015, Dr Warren Creemers All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/// &lt;summary&gt;
+/// These extensions make usage of the LinkedList more consise.
+/// &lt;/summary&gt;
+public static class LinkedListExtension
+{
+	/// &lt;summary&gt;
+	/// Pops the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the (formerly) last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T Pop&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		T item = list.Last.Value;
+		list.RemoveLast(); //throws InvalidOperationException
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Dequeues the first value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the (formerly) first item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T Dequeue&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		T item = list.First.Value;
+		list.RemoveFirst(); //throws InvalidOperationException
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Gets the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T PeekLast&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		if (list.Count &lt;= 0)
+		{
+			throw new InvalidOperationException("LinkedList is empty (call to PeekLast)");
+		}
+
+		T item = list.Last.Value;
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Gets the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T PeekFirst&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		if (list.Count &lt;= 0)
+		{
+			throw new InvalidOperationException("LinkedList is empty (call to PeekFirst)");
+		}
+
+		T item = list.First.Value;
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Addss items to the end of the list.
+	/// &lt;/summary&gt;
+	/// &lt;param name="items"&gt;Items to add.&lt;/param&gt;
+	public static void AddLastAll&lt;T&gt;(this LinkedList&lt;T&gt; list, IEnumerable&lt;T&gt; items)
+	{
+		foreach (T item in items)
+		{
+			list.AddLast(item);
+		}
+	}
+
+	/// &lt;summary&gt;
+	/// Addss items to the end of the list.
+	/// &lt;/summary&gt;
+	/// &lt;param name="items"&gt;Items to add.&lt;/param&gt;
+	public static void AddFirstAll&lt;T&gt;(this LinkedList&lt;T&gt; list, IEnumerable&lt;T&gt; items)
+	{
+		foreach (T item in items)
+		{
+			list.AddFirst(item);
+		}
+	}
+}</pre>
+<h3>Unit Tests:</h3>
+<pre class="height-set:true height:500 lang:c# decode:true ">       [TestMethod()]
+        public void EnumerateNodesTest()
+        {
+            /*
+            * Test tree
+            *                  A
+            *                / | \ 
+            *              B   C   D
+            *            / |       | \
+            *          E   F       G   H
+            *        / |         / | \
+            *       I  J        K  L  M
+            */
+            Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+            Node&lt;char&gt; coruptTree = Node&lt;char&gt;.TestTree();
+            //point L  to A
+            coruptTree.Nodes[2].Nodes[0].Nodes[1].Nodes.Add(coruptTree); 
+
+            //DepthFirstPreOrder
+            string res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                        NodeVisitOrder.DepthFirstPreOrder, 
+                                                        CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+
+
+
+            //System.Diagnostics.Trace.WriteLine("Hello World");
+            Assert.AreEqual("ABEIJFCDGKLMH", res);
+            
+            //DepthFirstProstOrder
+            res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                    NodeVisitOrder.DepthFirstPostOrder,
+                                                    CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+            Assert.IsTrue(res == "IJEFBCKLMGHDA");
+
+            //BredthFirst
+            res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                 NodeVisitOrder.BredthFirst,
+                                                 CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+            Assert.AreEqual("ABCDEFGHIJKLM", res);
+
+            //just to check no exception thrown
+            TreeNode n = Misc.RebuildTree(tree,  
+                                         N =&gt; N.Nodes, 
+                                         N =&gt; new TreeNode("" + N.Item),
+                                         (T, N) =&gt; T.Nodes.AddRange(N.ToArray()), 
+                                         CircularRefernceBehaviour.ThrowException);
+
+            //Check an exception is thrown for curupted tree
+
+            try
+            {
+                n = Misc.RebuildTree(coruptTree,
+                                             N =&gt; N.Nodes,
+                                             N =&gt; new TreeNode("" + N.Item),
+                                             (T, N) =&gt; T.Nodes.AddRange(N.ToArray()),
+                                             CircularRefernceBehaviour.ThrowException);
+
+                Assert.Fail("Should never reach this line of code");
+            }
+            catch (Exception)
+            {
+            }
+
+            //Just handle a corupt tree by not going backward.
+            n = Misc.RebuildTree(coruptTree,
+                                 N =&gt; N.Nodes,
+                                 N =&gt; new TreeNode("" + N.Item),
+                                 (T, N) =&gt; T.Nodes.AddRange(N.ToArray()),
+                                 CircularRefernceBehaviour.Skip);
+
+            //NB: Infinite loop on fail
+
+        }
+
+        
+
+        public class Node&lt;T&gt;
+        {
+            public List&lt;Node&lt;T&gt;&gt; Nodes = new List&lt;Node&lt;T&gt;&gt;();
+            public T Item;
+            public Node(T item, IList&lt;Node&lt;T&gt;&gt; nodes = null)
+            {
+                Item = item;
+                if (nodes != null)
+                {
+                    Nodes.AddRange(nodes);
+                }
+            }
+
+            private static Node&lt;T&gt; NODE&lt;T&gt;(T item, params Node&lt;T&gt;[] Nodes)
+            {
+                return new Node&lt;T&gt;(item, Nodes);
+            }
+
+            public static Node&lt;char&gt; TestTree()
+            {
+                /*
+                * Test tree
+                *                  A
+                *                / | \ 
+                *              B   C   D
+                *            / |       | \
+                *          E   F       G   H
+                *        / |         / | \
+                *       I  J        K  L  M
+                */
+
+
+                Node&lt;char&gt; tree =
+                    NODE('A',
+                        NODE('B',
+                            NODE('E',
+                                NODE('I'),
+                                NODE('J')
+                                ),
+                            NODE('F')
+                            ),
+                        NODE('C'),
+                        NODE('D',
+                            NODE('G',
+                                NODE('K'),
+                                NODE('L'),
+                                NODE('M')
+                                ),
+                            NODE('H')
+                            )
+                        );
+
+                return tree;
+            }
+        }
+    }</pre>
+<h3>WDLib Library:</h3>
+<p>This is part of my personal toolbox, WDLib (in the misc class, which is abridged for clarity on this page). I am moving to open source the library at the moment.</p>
+<h3>Limitations and Usage:</h3>
+<ul>
+<li>The circular reference check just checks for a repeated node, which is not necessarily a circular reference (but all circular references have a repeated node). This may deny some malformed trees that could otherwise be safely parsed. Checking can always be disabled if this is your intent.</li>
+<li>Be aware the first iteration of the Depth First Post-Order has a O(n) overhead.</li>
+</ul>
+<h3></h3>
+<h3>Contact / Feedback</h3>
+<p>[Sorry I had to remove this, because hundreds of spam emails about SEO]</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

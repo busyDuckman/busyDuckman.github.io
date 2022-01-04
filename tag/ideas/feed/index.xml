@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Ideas &#8211; Busy Ducks</title>
+	<atom:link href="/tag/ideas/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Tue, 11 Jul 2017 11:26:39 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Ideas &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Random Thoughts</title>
+		<link>/random-thoughts/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 11 Jul 2017 11:26:39 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Ideas]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=857</guid>
+
+					<description><![CDATA[Here are some random ideas, like: "Could we get street lights to start flashing 30 seconds before an ambulance is due to come through?"]]></description>
+										<content:encoded><![CDATA[<h2></h2>
+<h2>Could we get street lights to start flashing 30 seconds before an ambulance is due to come through?</h2>
+<p>All traffic would have time to organise itself into one lane and emergency vehicles could proceed without obstruction. This seems easy to achieve using existing</p>
+<p><a href="/wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood.jpg"><img loading="lazy" class="aligncenter wp-image-858 " src="/wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-300x225.jpg" alt="" width="411" height="308" srcset="/wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-300x225.jpg 300w, /wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-1024x768.jpg 1024w, /wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-768x576.jpg 768w, /wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-1536x1152.jpg 1536w, /wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-2048x1536.jpg 2048w, /wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-1568x1176.jpg 1568w" sizes="(max-width: 411px) 100vw, 411px" /></a></p>
+<p>&nbsp;</p>
+<h2>Compiler errors should link through to concise explanations or solutions on  stackoverflow, or some error code explanation wiki.</h2>
+<p>Lats face it, this will speed up things a bit; especially when learning a new language.</p>
+<p>&nbsp;</p>
+<h2>Give random rich/powerfull people weird handshakes. See if you can pass for Illuminati.</h2>
+<div class="_1dwg _1w_m">
+<div>
+<div id="js_89t" class="_5pbx userContent" data-ft="{&quot;tn&quot;:&quot;K&quot;}">
+<p>It&#8217;s like going to go around to everyone you meet saying, &#8220;Hey, your&#8217;e from the future as well&#8230; right.&#8221;. Hopefully someone will reply &#8220;How did you know?&#8221;.</p>
+<p>&nbsp;</p>
+</div>
+<h2 class="_3x-2">Browsers should use a 2 Mb cap in loading of any website.</h2>
+<p class="_3x-2">If displaying the site goes over you get &#8220;You have visited some stupidly large web page, do you wan&#8217;t to continue?&#8221;.</p>
+<div>Also why can&#8217;t there be 100 odd &#8216;standard internet fonts&#8217;, so that we can do away with many custom font downloads for web pages.</div>
+<h2></h2>
+<div>
+<div class="_1dwg _1w_m">
+<div>
+<div id="js_9me" class="_5pbx userContent" data-ft="{&quot;tn&quot;:&quot;K&quot;}">
+<h2>Leave fake logins on sticky notes around the office, and log if anyone attempts to use them.</h2>
+<p>Also some easy to find network ports that connect to an isolated honey pot.</p>
+<p>&nbsp;</p>
+</div>
+<div class="_3x-2"></div>
+<div></div>
+</div>
+</div>
+<div></div>
+</div>
+</div>
+</div>
+<div></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

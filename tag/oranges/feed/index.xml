@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Oranges &#8211; Busy Ducks</title>
+	<atom:link href="/tag/oranges/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Wed, 24 Jun 2015 05:25:05 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Oranges &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Neat maths trick with an orange. Bonus: the worst duck joke ever!</title>
+		<link>/neat-maths-trick-with-an-orange-bonus-the-worst-duck-joke-ever/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 24 Jun 2015 05:25:05 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Bad humor]]></category>
+		<category><![CDATA[Humor]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[Oranges]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<category><![CDATA[Rubber Ducks]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=375</guid>
+
+					<description><![CDATA[Draw five dots anywhere on an orange with a white board marker.  There is a way to cut the orange exactly in half so that at least four of the dots are visible on one side.  Can you figure out how? Solution in this video.]]></description>
+										<content:encoded><![CDATA[<p>Draw five dots anywhere on an orange with a white board marker.  There is a way to cut the orange exactly in half so that at least four of the dots are visible on one side.  Can you figure out how?</p>
+<p>Solution in this video.</p>
+<p><iframe loading="lazy" title="Maths trick with an orange, great for teaching and parties." width="940" height="529" src="https://www.youtube.com/embed/aabF_IBlLdE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

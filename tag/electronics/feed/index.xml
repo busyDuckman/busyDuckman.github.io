@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Electronics &#8211; Busy Ducks</title>
+	<atom:link href="/tag/electronics/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Tue, 21 Apr 2020 02:27:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Electronics &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Upgrading Robie The Robot.</title>
+		<link>/upgrading-robie-the-robot/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 21 Apr 2020 02:27:55 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[3D-Printing]]></category>
+		<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[raspberry_pi]]></category>
+		<category><![CDATA[Robot]]></category>
+		<category><![CDATA[vintage]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=1018</guid>
+
+					<description><![CDATA[Part one, in a journey to upgrade an old robot. This classic 80's robot This robot was also known as: Tandy Robie, Radio Shack Robie, Robie the Robot, Talking Robie, RS 4061, Robocom 1000, Robie Parlant, and Robocom Robot (Super).]]></description>
+										<content:encoded><![CDATA[
+<h2>A Rare Find</h2>
+
+
+
+<p>I was in an vintage collectables store and saw a beaten up old &#8216;Robie the Robot&#8217; forgotten at the back of a shelf. It&#8217;s dome was cracked and it&#8217;s remote missing. Robot collectors are quite voracious in Canberra with most robots snapped up within days. However, it seems nobody relished this rough robotic remnant, so I got it cheap.</p>
+
+
+
+<p>This robot was also known as: <em>Tandy Robie, Radio Shack Robie, Robie the Robot, Talking Robie, RS 4061, Robocom 1000, Robie Parlant, Robocom Robot (Super)</em>. There is a good write up about the robot on <a rel="noreferrer noopener" href="http://www.theoldrobots.com/talkrobie2.html" target="_blank">theoldrobots</a>.</p>
+
+
+
+<figure class="wp-block-image size-large"><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/robbie-1024x768.jpeg" alt="" class="wp-image-1019"/><figcaption>Robie The Robot, as purchased.</figcaption></figure>
+
+
+
+<h2>Tear Down</h2>
+
+
+
+<p>Disassembling Robie I discovered a typical 80&#8217;s remote control toy. RC circuitry oozing with leaking capacitor electrolyte and decayed protective lacquer. Apparently the built in speaker could talk, but looking at the circuitry, my guess is it functioned as a wally talky, playing a voice signal from the remote.  I didn&#8217;t have the remote so I can&#8217;t confirm.<br><br>The motors were the &#8220;old style&#8221;; power hungry and weak. The Achilles heel that made all 80&#8217;s moving toys kinda nerfed.</p>
+
+
+
+<p>The front screen was fake, the heads and arms were not designed to move. I will need to fix all this.</p>
+
+
+
+<h2>A New Brain.</h2>
+
+
+
+<p>Decided to throw a pi in there, with a monitor that fits the front screen and a camera because that would be cool. <br></p>
+
+
+
+<figure class="wp-block-image size-large"><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/pi-1024x768.jpeg" alt="" class="wp-image-1020"/></figure>
+
+
+
+<p>For the display, a generic five dollar 2.2&#8243; SPI TFT LCD&nbsp;that sells for arduino projects works well (fits just behind the front monitor panel). The stock plastic used for Robies display is way to dark for the screen to be visible, so I used a Fresnel lens instead (you can get them from the two dollar shop, sold a book magnifiers). </p>
+
+
+
+<p>A front assembly was 3d printed to hold the pi, monitor and camera (such that everything lined up, and the camera could see out of the hole previously used for the frontal on/off switch.</p>
+
+
+
+<figure class="wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img loading="lazy" width="1024" height="768" src="/wp-content/uploads/2020/04/front_asm_render.jpg" alt="" data-id="1021" data-link="http://busyducks.com/wp_4_1/?attachment_id=1021#main" class="wp-image-1021" srcset="/wp-content/uploads/2020/04/front_asm_render.jpg 1024w, /wp-content/uploads/2020/04/front_asm_render-300x225.jpg 300w, /wp-content/uploads/2020/04/front_asm_render-768x576.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="blocks-gallery-item__caption">Design in Fusion 360, screen is mounted on the green sled.</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158235-768x1024.jpg" alt="" data-id="1034" data-link="http://busyducks.com/wp_4_1/?attachment_id=1034#main" class="wp-image-1034"/><figcaption class="blocks-gallery-item__caption">Rear</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158236-768x1024.jpg" alt="" data-id="1035" data-link="http://busyducks.com/wp_4_1/?attachment_id=1035#main" class="wp-image-1035"/><figcaption class="blocks-gallery-item__caption">Front</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158224-1024x768.jpg" alt="" data-id="1037" data-full-url="/wp-content/uploads/2020/04/P4158224-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1037#main" class="wp-image-1037"/><figcaption class="blocks-gallery-item__caption">Empty shell, wit Fresnel lens.</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158223-1024x768.jpg" alt="" data-id="1036" data-full-url="/wp-content/uploads/2020/04/P4158223-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1036#main" class="wp-image-1036"/><figcaption class="blocks-gallery-item__caption">Mount pi.</figcaption></figure></li></ul></figure>
+
+
+
+<h2>Motorising the Head</h2>
+
+
+
+<p>A turntable system was created in OpenSCAD, using the awesome parametric gear library by Dr Jörg Janssen. I didn&#8217;t have a 3d printer, so I printed via the ANU Makerspace.</p>
+
+
+
+<figure class="wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img loading="lazy" width="1024" height="586" src="/wp-content/uploads/2020/04/head_gears_lower-1024x586.png" alt="" data-id="1023" data-link="http://busyducks.com/wp_4_1/?attachment_id=1023#main" class="wp-image-1023" srcset="/wp-content/uploads/2020/04/head_gears_lower-1024x586.png 1024w, /wp-content/uploads/2020/04/head_gears_lower-300x172.png 300w, /wp-content/uploads/2020/04/head_gears_lower-768x439.png 768w, /wp-content/uploads/2020/04/head_gears_lower.png 1103w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></li><li class="blocks-gallery-item"><figure><img loading="lazy" width="1024" height="691" src="/wp-content/uploads/2020/04/P6185667_close_up-1024x691.jpg" alt="" data-id="1024" data-link="http://busyducks.com/wp_4_1/?attachment_id=1024#main" class="wp-image-1024" srcset="/wp-content/uploads/2020/04/P6185667_close_up-1024x691.jpg 1024w, /wp-content/uploads/2020/04/P6185667_close_up-300x202.jpg 300w, /wp-content/uploads/2020/04/P6185667_close_up-768x518.jpg 768w, /wp-content/uploads/2020/04/P6185667_close_up-1536x1036.jpg 1536w, /wp-content/uploads/2020/04/P6185667_close_up-2048x1381.jpg 2048w, /wp-content/uploads/2020/04/P6185667_close_up-1568x1057.jpg 1568w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/inside_a-906x1024.jpg" alt="" data-id="1025" data-full-url="/wp-content/uploads/2020/04/inside_a-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1025#main" class="wp-image-1025"/></figure></li><li class="blocks-gallery-item"><figure><img loading="lazy" width="674" height="440" src="/wp-content/uploads/2020/04/head_gears_upper.png" alt="" data-id="1022" data-link="http://busyducks.com/wp_4_1/?attachment_id=1022#main" class="wp-image-1022" srcset="/wp-content/uploads/2020/04/head_gears_upper.png 674w, /wp-content/uploads/2020/04/head_gears_upper-300x196.png 300w" sizes="(max-width: 674px) 100vw, 674px" /></figure></li></ul></figure>
+
+
+
+<p>The turntable is driven by a 28byj-48 stepper motor, with a ULN2003 Darlington transistor array driver. <br></p>
+
+
+
+<p>I discovered the original broken dome was most likely not a custom mould,  but a security camera dome. I had some difficulty justifying a proper replacement as Australian retailers wanted over $50 for a replacement security camera dome (just the one piece of plastic). So I just replaced the head with a plastic dome from a toy shop.<br><br>The result is not quite as fast as I would like, but it was unexpectedly charming.</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="P6235685" width="940" height="529" src="https://www.youtube.com/embed/sQd-v5fpN5s?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<h2>Getting the arms to move.</h2>
+
+
+
+<p>A bracket was designed to get some cheap tower-pro servos to fit aligned with the arms. The brackets neatly affixes to old circuit mounting points in the plastic. A custom servo horn will friction fitted the arms to the servo. The existing arm bearing was sanded a bit to get it to slide freely. The result is a much more expressive robot. </p>
+
+
+
+<figure class="wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058095-768x1024.jpg" alt="" data-id="1026" data-link="http://busyducks.com/wp_4_1/?attachment_id=1026#main" class="wp-image-1026"/><figcaption class="blocks-gallery-item__caption">Servo mount rear</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058096-768x1024.jpg" alt="" data-id="1027" data-link="http://busyducks.com/wp_4_1/?attachment_id=1027#main" class="wp-image-1027"/><figcaption class="blocks-gallery-item__caption">Servo mount top</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058110-1024x768.jpg" alt="" data-id="1028" data-link="http://busyducks.com/wp_4_1/?attachment_id=1028#main" class="wp-image-1028"/><figcaption class="blocks-gallery-item__caption">friction fit arm</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058101-1024x768.jpg" alt="" data-id="1029" data-link="http://busyducks.com/wp_4_1/?attachment_id=1029#main" class="wp-image-1029"/><figcaption class="blocks-gallery-item__caption">servos installed</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058108-1024x768.jpg" alt="" data-id="1030" data-full-url="/wp-content/uploads/2020/04/P4058108-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1030#main" class="wp-image-1030"/><figcaption class="blocks-gallery-item__caption">servo horns installed</figcaption></figure></li></ul></figure>
+
+
+
+<h2>Whats next.</h2>
+
+
+
+<p>I have made files for the progress thus far available via github, encase anyone has a Robie of their own and wants to try this. <a href="https://github.com/busyDuckman/robbie">https://github.com/busyDuckman/robbie</a></p>
+
+
+
+<p>Next up I will work on:</p>
+
+
+
+<ul><li>Drive system so Robie can move around.</li><li>Microphone array so voice interaction is possible.</li><li>Control software.</li><li>Personality and human interaction.</li></ul>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Surface Preparation and Finger Prints. How bad are they?</title>
+		<link>/surface-preparation-and-finger-prints-how-bad-are-they/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 24 Jan 2017 13:45:25 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Finger Prints]]></category>
+		<category><![CDATA[Glue]]></category>
+		<category><![CDATA[Industry]]></category>
+		<category><![CDATA[PCB]]></category>
+		<category><![CDATA[Solder]]></category>
+		<category><![CDATA[Woodwork]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=828</guid>
+
+					<description><![CDATA[In preparing a surface for paint / glue / thermal paste / soldering / whatever, there is one thing to remember. A normal finger print is of similar thickness to cling wrap (0.01mm). A thick (eg post pizza) print, where the ridges are no longer visible, is closer to the thickness of a sheet of paper (0.1mm).
+
+Rule of thumb. If you would you would not be happy with this kind of material on the surface of whatever you are coating, remove your finger prints.]]></description>
+										<content:encoded><![CDATA[<p>In preparing a surface for paint / glue / thermal paste / soldering / whatever, there is one thing to remember. A normal finger print is of similar thickness to cling wrap (0.01mm). A thick (eg post pizza) print, where the ridges are no longer visible, is closer to the thickness of a sheet of paper (0.1mm).</p>
+<p>Rule of thumb. If you would you would not be happy with this kind of material on the surface of whatever you are coating, remove your finger prints.</p>
+<ul>
+<li>So a very thin coat of paint is 0.02mm, but often thicker.  So wash your hands, then it&#8217;s probably OK to touch. But don&#8217;t &#8220;Pizza and Paint&#8221;.</li>
+<li>Thermal paste on your CPU is 0.07mm  to 0.12mm thick, So Pizza hands are a definite problem. A single normal finger print may well produce a small but noticeable effect to cooling. A well handled CPU with a few prints is probably not good, you would not leave scraps of plastic wrap on the CPU after all.</li>
+<li>Some glues may dilute your finger print and not care (super glue). While other (silicone adhesives) will probably bond poorly.</li>
+<li>Solder &#8211; The NASA soldering standards (<a href="https://www.hq.nasa.gov/office/codeq/doctree/canceled/NS87393-Ch5.pdf">NASA_STD_8739 .3</a>) state: <em>&#8220;When handling metal surfaces that are to be soldered is unavoidable, clean, lint-free gloves or finger cots shall be used. &#8220;</em>. Many commercial soldering standards also follow this advise for handling of both solder and parts.
+<ul>
+<li>Whats interesting is that some manufactures are particularly concerned about what is on your hands (moisturisers and hand lotions cited as being particularly problematic to solder).</li>
+<li>The finger print contamination of solder joints is often resolved by just keeping the joint hot until the solder takes. This extra heating burns of enough contaminate to allow solder to flow, but can damage components amongst other problems.</li>
+<li>UPDATE: The new IPC standards (<a href="https://www.ipc.org/4.0_Knowledge/4.1_Standards/IPC-J-STD-001ES.pdf">IPC-J-STD-001ES</a>), which NASA, and many other companies, have adopted, don&#8217;t mention fingers or gloves specifically. They only broadly reference that handling mechanisms stall not contaminate the board or parts.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>RGB Bias Lighting with Arduino (Part 1)</title>
+		<link>/rgb-bias-lighting-with-arduino-part-1/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 09 Nov 2015 17:55:35 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<category><![CDATA[WS2811]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=679</guid>
+
+					<description><![CDATA[We are setting up an arduino with a WS2811 LED strip to do RGB based bias lighting effects.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p>Bias Lighting is a light around your display that helps you perceive contrast and reduces eye stress. It also just looks just plain cool, and create a kind of relaxed vibe.</p>
+<p>There is a lot of theory on optimising bias lighting, but really any light will help quite a bit. So why not see if we can do anything inventive with the bias lighting colour.</p>
+<h1>The Idea</h1>
+<p>Lets use a bias lighting that changes colour, and experiment with:</p>
+<ul>
+<li>Altering the colour to  correspond with the time of a day</li>
+<li>Blink light to warn you that you have a meeting soon</li>
+<li>Having the colour change match the movement of the sun</li>
+<li>Changing the colour to green (or whatever) when its your &#8220;bed time&#8221;</li>
+<li>Using a colour change scheme set to work with your circadian rhythm</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Materials</h1>
+<p>What you will need:</p>
+<ul>
+<li>Some WS2811 LED strips (approx 30cm per monitor)</li>
+<li>An arduino</li>
+<li>Some 3 core wire</li>
+<li>About an hour free time</li>
+<li>Electrical tape</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Results</h1>
+<p>&nbsp;</p>
+<p><iframe loading="lazy" title="RGB Bias lighting on three monitors (using an arduino)." width="940" height="529" src="https://www.youtube.com/embed/_tsl4WFH_8o?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>&nbsp;</p>
+<h1>WS2811 RGB Strips</h1>
+<p>WS2811 strips can be acquired via <a href="http://www.aliexpress.com/w/wholesale-ws2811-led-strip.html" target="_blank" rel="noopener">Ali Express</a> at a reasonable price, they are a strip of RGB LED&#8217;s that are individually addressable (set any LED to any colour).</p>
+<p>Pros&#8217;</p>
+<ul>
+<li>Each chip has an active data repeater that forwards the data signal. Provided the 5v power to the strip is strong, the data signal is propagated to as many chips as you like.</li>
+<li>Very good value</li>
+<li>Strong bright lights</li>
+<li>Fast data channel</li>
+<li>Only requires one GPIO pin.</li>
+</ul>
+<p>Cons&#8217;</p>
+<ul>
+<li>PWM control used for arbitrary colours is not super fast. Use of 7 colours that involve any LED being either full on or gull off produces results that work better for moving items / camera.</li>
+<li>Poor build quality occasionally causes minor issues</li>
+<li>Some visual artefacts from &#8220;fast moving pixels&#8221;.  (that can look very cool if used correctly).</li>
+</ul>
+<p>The strips look like what you see below. They can be cut to length, and have a soldered connection every 30cm or so.  The arrows indicate the direction the data signal is propagated in, your controller (eg an arduino) must be connected to the left most (first) arrow. However the voltage to run the strip can be applied anywhere.</p>
+<p><a href="/wp-content/uploads/2015/11/WS2811_strip.jpg" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-694 size-large" src="/wp-content/uploads/2015/11/WS2811_strip-1024x193.jpg" alt="WS2811_strip" width="640" height="121" srcset="/wp-content/uploads/2015/11/WS2811_strip-1024x193.jpg 1024w, /wp-content/uploads/2015/11/WS2811_strip-300x57.jpg 300w, /wp-content/uploads/2015/11/WS2811_strip-768x145.jpg 768w, /wp-content/uploads/2015/11/WS2811_strip-1536x290.jpg 1536w, /wp-content/uploads/2015/11/WS2811_strip-2048x386.jpg 2048w, /wp-content/uploads/2015/11/WS2811_strip-1568x296.jpg 1568w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>A close up look shows a chip (black part on the left) and three LED&#8217;s, the middle one being red.</p>
+<p style="padding-left: 90px;"><a href="/wp-content/uploads/2015/11/WS2811_single2.jpg" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-696 size-medium" src="/wp-content/uploads/2015/11/WS2811_single2-300x226.jpg" alt="WS2811_single2" width="300" height="226" srcset="/wp-content/uploads/2015/11/WS2811_single2-300x226.jpg 300w, /wp-content/uploads/2015/11/WS2811_single2-1024x770.jpg 1024w, /wp-content/uploads/2015/11/WS2811_single2-768x578.jpg 768w, /wp-content/uploads/2015/11/WS2811_single2.jpg 1391w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>&nbsp;</p>
+<h1>Arduino Setup</h1>
+<p>For effective bias lighting, stick an adhesive LED strip to the back of your monitor, about 5cm from the top. The arduino can be mounted with stick on velcro to what have you. If necessary, connect up multiple sections of LED strips (one for each monitor) using a good 3 core wire.</p>
+<p>The LED strip&#8217;s data line is connected to a single arduino GPIO pin configured as an output.  Its important to note the <span style="text-decoration: underline;">strip has an arrow on it</span>, this arrow shows the direction the data will travel. Your data cable must be connected to the first  LED in the strip (not the last).</p>
+<p>For my three monitors I was able to power the strip directly from my arduino, using only USB power. Though your mileage may vary.</p>
+<p><strong>Setup via USB Power</strong></p>
+<p>If you can get away with it wire up the strips shown in the top diagram. Be aware that your PC or USB hub will be responsible for providing power to a large set of lights.</p>
+<p>Consider some issues with this:</p>
+<ul>
+<li>There will remain a significant current draw on the PC even while its in sleep mode (or running of batteries).  Be aware not all PC power supplies sleep well , they may turn their fans off even though you are drawing enough current to necessitate a low amount of active cooling.</li>
+<li>Your arduinos regulator will may get hot.</li>
+<li>Your USB port may well not be up to task.</li>
+</ul>
+<p><span style="color: #000000;">For these reasons I would advise:</span></p>
+<ul>
+<li><span style="color: #000000;">Connection via a powered USB hub. </span></li>
+<li>Use of a <a href="http://amzn.to/1Qok8qt" target="_blank" rel="noopener">USB Doctor Device</a> to check your current draw is sensible (eg 350mA or below, the 500mA max in the USB spec does not always pan out well)</li>
+<li>Configuring the brightness of the LED output (programmatically) to reduce current draw.</li>
+<li>Don&#8217;t connect the Arduous power jack to a DC wall adapter (see note on ground loops later in this article).</li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/11/rgb_leds_usb.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-688 size-large" src="/wp-content/uploads/2015/11/rgb_leds_usb-1024x371.png" alt="rgb_leds_usb" width="640" height="232" srcset="/wp-content/uploads/2015/11/rgb_leds_usb-1024x371.png 1024w, /wp-content/uploads/2015/11/rgb_leds_usb-300x109.png 300w, /wp-content/uploads/2015/11/rgb_leds_usb-768x278.png 768w, /wp-content/uploads/2015/11/rgb_leds_usb-1536x557.png 1536w, /wp-content/uploads/2015/11/rgb_leds_usb-1568x568.png 1568w, /wp-content/uploads/2015/11/rgb_leds_usb.png 1644w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<p>If your Arduino fails to start, or the strip displays a gaudy set of flashing bright colours, you will need to use external power to run the strip. The cutt-off regarding how long your strip can be, before problems appear varies greatly between different production runs (of the RGB strip, not the arduino).</p>
+<p><strong>Setup via External 5V power supply</strong></p>
+<p>To use an external power supply  to power the strip is not difficult (see image below). But it leaves us with the annoying issue of ground loops (see ground loop section later in this article).</p>
+<p>To use external 5V power:</p>
+<ul>
+<li>Connect the 5V ground to both the arduinos ground and the LED strips ground.</li>
+<li>Set-up a 7V(ish) power for the arduinos DC Jack, and use a cheap buck DC-DC power supply (eg <a href="http://amzn.to/1NlT1ac" target="_blank" rel="noopener">LM2596 module</a>) to drop that voltage down to 5V, which is connected to the LED strips power supply.</li>
+<li>Resist the urge to just get a 5V power supply and connect it to both the arduous 5V pin and the LED strip, unless you have a good regulated 5V supply.</li>
+</ul>
+<p><a href="/wp-content/uploads/2015/11/rgb_leds_dc_jack.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-689 size-large" src="/wp-content/uploads/2015/11/rgb_leds_dc_jack-1024x420.png" alt="rgb_leds_dc_jack" width="640" height="263" srcset="/wp-content/uploads/2015/11/rgb_leds_dc_jack-1024x420.png 1024w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-300x123.png 300w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-768x315.png 768w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-1536x631.png 1536w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-1568x644.png 1568w, /wp-content/uploads/2015/11/rgb_leds_dc_jack.png 1644w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<h2>A little more safety to this circuit</h2>
+<p>The soldering of wiring to the LED strip is often problematic, and the area is often moved / stressed / bent.  This can cause the electrical connection to come loose, short or form an intermittent contact.</p>
+<p>We may want to protect the first LED package in the strip from damage caused by too much current passing though the data line (I suggest using a 330 ohm resistor).  It&#8217;s also not a bad idea to provide a 1000uF decoupling capacitor (use an electrolytic capacitor and watch the polarity). Without this you risk a wiring issue, or power connection issue, damaging the first LED unit on the strip.</p>
+<p>In practice, you may never have a problem without these extra components, and the damage is often repaired easily by removing the first pixel and re-soldering. So the decision is yours, a &#8216;best practice&#8217; version of the above circuits is shown below.</p>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/11/rgb_leds_better.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-690 size-large" src="/wp-content/uploads/2015/11/rgb_leds_better-1024x739.png" alt="rgb_leds_better" width="640" height="462" srcset="/wp-content/uploads/2015/11/rgb_leds_better-1024x739.png 1024w, /wp-content/uploads/2015/11/rgb_leds_better-300x217.png 300w, /wp-content/uploads/2015/11/rgb_leds_better-768x554.png 768w, /wp-content/uploads/2015/11/rgb_leds_better-1536x1109.png 1536w, /wp-content/uploads/2015/11/rgb_leds_better-1568x1132.png 1568w, /wp-content/uploads/2015/11/rgb_leds_better.png 1833w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<h2>Watchout for ground loops</h2>
+<p>If you need more power than just the USB connection you will have to give some thought to protecting your computer from ground loops.</p>
+<p>The possibility of a ground loop exists when your arduino is connected to the PC via a USB cable and both the arduino (or connected circuitry) and the PC are mains connected in some way (even via a plug pack).</p>
+<p>Possible solutions include:</p>
+<ul>
+<li>USB isolator (eg: <a href="http://amzn.to/1Pktq7r" target="_blank" rel="noopener">this one</a>)</li>
+<li>Powering the PC from battery (eg laptop)</li>
+<li>Powering the arduino from battery (eg 6v SLA)</li>
+<li>Powering the arduino and circuitry from a plug-pack and using a wireless connection to communicate to the arduino</li>
+<li>Don&#8217;t connect the usb cable
+<ul>
+<li>Use a network enabled board (the network ports are very well isolated). The <a href="http://www.freetronics.com.au/products/etherten#.VkCYO7crJhE" target="_blank" rel="noopener">etherten </a>is great for this.</li>
+<li>Use wifi via a $5 esp8266 (for example <a href="http://amzn.to/1QdHAY4" target="_blank" rel="noopener">this one</a>)</li>
+<li>Use an infra red serial connection (2400 baud)</li>
+</ul>
+</li>
+<li>Just live with a potential ground loop
+<ul>
+<li>Plug everything into the same wall socket and keep your fingers crossed.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Basic arduino code to test out the LED Strip</h3>
+<p>Now we have to check our electrical project functions as predicted. For this article, and part 2, I will be using the <a href="https://github.com/nethoncho/FastSPI_LED2" target="_blank" rel="noopener">FastSPI_LED2 </a>library from  <a href="http://fastled.io/" target="_blank" rel="noopener">fastled.io</a>.</p>
+<p>This demo code will create the effect shown in the video at the top of this article. If all you wanted was cool looking bias lighting, your&#8217;e done!</p>
+<pre class="font:monospace height-set:true height:500 lang:c++ decode:true ">#include "FastSPI_LED2.h"
+
+//----------------------------------------------------------------------------------------
+//
+// LED stip driver for smooth HUE trnsitions radiating from the middle of the LED strip.
+//
+//----------------------------------------------------------------------------------------
+
+//Alter this to suit your setup
+#define NUM_LEDS 91
+#define PIN_LED 4
+
+//This is where the individual pixel for ever LED is stored.
+//use LEDS.show(); to sync the strip with the data in this array.
+struct CRGB leds[NUM_LEDS];
+
+void setup() 
+{
+	  // sanity check delay - allows reprogramming if accidently blowing power w/leds
+   	delay(2000);
+
+   	//to prevent too high  a power draw use 25% brightness
+   	LEDS.setBrightness(64);
+
+    //setup the LED controller
+    LEDS.addLeds&lt;WS2811, PIN_LED, RGB&gt;(leds, NUM_LEDS);
+}
+
+
+void loop()
+{ 
+  byte hueMiddle=0;
+  byte hueEdge=0;
+  byte hueStep = 48;
+  int maxHue = 255; //NB: hue may not be in the range 0-255, if we use a differnt hsv2rgb function.
+  bool sync = false;
+  
+  while(true)
+  {
+    //pause a second
+    delay(1000);
+
+    //push the hue of the middle part of the bias light forward
+    for(int s=0; s&lt; hueStep; s++)
+    {
+        hueMiddle++;
+        if(hueMiddle &gt;= maxHue)
+        {
+          sync = true;
+          break;
+        }
+        updateStrip(hueMiddle, hueEdge);
+    }
+
+    //have the edge of the bias light catch up to the hue in the middle
+    for(int s=0; s&lt; hueStep; s++)
+    {
+        hueEdge++;
+        if(hueEdge &gt;= maxHue)
+        {
+          sync = true;
+          break;
+        }
+       updateStrip(hueMiddle, hueEdge);
+    }
+
+    // Reached the end of the hue cycle, wrap to the begining.
+    // We do it this way because if the hueMiddle wraps around, but the
+    // hueEdge remains before the end, then a full rainbow is creted
+    // when updateStrip smooths the pixels over the strip
+    if(sync)
+    {
+       hueMiddle = 0;
+       hueEdge = 0;
+       sync = false;
+    } 
+  }
+}
+
+
+// This method creates a smooth transition of pixels, from one hue in the middle
+// to another hue at the edge.
+//
+//note: Could be faster with symetry away from middle.
+//note: Could be faster with integer math.
+//note: Because of the long delay, this does not need to be fast.
+void updateStrip(byte hueMiddle, byte hueEdge)
+{
+    float mid = NUM_LEDS/2;
+    int hueDiff =  hueEdge - hueMiddle;
+    for(int i = 0; i &lt; NUM_LEDS; i++) 
+    {
+        //get the hue for the pixel
+        CRGB pixel;
+        float h = abs(i-mid)/mid; //0 at mid, 1 at edge
+        h *= hueDiff; //0 at mid, hueDiff at edge
+        h += hueMiddle; //hueMiddle at mid, hueEdge at edge
+
+        //set the pixel
+        hsv2rgb_spectrum(CHSV((byte)round(h), 255, 255), pixel);
+        leds[i] = pixel;
+    }
+    delay(150);
+    LEDS.show();
+}
+</pre>
+<p>&nbsp;</p>
+<h3>What&#8217;s next?</h3>
+<p>In a follow-up article (part-2) we will cover syncing your arduino to the computers clock, choosing good colours for different times of the day and using your location to calculate where the sun is (in case you want to tune your your lighting to the time of the day).</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Cheap and easy temperature controlled cabinet fan.</title>
+		<link>/cheap-and-easy-temperature-controlled-cabinate-fan/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 17 Aug 2015 20:11:10 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Woodwork]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=609</guid>
+
+					<description><![CDATA[Cabinet cooling hack. Because good entertainment units are still not heat dissipation savvy.]]></description>
+										<content:encoded><![CDATA[<h3>Introduction</h3>
+<p>This cabinet cooling hack is based around the <span style="text-decoration: underline;">Artic F12 TC series fans</span> because<strong> this fan has a built in temperature sensor</strong>. It&#8217;s not a hardware hack at all. but a &#8216;cabinet hack&#8217;; so don&#8217;t be afraid to give it a go if your not into electronics.</p>
+<p>These fans are awesome for cabinets (cooling your amp. game console, etc) because they:</p>
+<ul>
+<li>have their own temperature sensor and speed up accordingly;</li>
+<li>are basically silent until needed;</li>
+<li>use a fluid dynamic bearings (much longer lasting than regular fans)</li>
+<li>know when to speed up (temperature profile is pretty good);</li>
+<li>are long lasting;, with a 6 year warranty;</li>
+<li>less irritating and deeper than normal fans (sounds like a fridge) when going full ball.</li>
+<li>are not expensive.</li>
+<li>The specs say it can run on 5v <del>so USB power may be an option</del>.
+<ul>
+<li>Edit: I just tried one out on my bench-top power supply. It did not move until about 6.5v.</li>
+</ul>
+</li>
+</ul>
+<p>Links:</p>
+<ul>
+<li><a href="http://www.amazon.com/gp/product/B0037AQLLM/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0037AQLLM&amp;linkCode=as2&amp;tag=wwwbusyducksc-20&amp;linkId=HAZYEDONGHUCGT3K">ARCTIC F12 TC</a></li>
+<li><a href="http://www.amazon.com/gp/product/B002G3CKX4/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B002G3CKX4&amp;linkCode=as2&amp;tag=wwwbusyducksc-20&amp;linkId=F4AQO6QVXG7363UW">ARCTIC F12 PRO TC</a></li>
+</ul>
+<p style="padding-left: 30px;"><img loading="lazy" class="alignnone wp-image-621 size-thumbnail" src="/wp-content/uploads/2015/08/Artic_F12_TC-150x150.jpg" alt="Artic_F12_TC" width="150" height="150" srcset="/wp-content/uploads/2015/08/Artic_F12_TC-150x150.jpg 150w, /wp-content/uploads/2015/08/Artic_F12_TC-300x300.jpg 300w, /wp-content/uploads/2015/08/Artic_F12_TC.jpg 443w" sizes="(max-width: 150px) 100vw, 150px" /></p>
+<p>For this project I am using my DIY honey-comb fan guard (<a href="http://busyducks.com/wp_4_1/2015/08/17/i-reckon-my-fan-guard-design-is-pretty-damn-neat-free-plans/" target="_blank" rel="noopener">details here</a>) to protect the fan and install it into a cabinet.</p>
+<h3>Step 1: Plan it out.</h3>
+<p>Some things you need to do first,</p>
+<ul>
+<li>Figure out which way you are going to position the fan.
+<ul>
+<li>Many people have the fan blow into the cabinet so that dust is not drawn in through every crack</li>
+<li>You can then protect the from sucking dust in with a screen</li>
+<li>Note: You don&#8217;t want the fan working against another devices fan, which it sits behind</li>
+</ul>
+</li>
+<li>Route 12v power to the fan pins and check it spins and works before installing.
+<ul>
+<li>Don&#8217;t worry about an off switch, it will idle silent when your devices don&#8217;t need cooling.</li>
+<li>You can use a 12v wall wart.</li>
+</ul>
+</li>
+<li>Look into dust catching foam</li>
+<li>By my testing, this neat little fan in question draws 30mA on idle and about 100mA when going full throttle.
+<ul>
+<li>So look for a 12v wall-wart in the 150mA to 200mA range.</li>
+<li>Also Red is positive, black is negative, and don&#8217;t do anything with the yellow.</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/08/fan1.jpg"><img loading="lazy" class=" size-medium wp-image-611 alignleft" src="/wp-content/uploads/2015/08/fan1-300x271.jpg" alt="fan1" width="300" height="271" srcset="/wp-content/uploads/2015/08/fan1-300x271.jpg 300w, /wp-content/uploads/2015/08/fan1-768x693.jpg 768w, /wp-content/uploads/2015/08/fan1.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Step 2: Cut your cabinet.</h2>
+<p>Take care, with this.</p>
+<ul>
+<li>Use a 120mm hole saw and a stencil (I have one <a href="http://www.busyducks.com/downloads/dxf/fans_and_template.png" target="_blank" rel="noopener">here</a>).</li>
+<li>Drill from the outside in</li>
+<li>Unplug everything in your cabinet, don&#8217;t dill through into your favourite electronic toy.</li>
+<li>Do the hole-saw first, then the other four holes.
+<ul>
+<li>Then, if your hole saw moves of target, you can reposition your stencil.</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/08/fan2.jpg"><img loading="lazy" class="alignnone wp-image-612 size-medium" src="/wp-content/uploads/2015/08/fan2-300x202.jpg" alt="fan2" width="300" height="202" srcset="/wp-content/uploads/2015/08/fan2-300x202.jpg 300w, /wp-content/uploads/2015/08/fan2-768x518.jpg 768w, /wp-content/uploads/2015/08/fan2.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p style="padding-left: 30px;">Stencil (on right, print at 300 dpi. The big circle should be 120mm in diameter and the screw holes 105mm centre to centre.</p>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/08/rendered_plans.png"><img loading="lazy" class="alignnone wp-image-603 size-large" src="/wp-content/uploads/2015/08/rendered_plans-1024x507.png" alt="rendered_plans" width="640" height="317" srcset="/wp-content/uploads/2015/08/rendered_plans-1024x507.png 1024w, /wp-content/uploads/2015/08/rendered_plans-300x149.png 300w, /wp-content/uploads/2015/08/rendered_plans-768x380.png 768w, /wp-content/uploads/2015/08/rendered_plans-1536x761.png 1536w, /wp-content/uploads/2015/08/rendered_plans-1568x776.png 1568w, /wp-content/uploads/2015/08/rendered_plans.png 1969w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<h3>Step 3: Assemble and Enjoy.</h3>
+<ul>
+<li> You may need a guard on both sides, to prevent errant wires entering the fan.</li>
+<li>Be careful the temperature sensor is not damaged (its breakable, and the fan stops if you smash it)
+<ul>
+<li>Generally tuck the sensor out of harms reach.</li>
+<li>Place your temperature sensor on the device if you need more aggressive cooling.</li>
+</ul>
+</li>
+</ul>
+<p><a href="/wp-content/uploads/2015/08/fan4.jpg"><img loading="lazy" class="alignnone size-medium wp-image-614" src="/wp-content/uploads/2015/08/fan4-300x222.jpg" alt="fan4" width="300" height="222" srcset="/wp-content/uploads/2015/08/fan4-300x222.jpg 300w, /wp-content/uploads/2015/08/fan4-768x568.jpg 768w, /wp-content/uploads/2015/08/fan4.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a> <a href="/wp-content/uploads/2015/08/fan3.jpg"><img loading="lazy" class="alignnone wp-image-613" src="/wp-content/uploads/2015/08/fan3-300x225.jpg" alt="fan3" width="297" height="223" srcset="/wp-content/uploads/2015/08/fan3-300x225.jpg 300w, /wp-content/uploads/2015/08/fan3-768x576.jpg 768w, /wp-content/uploads/2015/08/fan3.jpg 1024w" sizes="(max-width: 297px) 100vw, 297px" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What&#8217;s inside an integrated circuit? We broke one open and scanned it for you at 12,800DPI</title>
+		<link>/whats-inside-an-integrated-circuit/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 24 Jun 2015 07:09:19 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Hi-Res Scan]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=368</guid>
+
+					<description><![CDATA[Because you always wondered what was inside. See if you can guess which IC it was? Useful image for teachers, overhead slides etc. NB: This is not always a good DIY or classroom activity. Be aware that some electrical components create a seriously hazardous dust when broken open. Rectifiers, Hi Power transistors, Older IC&#8217;s &#38; IC&#8217;s with certain &#8230;<br><a href="/whats-inside-an-integrated-circuit/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">What&#8217;s inside an integrated circuit? We broke one open and scanned it for you at 12,800DPI</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Because you always wondered what was inside. See if you can guess which IC it was?</p>
+<p>Useful image for teachers, overhead slides etc.<br />
+<em>NB: This is not always a good DIY or classroom activity. Be aware that some electrical components create a seriously hazardous dust when broken open. Rectifiers, Hi Power transistors, Older IC&#8217;s &amp; IC&#8217;s with certain head spreaders as well as some IC&#8217;s designed for use in microwaves contain Beryllium Oxide.  While safe to handle, the dust particles created when they are damaged will make you gravely ill.</em></p>
+<p>Download large and detailed image [4096 x 5686] (1.5mb) <a href="http://www.busyducks.com/downloads/ic_[4096].jpg" target="_blank" rel="noopener">here</a><br />
+Download full scan [16394 x 22761] (27mb, <strong>use save as</strong>, because <span style="text-decoration: underline;">images this large still crash some broswers</span>) <a href="http://www.busyducks.com/downloads/ic128000.jpg" target="_blank" rel="noopener">here</a></p>
+<p><figure id="attachment_371" aria-describedby="caption-attachment-371" style="width: 800px" class="wp-caption alignnone"><a href="/wp-content/uploads/2015/06/ic_800.jpg"><img loading="lazy" class="wp-image-371 size-full" src="/wp-content/uploads/2015/06/ic_800.jpg" alt="Inside an integrated circuit." width="800" height="1110" srcset="/wp-content/uploads/2015/06/ic_800.jpg 800w, /wp-content/uploads/2015/06/ic_800-216x300.jpg 216w, /wp-content/uploads/2015/06/ic_800-738x1024.jpg 738w, /wp-content/uploads/2015/06/ic_800-768x1066.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /></a><figcaption id="caption-attachment-371" class="wp-caption-text">Inside an integrated circuit.</figcaption></figure></p>
+<p><em>What&#8217;s the white grid? Its a standard prototyping board, used to protect the scanner from the IC&#8217;s pins.</em></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Quick Graphs to make PCB Track Width and Silkscreen Ratios easy.</title>
+		<link>/quick-graphs-to-make-pcb-track-width-and-silkscreen-ratios-easy/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 19 Mar 2015 12:10:07 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[CAD]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Eagle Cad]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Fonts]]></category>
+		<category><![CDATA[Matlab]]></category>
+		<category><![CDATA[PCB]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=130</guid>
+
+					<description><![CDATA[Recently I had to make a series of circuit boards using Eagle Cad.
+
+I spent a lot of time calculating track widths to make sure my circuit board could handle the current I was using.
+Then I had to do more calculations for font ratios. so that that all lines were wide enough to work with the silk screening process.
+
+Sick of this; I quickly used matlab to create a few charts so I could look up the answers quickly.
+I thought I would share these charts and the matlab scripts, hope they are useful.]]></description>
+										<content:encoded><![CDATA[<p>Recently I had to make a series of circuit boards using Eagle Cad.</p>
+<p>I spent a lot of time calculating track widths to make sure my circuit board could handle the current I was using.<br />
+Then I had to do more calculations for font ratios. so that that all lines were wide enough to work with the silk screening process.</p>
+<p>Sick of this; I quickly used matlab to create a few charts so I could look up the answers quickly.<br />
+I thought I would share these charts and the matlab scripts, hope they are useful.</p>
+<h1>Font Ratio Chart</h1>
+<p>To my experience, In Eagle Cad (and others) font ratios for silk screens work best using vector fonts. The cam processor, other tools, and factory will often use vector fonts regardless; &#8211; so using vector fonts tends to keep things compatible. In the text properties dialogue you must set the ratio correctly so that (Size * Ratio) &gt; &#8220;Factory Minimum Line Width&#8221;.  To make it worse, fonts are best wrangled using Mils (1/1000th of an inch [<a href="http://gwydir.demon.co.uk/jo/units/length.htm" target="_blank" rel="noopener">what&#8217;s an inch</a>]).</p>
+<p>Typically in Eagle Cad, I would set up text for silk-screening as follows.</p>
+<p><a href="/wp-content/uploads/2015/03/eagl_cad_text_font_how_to.png"><img loading="lazy" class=" wp-image-146 size-full aligncenter" src="/wp-content/uploads/2015/03/eagl_cad_text_font_how_to.png" alt="" width="379" height="441" srcset="/wp-content/uploads/2015/03/eagl_cad_text_font_how_to.png 379w, /wp-content/uploads/2015/03/eagl_cad_text_font_how_to-258x300.png 258w" sizes="(max-width: 379px) 100vw, 379px" /></a></p>
+<p>&nbsp;</p>
+<h3>Anyway, here is the chart</h3>
+<p>To use it:</p>
+<ul>
+<li>Find the colour that corresponds to your manufactures minimum silk screen resolution.</li>
+<li>Find your font height in the x-axis</li>
+<li>The corresponding ratio is given in the y-axis.</li>
+</ul>
+<p><a href="/wp-content/uploads/2015/03/silkscreen.png"><img loading="lazy" class=" wp-image-134 size-large aligncenter" src="/wp-content/uploads/2015/03/silkscreen-1024x774.png" alt="silkscreen" width="640" height="484" srcset="/wp-content/uploads/2015/03/silkscreen-1024x774.png 1024w, /wp-content/uploads/2015/03/silkscreen-300x227.png 300w, /wp-content/uploads/2015/03/silkscreen-768x581.png 768w, /wp-content/uploads/2015/03/silkscreen.png 1038w" sizes="(max-width: 640px) 100vw, 640px" /><br />
+</a></p>
+<h1>PCB Track Width Chart</h1>
+<p>Track width is related to a lot of factors (acceptable temperatures. how insulated the tracks are from the air, current, acceptable power loss, etc). For anything complicated (internal PCB layers, high currents/voltages, installation in a vehicle/ heater / oven) go do proper calculations!</p>
+<p>Looking for a good track width calculator, I found this and like it a lot:  <a href="http://www.4pcb.com/trace-width-calculator.html" target="_blank" rel="noopener">http://www.4pcb.com/trace-width-calculator.html</a></p>
+<p>99% of the time, as a hobbyist, you just want an external PCB track that does not raise in temperature by more than 10ºC. You would be using either 0.5, 1 or 2 oz copper tracks (eek, more imperial units). So I implemented the formula presented on the calculator mentioned above in matlab.  Then I plotted 3 lines, one for each common copper thickness, creating charts that seem correct for normal hobbyist type situations.</p>
+<p>Four charts follow metric and imperial versions of high and low current situations. Find the graph that suits you and keep it handy.</p>
+<p><em>Disclaimer: Your mileage may vary. A) I may be wrong, and accept <span style="text-decoration: underline;">no</span> liability for that. B) Silkscreens, lacquer, protective coatings, hot electrical components may invalidate these figures.  If your doing anything medical / military /  safety critical / mass produced / potentially dangerous; this page is not an appropriate source of information, go find an engineering book, or something peer reviewed.</em></p>
+<p><em> </em></p>
+<h2>Metric &#8211; High Amps</h2>
+<p><a href="/wp-content/uploads/2015/03/track_width_metric.png"><img loading="lazy" class=" wp-image-135 size-large aligncenter" src="/wp-content/uploads/2015/03/track_width_metric-1024x768.png" alt="track_width_metric" width="640" height="480" srcset="/wp-content/uploads/2015/03/track_width_metric-1024x768.png 1024w, /wp-content/uploads/2015/03/track_width_metric-300x225.png 300w, /wp-content/uploads/2015/03/track_width_metric-768x576.png 768w, /wp-content/uploads/2015/03/track_width_metric.png 1201w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<h2>Metric &#8211; Low Amps</h2>
+<p><a href="/wp-content/uploads/2015/03/track_width_mils.png"><img loading="lazy" class=" wp-image-131 size-large aligncenter" src="/wp-content/uploads/2015/03/track_width_metric_small-1024x768.png" alt="track_width_metric_small" width="640" height="480" srcset="/wp-content/uploads/2015/03/track_width_metric_small-1024x768.png 1024w, /wp-content/uploads/2015/03/track_width_metric_small-300x225.png 300w, /wp-content/uploads/2015/03/track_width_metric_small-768x576.png 768w, /wp-content/uploads/2015/03/track_width_metric_small.png 1201w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Mils (Imperial)- High Amps</h2>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/03/track_width_mils.png"><img loading="lazy" class=" wp-image-132 size-large aligncenter" src="/wp-content/uploads/2015/03/track_width_mils-1024x768.png" alt="track_width_mils" width="640" height="480" srcset="/wp-content/uploads/2015/03/track_width_mils-1024x768.png 1024w, /wp-content/uploads/2015/03/track_width_mils-300x225.png 300w, /wp-content/uploads/2015/03/track_width_mils-768x576.png 768w, /wp-content/uploads/2015/03/track_width_mils.png 1201w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<h2>Mils (Imperial)- Low Amps</h2>
+<p><img loading="lazy" class=" wp-image-133 size-large aligncenter" src="/wp-content/uploads/2015/03/track_width_mils_small-1024x768.png" alt="track_width_mils_small" width="640" height="480" srcset="/wp-content/uploads/2015/03/track_width_mils_small-1024x768.png 1024w, /wp-content/uploads/2015/03/track_width_mils_small-300x225.png 300w, /wp-content/uploads/2015/03/track_width_mils_small-768x576.png 768w, /wp-content/uploads/2015/03/track_width_mils_small.png 1201w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<p>&nbsp;</p>
+<h2>Source Code</h2>
+<h3>Fonts</h3>
+<p>&nbsp;</p>
+<pre class="height-set:true scroll:true lang:matlab decode:true " title="plotSilkScreenRatio.m">%----------------------------------------------------------------------------------%
+%                                    BUSYDUCKS.COM                                 %
+%                            Making you pro-duck-tive                              %
+%                                                                                  %
+%  Author: Duckman   Date: 10/3/15   Ver: 1.0   Licence: Creative Commons (by-sa)  %
+%                                                                                  %
+%  Calculates silckscreen font ratios.                                             %
+%  Compile with Matlab / Possibly Octave                                           %
+%                                                                                  %
+%  Permision given to freely copy/paste "code snippets" into your own code. For    %
+%  other uses (e.g. derivative works) the Creative Commons Attribution Share-      %
+%  alike license applies (cite busyducks.com). This means commercial use is ok.    %
+%----------------------------------------------------------------------------------%
+s = [10 : 5 : 100];
+r = zeros(7, max(size(s)))
+
+for x = 2:8
+    r(x-1,:) = ((x*100) ./ s)';
+    plot(s, r);
+end
+
+plot(s, r);
+title('PCB Silk Screen Font Ratios')
+xlabel('Font Height (Mils)')
+ylabel('Font Ratio (%)')
+legend('2 Mil', '3 Mil', '4 Mil', '5 Mil', '6 Mil', '7 Mil', '8 Mil');
+grid on
+</pre>
+<h3>Track Width</h3>
+<p>&nbsp;</p>
+<pre class="height-set:true scroll:true lang:c++ decode:true " title="plotTraceWidth.m">%----------------------------------------------------------------------------------%
+%                                    BUSYDUCKS.COM                                 %
+%                            Making you pro-duck-tive                              %
+%                                                                                  %
+%  Author: Duckman   Date: 10/3/15   Ver: 1.0   Licence: Creative Commons (by-sa)  %
+%                                                                                  %
+%  Calculates Track widths.                                                        %
+%  Compile with Matlab / Possibly Octave                                           %
+%                                                                                  %
+%  Permision given to freely copy/paste "code snippets" into your own code. For    %
+%  other uses (e.g. derivative works) the Creative Commons Attribution Share-      %
+%  alike license applies (cite busyducks.com). This means commercial use is ok.    %
+%----------------------------------------------------------------------------------%
+function plotTraceWidth (metric, small)
+%Formula from: http://www.4pcb.com/trace-width-calculator.html
+%sample usage: plotTraceWidth(true, false);  
+%will save a .png to the current working directory;  
+
+amps = [0.1 : 0.1 : 10];
+thickness = [0.5, 1, 2];
+
+if(small)
+    amps = amps * 0.2;
+end
+
+%external layers, IPC-2221
+ k = 0.048;
+ b = 0.44;
+ c = 0.725;
+ tempRise = 10; %deg C
+
+factor = (k*tempRise^b);
+
+for it = 1:3
+    t = thickness(it);
+    area = amps./factor;
+    area = area.^(1/c);
+    width(it,:) = (area./(t*1.378))';
+end
+
+if (metric)
+    %convert to metric
+    mmPerMil = 0.0254;
+    width = width .* mmPerMil;
+end
+
+plot(amps, width);
+title('PCB Track Width')
+xlabel('Amps')
+legend('0.5 oz', '1 oz', '2 oz', 2);
+
+name = 'track_width';
+if (metric)
+    ylabel('Track Width (mm)')
+    ticks = [1:15];
+    name = [name '_metric'];
+    if(small)
+        ticks  = [0.2:0.2:2];
+        name = [name '_small'];
+    end
+else
+    ylabel('Track Width (Mils)')
+    name = [name '_mils'];
+    ticks = [50:50:2000];
+    if(small)
+         ticks = [10:10:200];
+        name = [name '_small'];
+    end
+end
+set(gca,'Ytick', ticks)
+grid on
+saveas(gcf, [name '.png']);
+</pre>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Art &#8211; Busy Ducks</title>
+	<atom:link href="/tag/art/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Tue, 30 Jun 2015 08:57:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Art &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>List of the best pages/software that empowers you to generate awesome procedural art.</title>
+		<link>/list-pages-to-generate-procedural-art-and-graphics/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 30 Jun 2015 08:57:03 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Fractal]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[List_of]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=444</guid>
+
+					<description><![CDATA[&#160; Firstly, you will find none of the &#8220;lets make homework cool&#8221; type stuff here. The Internet has become a much more stimulating place for maths, visualisation and generative images. This is in part driven by the death of those &#8220;java applets&#8221; as wonderful HTML5 based interactive maths content takes glorious hold. Trying to keep pace with &#8230;<br><a href="/list-pages-to-generate-procedural-art-and-graphics/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">List of the best pages/software that empowers you to generate awesome procedural art.</span></a>]]></description>
+										<content:encoded><![CDATA[<p>&nbsp;</p>
+<p>Firstly, you will find none of the &#8220;lets make homework cool&#8221; type stuff here. The Internet has become a much more stimulating place for maths, visualisation and generative images.<br />
+This is in part driven by the death of those &#8220;java applets&#8221; as wonderful HTML5 based interactive maths content takes glorious hold.</p>
+<p>Trying to keep pace with all that is emerging as the new generation of artistic maths geeks put their awesome skills to work.I decided to make this list of the best stuff around.</p>
+<p>&nbsp;</p>
+<h3>Google Julia Map:</h3>
+<h3 style="padding-left: 30px;"><img loading="lazy" class="alignnone wp-image-446 size-medium" src="/wp-content/uploads/2015/06/google_julia_small-300x262.jpg" alt="google_julia_small" width="300" height="262" srcset="/wp-content/uploads/2015/06/google_julia_small-300x262.jpg 300w, /wp-content/uploads/2015/06/google_julia_small.jpg 512w" sizes="(max-width: 300px) 100vw, 300px" /></h3>
+<ul>
+<li>&#8220;Google maps&#8221; for exploring different fractals.</li>
+<li>Allows custom palettes</li>
+<li>Highly interactive</li>
+<li>Lets you share your work.</li>
+<li><a href="http://juliamap.googlelabs.com/#c=-0.009144752822328128,0.08941031334500188$z=0.59$p=ff0000,ff8000,ffff00,ff00,ff,a000c0$f=julia3" target="_blank" rel="noopener">here </a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>Science vs. Magic</h3>
+<p><img loading="lazy" class="alignnone wp-image-447 size-medium" src="/wp-content/uploads/2015/06/svm-300x275.jpg" alt="svm" width="300" height="275" srcset="/wp-content/uploads/2015/06/svm-300x275.jpg 300w, /wp-content/uploads/2015/06/svm-768x703.jpg 768w, /wp-content/uploads/2015/06/svm.jpg 984w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<ul>
+<li>Awesome website that lets you customise and generate many cool things.</li>
+<li>Has animation options.</li>
+<li>Very interactive</li>
+<li>Highly recommend the fractal machine</li>
+<li><a href="http://sciencevsmagic.net/" target="_blank" rel="noopener">http://sciencevsmagic.net/</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>Mandelbulber</h3>
+<p style="padding-left: 30px;"><img loading="lazy" class="alignnone wp-image-451 size-medium" src="/wp-content/uploads/2015/06/mandelbulber-300x223.jpg" alt="mandelbulber" width="300" height="223" srcset="/wp-content/uploads/2015/06/mandelbulber-300x223.jpg 300w, /wp-content/uploads/2015/06/mandelbulber.jpg 395w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<ul>
+<li>3d Fractal rendering</li>
+<li>Free cross-platform software (GNU/GPL)</li>
+<li>Produces stunning results</li>
+<li>Website is <a href="https://sites.google.com/site/mandelbulber/home" target="_blank" rel="noopener">here</a></li>
+</ul>
+<h3></h3>
+<h3>Rainbow Smoke</h3>
+<p style="padding-left: 30px;"><img loading="lazy" class="alignnone wp-image-448 size-medium" src="/wp-content/uploads/2015/06/dn25167-3_1200-300x300.jpg" alt="dn25167-3_1200" width="300" height="300" srcset="/wp-content/uploads/2015/06/dn25167-3_1200-300x300.jpg 300w, /wp-content/uploads/2015/06/dn25167-3_1200-150x150.jpg 150w, /wp-content/uploads/2015/06/dn25167-3_1200.jpg 512w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<ul>
+<li>Algorithm by Jozsef Fejes that grew into a media and Internet sensation</li>
+<li>Creates images using one of every RGB24 colour (see our own <a href="http://busyducks.com/wp_4_1/2015/06/16/images-that-use-one-of-every-colour/" target="_blank" rel="noopener">application</a> for doing this to photos)</li>
+<li>Not interactive, but describes his algorithm, with an early version being downloadable.
+<ul>
+<li>This means get your coding pants on if you want to mess around with it!</li>
+</ul>
+</li>
+<li>Website is <a href="http://rainbowsmoke.hu/home" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>Terragen</h3>
+<h3 style="padding-left: 30px;"><img loading="lazy" class="alignnone wp-image-453 size-medium" src="/wp-content/uploads/2015/06/terragen-300x259.jpg" alt="terragen" width="300" height="259" srcset="/wp-content/uploads/2015/06/terragen-300x259.jpg 300w, /wp-content/uploads/2015/06/terragen.jpg 428w" sizes="(max-width: 300px) 100vw, 300px" /></h3>
+<ul>
+<li>Offering a free version for non-commercial use, terragen has long been an excellent way to generate quality terrains</li>
+<li>Windows / Mac support</li>
+<li>Has a learning curve</li>
+<li><a href="http://planetside.co.uk/" target="_blank" rel="noopener">http://planetside.co.uk/</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>Evolvotron</h3>
+<p style="padding-left: 30px;"><img loading="lazy" class="alignnone wp-image-454 size-medium" src="/wp-content/uploads/2015/06/i000003-300x300.jpg" alt="i000003" width="300" height="300" srcset="/wp-content/uploads/2015/06/i000003-300x300.jpg 300w, /wp-content/uploads/2015/06/i000003-150x150.jpg 150w, /wp-content/uploads/2015/06/i000003.jpg 512w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<ul>
+<li>Evolve your artistic vision.</li>
+<li>Creation by iteratively choosing what is closest to what you want.</li>
+<li>Great for colourful splashes / wallpapers</li>
+<li>Free and opensource</li>
+<li>Linux only</li>
+<li>Home page is <a href="http://www.bottlenose.net/share/evolvotron/index.htm" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Monitors &#8211; Busy Ducks</title>
+	<atom:link href="/tag/monitors/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Mon, 20 Apr 2020 10:52:06 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Monitors &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Parametric VESA Mount Fixer.</title>
+		<link>/parametric-vesa-mount-fixer/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 20 Apr 2020 10:52:06 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[3D-Printing]]></category>
+		<category><![CDATA[CAD]]></category>
+		<category><![CDATA[Monitors]]></category>
+		<category><![CDATA[OpenSCAD]]></category>
+		<category><![CDATA[VESA]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=1006</guid>
+
+					<description><![CDATA[Recently I encountered a monitor that used a different mount despite being only a few digits of in model number. The monitor needed to live with the other, so I created an OpenSCAD mount to convert lower mount VESA, to central mount VESA.]]></description>
+										<content:encoded><![CDATA[
+<p>Recently I encountered a monitor that used a different mount positioning despite being only a few digits of in model number to its neighbour. The monitor needed to live with the other, sharing a horizontal mounting arm.   I created an <a rel="noreferrer noopener" href="https://www.openscad.org/" target="_blank">OpenSCAD</a> mount to convert &#8220;lower mounted VESA&#8221;, to &#8220;central mounted VESA&#8221;.</p>
+
+
+
+<figure class="wp-block-gallery columns-1 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4148178-1024x768.jpg" alt="" data-id="1015" data-full-url="/wp-content/uploads/2020/04/P4148178-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/2020/04/20/parametric-vesa-mount-fixer/olympus-digital-camera-8/#main" class="wp-image-1015"/><figcaption class="blocks-gallery-item__caption">VESA Mount Fixer (configurable)</figcaption></figure></li></ul></figure>
+
+
+
+<p>You can download it via: <a rel="noreferrer noopener" href="https://www.thingiverse.com/thing:4300602" target="_blank">https://www.thingiverse.com/thing:4300602</a></p>
+
+
+
+<h2>Background</h2>
+
+
+
+<p>Some manufactures put the VESA mount at the bottom of the screen, others in the middle. This can cause an issue for many situations, especially if monitors need to be used on a shared mount or in portrait mode.<br><br>Lets compare the pro&#8217;s cons of the mounting styles:</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Feature</strong></td><td><strong>VESA<br>Middle</strong></td><td><strong>VESA<br>Bottom</strong></td></tr><tr><td>Monitors line up nicely when sharing a mount. </td><td>Yes</td><td>No</td></tr><tr><td>Monitor is stable and does not roll violently on mount.</td><td>Yes</td><td>No</td></tr><tr><td>Monitor can be used in portrait mode without a rigid mount.</td><td>Yes</td><td>No</td></tr><tr><td>Monitor won&#8217;t drop forward overtime on an adjustable mount.</td><td>Yes</td><td>No</td></tr><tr><td>Mounting high on shop wall hides what is behind screen.</td><td>No</td><td>Yes</td></tr><tr><td>Monitor is cheaper to produce.</td><td>No</td><td>Yes</td></tr></tbody></table></figure>
+
+
+
+<p>The result for a shared mount was quite noticeable.</p>
+
+
+
+<figure class="wp-block-gallery columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4148183-1024x768.jpg" alt="" data-id="1009" data-link="http://busyducks.com/wp_4_1/2020/04/20/parametric-vesa-mount-fixer/olympus-digital-camera-5/#main" class="wp-image-1009"/><figcaption class="blocks-gallery-item__caption">Before</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4148204-1024x768.jpg" alt="" data-id="1010" data-full-url="/wp-content/uploads/2020/04/P4148204-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/2020/04/20/parametric-vesa-mount-fixer/olympus-digital-camera-6/#main" class="wp-image-1010"/><figcaption class="blocks-gallery-item__caption">After</figcaption></figure></li></ul></figure>
+
+
+
+<p>The plate which pokes out, should connect to the monitor. The other to the VESA mount (See below). </p>
+
+
+
+<figure class="wp-block-image size-large"><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4148212-768x1024.jpg" alt="" class="wp-image-1011"/><figcaption>How it works.</figcaption></figure>
+
+
+
+<h2>Customisation</h2>
+
+
+
+<p>The mount can be customised in OpenSCAD, or via the Thingverse customiser: <a rel="noreferrer noopener" href="https://www.thingiverse.com/apps/customizer/run?thing_id=4300602" target="_blank">https://www.thingiverse.com/apps/customizer/run?thing_id=4300602</a>.</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="636" src="/wp-content/uploads/2020/04/mount-1024x636.png" alt="" class="wp-image-1007" srcset="/wp-content/uploads/2020/04/mount-1024x636.png 1024w, /wp-content/uploads/2020/04/mount-300x186.png 300w, /wp-content/uploads/2020/04/mount-768x477.png 768w, /wp-content/uploads/2020/04/mount.png 1154w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>CAD View.</figcaption></figure>
+
+
+
+<p>The following parameters should be altered to suit your need.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Parameter</strong></td><td><strong>Values</strong></td><td><strong>Notes</strong></td></tr><tr><td>correction</td><td></td><td>The distance to move the screen down.</td></tr><tr><td>washer_size</td><td></td><td>Creates pockets for washers and bolts to sit flush in. Use zero to disable.</td></tr><tr><td>connection_size</td><td>&gt;=30<br>and<br>&lt;=100</td><td>The size by which the central column extends over the top of the VESA plate. Significant trade of between material use and strength. 30 produces a cheap print and holds light monitors. But 80 should be used for heavy displayed, or displays someone may pull downward on.</td></tr><tr><td>step</td><td>&gt;=0<br>and<br>&lt;40ish</td><td>Total recess size (depth) of the adapter. </td></tr><tr><td>thickness</td><td>&gt; 1<br>and<br>&lt;=step</td><td>Thickness of the VESA plate. This must be &gt;= the depth of any pocket the vesa mount will sit in. Probably don&#8217;t go below 5 if 3D printing.</td></tr></tbody></table></figure>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

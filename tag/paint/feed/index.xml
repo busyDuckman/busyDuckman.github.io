@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Paint &#8211; Busy Ducks</title>
+	<atom:link href="/tag/paint/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Fri, 24 Jul 2015 19:32:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Paint &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>How to make coloured text in acrylic with spray paint.</title>
+		<link>/paint-coloured-text-on-acrylic/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Fri, 24 Jul 2015 19:32:25 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Fonts]]></category>
+		<category><![CDATA[Laser_Cutter]]></category>
+		<category><![CDATA[Paint]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=509</guid>
+
+					<description><![CDATA[Laser engraving text on acrylic / perspex does not create a lot of contrast. This leads to the subject of painting text on the acrylic. I have developed some useful methods of achieving this that I thought I would share.]]></description>
+										<content:encoded><![CDATA[<p>&nbsp;</p>
+<h3>Introduction</h3>
+<p>Laser engraving text on acrylic / perspex does not create a lot of contrast. This leads to the subject of painting text on the acrylic. I have developed some useful methods of achieving this that I thought I would share.</p>
+<p>My techniques achieve a good hard wearing result. One of them allows for painting everything except the text, to allow for back lighting. Note: As I often have to bend and mould Perspex, I needed a procedure that could be implemented on the final moulded pieces. This meant that using a laser cutter to remove paint was not an option.</p>
+<h3>Technique 1, Painting the text.</h3>
+<p>This effect is a little more difficult than would appear at first glance. You want to paint the whole area and remove only the paint that&#8217;s not in the text. Problem is doing this by washing with solvents will thin the paint and dilute the finish, reducing the contrast. There is a neat trick you an use however, it involves pouring water over an oil based paint to form a gum in the lettering, which is resistant to solvents.</p>
+<ul>
+<li>Laser engrave the text with a deep cut (1mm -ish).</li>
+<li>Prepare the piece (bend, polish etc.)</li>
+<li>Spray paint with a cheap oil based paint (the kind that gums with water). The &#8220;Fiddly Bits&#8221; brand works well.</li>
+<li>Wait 30sec to a minute.</li>
+<li>Place piece under running water for a couple of seconds.</li>
+<li>You should now be looking at a complete disaster, the finish is ruined and everything is a kinda horrid sticky mess.</li>
+<li>Get a thin micro-fiber disposable cloth, dip in turpentine.</li>
+<li>Scrub the surface (will require elbow grease and persistence).</li>
+<li>Presto, the only stuff you cant scrub out is this awesome looking text.</li>
+</ul>
+<p><img loading="lazy" class="alignnone wp-image-511" src="/wp-content/uploads/2015/07/paint_can-102x300.png" alt="paint_can" width="81" height="238" srcset="/wp-content/uploads/2015/07/paint_can-102x300.png 102w, /wp-content/uploads/2015/07/paint_can.png 160w" sizes="(max-width: 81px) 100vw, 81px" /> <a href="/wp-content/uploads/2015/07/front_panel-black.jpg"><img loading="lazy" class="alignnone wp-image-514" src="/wp-content/uploads/2015/07/front_panel-black-300x294.jpg" alt="front_panel black" width="235" height="230" srcset="/wp-content/uploads/2015/07/front_panel-black-300x294.jpg 300w, /wp-content/uploads/2015/07/front_panel-black-768x752.jpg 768w, /wp-content/uploads/2015/07/front_panel-black.jpg 900w" sizes="(max-width: 235px) 100vw, 235px" />   <img loading="lazy" class="alignnone wp-image-512" src="/wp-content/uploads/2015/07/text_close_up-300x256.jpg" alt="text_close_up" width="271" height="231" srcset="/wp-content/uploads/2015/07/text_close_up-300x256.jpg 300w, /wp-content/uploads/2015/07/text_close_up-768x654.jpg 768w, /wp-content/uploads/2015/07/text_close_up.jpg 926w" sizes="(max-width: 271px) 100vw, 271px" /></a></p>
+<p>&nbsp;</p>
+<h3>Technique 2, Painting everything that is not text.</h3>
+<p>This seems like an odd way of doing things, but offers some interesting advantages:</p>
+<ul>
+<li>Done on translucent acrylic, you can now do back-lighting</li>
+<li>You can paint gradients / flames etc. and still have blacked out text.</li>
+<li>You can always find the right coloured paint on short notice, while acrylic colours are at the mercy of your supplier.</li>
+</ul>
+<p>This technique is actually a lot simpler than the first technique, but a lot less forgiving to errors.</p>
+<ul>
+<li>Engrave text with the quick shallow cut. You basicly just want to rough the surface.</li>
+<li>Prepare the piece (bend, polish etc.)</li>
+<li>Wipe turpentine over the piece with a cloth.</li>
+<li>Gently (half) dry the surface with a dry cloth. Leave the thinnest smear don&#8217;t dry out the letters.</li>
+<li>Wait 20 seconds to allow for some evaporation to occur.</li>
+<li>Spray paint a very thin layer.</li>
+<li>The text area will still have some turps, and also possesses a higher surface tension due to its roughness.
+<ul>
+<li>The paint will move away from the text forming on the flat, smooth areas.</li>
+</ul>
+</li>
+<li>Repeat coats using this procedure as needed.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img loading="lazy" class="alignnone wp-image-515 size-medium" src="/wp-content/uploads/2015/07/front-panel-300x244.jpg" alt="front panel" width="300" height="244" srcset="/wp-content/uploads/2015/07/front-panel-300x244.jpg 300w, /wp-content/uploads/2015/07/front-panel-768x625.jpg 768w, /wp-content/uploads/2015/07/front-panel.jpg 961w" sizes="(max-width: 300px) 100vw, 300px" />   <a href="/wp-content/uploads/2015/07/front_pane_white.jpg"><img loading="lazy" class="alignnone wp-image-516" src="/wp-content/uploads/2015/07/front_pane_white-300x279.jpg" alt="front_pane_white" width="262" height="244" srcset="/wp-content/uploads/2015/07/front_pane_white-300x279.jpg 300w, /wp-content/uploads/2015/07/front_pane_white-768x713.jpg 768w, /wp-content/uploads/2015/07/front_pane_white.jpg 969w" sizes="(max-width: 262px) 100vw, 262px" /><br />
+</a>(Left, final product. Right. first coat)</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

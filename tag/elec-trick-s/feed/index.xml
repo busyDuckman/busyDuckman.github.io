@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Elec-TRICK-s &#8211; Busy Ducks</title>
+	<atom:link href="/tag/elec-trick-s/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Sun, 27 Sep 2015 09:10:41 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Elec-TRICK-s &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Elec-TRICK-s part 1 &#8211; &#8220;dual mono-speakers&#8221;</title>
+		<link>/elec-trick-s-part-1-dual-mono-speakers/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Sun, 27 Sep 2015 09:10:41 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Elec-TRICK-s]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=664</guid>
+
+					<description><![CDATA[Today, after an errant purchase, I am a little peeved at how certain companies deceive consumers with electrical smoke and mirrors. So I am creating the tag "Elec-TRICK-s" and going through devices that are tricking you into making a purchase.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction.</h1>
+<p>Today, after an errant purchase, I am a little peeved at how certain companies deceive consumers with electrical smoke and mirrors. So I am creating the tag &#8220;Elec-TRICK-s&#8221; and going through devices that are tricking you into making a purchase.</p>
+<p>Yes, this is nothing new, there are a bunch of companies/devices out there that peddle complete BS.  What is unique to electronics is the way good devices can be turned into crap devices for the sake of saving 20 cents on parts. On the scale of mass production this is a great saving. For millions of consumers this is just bad news. You would have much rather paid the extra 20c and received something that&#8217;s not junk.</p>
+<h1>The Trick.</h1>
+<p>To start things of, I bring to your attention this pair of speakers. They retail for about $15 in various Australian electronics shops. But don&#8217;t be fooled by the fact its a pair of speakers with a stereo plug, it is in fact a mono speaker set.</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" class="alignnone size-medium wp-image-666" src="/wp-content/uploads/2015/09/speakers-300x297.jpg" alt="speakers" width="300" height="297" srcset="/wp-content/uploads/2015/09/speakers-300x297.jpg 300w, /wp-content/uploads/2015/09/speakers-150x150.jpg 150w, /wp-content/uploads/2015/09/speakers-768x761.jpg 768w, /wp-content/uploads/2015/09/speakers.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>In case there is any doubt, the cable running from the plug to the speaker has only two wires, I cut it off and stripped it back, as I needed the speaker for parts anyway. The tip and middle section are simply shorted together, the cable is mono.</p>
+<p><a href="/wp-content/uploads/2015/09/speakers2.jpg"><img loading="lazy" class="alignnone size-medium wp-image-667" src="/wp-content/uploads/2015/09/speakers2-300x281.jpg" alt="speakers2" width="300" height="281" srcset="/wp-content/uploads/2015/09/speakers2-300x281.jpg 300w, /wp-content/uploads/2015/09/speakers2.jpg 512w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>&nbsp;</p>
+<p>Now, nowhere on the packaging does the item claim to be stereo.  There is no left speaker / right speaker markings. There is no overstep of a legal line in the sand. However, one would assume two speakers on a stereo plug is a stereo sound device. The relative saving of not making the device stereo is minimal. and 99% of people would be fooled.  There are plenty of stereo devices in the same price bracket, so it&#8217;s not like you would be wary.  Checking computer speakers to see if they are in fact a stereo devices feels like checking a car to see if there is actually an engine inside.</p>
+<p>&nbsp;</p>
+<p><strong>The lesson</strong>: &#8220;If your radio / speakers / whatever does not explicitly say stereo, then they probably aren&#8217;t.</p>
+<p>Stay tuned, next up the shenanigans of the common alarm clock.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

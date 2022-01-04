@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Progmem &#8211; Busy Ducks</title>
+	<atom:link href="/tag/progmem/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Thu, 11 Feb 2016 05:46:20 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Progmem &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>[UPDATE] Comprehensive Arduino Flash Memory via PROGMEM</title>
+		<link>/update-comprehensive-arduino-flash-memory-via-progmem/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 11 Feb 2016 05:46:20 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Progmem]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=795</guid>
+
+					<description><![CDATA[[Updated for arduino v1.6] This post is a huge set of PROGMEM examples (done as unit tests) which you can freely copy and paste into your work.
+
+The readership level is set at those who are already familiar with the arduino PROGMEM documentation here and the use of the F() macro and __FlashStringHelper*
+
+ Its designed as a reference to save you the "lets see how to make this work" time and communicate common pitfalls. Search for the method you need to use, and see it running in working tested code]]></description>
+										<content:encoded><![CDATA[<p>A Few years ago I posed an encyclopaedic set of unit tests (<a href="http://busyducks.com/wp_4_1/2015/03/09/comprehensive-example-code-demonstrating-using-arduino-flash-memory-via-progmem/" target="_blank" rel="noopener">here</a>) that showed how to do anything in progmem.  It went through structs, strings, arrays and all the library functions that could use progmem. However as of arduino V1.55 a it was broken as things on the Arduino platform had changed, v1.6 compounded the issues. As I regularly get visitors to this page, I thought it was in need of an update.</p>
+<p>So I present the code, updated to work on the latest platform. As per the last article:</p>
+<ul>
+<li><strong>This is not an intro to progmem article.</strong> The readership level is set at those who are already familiar with the arduino PROGMEM documentation <a href="http://arduino.cc/en/Reference/PROGMEM" target="_blank" rel="noopener">here </a>and the use of the F() macro and __FlashStringHelper*.</li>
+<li>Its&#8217; designed as a reference on how to accomplish many different common tasks in PROGMEM.</li>
+<li>It&#8217;s  here  to save you the &#8220;lets see how to make this work&#8221; time and communicate common pitfalls.</li>
+<li>The code is well documented, so you should be able to find what you need quickly.</li>
+<li>There is data declarations out front,  assorted unit tests in setup() and a simple unit testing framework at the end of the file.</li>
+<li>Some of the examples have  //JBYCDMUS after the line. This stands for &#8220;just because you can, doesn&#8217;t mean you should&#8221; implying It works but is not recommended.</li>
+<li><strong>To use this search for the method you need to use, and see it running in working tested code.</strong></li>
+</ul>
+<p>&nbsp;</p>
+<pre class="lang:c++ decode:true ">//----------------------------------------------------------------------------------//
+//                                    BUSYDUCKS.COM                                 //
+//                           _         _                  _                         //
+//                         ( o)&gt;     ( o)&lt;     __       ( o)&lt;                       //
+//                      ____\\    ____\\   __ (.. )  \\\_\\                         //
+//                 ~~~~\_///__)~~\_///__)~~\_\\V__)~~\_____)~~~~~                   //
+//                                                                                  //
+//                            Making you pro-duck-tive                              //
+//                                                                                  //
+//  Author: Duckman   Date: 08/02/16   Ver: 1.6   Licence: Creative Commons (by-sa) //
+//                                                                                  //
+//  Demonstrates the use of PROGMEM.                                                //
+//  Compile with Arduino environment 1.6 or later                                   //
+//                                                                                  //
+//  Permision given to freely copy/paste "code snippets" into your own code. For    //
+//  other uses (e.g. derivative works) the Creative Commons Attribution Share-      //
+//  alike license applies (cite busyducks.com). This means comerical use is ok.     //
+//----------------------------------------------------------------------------------//
+
+#if !(defined(ARDUINO) &amp;&amp; ARDUINO &gt;= 140)
+#include &lt;environment.h&gt;
+#endif
+
+void setTestName(const __FlashStringHelper* name);
+void setTestName(const char *name);
+bool assert(bool isTrue, Print *outStream=NULL);
+void pass();
+void fail(Print *outStream=NULL);
+void printTestSummary(Print *outStream);
+
+/*
+char,                             (1 byte)    -127 to 128 also letters i.e. 'a'     pgm_read_byte
+unsigned char, byte               (1 byte)    0 to 255                              pgm_read_byte
+int, short                        (2 bytes)   -32,767 to 32,768                     pgm_read_word
+unsigned int, unsigned short      (2 bytes)   0 to 65,535                           pgm_read_word
+long                              (4 bytes)   -2,147,483,648 to 2,147,483,647       pgm_read_dword
+unsigned long                     (4 bytes)   0 to 4,294,967,295                    pgm_read_dword
+
+For ATMEGA based arduino's double is the same as float
+float, double                     (4 bytes)   -3.4028235E+38 to 3.4028235E+38       pgm_read_float
+*/
+
+//--------------------------------------------------------------------------------------------------------------
+// Data structures for test
+//--------------------------------------------------------------------------------------------------------------
+struct Person
+{
+  int height;
+  char *name;
+  int age;
+  Person *spouse;
+};
+
+//--------------------------------------------------------------------------------------------------------------
+// Test Data Sets
+//--------------------------------------------------------------------------------------------------------------
+#define BYTE_TEST_PATTERN_DATA {0, 1, 2, 3, 4, 9, 15, 16, 21, 31, 32, 64, 100, 201, 212, 255, 7}
+#define BYTE_TEST_PATTERN_SIZE 17
+#define MAX_STRING_SIZE 100
+
+//--------------------------------------------------------------------------------------------------------------
+// Test Data
+//--------------------------------------------------------------------------------------------------------------
+//  regular data
+const byte  progMem_ucharArray[]     PROGMEM = BYTE_TEST_PATTERN_DATA;
+const byte  progMem_uchar            PROGMEM = 130;
+const int   progMem_int              PROGMEM = -3021;
+const long  progMem_long             PROGMEM = 2000000001;
+const float progMem_float            PROGMEM = 3.14159265359;
+const char  progMem_string[]         PROGMEM = "Snollygoster";
+const char  progMem_string2[]        PROGMEM = "Problem Alchemist";
+const char  progMem_string3[]        PROGMEM = "Lead Paradigm Architect";
+const char  progMem_emptyString[]    PROGMEM = "";
+const float progMem_floatArray[2][5] PROGMEM = {{0.2, 0.1, 0.5, 0.7, -3.2},
+                                               {0.4, 0.2, 1.0, 1.4, -6.4}};
+
+//  NB this used to be in the form "PROGMEM const char *progMem_stringArray[] =",
+//  now the extra const is required.
+PROGMEM const char *const progMem_stringArray[] =
+{   
+  progMem_string,
+  progMem_string2,
+  progMem_string3
+};
+
+//  STRUCTS
+//  this line is a foward decleration, it allows person1 to create a valid pointer 
+//  to person2 even though person2 is not defined yet.
+extern const Person progMem_person2;
+
+const char     _name[]         PROGMEM = "Papa Smurf";
+const Person   progMem_person  PROGMEM = {189, (char *)_name, 32, (Person*)&amp;progMem_person2};
+const char     _name2[]        PROGMEM = "Muma Smurf";
+const Person   progMem_person2 PROGMEM = {160, (char *)_name2, 41, (Person*)&amp;progMem_person};
+
+//--------------------------------------------------------------------------------------------------------------
+// Stats
+//--------------------------------------------------------------------------------------------------------------
+long passCount = 0;
+long failCount = 0;
+long countAtLastNameChange = 0;
+char currentTestName[64];
+
+//--------------------------------------------------------------------------------------------------------------
+// setup and loop
+//--------------------------------------------------------------------------------------------------------------
+void setup() 
+{
+    byte localData[] = BYTE_TEST_PATTERN_DATA;
+    char buffer[MAX_STRING_SIZE];
+    
+    Serial.begin(9600);
+    
+	//JBYCDMUS = just because you can, doesn't mean you should
+	
+    Serial.println(F("---------------- single variable tests"));
+    setTestName(F("single variable tests"));
+    assert(  progMem_uchar == 130                                       ); //JBYCDMUS
+    assert(  pgm_read_byte(&amp;progMem_uchar) == 130                       );
+    assert(  progMem_int == -3021                                       ); //JBYCDMUS
+    assert(  progMem_long == 2000000001                                 ); //JBYCDMUS
+    assert(  (int)(pgm_read_float(&amp;progMem_float)*10000) == 31415       );
+    
+    Serial.println(F("---------------- array tests"));
+    setTestName(F("array tests"));
+    for(int i=0; i&lt; BYTE_TEST_PATTERN_SIZE; i++)
+    {
+        assert(   pgm_read_byte(&amp;progMem_ucharArray[i]) == localData[i] );
+    }
+    for(int i=0; i&lt;5; i++)
+    {
+        //  the easy way of accessing the array
+        float a = pgm_read_float(&amp;progMem_floatArray[0][i]);
+        //  another way of accessing the array same as [1][i]
+        float b = pgm_read_float(((unsigned int)progMem_floatArray)+(5+i)*sizeof(float));
+        a = a * 2;
+        //  to check two floating points are "equal"
+        assert (abs(a - b) &lt; 0.0001                                     );
+    }
+
+    
+    Serial.println(F("---------------- struct tests"));
+    setTestName(F("struct tests"));
+    assert(  progMem_person.height == 189                               ); //JBYCDMUS
+    assert(  pgm_read_byte(&amp;progMem_person.height) == 189               );
+    //  NB: this used to be (prog_char *)pgm_read_word(&amp;progMem_person.name) but prog_char is depreciated
+    assert(  strcmp_P("Papa Smurf", (char PROGMEM *)pgm_read_word(&amp;progMem_person.name)) == 0 );
+    assert(  pgm_read_byte(&amp;progMem_person.age) == 32                   );
+    assert(  progMem_person.age == 32                                   ); //JBYCDMUS
+    
+    //  get person1's spouse
+    Person *p= (Person *)pgm_read_word(&amp;progMem_person.spouse);
+    assert(  p == &amp;progMem_person2                                      );
+    assert(  pgm_read_byte(&amp;p-&gt;age) == 41                               );
+    //get person2's spouse
+    p = (Person *)pgm_read_word(&amp;progMem_person2.spouse);
+    assert(  p == &amp;progMem_person                                       );
+    assert(  pgm_read_byte(&amp;p-&gt;age) == 32                               );
+
+    Serial.println(F("---------------- memory operation tests"));
+    setTestName(F("memcmp [memory compare]"));
+    //  compares len bytes of the memory s1 and flash s2
+    byte data[] = BYTE_TEST_PATTERN_DATA;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) == 0 );
+    data[BYTE_TEST_PATTERN_SIZE-1] = 0;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &lt; 0  );
+    data[BYTE_TEST_PATTERN_SIZE-1] = 255;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &gt; 0  );
+    
+    //  copy len bytes from flash to SRAM
+    memset (data, 0, BYTE_TEST_PATTERN_SIZE);
+    assert(  memcpy_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &gt; 0  );
+    assert(  memcmp(data, localData, BYTE_TEST_PATTERN_SIZE) == 0            );
+    
+    Serial.println(F("---------------- string function tests"));
+    
+    //  ---- strcmp &amp; strncmp Compare two strings
+    setTestName(F("strcmp [string compare]"));
+    assert(  strcmp_P("Snollygoster", progMem_string) == 0                ); 
+    assert(  strcmp_P("sNollyGostEr", progMem_string) != 0                );
+    assert(  strcmp_P("Bug", progMem_string) &lt; 0                          );
+    assert(  strcmp_P("Zoo", progMem_string) &gt; 0                          );
+    
+    setTestName(F("strncmp [string compare, first n chars]"));
+    assert(  strncmp_P("Snollyfoobar", progMem_string, 6) == 0            );
+    assert(  strncmp_P("sNollyGostEr", progMem_string, 6) != 0            );
+    assert(  strncmp_P("Bug", progMem_string, 3) &lt; 0                      );
+    assert(  strncmp_P("Zoo", progMem_string, 3) &gt; 0                      );
+    
+    //  ---- strcasecmp &amp; strncasecmp, Compare two strings, ignoring case  
+    assert(  strcasecmp_P("Snollygoster", progMem_string) == 0            );
+    assert(  strcasecmp_P("sNollyGostEr", progMem_string) == 0            );
+    assert(  strcasecmp_P("Bug", progMem_string) &lt; 0                      );
+    assert(  strcasecmp_P("Zoo", progMem_string) &gt; 0                      );
+    
+    setTestName(F("strncasecmp [string compare ignoring case]"));
+    assert(  strncasecmp_P("Snollyfoobar", progMem_string, 6) == 0        );
+    assert(  strncasecmp_P("sNollYGostEr", progMem_string, 8) == 0        );
+    assert(  strncasecmp_P("Bug", progMem_string, 3) &lt; 0                  );
+    assert(  strncasecmp_P("Zoo", progMem_string, 3) &gt; 0                  );
+    
+    //  ---- strcpy, strlcpy &amp; strncpy: makes a copy of a string
+    setTestName(F("strcpy [copy a string]"));
+    clear(buffer, MAX_STRING_SIZE); //empty string buffer
+    assert(  strcpy_P(buffer, progMem_string) == buffer                   );
+    assert(  strncmp(buffer, "Snollygoster", MAX_STRING_SIZE) == 0        );
+    
+    setTestName(F("strlcpy [copy a string of maximim size, ensure null terminated result]"));
+    char smallBuffer[12]; //  not long enough to hold "Snollygoster" AND the final null terminator
+	
+    clear(buffer, MAX_STRING_SIZE); //  empty string buffer
+    clear(smallBuffer, 12); //empty string buffer
+
+	
+    assert(  strlcpy_P(buffer, progMem_string, MAX_STRING_SIZE) == 12     );
+    assert(  strlcpy_P(smallBuffer, progMem_string, 12) == 12             );
+    assert(  strcmp(buffer, "Snollygoster") == 0                          );
+    //  This is the difference between strlcpy and strncpy, the whole string was not copied 
+    //  to ensure a null terminator was present
+    assert(  strcmp(smallBuffer, "Snollygoste") == 0                      );
+	
+    
+    setTestName(F("strncpy [copy a string of maximim size, null terminate iff space allows]"));
+    clear(buffer, MAX_STRING_SIZE); //  empty string buffer
+    assert(  strncpy_P(buffer, progMem_string, MAX_STRING_SIZE) == buffer );
+    assert(  strcmp(buffer, "Snollygoster") == 0                          );
+    
+    //  ---- strcat, strlcat &amp; strncat: Concatenate two strings
+    setTestName(F("strcat [join two strings]"));
+    strcpy(buffer, "Chief ");
+    assert(  strcat_P(buffer, progMem_string) == buffer                   );
+    assert(  strcmp(buffer, "Chief Snollygoster") == 0                    );
+    
+	
+    setTestName(F("strlcat [join two strings, limiting final size, ensure termination]"));  
+    strcpy(smallBuffer, "Chief "); //smallBuffer is only 12 characters
+    //  NOTE strlcat_P n = sizeof destination; while strncat_P n = number of chars to copy
+    assert(  strlcat_P(smallBuffer, progMem_string, 12) == 18             );
+    //  12th character is the nul terminator
+    assert(  strcmp(smallBuffer, "Chief Snoll") == 0                      );
+    
+    strcpy(buffer, "Chief "); //smallBuffer is only 12 characters
+    assert(  strlcat_P(buffer, progMem_string, MAX_STRING_SIZE) == 18     );
+    assert(  strcmp(buffer, "Chief Snollygoster") == 0                    );
+	
+    
+    setTestName(F("strncat [join two strings, limiting final size]"));
+    strcpy(buffer, "Chief ");
+    //  NOTE strncat_P n = number of chars to copy; while strlcat_P n = sizeof destination
+    assert(  strncat_P(buffer, progMem_string, 6) == buffer               );
+    assert(  strcmp(buffer, "Chief Snolly") == 0                          );    
+	
+    
+    //  ---- strlen &amp; strnlen: Finds the length of the string (searches for the null terminator)
+    setTestName(F("strlen [find the length of a string]"));
+    assert(  strlen_P( progMem_string) == 12    );
+    setTestName(F("strnlen [find the length of a string, limited to n]"));
+    assert(  strnlen_P( progMem_string, 6) == 6                           );
+    assert(  strnlen_P( progMem_string, MAX_STRING_SIZE) == 12            );
+    
+    //  ---- strstr: searches s1 for the first occurrence of (the substring) s2
+    setTestName(F("strstr [find a string inside another string]"));
+    //  one item to find
+    strcpy(buffer, "A Snollygoster sounds like something you would find in a handkerchief.");
+    assert(  strstr_P(buffer, progMem_string) == &amp;buffer[2]               );
+    assert(  strstr_P("foobar", progMem_string) == NULL                   );
+    //  what is defined to happen when searching an empty/null strings
+    strcpy(buffer, "foobar");
+    assert(  strstr_P(buffer, NULL) == NULL              );
+    //  this is why "if(strstr_P(s1, s2) != null){...}" is a bad idea!"
+    assert(  strstr_P(buffer, progMem_emptyString) == buffer              );
+        
+    Serial.println(F("---------------- done"));
+    if(failCount &gt; 0)
+    {
+        Serial.print(passCount); Serial.println(F(" test(s) passed"));
+        Serial.print(failCount); Serial.println(F(" test(s) FAILED"));
+    }
+    else
+    {
+        Serial.print(F("All tests passed (")); Serial.print(passCount); Serial.println(F(" tests rum)"));
+    }
+}
+
+void loop() 
+{
+}
+
+void clear(char *buffer, int len)
+{
+    memset(buffer, '\0', len);
+}
+
+//----------------------------------------------------------------------------------------------------------
+// Testing framework data
+//----------------------------------------------------------------------------------------------------------
+#define TEST_NAME_BUFFER_LEN (64)
+extern long passCount;
+extern long failCount;
+extern long countAtLastNameChange;
+extern char currentTestName[TEST_NAME_BUFFER_LEN];
+
+
+
+//----------------------------------------------------------------------------------------------------------
+// Testing framework
+//----------------------------------------------------------------------------------------------------------
+
+template&lt;typename T&gt;
+__attribute__ ((noinline)) bool assert_EQ(T a, T b, Print *outStream=NULL)
+{
+	bool ok = assert(a == b, outStream);
+	if((!ok) &amp;&amp; (outStream != NULL))
+	{
+		outStream-&gt;print(F("  error:  0x"));
+		outStream-&gt;print(a, HEX);
+		outStream-&gt;print(F(" != 0x"));
+		outStream-&gt;println(b, HEX);
+	}
+}
+
+
+
+template&lt;typename T&gt;
+__attribute__ ((noinline)) bool assert_NEQ(T a, T b, Print *outStream=NULL)
+{
+	bool ok = assert(a != b, outStream);
+	if((!ok) &amp;&amp; (outStream != NULL))
+	{
+		outStream-&gt;print(F("  error:  0x"));
+		outStream-&gt;print(a, HEX);
+		outStream-&gt;print(F(" != 0x"));
+		outStream-&gt;println(b, HEX);
+	}
+}
+
+template&lt;typename T&gt;
+__attribute__ ((noinline)) bool assert_GT(T a, T b, Print *outStream=NULL)
+{
+	bool ok = assert(a &gt; b, outStream);
+	if((!ok) &amp;&amp; (outStream != NULL))
+	{
+		outStream-&gt;print(F("  error:  0x"));
+		outStream-&gt;print(a, HEX);
+		outStream-&gt;print(F(" &lt;= 0x"));
+		outStream-&gt;println(b, HEX);
+	}
+}
+template&lt;typename T&gt;
+__attribute__ ((noinline)) bool assert_LT(T a, T b, Print *outStream=NULL)
+{
+	bool ok = assert(a &lt; b, outStream);
+	if((!ok) &amp;&amp; (outStream != NULL))
+	{
+		outStream-&gt;print(F("  error:  0x"));
+		outStream-&gt;print(a, HEX);
+		outStream-&gt;print(F(" &gt;= 0x"));
+		outStream-&gt;println(b, HEX);
+	}
+}
+
+void setTestName(const __FlashStringHelper* name) 
+{
+	currentTestName[0]= 0;
+	if(name != NULL)
+	{
+		strlcpy_P(currentTestName, (const char PROGMEM *)name, TEST_NAME_BUFFER_LEN);
+	}
+	
+	countAtLastNameChange = passCount+failCount;
+}
+
+void setTestName(const char *name)
+{
+	currentTestName[0]= 0;
+	if(name != NULL)
+	{
+		strlcpy(currentTestName, name, TEST_NAME_BUFFER_LEN);
+	}
+	
+	countAtLastNameChange = passCount+failCount;
+}
+
+bool assert(bool isTrue, Print *outStream)
+{
+	if(isTrue) 
+	{
+		pass();
+		return true;
+	}
+	else 
+	{
+		fail(outStream);
+		return false;
+	}
+}
+
+void pass()
+{
+	passCount++;
+}
+
+void fail(Print *outStream)
+{
+	if(outStream != NULL)
+	{
+		outStream-&gt;print(F("TEST FAILED: "));
+		if(currentTestName != NULL)
+		{
+			int localTestNum = (passCount + failCount) - countAtLastNameChange + 1;
+			outStream-&gt;print(F("(")); 
+			outStream-&gt;print(currentTestName); 
+			outStream-&gt;print(F(" [test ")); 
+			outStream-&gt;print(localTestNum);
+			outStream-&gt;print(F("])"));
+		}
+		outStream-&gt;println();
+	}
+	failCount++;
+}
+
+void printTestSummary(Print *outStream)
+{
+	if(outStream != NULL)
+	{
+		if(failCount &gt; 0)
+		{
+			outStream-&gt;print(passCount); Serial.println(F(" test passed"));
+			outStream-&gt;print(failCount); Serial.println(F(" test FAILED"));
+		}
+		else
+		{
+			outStream-&gt;print(F("All tests passed (")); Serial.print(passCount); Serial.println(F(" tests run)"));
+		}
+	}
+}
+</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Comprehensive Example Code Demonstrating using Arduino Flash Memory via PROGMEM</title>
+		<link>/comprehensive-example-code-demonstrating-using-arduino-flash-memory-via-progmem/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 09 Mar 2015 08:05:38 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Progmem]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=94</guid>
+
+					<description><![CDATA[The post is a huge set of PROGMEM examples (done as unit tests) which you can freely copy and paste into your work.
+
+The readership level is set at those who are already familiar with the arduino PROGMEM documentation here and the use of the F() macro and __FlashStringHelper*. Its designed as a reference on how to accomplish many different common tasks in PROGMEM , from standard string functions, to structures and arrays. The idea is to save you the "lets see how to make this work" time and communicate common pitfalls.]]></description>
+										<content:encoded><![CDATA[<p>&nbsp;</p>
+<p><strong>[<span style="color: #ff0000;">Note</span>: This page is only applicable to older arduino versions. For version 1.5 onwards <a href="http://busyducks.com/wp_4_1/2016/02/11/update-comprehensive-arduino-flash-memory-via-progmem/">see this page instead</a>].</strong></p>
+<p>This post is a huge set of PROGMEM examples (done as unit tests) which you can freely copy and paste into your work.</p>
+<p>The readership level is set at those who are already familiar with the arduino PROGMEM documentation <a href="http://arduino.cc/en/Reference/PROGMEM" target="_blank" rel="noopener">here </a>and the use of the F() macro and __FlashStringHelper*. Its designed as a reference on how to accomplish many different common tasks in PROGMEM , from standard string functions, to structures and arrays. The idea is to save you the &#8220;lets see how to make this work&#8221; time and communicate common pitfalls.</p>
+<p>The code is well documented, so you should be able to find what you need quickly. There is data declarations out front,  sets of unit tests in setup() and a simple unit testing framework at the end of the file.</p>
+<p>NB: some of the examples have  //JBYCDMUS after the line.<br />
+This stands for &#8220;just because you can, doesn&#8217;t mean you should&#8221; implying It works but is not recommended.</p>
+<p>&nbsp;</p>
+<pre class="" mark="104,112,130,148,163">//----------------------------------------------------------------------------------//
+//                                    BUSYDUCKS.COM                                 //
+//                           _         _                  _                         //
+//                         ( o)&gt;     ( o)&lt;     __       ( o)&lt;                       //
+//                      ____\\    ____\\   __ (.. )  \\\_\\                         //
+//                 ~~~~\_///__)~~\_///__)~~\_\\V__)~~\_____)~~~~~                   //
+//                                                                                  //
+//                            Making you pro-duck-tive                              //
+//                                                                                  //
+//  Author: Duckman   Date: 20/3/13   Ver: 1.0   Licence: Creative Commons (by-sa)  //
+//                                                                                  //
+//  Demonstrates the use of PROGMEM.                                                //
+//  Compile with Arduino environment 1.02 or later                                  //
+//                                                                                  //
+//  Permision given to freely copy/paste "code snippets" into your own code. For    //
+//  other uses (e.g. derivative works) the Creative Commons Attribution Share-      //
+//  alike license applies (cite busyducks.com). This means comerical use is ok.     //
+//----------------------------------------------------------------------------------//
+#include <environment.h>
+
+/*
+char,                             (1 byte)    -127 to 128 also letters i.e. 'a'     pgm_read_byte
+unsigned char, byte               (1 byte)    0 to 255                              pgm_read_byte
+int, short                        (2 bytes)   -32,767 to 32,768                     pgm_read_word
+unsigned int, unsigned short      (2 bytes)   0 to 65,535                           pgm_read_word
+long                              (4 bytes)   -2,147,483,648 to 2,147,483,647       pgm_read_dword
+unsigned long                     (4 bytes)   0 to 4,294,967,295                    pgm_read_dword
+
+For ATMEGA based arduino's double is the same as float
+float, double                     (4 bytes)   -3.4028235E+38 to 3.4028235E+38       pgm_read_float
+*/
+
+//--------------------------------------------------------------------------------------------------------------
+// Data structures for test
+//--------------------------------------------------------------------------------------------------------------
+struct Person
+{
+  int height;
+  char *name;
+  int age;
+  Person *spouse;
+};
+
+//--------------------------------------------------------------------------------------------------------------
+// Test Data Sets
+//--------------------------------------------------------------------------------------------------------------
+#define BYTE_TEST_PATTERN_DATA {0, 1, 2, 3, 4, 9, 15, 16, 21, 31, 32, 64, 100, 201, 212, 255, 7}
+#define BYTE_TEST_PATTERN_SIZE 17
+#define MAX_STRING_SIZE 100
+
+//--------------------------------------------------------------------------------------------------------------
+// Test Data
+//--------------------------------------------------------------------------------------------------------------
+//regular data
+const byte  progMem_ucharArray[]     PROGMEM = BYTE_TEST_PATTERN_DATA;
+const byte  progMem_uchar            PROGMEM = 130;
+const int   progMem_int              PROGMEM = -3021;
+const long  progMem_long             PROGMEM = 2000000001;
+const float progMem_float            PROGMEM = 3.14159265359;
+const char  progMem_string[]         PROGMEM = "Snollygoster";
+const char  progMem_string2[]        PROGMEM = "Problem Alchemist";
+const char  progMem_string3[]        PROGMEM = "Lead Paradigm Architect";
+const char  progMem_emptyString[]    PROGMEM = "";
+const float progMem_floatArray[2][5] PROGMEM = {{0.2, 0.1, 0.5, 0.7, -3.2},
+                                               {0.4, 0.2, 1.0, 1.4, -6.4}};
+
+PROGMEM const char *progMem_stringArray[] =
+{   
+  progMem_string,
+  progMem_string2,
+  progMem_string3
+};
+
+//structs
+//this line is a foward decleration, it allows person1 to create a valid pointer 
+//to person2 even though person2 is not defined yet.
+extern const Person progMem_person2;
+
+const char     _name[]         PROGMEM = "Papa Smurf";
+const Person   progMem_person  PROGMEM = {189, (char *)_name, 32, (Person*)&amp;progMem_person2};
+const char     _name2[]        PROGMEM = "Muma Smurf";
+const Person   progMem_person2 PROGMEM = {160, (char *)_name2, 41, (Person*)&amp;progMem_person};
+
+//--------------------------------------------------------------------------------------------------------------
+// Stats
+//--------------------------------------------------------------------------------------------------------------
+long passCount = 0;
+long failCount = 0;
+long countAtLastNameChange = 0;
+char currentTestName[64];
+
+//--------------------------------------------------------------------------------------------------------------
+// setup and loop
+//--------------------------------------------------------------------------------------------------------------
+void setup() 
+{
+    byte localData[] = BYTE_TEST_PATTERN_DATA;
+    char buffer[MAX_STRING_SIZE];
+    
+    Serial.begin(9600);
+    
+	//JBYCDMUS = just because you can, doesn't mean you should
+	
+    Serial.println(F("---------------- single variable tests"));
+    setTestName("single variable tests");
+    assert(  progMem_uchar == 130                                       ); //JBYCDMUS
+    assert(  pgm_read_byte(&amp;progMem_uchar) == 130                       );
+    assert(  progMem_int == -3021                                       ); //JBYCDMUS
+    assert(  progMem_long == 2000000001                                 ); //JBYCDMUS
+    assert(  (int)(pgm_read_float(&amp;progMem_float)*10000) == 31415       );
+    
+    Serial.println(F("---------------- array tests"));
+    setTestName("array tests");
+    for(int i=0; i&lt; BYTE_TEST_PATTERN_SIZE; i++)
+    {
+        assert(   pgm_read_byte(&amp;progMem_ucharArray[i]) == localData[i] );
+    }
+    for(int i=0; i&lt;5; i++)
+    {
+        //the easy way of accessing the array
+        float a = pgm_read_float(&amp;progMem_floatArray[0][i]);
+        //another way of accessing the array same as [1][i]
+        float b = pgm_read_float(((unsigned int)progMem_floatArray)+(5+i)*sizeof(float));
+        a = a * 2;
+        //to check two floating points are "equal"
+        assert (abs(a - b) &lt; 0.0001                                     );     }          Serial.println(F("---------------- struct tests"));     setTestName("struct tests");     assert(  progMem_person.height == 189                               ); //JBYCDMUS     assert(  pgm_read_byte(&amp;progMem_person.height) == 189               );     //to get a string use: (prog_char *)pgm_read_word(&amp;progMem_person.name)         assert(  strcmp_P("Papa Smurf", (prog_char *)pgm_read_word(&amp;progMem_person.name)) == 0 );     assert(  pgm_read_byte(&amp;progMem_person.age) == 32                   );     assert(  progMem_person.age == 32                                   ); //JBYCDMUS          //get person1's spouse     Person *p= (Person *)pgm_read_word(&amp;progMem_person.spouse);     assert(  p == &amp;progMem_person2                                      );     assert(  pgm_read_byte(&amp;p-&gt;age) == 41                               );
+    //get person2's spouse
+    p = (Person *)pgm_read_word(&amp;progMem_person2.spouse);
+    assert(  p == &amp;progMem_person                                       );
+    assert(  pgm_read_byte(&amp;p-&gt;age) == 32                               );
+
+    Serial.println(F("---------------- memory operation tests"));
+    setTestName("memcmp [memory compare]");
+    //compares len bytes of the memory s1 and flash s2
+    byte data[] = BYTE_TEST_PATTERN_DATA;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) == 0 );
+    data[BYTE_TEST_PATTERN_SIZE-1] = 0;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &lt; 0  );     data[BYTE_TEST_PATTERN_SIZE-1] = 255;     assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &gt; 0  );
+    
+    //copy len bytes from flash to SRAM
+    memset (data, 0, BYTE_TEST_PATTERN_SIZE);
+    assert(  memcpy_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &gt; 0  );
+    assert(  memcmp(data, localData, BYTE_TEST_PATTERN_SIZE) == 0            );
+    
+    Serial.println(F("---------------- string function tests"));
+    
+    //---- strcmp &amp; strncmp Compare two strings
+    setTestName("strcmp [string compare]");
+    assert(  strcmp_P("Snollygoster", progMem_string) == 0                ); 
+    assert(  strcmp_P("sNollyGostEr", progMem_string) != 0                );
+    assert(  strcmp_P("Bug", progMem_string) &lt; 0                          );     assert(  strcmp_P("Zoo", progMem_string) &gt; 0                          );
+    
+    setTestName("strncmp [string compare, first n chars]");
+    assert(  strncmp_P("Snollyfoobar", progMem_string, 6) == 0            );
+    assert(  strncmp_P("sNollyGostEr", progMem_string, 6) != 0            );
+    assert(  strncmp_P("Bug", progMem_string, 3) &lt; 0                      );     assert(  strncmp_P("Zoo", progMem_string, 3) &gt; 0                      );
+    
+    //---- strcasecmp &amp; strncasecmp, Compare two strings, ignoring case  
+    assert(  strcasecmp_P("Snollygoster", progMem_string) == 0            );
+    assert(  strcasecmp_P("sNollyGostEr", progMem_string) == 0            );
+    assert(  strcasecmp_P("Bug", progMem_string) &lt; 0                      );     assert(  strcasecmp_P("Zoo", progMem_string) &gt; 0                      );
+    
+    setTestName("strncasecmp [string compare ignoring case]");
+    assert(  strncasecmp_P("Snollyfoobar", progMem_string, 6) == 0        );
+    assert(  strncasecmp_P("sNollYGostEr", progMem_string, 8) == 0        );
+    assert(  strncasecmp_P("Bug", progMem_string, 3) &lt; 0                  );     assert(  strncasecmp_P("Zoo", progMem_string, 3) &gt; 0                  );
+    
+    //---- strcpy, strlcpy &amp; strncpy: makes a copy of a string
+    setTestName("strcpy [copy a string]");
+    clear(buffer, MAX_STRING_SIZE); //empty string buffer
+    assert(  strcpy_P(buffer, progMem_string) == buffer                   );
+    assert(  strncmp(buffer, "Snollygoster", MAX_STRING_SIZE) == 0        );
+    
+    setTestName("strlcpy [copy a string of maximim size, ensure null terminated result]");
+    char smallBuffer[12]; //not long enough to hold "Snollygoster" AND the final null terminator
+    clear(buffer, MAX_STRING_SIZE); //empty string buffer
+    clear(smallBuffer, 12); //empty string buffer
+    assert(  strlcpy_P(buffer, progMem_string, MAX_STRING_SIZE) == 12     );
+    assert(  strlcpy_P(smallBuffer, progMem_string, 12) == 12             );
+    assert(  strcmp(buffer, "Snollygoster") == 0                          );
+    //This is the difference between strlcpy and strncpy, the whole string was not copied 
+    //to ensure a null terminator was present
+    assert(  strcmp(smallBuffer, "Snollygoste") == 0                      );
+
+    
+    setTestName("strncpy [copy a string of maximim size, null terminate iff space allows]");
+    clear(buffer, MAX_STRING_SIZE); //empty string buffer
+    assert(  strncpy_P(buffer, progMem_string, MAX_STRING_SIZE) == buffer );
+    assert(  strcmp(buffer, "Snollygoster") == 0                          );
+    
+    //---- strcat, strlcat &amp; strncat: Concatenate two strings
+    setTestName("strcat [join two strings]");
+    strcpy(buffer, "Chief ");
+    assert(  strcat_P(buffer, progMem_string) == buffer                   );
+    assert(  strcmp(buffer, "Chief Snollygoster") == 0                    );
+    
+    setTestName("strlcat [join two strings, limiting final size, ensure termination]");  
+    strcpy(smallBuffer, "Chief "); //smallBuffer is only 12 characters
+    //NOTE strlcat_P n = sizeof destination; while strncat_P n = number of chars to copy
+    assert(  strlcat_P(smallBuffer, progMem_string, 12) == 18             );
+    //12th character is the nul terminator
+    assert(  strcmp(smallBuffer, "Chief Snoll") == 0                      );
+    
+    strcpy(buffer, "Chief "); //smallBuffer is only 12 characters
+    assert(  strlcat_P(buffer, progMem_string, MAX_STRING_SIZE) == 18     );
+    assert(  strcmp(buffer, "Chief Snollygoster") == 0                    );
+    
+    setTestName("strncat [join two strings, limiting final size]");
+    strcpy(buffer, "Chief ");
+     //NOTE strncat_P n = number of chars to copy; while strlcat_P n = sizeof destination
+    assert(  strncat_P(buffer, progMem_string, 6) == buffer               );
+    assert(  strcmp(buffer, "Chief Snolly") == 0                          );    
+    
+    //---- strlen &amp; strnlen: Finds the length of the string (searches for the null terminator)
+    setTestName("strlen [find the length of a string]");
+    assert(  strlen_P( progMem_string) == 12    );
+    setTestName("strnlen [find the length of a string, limited to n]");
+    assert(  strnlen_P( progMem_string, 6) == 6                           );
+    assert(  strnlen_P( progMem_string, MAX_STRING_SIZE) == 12            );
+    
+    //---- strstr: searches s1 for the first occurrence of (the substring) s2
+    setTestName("strstr [find a string inside another string]");
+    //one item to find
+    strcpy(buffer, "A Snollygoster sounds like something you would find in a handkerchief.");
+    assert(  strstr_P(buffer, progMem_string) == &amp;buffer[2]               );
+    assert(  strstr_P("foobar", progMem_string) == NULL                   );
+    //what is defined to happen when searching an empty/null strings
+    strcpy(buffer, "foobar");
+    assert(  strstr_P(buffer, NULL) == NULL              );
+    //this is why "if(strstr_P(s1, s2) != null){...}" is a bad idea!"
+    assert(  strstr_P(buffer, progMem_emptyString) == buffer              );
+        
+    Serial.println(F("---------------- done"));
+    if(failCount &gt; 0)
+    {
+        Serial.print(passCount); Serial.println(" test passed");
+        Serial.print(failCount); Serial.println(" test FAILED");
+    }
+    else
+    {
+        Serial.print("All tests passed ("); Serial.print(passCount); Serial.println(" tests rum)");
+    }
+}
+
+void loop() 
+{
+}
+
+void clear(char *buffer, int len)
+{
+    memset(buffer, '\0', len);
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Testing framework
+//--------------------------------------------------------------------------------------------------------------
+void setTestName(const char *name)
+{
+  strcpy(currentTestName, name);
+  countAtLastNameChange = passCount+failCount;
+}
+
+void assert(bool isTrue)
+{
+  if(isTrue) {
+    pass();
+  }
+  else {
+    fail();
+  }
+}
+
+void pass()
+{
+  passCount++;
+}
+
+void fail()
+{
+    Serial.print("TEST FAILED: ");
+    if(currentTestName != NULL)
+    {
+        int localTestNum = (passCount + failCount) - countAtLastNameChange + 1;
+        Serial.print("("); 
+        Serial.print(currentTestName); 
+        Serial.print(" test "); 
+        Serial.print(localTestNum);
+        Serial.print(")");
+    }
+    Serial.println("");
+    failCount++;
+}
+
+</pre>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

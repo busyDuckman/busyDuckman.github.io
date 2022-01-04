@@ -1,0 +1,1442 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>duckman &#8211; Busy Ducks</title>
+	<atom:link href="/author/duckman/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Tue, 21 Apr 2020 02:27:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>duckman &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Upgrading Robie The Robot.</title>
+		<link>/upgrading-robie-the-robot/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 21 Apr 2020 02:27:55 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[3D-Printing]]></category>
+		<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[raspberry_pi]]></category>
+		<category><![CDATA[Robot]]></category>
+		<category><![CDATA[vintage]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=1018</guid>
+
+					<description><![CDATA[Part one, in a journey to upgrade an old robot. This classic 80's robot This robot was also known as: Tandy Robie, Radio Shack Robie, Robie the Robot, Talking Robie, RS 4061, Robocom 1000, Robie Parlant, and Robocom Robot (Super).]]></description>
+										<content:encoded><![CDATA[
+<h2>A Rare Find</h2>
+
+
+
+<p>I was in an vintage collectables store and saw a beaten up old &#8216;Robie the Robot&#8217; forgotten at the back of a shelf. It&#8217;s dome was cracked and it&#8217;s remote missing. Robot collectors are quite voracious in Canberra with most robots snapped up within days. However, it seems nobody relished this rough robotic remnant, so I got it cheap.</p>
+
+
+
+<p>This robot was also known as: <em>Tandy Robie, Radio Shack Robie, Robie the Robot, Talking Robie, RS 4061, Robocom 1000, Robie Parlant, Robocom Robot (Super)</em>. There is a good write up about the robot on <a rel="noreferrer noopener" href="http://www.theoldrobots.com/talkrobie2.html" target="_blank">theoldrobots</a>.</p>
+
+
+
+<figure class="wp-block-image size-large"><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/robbie-1024x768.jpeg" alt="" class="wp-image-1019"/><figcaption>Robie The Robot, as purchased.</figcaption></figure>
+
+
+
+<h2>Tear Down</h2>
+
+
+
+<p>Disassembling Robie I discovered a typical 80&#8217;s remote control toy. RC circuitry oozing with leaking capacitor electrolyte and decayed protective lacquer. Apparently the built in speaker could talk, but looking at the circuitry, my guess is it functioned as a wally talky, playing a voice signal from the remote.  I didn&#8217;t have the remote so I can&#8217;t confirm.<br><br>The motors were the &#8220;old style&#8221;; power hungry and weak. The Achilles heel that made all 80&#8217;s moving toys kinda nerfed.</p>
+
+
+
+<p>The front screen was fake, the heads and arms were not designed to move. I will need to fix all this.</p>
+
+
+
+<h2>A New Brain.</h2>
+
+
+
+<p>Decided to throw a pi in there, with a monitor that fits the front screen and a camera because that would be cool. <br></p>
+
+
+
+<figure class="wp-block-image size-large"><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/pi-1024x768.jpeg" alt="" class="wp-image-1020"/></figure>
+
+
+
+<p>For the display, a generic five dollar 2.2&#8243; SPI TFT LCD&nbsp;that sells for arduino projects works well (fits just behind the front monitor panel). The stock plastic used for Robies display is way to dark for the screen to be visible, so I used a Fresnel lens instead (you can get them from the two dollar shop, sold a book magnifiers). </p>
+
+
+
+<p>A front assembly was 3d printed to hold the pi, monitor and camera (such that everything lined up, and the camera could see out of the hole previously used for the frontal on/off switch.</p>
+
+
+
+<figure class="wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img loading="lazy" width="1024" height="768" src="/wp-content/uploads/2020/04/front_asm_render.jpg" alt="" data-id="1021" data-link="http://busyducks.com/wp_4_1/?attachment_id=1021#main" class="wp-image-1021" srcset="/wp-content/uploads/2020/04/front_asm_render.jpg 1024w, /wp-content/uploads/2020/04/front_asm_render-300x225.jpg 300w, /wp-content/uploads/2020/04/front_asm_render-768x576.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="blocks-gallery-item__caption">Design in Fusion 360, screen is mounted on the green sled.</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158235-768x1024.jpg" alt="" data-id="1034" data-link="http://busyducks.com/wp_4_1/?attachment_id=1034#main" class="wp-image-1034"/><figcaption class="blocks-gallery-item__caption">Rear</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158236-768x1024.jpg" alt="" data-id="1035" data-link="http://busyducks.com/wp_4_1/?attachment_id=1035#main" class="wp-image-1035"/><figcaption class="blocks-gallery-item__caption">Front</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158224-1024x768.jpg" alt="" data-id="1037" data-full-url="/wp-content/uploads/2020/04/P4158224-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1037#main" class="wp-image-1037"/><figcaption class="blocks-gallery-item__caption">Empty shell, wit Fresnel lens.</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158223-1024x768.jpg" alt="" data-id="1036" data-full-url="/wp-content/uploads/2020/04/P4158223-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1036#main" class="wp-image-1036"/><figcaption class="blocks-gallery-item__caption">Mount pi.</figcaption></figure></li></ul></figure>
+
+
+
+<h2>Motorising the Head</h2>
+
+
+
+<p>A turntable system was created in OpenSCAD, using the awesome parametric gear library by Dr Jörg Janssen. I didn&#8217;t have a 3d printer, so I printed via the ANU Makerspace.</p>
+
+
+
+<figure class="wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img loading="lazy" width="1024" height="586" src="/wp-content/uploads/2020/04/head_gears_lower-1024x586.png" alt="" data-id="1023" data-link="http://busyducks.com/wp_4_1/?attachment_id=1023#main" class="wp-image-1023" srcset="/wp-content/uploads/2020/04/head_gears_lower-1024x586.png 1024w, /wp-content/uploads/2020/04/head_gears_lower-300x172.png 300w, /wp-content/uploads/2020/04/head_gears_lower-768x439.png 768w, /wp-content/uploads/2020/04/head_gears_lower.png 1103w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></li><li class="blocks-gallery-item"><figure><img loading="lazy" width="1024" height="691" src="/wp-content/uploads/2020/04/P6185667_close_up-1024x691.jpg" alt="" data-id="1024" data-link="http://busyducks.com/wp_4_1/?attachment_id=1024#main" class="wp-image-1024" srcset="/wp-content/uploads/2020/04/P6185667_close_up-1024x691.jpg 1024w, /wp-content/uploads/2020/04/P6185667_close_up-300x202.jpg 300w, /wp-content/uploads/2020/04/P6185667_close_up-768x518.jpg 768w, /wp-content/uploads/2020/04/P6185667_close_up-1536x1036.jpg 1536w, /wp-content/uploads/2020/04/P6185667_close_up-2048x1381.jpg 2048w, /wp-content/uploads/2020/04/P6185667_close_up-1568x1057.jpg 1568w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/inside_a-906x1024.jpg" alt="" data-id="1025" data-full-url="/wp-content/uploads/2020/04/inside_a-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1025#main" class="wp-image-1025"/></figure></li><li class="blocks-gallery-item"><figure><img loading="lazy" width="674" height="440" src="/wp-content/uploads/2020/04/head_gears_upper.png" alt="" data-id="1022" data-link="http://busyducks.com/wp_4_1/?attachment_id=1022#main" class="wp-image-1022" srcset="/wp-content/uploads/2020/04/head_gears_upper.png 674w, /wp-content/uploads/2020/04/head_gears_upper-300x196.png 300w" sizes="(max-width: 674px) 100vw, 674px" /></figure></li></ul></figure>
+
+
+
+<p>The turntable is driven by a 28byj-48 stepper motor, with a ULN2003 Darlington transistor array driver. <br></p>
+
+
+
+<p>I discovered the original broken dome was most likely not a custom mould,  but a security camera dome. I had some difficulty justifying a proper replacement as Australian retailers wanted over $50 for a replacement security camera dome (just the one piece of plastic). So I just replaced the head with a plastic dome from a toy shop.<br><br>The result is not quite as fast as I would like, but it was unexpectedly charming.</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="P6235685" width="940" height="529" src="https://www.youtube.com/embed/sQd-v5fpN5s?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<h2>Getting the arms to move.</h2>
+
+
+
+<p>A bracket was designed to get some cheap tower-pro servos to fit aligned with the arms. The brackets neatly affixes to old circuit mounting points in the plastic. A custom servo horn will friction fitted the arms to the servo. The existing arm bearing was sanded a bit to get it to slide freely. The result is a much more expressive robot. </p>
+
+
+
+<figure class="wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058095-768x1024.jpg" alt="" data-id="1026" data-link="http://busyducks.com/wp_4_1/?attachment_id=1026#main" class="wp-image-1026"/><figcaption class="blocks-gallery-item__caption">Servo mount rear</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058096-768x1024.jpg" alt="" data-id="1027" data-link="http://busyducks.com/wp_4_1/?attachment_id=1027#main" class="wp-image-1027"/><figcaption class="blocks-gallery-item__caption">Servo mount top</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058110-1024x768.jpg" alt="" data-id="1028" data-link="http://busyducks.com/wp_4_1/?attachment_id=1028#main" class="wp-image-1028"/><figcaption class="blocks-gallery-item__caption">friction fit arm</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058101-1024x768.jpg" alt="" data-id="1029" data-link="http://busyducks.com/wp_4_1/?attachment_id=1029#main" class="wp-image-1029"/><figcaption class="blocks-gallery-item__caption">servos installed</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058108-1024x768.jpg" alt="" data-id="1030" data-full-url="/wp-content/uploads/2020/04/P4058108-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1030#main" class="wp-image-1030"/><figcaption class="blocks-gallery-item__caption">servo horns installed</figcaption></figure></li></ul></figure>
+
+
+
+<h2>Whats next.</h2>
+
+
+
+<p>I have made files for the progress thus far available via github, encase anyone has a Robie of their own and wants to try this. <a href="https://github.com/busyDuckman/robbie">https://github.com/busyDuckman/robbie</a></p>
+
+
+
+<p>Next up I will work on:</p>
+
+
+
+<ul><li>Drive system so Robie can move around.</li><li>Microphone array so voice interaction is possible.</li><li>Control software.</li><li>Personality and human interaction.</li></ul>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Parametric VESA Mount Fixer.</title>
+		<link>/parametric-vesa-mount-fixer/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 20 Apr 2020 10:52:06 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[3D-Printing]]></category>
+		<category><![CDATA[CAD]]></category>
+		<category><![CDATA[Monitors]]></category>
+		<category><![CDATA[OpenSCAD]]></category>
+		<category><![CDATA[VESA]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=1006</guid>
+
+					<description><![CDATA[Recently I encountered a monitor that used a different mount despite being only a few digits of in model number. The monitor needed to live with the other, so I created an OpenSCAD mount to convert lower mount VESA, to central mount VESA.]]></description>
+										<content:encoded><![CDATA[
+<p>Recently I encountered a monitor that used a different mount positioning despite being only a few digits of in model number to its neighbour. The monitor needed to live with the other, sharing a horizontal mounting arm.   I created an <a rel="noreferrer noopener" href="https://www.openscad.org/" target="_blank">OpenSCAD</a> mount to convert &#8220;lower mounted VESA&#8221;, to &#8220;central mounted VESA&#8221;.</p>
+
+
+
+<figure class="wp-block-gallery columns-1 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4148178-1024x768.jpg" alt="" data-id="1015" data-full-url="/wp-content/uploads/2020/04/P4148178-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/2020/04/20/parametric-vesa-mount-fixer/olympus-digital-camera-8/#main" class="wp-image-1015"/><figcaption class="blocks-gallery-item__caption">VESA Mount Fixer (configurable)</figcaption></figure></li></ul></figure>
+
+
+
+<p>You can download it via: <a rel="noreferrer noopener" href="https://www.thingiverse.com/thing:4300602" target="_blank">https://www.thingiverse.com/thing:4300602</a></p>
+
+
+
+<h2>Background</h2>
+
+
+
+<p>Some manufactures put the VESA mount at the bottom of the screen, others in the middle. This can cause an issue for many situations, especially if monitors need to be used on a shared mount or in portrait mode.<br><br>Lets compare the pro&#8217;s cons of the mounting styles:</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Feature</strong></td><td><strong>VESA<br>Middle</strong></td><td><strong>VESA<br>Bottom</strong></td></tr><tr><td>Monitors line up nicely when sharing a mount. </td><td>Yes</td><td>No</td></tr><tr><td>Monitor is stable and does not roll violently on mount.</td><td>Yes</td><td>No</td></tr><tr><td>Monitor can be used in portrait mode without a rigid mount.</td><td>Yes</td><td>No</td></tr><tr><td>Monitor won&#8217;t drop forward overtime on an adjustable mount.</td><td>Yes</td><td>No</td></tr><tr><td>Mounting high on shop wall hides what is behind screen.</td><td>No</td><td>Yes</td></tr><tr><td>Monitor is cheaper to produce.</td><td>No</td><td>Yes</td></tr></tbody></table></figure>
+
+
+
+<p>The result for a shared mount was quite noticeable.</p>
+
+
+
+<figure class="wp-block-gallery columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4148183-1024x768.jpg" alt="" data-id="1009" data-link="http://busyducks.com/wp_4_1/2020/04/20/parametric-vesa-mount-fixer/olympus-digital-camera-5/#main" class="wp-image-1009"/><figcaption class="blocks-gallery-item__caption">Before</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4148204-1024x768.jpg" alt="" data-id="1010" data-full-url="/wp-content/uploads/2020/04/P4148204-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/2020/04/20/parametric-vesa-mount-fixer/olympus-digital-camera-6/#main" class="wp-image-1010"/><figcaption class="blocks-gallery-item__caption">After</figcaption></figure></li></ul></figure>
+
+
+
+<p>The plate which pokes out, should connect to the monitor. The other to the VESA mount (See below). </p>
+
+
+
+<figure class="wp-block-image size-large"><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4148212-768x1024.jpg" alt="" class="wp-image-1011"/><figcaption>How it works.</figcaption></figure>
+
+
+
+<h2>Customisation</h2>
+
+
+
+<p>The mount can be customised in OpenSCAD, or via the Thingverse customiser: <a rel="noreferrer noopener" href="https://www.thingiverse.com/apps/customizer/run?thing_id=4300602" target="_blank">https://www.thingiverse.com/apps/customizer/run?thing_id=4300602</a>.</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="636" src="/wp-content/uploads/2020/04/mount-1024x636.png" alt="" class="wp-image-1007" srcset="/wp-content/uploads/2020/04/mount-1024x636.png 1024w, /wp-content/uploads/2020/04/mount-300x186.png 300w, /wp-content/uploads/2020/04/mount-768x477.png 768w, /wp-content/uploads/2020/04/mount.png 1154w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>CAD View.</figcaption></figure>
+
+
+
+<p>The following parameters should be altered to suit your need.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Parameter</strong></td><td><strong>Values</strong></td><td><strong>Notes</strong></td></tr><tr><td>correction</td><td></td><td>The distance to move the screen down.</td></tr><tr><td>washer_size</td><td></td><td>Creates pockets for washers and bolts to sit flush in. Use zero to disable.</td></tr><tr><td>connection_size</td><td>&gt;=30<br>and<br>&lt;=100</td><td>The size by which the central column extends over the top of the VESA plate. Significant trade of between material use and strength. 30 produces a cheap print and holds light monitors. But 80 should be used for heavy displayed, or displays someone may pull downward on.</td></tr><tr><td>step</td><td>&gt;=0<br>and<br>&lt;40ish</td><td>Total recess size (depth) of the adapter. </td></tr><tr><td>thickness</td><td>&gt; 1<br>and<br>&lt;=step</td><td>Thickness of the VESA plate. This must be &gt;= the depth of any pocket the vesa mount will sit in. Probably don&#8217;t go below 5 if 3D printing.</td></tr></tbody></table></figure>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What is the difference between a laser that will cut metals and one that won&#8217;t?</title>
+		<link>/what-is-the-difference-between-a-laser-that-will-cut-metals-and-one-that-wont/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Fri, 26 Jan 2018 04:12:23 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Laser_Cutter]]></category>
+		<category><![CDATA[Manufacturing]]></category>
+		<category><![CDATA[Metal-work]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=905</guid>
+
+					<description><![CDATA[A friend who recently acquired a CO2 laser cutter for his school recently sent me a message. "What is the difference between a laser that will cut metals and one that won't?". I thought this is a good question, as the answer will help with understanding how to work with many materials.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p>A friend who recently acquired a CO2 laser cutter for his school sent me a message. &#8220;What is the difference between a laser that will cut metals and one that won&#8217;t?&#8221;. I thought this is a good question, as the answer will help with understanding how to work with many materials.</p>
+<p>But before the answer will make sense, we need to revisit the basics of how a laser cutter works in more detail.</p>
+<p><figure id="attachment_906" aria-describedby="caption-attachment-906" style="width: 300px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o.jpg"><img loading="lazy" class="wp-image-906 size-medium" src="/wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-300x242.jpg" alt="" width="300" height="242" srcset="/wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-300x242.jpg 300w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-1024x827.jpg 1024w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-768x620.jpg 768w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-1536x1240.jpg 1536w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-1568x1266.jpg 1568w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o.jpg 1624w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-906" class="wp-caption-text">Nick Bannon (left) and Myself (right) [amongst others not pictured], setting up the laser cutting area at the Perth Aritifactoty &#8211; 2013.</figcaption></figure>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>How the laser cutter works: 101</h1>
+<p>The common C02 laser cutter can be thought of as &#8220;thick&#8221; beam of IR light that moves out of a laser tube, bounces of mirrors until to get to the head. In the head it passes through a lens that focuses the beam, such that it is strong enough to ablate certain material though heat. A jet of air clears debris, and if upgraded from the piddly inbuilt compressor, will minimise scorching on materials like wood. The fact the beam is wide means that it can be bounced around off mirrors wit out imparting too much energy to one spot, such that it burns though a mirror, or the lens.</p>
+<p>&nbsp;</p>
+<h1>How the laser cutter works: 102</h1>
+<p><figure id="attachment_907" aria-describedby="caption-attachment-907" style="width: 229px" class="wp-caption alignright"><a href="/wp-content/uploads/2018/01/laser-cutter.jpg"><img loading="lazy" class="wp-image-907 size-medium" src="/wp-content/uploads/2018/01/laser-cutter-229x300.jpg" alt="Laser cutter beam focus" width="229" height="300" srcset="/wp-content/uploads/2018/01/laser-cutter-229x300.jpg 229w, /wp-content/uploads/2018/01/laser-cutter-780x1024.jpg 780w, /wp-content/uploads/2018/01/laser-cutter-768x1008.jpg 768w, /wp-content/uploads/2018/01/laser-cutter-1170x1536.jpg 1170w, /wp-content/uploads/2018/01/laser-cutter-1561x2048.jpg 1561w, /wp-content/uploads/2018/01/laser-cutter-1568x2058.jpg 1568w, /wp-content/uploads/2018/01/laser-cutter-scaled.jpg 1951w" sizes="(max-width: 229px) 100vw, 229px" /></a><figcaption id="caption-attachment-907" class="wp-caption-text">A CO2 laser produces an Infra red beam that is more intense in the centre. The beam is focused through a quartz lens.</figcaption></figure></p>
+<p>Now think of a laser cut in slow motion and zoomed in massively.  The laser hits a material. The focal point is probably beneath the surface and the beam is still a bit wide (less hot).</p>
+<p>The area at the surface vaporises and a little pilot hole forms. This hole is like the first domino, the material near it is now deformed. This deformed material (sub millimetre area) is like the plastic left in the sun, less robust and more sensitive to light. The cut now picks up momentum and deepens as a “pool of vaporising material eating into the ground”. The air stream is ejecting loose material and anything &#8216;molten&#8217; that was not instantly vaporised.</p>
+<p>The ability to cut well is a balance of many factors, primarily the right laser strength, air flow and movement speed &#8211; for a given material at a certain thickness.</p>
+<p>Relevant to later discussions with metal, is getting a good movement speed.</p>
+<ul>
+<li>Slow enough that the pit will work all the way through, before the beam moves on.</li>
+<li>Fast enough that the material is not given too much heat (see diagram to right, not all the beam is vaporising goodness and its not all equal in strengths.
+<ul>
+<li>From the parts of the beam not near the focal point that are not hot enough .</li>
+<li>From outer areas of the beam not as intense</li>
+</ul>
+</li>
+<li>Different lenses will help with thicker materials, butt you first limitation is you will need more power for thicker materials. Otherwise you will need to move at a slow speed that brings many other problems of heat dissipation.</li>
+</ul>
+<p>Reading the above may lead you to think you will need to get the most powerful laser cutter you can afford, for those times when you want to do a thick material. But&#8230; power is a two edged sword. The laser will only fire at a minimum of say 40%. So your 120W laser that will get you through 20mm acrylic, won’t be any good for etching designs on clothing (it will punch straight through at it minimum of 48W).</p>
+<h1>Problems that will affect metal</h1>
+<ul>
+<li>Many metals are reflective of IR beams (C02 lasers), preventing even etching of the surface.
+<ul>
+<li>NB: other lasers, such as solid state lasers which work with a different wavelength will be several times more efficient than C02 lasers for most metals.</li>
+</ul>
+</li>
+<li>Metal is a heat sink, it will draw heat away from the cut. Preventing the laser beam from melting any of the metal, or forming the initial pit.</li>
+<li>Many metals are not cool/safe in gaseous form. You may need venting.</li>
+</ul>
+<h2>Etching metal</h2>
+<p>Your enemy for etching, is not the heat conductivity of the metal, it’s the fact it reflects.<br />
+On cutters around your size it is often possible to etch certain metal. You will need to paint the surface with something (there are products that are sold for this purpose, but some people just use black $3 fiddly bit paint from buntings). The pit will form in the paint and you will get sufficient heat in to mark the metal. But then go no further down.</p>
+<p>&nbsp;</p>
+<h2>Cutting metal</h2>
+<p>Generally laser cut metal is not ablated/vaporised (turned to gas) like other materials. It is instead it is melted (turned to liquid), and blown out of the way by forced airflow. This is sometimes referred to as ‘melt and blow’ cutting. It is messy and provides issues that can damage a machine:</p>
+<ul>
+<li>Bits of molten metal can settle on the lens, this will absorb heat that the lens would otherwise transmit. The lens will now heat up and be damaged / burnt though.</li>
+<li>The metal / molten metal can reflect focused beam of light back at the lens. This can damage the lens, because the amount of IR radiation passing though it is now double.
+<ul>
+<li>The focused light can even propagate back along the mirrors and into the laser tube (damaging the very expensive parts of the machine).</li>
+</ul>
+</li>
+</ul>
+<p>Its worth mentioning that metal needs a lot more power to get the piloting pit going. And the pit is not a nice vaporised area with laser friendly material next to it. It’s a stubborn pool of liquid that sits in the way of your laser. This means cutting requires bigger lasers, or one or more assisting technologies to reduce the necessitated “bigness” of your laser.</p>
+<p>Such assisting technologies, for CO2 lasers, may include.</p>
+<ul>
+<li>High pressure gas, to blow the molten metal out of the hole.</li>
+<li>Blowing Oxygen or Nitrogen into the cut to make things more efficient.</li>
+<li>Using a more focused beam to get the metal to melt before heat dissipation sets in.</li>
+<li>A lens that moves, so that the focal point travels with your pit as it goes down.</li>
+</ul>
+<h1>As some lasers can be coerced into cutting metal, why is it not more common?</h1>
+<p>Firstly, the risk to the machine means many operators don&#8217;t feel it is worth it.</p>
+<p>But there are other issues:</p>
+<ul>
+<li>Solid state lasers are becoming more popular for cutting metal over the use of a large C02 Laser.</li>
+<li>The cut speed of lasers on metal can be slow, and the depth of cut limited.</li>
+<li>Tuning air/ laser/ lens /speed parameters is more difficult, and the results are not always a clean cut for inexperienced operators.</li>
+</ul>
+<p>But more importantly there are many <span style="text-decoration: underline;">more attractive  alternatives</span> for cutting of metal, including water jet cutting and CNC milling.</p>
+<p>&nbsp;</p>
+<h1>Further reading:</h1>
+<p>For clarity I simplified and glossed over some less important concepts in the above explanation.</p>
+<p>The following industry articles explore things in more depth:</p>
+<ul>
+<li>Laser comparison – cutting speed and rate of feed. <a href="http://jmtusa.com/laser-comparison-cutting-speed-and-rate-of-feed/">http://jmtusa.com/laser-comparison-cutting-speed-and-rate-of-feed/</a></li>
+<li>Lasing reflective metals <a href="http://www.fsmdirect.com/cutting/laser-cutting/326-lasing-reflective-metals">http://www.fsmdirect.com/cutting/laser-cutting/326-lasing-reflective-metals</a></li>
+<li>Back to basics: The subtle science of burr-free laser cutting. <a href="https://www.thefabricator.com/article/lasercutting/back-to-basics-the-subtle-science-of-burr-free-laser-cutting">https://www.thefabricator.com/article/lasercutting/back-to-basics-the-subtle-science-of-burr-free-laser-cutting</a></li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>SpeakingDuck (Maven plugin for java resource bundle transition.)</title>
+		<link>/speakingduck-maven-plugin-for-java-resource-bundle-transitional/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 16 Nov 2017 10:28:29 +0000</pubDate>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[i18n]]></category>
+		<category><![CDATA[java]]></category>
+		<category><![CDATA[Linguistics]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=896</guid>
+
+					<description><![CDATA[Developing multi-lingual applications in java seems a pain, to me anyway. There are resource bundles and a localisation API &#8211; which are well documented. I wanted to auto translate these bundles, and then have friends look over and refine the translations later. I did not want some heavy weight application to manage properties files etc. &#8230;<br><a href="/speakingduck-maven-plugin-for-java-resource-bundle-transitional/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">SpeakingDuck (Maven plugin for java resource bundle transition.)</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Developing multi-lingual applications in java seems a pain, to me anyway.<br />
+There are resource bundles and a localisation API &#8211; which are <a href="https://docs.oracle.com/javase/tutorial/i18n/intro/steps.html">well documented</a>.</p>
+<p>I wanted to auto translate these bundles, and then have friends look over and refine the translations later.</p>
+<ul>
+<li>I did not want some heavy weight application to manage properties files etc.</li>
+<li>I found some simple auto translation tools, some free-ish, some pay-per-say. But they did not support java resource bundles.
+<ul>
+<li>I liked <a href="https://github.com/soimort/translate-shell">translate shell</a> a lot.</li>
+</ul>
+</li>
+<li>Few tools supported maven</li>
+<li>But nothing just worked</li>
+</ul>
+<p>So I created a quick maven plugin to translate resource bundles, by calling whatever tool you setup.</p>
+<p>Stuk it on github, will attempt to register it with maven.</p>
+<p><a href="https://github.com/busyDuckman/speakingDuck">https://github.com/busyDuckman/speakingDuck</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Making a Train Set: Part 1 &#8211; Design and Woodwork.</title>
+		<link>/making-a-train-set/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 03 Aug 2017 21:45:22 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[CAD]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Laser_Cutter]]></category>
+		<category><![CDATA[Trains]]></category>
+		<category><![CDATA[Woodwork]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=862</guid>
+
+					<description><![CDATA[Recently I have been building a train set, I will blog the progress, in six parts, highlighting how I get certain things done.]]></description>
+										<content:encoded><![CDATA[<h1>Overview</h1>
+<p>Recently I have been building a train set, I will blog the progress, in six parts, highlighting how I get certain things done.</p>
+<ul>
+<li><strong>Part 1 &#8211; Design and Woodwork</strong></li>
+<li>Part 2 &#8211; Electrical design.</li>
+<li>Part 3 &#8211; Mechanical servicing</li>
+<li>Part 4 &#8211; Construction</li>
+<li>Part 5 &#8211; Painting of buildings and natural elements.</li>
+<li>Part 6 &#8211; Embedded computing and setup of DCC controllers.</li>
+</ul>
+<h1></h1>
+<h1>Base Setup</h1>
+<p>Firstly I am designing a track that is movable from a storage hook on a garage, to a pool table in my living. This requires a baseboard, which I constructed with three cross breams, an MDF sheet and Tasmanian oak edging.</p>
+<p>&nbsp;</p>
+<h1>Designing the layout.</h1>
+<p>I used  the Simple Computer Aided Railway Modeller (<a href="https://www.scarm.info/index.php" target="_blank" rel="noopener">SCARM</a>) to plan my layout.  A read over an old German railway construction guide gave me a lot of practical hints as to what made a good layout.</p>
+<p><a href="/wp-content/uploads/2017/08/front.png"><img loading="lazy" class="alignnone size-large wp-image-866" src="/wp-content/uploads/2017/08/front-1024x531.png" alt="" width="640" height="332" srcset="/wp-content/uploads/2017/08/front-1024x531.png 1024w, /wp-content/uploads/2017/08/front-300x156.png 300w, /wp-content/uploads/2017/08/front-768x399.png 768w, /wp-content/uploads/2017/08/front.png 1216w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p style="padding-left: 30px;">Layout as viewed from the front.</p>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2017/08/rear.png"><img loading="lazy" class="alignnone size-large wp-image-867" src="/wp-content/uploads/2017/08/rear-1024x531.png" alt="" width="640" height="332" srcset="/wp-content/uploads/2017/08/rear-1024x531.png 1024w, /wp-content/uploads/2017/08/rear-300x156.png 300w, /wp-content/uploads/2017/08/rear-768x399.png 768w, /wp-content/uploads/2017/08/rear.png 1216w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p style="padding-left: 30px;">layout as viewed from the rear.</p>
+<h1></h1>
+<h1>Setting up the levels for hills and track.</h1>
+<p>The frame work is wood and MDF. Before getting into some neat tricks, lets look at a time lapse.</p>
+<p>&nbsp;</p>
+<p><iframe loading="lazy" title="trainset" width="940" height="529" src="https://www.youtube.com/embed/mskjXSk1HVI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>Steps:</p>
+<ul>
+<li>The track plan is printed 1:1 on a standard printer using 40 pieces of paper, there is a <a href="http://www.scarm.info/blog/advanced-techniques/print-whole-layout-in-1to1-scale/">trick to doing this in SCARM</a>.</li>
+<li>The layout is placed on the board and a toy train is run over it, just to get a feel for what it will be like to interact with.</li>
+<li>Spacers are cut on a table saw, so that the MDF can be set to the correct height for the track.</li>
+<li>Contours are cut from MDF using a jigsaw and the track carver up and placed on top of the MDF.</li>
+<li>Everything is assembled, a brad gun and wood glue is a quick way to get this done. I screw down the MDF, without glue, so I can  run wires later.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Train storage Cabinet.</h1>
+<p>I built a cabinet to hold the trains and keep them dust free.</p>
+<ul>
+<li>It is build like a picture frame, but I used the table saw to create a &#8216;grove cut&#8217; on the frame.</li>
+<li>The grove allows two pieces of acrylic to slide like doors in the frame.</li>
+<li>If your not 100% on table saws, <a href="http://www.powertoolinstitute.com/pti-pages/videos/safetyvideo_3_TableSawSafety_eng-youtube.asp">this video is terrific</a>. (10:20 explains grove cuts).</li>
+<li>Using acrylic instead of glass lets me insert the doors after assembly (acrylic bends)</li>
+<li>The wood is Tasmanian oak (to match the table) and the finish is Linseed oil followed by a glossy furniture polish.
+<ul>
+<li>Frame Cutting  in Tasmanian oak is fraught with random peril. If you cut the long edges first, you can reuse failed cuts for the short edges, saving timber.</li>
+</ul>
+</li>
+</ul>
+<p>
+<a href='/making-a-train-set/olympus-digital-camera/'><img width="940" height="705" src="/wp-content/uploads/2017/08/P1012419-1024x768.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="/wp-content/uploads/2017/08/P1012419-1024x768.jpg 1024w, /wp-content/uploads/2017/08/P1012419-300x225.jpg 300w, /wp-content/uploads/2017/08/P1012419-768x576.jpg 768w, /wp-content/uploads/2017/08/P1012419-1536x1152.jpg 1536w, /wp-content/uploads/2017/08/P1012419-2048x1536.jpg 2048w, /wp-content/uploads/2017/08/P1012419-1568x1176.jpg 1568w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href='/making-a-train-set/olympus-digital-camera-2/'><img width="940" height="705" src="/wp-content/uploads/2017/08/P1012426-1024x768.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="/wp-content/uploads/2017/08/P1012426-1024x768.jpg 1024w, /wp-content/uploads/2017/08/P1012426-300x225.jpg 300w, /wp-content/uploads/2017/08/P1012426-768x576.jpg 768w, /wp-content/uploads/2017/08/P1012426-1536x1152.jpg 1536w, /wp-content/uploads/2017/08/P1012426-2048x1536.jpg 2048w, /wp-content/uploads/2017/08/P1012426-1568x1176.jpg 1568w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href='/making-a-train-set/olympus-digital-camera-4/'><img width="940" height="705" src="/wp-content/uploads/2017/08/P1012413-1024x768.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="/wp-content/uploads/2017/08/P1012413-1024x768.jpg 1024w, /wp-content/uploads/2017/08/P1012413-300x225.jpg 300w, /wp-content/uploads/2017/08/P1012413-768x576.jpg 768w, /wp-content/uploads/2017/08/P1012413-1536x1152.jpg 1536w, /wp-content/uploads/2017/08/P1012413-2048x1536.jpg 2048w, /wp-content/uploads/2017/08/P1012413-1568x1176.jpg 1568w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href='/making-a-train-set/olympus-digital-camera-3/'><img width="940" height="705" src="/wp-content/uploads/2017/08/P1012425-1024x768.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="/wp-content/uploads/2017/08/P1012425-1024x768.jpg 1024w, /wp-content/uploads/2017/08/P1012425-300x225.jpg 300w, /wp-content/uploads/2017/08/P1012425-768x576.jpg 768w, /wp-content/uploads/2017/08/P1012425-1536x1152.jpg 1536w, /wp-content/uploads/2017/08/P1012425-2048x1536.jpg 2048w, /wp-content/uploads/2017/08/P1012425-1568x1176.jpg 1568w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Random Thoughts</title>
+		<link>/random-thoughts/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 11 Jul 2017 11:26:39 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Ideas]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=857</guid>
+
+					<description><![CDATA[Here are some random ideas, like: "Could we get street lights to start flashing 30 seconds before an ambulance is due to come through?"]]></description>
+										<content:encoded><![CDATA[<h2></h2>
+<h2>Could we get street lights to start flashing 30 seconds before an ambulance is due to come through?</h2>
+<p>All traffic would have time to organise itself into one lane and emergency vehicles could proceed without obstruction. This seems easy to achieve using existing</p>
+<p><a href="/wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood.jpg"><img loading="lazy" class="aligncenter wp-image-858 " src="/wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-300x225.jpg" alt="" width="411" height="308" srcset="/wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-300x225.jpg 300w, /wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-1024x768.jpg 1024w, /wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-768x576.jpg 768w, /wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-1536x1152.jpg 1536w, /wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-2048x1536.jpg 2048w, /wp-content/uploads/2017/07/Northbound_freeway_traffic_greenwood-1568x1176.jpg 1568w" sizes="(max-width: 411px) 100vw, 411px" /></a></p>
+<p>&nbsp;</p>
+<h2>Compiler errors should link through to concise explanations or solutions on  stackoverflow, or some error code explanation wiki.</h2>
+<p>Lats face it, this will speed up things a bit; especially when learning a new language.</p>
+<p>&nbsp;</p>
+<h2>Give random rich/powerfull people weird handshakes. See if you can pass for Illuminati.</h2>
+<div class="_1dwg _1w_m">
+<div>
+<div id="js_89t" class="_5pbx userContent" data-ft="{&quot;tn&quot;:&quot;K&quot;}">
+<p>It&#8217;s like going to go around to everyone you meet saying, &#8220;Hey, your&#8217;e from the future as well&#8230; right.&#8221;. Hopefully someone will reply &#8220;How did you know?&#8221;.</p>
+<p>&nbsp;</p>
+</div>
+<h2 class="_3x-2">Browsers should use a 2 Mb cap in loading of any website.</h2>
+<p class="_3x-2">If displaying the site goes over you get &#8220;You have visited some stupidly large web page, do you wan&#8217;t to continue?&#8221;.</p>
+<div>Also why can&#8217;t there be 100 odd &#8216;standard internet fonts&#8217;, so that we can do away with many custom font downloads for web pages.</div>
+<h2></h2>
+<div>
+<div class="_1dwg _1w_m">
+<div>
+<div id="js_9me" class="_5pbx userContent" data-ft="{&quot;tn&quot;:&quot;K&quot;}">
+<h2>Leave fake logins on sticky notes around the office, and log if anyone attempts to use them.</h2>
+<p>Also some easy to find network ports that connect to an isolated honey pot.</p>
+<p>&nbsp;</p>
+</div>
+<div class="_3x-2"></div>
+<div></div>
+</div>
+</div>
+<div></div>
+</div>
+</div>
+</div>
+<div></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Surface Preparation and Finger Prints. How bad are they?</title>
+		<link>/surface-preparation-and-finger-prints-how-bad-are-they/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 24 Jan 2017 13:45:25 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Finger Prints]]></category>
+		<category><![CDATA[Glue]]></category>
+		<category><![CDATA[Industry]]></category>
+		<category><![CDATA[PCB]]></category>
+		<category><![CDATA[Solder]]></category>
+		<category><![CDATA[Woodwork]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=828</guid>
+
+					<description><![CDATA[In preparing a surface for paint / glue / thermal paste / soldering / whatever, there is one thing to remember. A normal finger print is of similar thickness to cling wrap (0.01mm). A thick (eg post pizza) print, where the ridges are no longer visible, is closer to the thickness of a sheet of paper (0.1mm).
+
+Rule of thumb. If you would you would not be happy with this kind of material on the surface of whatever you are coating, remove your finger prints.]]></description>
+										<content:encoded><![CDATA[<p>In preparing a surface for paint / glue / thermal paste / soldering / whatever, there is one thing to remember. A normal finger print is of similar thickness to cling wrap (0.01mm). A thick (eg post pizza) print, where the ridges are no longer visible, is closer to the thickness of a sheet of paper (0.1mm).</p>
+<p>Rule of thumb. If you would you would not be happy with this kind of material on the surface of whatever you are coating, remove your finger prints.</p>
+<ul>
+<li>So a very thin coat of paint is 0.02mm, but often thicker.  So wash your hands, then it&#8217;s probably OK to touch. But don&#8217;t &#8220;Pizza and Paint&#8221;.</li>
+<li>Thermal paste on your CPU is 0.07mm  to 0.12mm thick, So Pizza hands are a definite problem. A single normal finger print may well produce a small but noticeable effect to cooling. A well handled CPU with a few prints is probably not good, you would not leave scraps of plastic wrap on the CPU after all.</li>
+<li>Some glues may dilute your finger print and not care (super glue). While other (silicone adhesives) will probably bond poorly.</li>
+<li>Solder &#8211; The NASA soldering standards (<a href="https://www.hq.nasa.gov/office/codeq/doctree/canceled/NS87393-Ch5.pdf">NASA_STD_8739 .3</a>) state: <em>&#8220;When handling metal surfaces that are to be soldered is unavoidable, clean, lint-free gloves or finger cots shall be used. &#8220;</em>. Many commercial soldering standards also follow this advise for handling of both solder and parts.
+<ul>
+<li>Whats interesting is that some manufactures are particularly concerned about what is on your hands (moisturisers and hand lotions cited as being particularly problematic to solder).</li>
+<li>The finger print contamination of solder joints is often resolved by just keeping the joint hot until the solder takes. This extra heating burns of enough contaminate to allow solder to flow, but can damage components amongst other problems.</li>
+<li>UPDATE: The new IPC standards (<a href="https://www.ipc.org/4.0_Knowledge/4.1_Standards/IPC-J-STD-001ES.pdf">IPC-J-STD-001ES</a>), which NASA, and many other companies, have adopted, don&#8217;t mention fingers or gloves specifically. They only broadly reference that handling mechanisms stall not contaminate the board or parts.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OpenXeen</title>
+		<link>/openxeen/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Sat, 05 Nov 2016 14:29:49 +0000</pubDate>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Games]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[Xeen]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=816</guid>
+
+					<description><![CDATA[Overview OpenXeen is a game engine rewrite I have been working on for Might and Magic III, IV and V . It&#8217;s opensource and still under development. Currently it brings up monsters, objects, and most of the outdoor environment. Resources: Git: here Wiki: here Development Blog: here State of openXeen features Interested in contributing Xeen &#8230;<br><a href="/openxeen/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">OpenXeen</span></a>]]></description>
+										<content:encoded><![CDATA[<h1>Overview</h1>
+<p>OpenXeen is a game engine rewrite I have been working on for Might and Magic III, IV and V . It&#8217;s opensource and still under development.</p>
+<p>Currently it brings up monsters, objects, and most of the outdoor environment.</p>
+<p><a href="/wp-content/uploads/2016/11/openXeen13.png"><img loading="lazy" class="alignnone size-large wp-image-818" src="/wp-content/uploads/2016/11/openXeen13-1024x683.png" alt="openxeen13" width="640" height="427" srcset="/wp-content/uploads/2016/11/openXeen13-1024x683.png 1024w, /wp-content/uploads/2016/11/openXeen13-300x200.png 300w, /wp-content/uploads/2016/11/openXeen13-768x512.png 768w, /wp-content/uploads/2016/11/openXeen13.png 1306w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>Resources:</p>
+<ul>
+<li>Git: <a href="https://github.com/busyDuckman/OpenXeen">here</a></li>
+<li>Wiki: <a href="https://github.com/busyDuckman/OpenXeen/wiki">here</a></li>
+<li>Development Blog: <a href="https://github.com/busyDuckman/OpenXeen/wiki/A-Development-BLOG-(in-screenshots)">here</a></li>
+<li>State of openXeen <a href="https://github.com/busyDuckman/OpenXeen/wiki/Features">features</a></li>
+<li>Interested in <a href="https://github.com/busyDuckman/OpenXeen/wiki/Contributing">contributing</a></li>
+<li>Xeen development related <a href="https://github.com/busyDuckman/OpenXeen/wiki/Xeen-related-links">links</a></li>
+<li>The <a href="http://xeen.wikia.com/wiki/Xeen_Wiki">xeen wiki</a> (the groundwork reverse engineering project that OpenXeen stands on top of)</li>
+</ul>
+<p>Status:</p>
+<ul>
+<li>Software is not ready for release.</li>
+<li>At the moment it can:
+<ul>
+<li>Parse the cc files and open some graphics and audio files</li>
+<li>Parse some map info</li>
+<li>Create proxies of all files in cc files.</li>
+<li>Display a simple rendering of some xeen components. NB: First run will take some time, proxy files are being created.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Might and magic III (Isles of Terra) support.</h1>
+<p>I have got the MAMIII GUI up, and decoded some sprites. Not much more to show yet.</p>
+<p>I am by no means a proficient at reverse engineering software, however I wrote up a quick primer on how I was using the <a href="https://github.com/busyDuckman/OpenXeen/wiki/A-Development-BLOG-(in-screenshots)#july-17th-2016-reverse-engineering-mm3">cpu logs generated by the dosbox debugger</a>, to recover some MM3 data.</p>
+<p><a href="/wp-content/uploads/2016/11/openXeen12.png"><img loading="lazy" class="alignnone size-large wp-image-819" src="/wp-content/uploads/2016/11/openXeen12-1024x683.png" alt="openxeen12" width="640" height="427" srcset="/wp-content/uploads/2016/11/openXeen12-1024x683.png 1024w, /wp-content/uploads/2016/11/openXeen12-300x200.png 300w, /wp-content/uploads/2016/11/openXeen12-768x512.png 768w, /wp-content/uploads/2016/11/openXeen12.png 1306w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<h1>Related Links</h1>
+<p>Tools:</p>
+<ul>
+<li><a href="http://games.playazlounge.net/#UserUtilities">Xeen Utilities</a></li>
+<li><a href="https://github.com/rwfpl/rewolf-mm3-dumper">MM3 Dumper</a></li>
+</ul>
+<p>Mods:</p>
+<ul>
+<li><a href="http://www.jeffludwig.com/xeen/download.php">respawn mod</a></li>
+</ul>
+<p>Xeen Info Gneral:</p>
+<ul>
+<li>Xeen Wiki: <a href="http://xeen.wikia.com/wiki/Xeen_Wiki">http://xeen.wikia.com/wiki/Xeen_Wiki</a></li>
+<li>CC file format: <a href="http://rewiki.regengedanken.de/wiki/.CC">http://rewiki.regengedanken.de/wiki/.CC</a></li>
+<li>MM3 CC file: <a href="http://rewiki.regengedanken.de/wiki/MM3.CC">http://rewiki.regengedanken.de/wiki/MM3.CC</a></li>
+<li>MM3 CC file LHZ compression: <a href="http://blog.rewolf.pl/blog/?p=1202">http://blog.rewolf.pl/blog/?p=1202</a></li>
+</ul>
+<p>Xeen modding</p>
+<ul>
+<li>MM3 modding page: <a href="http://jeffludwig.com/mm3/resources.php">http://jeffludwig.com/mm3/resources.php</a></li>
+</ul>
+<p>Xeen Cluebooks</p>
+<ul>
+<li>MM3: <a href="http://www.abandonia.com/files/extras/25850_game_extra_1.pdf">http://www.abandonia.com/files/extras/25850_game_extra_1.pdf</a></li>
+<li>WoX: <a href="http://www.abandonia.com/files/extras/26962_Extra%20document_Cluebooks.zip">http://www.abandonia.com/files/extras/26962_Extra%20document_Cluebooks.zip</a></li>
+</ul>
+<p>MM3 Releases</p>
+<ul>
+<li>DOS: <a href="http://www.abandonia.com/en/games/1035/Might+and+Magic+III+-+Isles+of+Terra.html">http://www.abandonia.com/en/games/1035/Might+and+Magic+III+-+Isles+of+Terra.html</a></li>
+<li>Amiga: <a href="http://www.lemonamiga.com/?game_id=3142">http://www.lemonamiga.com/?game_id=3142</a></li>
+<li>SNES</li>
+</ul>
+<p>WoX Releases</p>
+<ul>
+<li>Dos: <a href="http://www.abandonia.com/en/games/482/Might+and+Magic+IV+and+V+-+World+Of+Xeen.html">http://www.abandonia.com/en/games/482/Might+and+Magic+IV+and+V+-+World+Of+Xeen.html</a></li>
+<li>Mac:</li>
+<li>PC-98</li>
+</ul>
+<p>&#8220;Vintage&#8221; Computing:</p>
+<ul>
+<li>File Formats from the C64: <a href="http://petlibrary.tripod.com/formats.htm">http://petlibrary.tripod.com/formats.htm</a></li>
+</ul>
+<p>Reference Code</p>
+<ul>
+<li>LHZ <a href="https://github.com/rwfpl/rewolf-mm3-dumper">https://github.com/rwfpl/rewolf-mm3-dumper</a></li>
+<li>Xbr</li>
+</ul>
+<p>Other WoX Engines:</p>
+<ul>
+<li>DeamMasters Xeen engine in scumvm <a href="https://github.com/dreammaster/scummvm/tree/xeen">https://github.com/dreammaster/scummvm/tree/xeen</a>and <a href="https://github.com/roguevm/roguevm/find/xeen">https://github.com/roguevm/roguevm/find/xeen</a></li>
+</ul>
+<p>Articles on the History of MaM</p>
+<ul>
+<li>5 pages covering the series:<a href="http://www.hardcoregaming101.net/mightandmagic/mightandmagic3.htm">http://www.hardcoregaming101.net/mightandmagic/mightandmagic3.htm</a></li>
+</ul>
+<p>Reverse Engineering Dos Games:</p>
+<ul>
+<li>A good primer <a href="http://wiki.scummvm.org/index.php/HOWTO-Reverse_Engineering">http://wiki.scummvm.org/index.php/HOWTO-Reverse_Engineering</a></li>
+<li>Dosbox 0.74 debug build: <a href="http://source.dosbox.com/dosbox-74-debug.exe">http://source.dosbox.com/dosbox-74-debug.exe</a></li>
+<li>Bridging IRA to dosbox <a href="https://github.com/wjp/idados">https://github.com/wjp/idados</a></li>
+<li>Driving the dosbox debugger: <a href="http://www.vogons.org/viewtopic.php?t=3944">http://www.vogons.org/viewtopic.php?t=3944</a></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>Code Audit, first release &#8211; v0.1.0 alpha</h1>
+<p>(From my <a href="https://github.com/busyDuckman/OpenXeen/wiki/A-Development-BLOG-(in-screenshots)">dev blog</a>)</p>
+<p><a href="/wp-content/uploads/2016/11/loc_chart_v0_1.png"><img loading="lazy" class="alignnone size-large wp-image-820" src="/wp-content/uploads/2016/11/loc_chart_v0_1-1024x716.png" alt="loc_chart_v0_1" width="640" height="448" srcset="/wp-content/uploads/2016/11/loc_chart_v0_1-1024x716.png 1024w, /wp-content/uploads/2016/11/loc_chart_v0_1-300x210.png 300w, /wp-content/uploads/2016/11/loc_chart_v0_1-768x537.png 768w, /wp-content/uploads/2016/11/loc_chart_v0_1.png 1101w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>With this first release I wanted to take stock of where the code is at, where I am heading and what my time is being spent on. I have a job and a family, so openXeen is largely coded in at night or when I can grab 5 minutes. This forces me to code in a manor &#8216;resistant to interruptions&#8217; (finish one logical area at a time, use a fully thought out architecture).</p>
+<p>What I also need to do Is audit how much time I spend on what. Which is where this line of code by package breakdown comes into play. It breaks my 8.8k lines of code down, telling me where my effort has been spent. I aim to update this graph at every delivery milestone. What I learnt:</p>
+<ul>
+<li>1/3 of the code is concerned with reading and loading files contained in the .cc archives (reds)</li>
+<li>1/3 of the code is &#8216;toolbox code&#8217; (oranges), stuff that is not relevant to xeen, and ideally would have been provided by java or a 3rd party library.</li>
+<li>1/6 is in game mechanics (blues), arguably this is an over investment in mechanics early on. But I am prioritising having a &#8216;game&#8217; by the end of the year, not a tech demo.</li>
+<li>1/6 is in rendering (greens). The rendering code has been kept as simple as possible. I love to write rendering engines, and know this is a trap. You spend far too much time on rendering &#8216;goodies&#8217;, then your engine was built without respect to the actual game (because the game did not exist yet) and you have nothing to show in your render. Your&#8217;e exhausted, and sometimes coded into a corner.</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[UPDATE] Comprehensive Arduino Flash Memory via PROGMEM</title>
+		<link>/update-comprehensive-arduino-flash-memory-via-progmem/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 11 Feb 2016 05:46:20 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Progmem]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=795</guid>
+
+					<description><![CDATA[[Updated for arduino v1.6] This post is a huge set of PROGMEM examples (done as unit tests) which you can freely copy and paste into your work.
+
+The readership level is set at those who are already familiar with the arduino PROGMEM documentation here and the use of the F() macro and __FlashStringHelper*
+
+ Its designed as a reference to save you the "lets see how to make this work" time and communicate common pitfalls. Search for the method you need to use, and see it running in working tested code]]></description>
+										<content:encoded><![CDATA[<p>A Few years ago I posed an encyclopaedic set of unit tests (<a href="http://busyducks.com/wp_4_1/2015/03/09/comprehensive-example-code-demonstrating-using-arduino-flash-memory-via-progmem/" target="_blank" rel="noopener">here</a>) that showed how to do anything in progmem.  It went through structs, strings, arrays and all the library functions that could use progmem. However as of arduino V1.55 a it was broken as things on the Arduino platform had changed, v1.6 compounded the issues. As I regularly get visitors to this page, I thought it was in need of an update.</p>
+<p>So I present the code, updated to work on the latest platform. As per the last article:</p>
+<ul>
+<li><strong>This is not an intro to progmem article.</strong> The readership level is set at those who are already familiar with the arduino PROGMEM documentation <a href="http://arduino.cc/en/Reference/PROGMEM" target="_blank" rel="noopener">here </a>and the use of the F() macro and __FlashStringHelper*.</li>
+<li>Its&#8217; designed as a reference on how to accomplish many different common tasks in PROGMEM.</li>
+<li>It&#8217;s  here  to save you the &#8220;lets see how to make this work&#8221; time and communicate common pitfalls.</li>
+<li>The code is well documented, so you should be able to find what you need quickly.</li>
+<li>There is data declarations out front,  assorted unit tests in setup() and a simple unit testing framework at the end of the file.</li>
+<li>Some of the examples have  //JBYCDMUS after the line. This stands for &#8220;just because you can, doesn&#8217;t mean you should&#8221; implying It works but is not recommended.</li>
+<li><strong>To use this search for the method you need to use, and see it running in working tested code.</strong></li>
+</ul>
+<p>&nbsp;</p>
+<pre class="lang:c++ decode:true ">//----------------------------------------------------------------------------------//
+//                                    BUSYDUCKS.COM                                 //
+//                           _         _                  _                         //
+//                         ( o)&gt;     ( o)&lt;     __       ( o)&lt;                       //
+//                      ____\\    ____\\   __ (.. )  \\\_\\                         //
+//                 ~~~~\_///__)~~\_///__)~~\_\\V__)~~\_____)~~~~~                   //
+//                                                                                  //
+//                            Making you pro-duck-tive                              //
+//                                                                                  //
+//  Author: Duckman   Date: 08/02/16   Ver: 1.6   Licence: Creative Commons (by-sa) //
+//                                                                                  //
+//  Demonstrates the use of PROGMEM.                                                //
+//  Compile with Arduino environment 1.6 or later                                   //
+//                                                                                  //
+//  Permision given to freely copy/paste "code snippets" into your own code. For    //
+//  other uses (e.g. derivative works) the Creative Commons Attribution Share-      //
+//  alike license applies (cite busyducks.com). This means comerical use is ok.     //
+//----------------------------------------------------------------------------------//
+
+#if !(defined(ARDUINO) &amp;&amp; ARDUINO &gt;= 140)
+#include &lt;environment.h&gt;
+#endif
+
+void setTestName(const __FlashStringHelper* name);
+void setTestName(const char *name);
+bool assert(bool isTrue, Print *outStream=NULL);
+void pass();
+void fail(Print *outStream=NULL);
+void printTestSummary(Print *outStream);
+
+/*
+char,                             (1 byte)    -127 to 128 also letters i.e. 'a'     pgm_read_byte
+unsigned char, byte               (1 byte)    0 to 255                              pgm_read_byte
+int, short                        (2 bytes)   -32,767 to 32,768                     pgm_read_word
+unsigned int, unsigned short      (2 bytes)   0 to 65,535                           pgm_read_word
+long                              (4 bytes)   -2,147,483,648 to 2,147,483,647       pgm_read_dword
+unsigned long                     (4 bytes)   0 to 4,294,967,295                    pgm_read_dword
+
+For ATMEGA based arduino's double is the same as float
+float, double                     (4 bytes)   -3.4028235E+38 to 3.4028235E+38       pgm_read_float
+*/
+
+//--------------------------------------------------------------------------------------------------------------
+// Data structures for test
+//--------------------------------------------------------------------------------------------------------------
+struct Person
+{
+  int height;
+  char *name;
+  int age;
+  Person *spouse;
+};
+
+//--------------------------------------------------------------------------------------------------------------
+// Test Data Sets
+//--------------------------------------------------------------------------------------------------------------
+#define BYTE_TEST_PATTERN_DATA {0, 1, 2, 3, 4, 9, 15, 16, 21, 31, 32, 64, 100, 201, 212, 255, 7}
+#define BYTE_TEST_PATTERN_SIZE 17
+#define MAX_STRING_SIZE 100
+
+//--------------------------------------------------------------------------------------------------------------
+// Test Data
+//--------------------------------------------------------------------------------------------------------------
+//  regular data
+const byte  progMem_ucharArray[]     PROGMEM = BYTE_TEST_PATTERN_DATA;
+const byte  progMem_uchar            PROGMEM = 130;
+const int   progMem_int              PROGMEM = -3021;
+const long  progMem_long             PROGMEM = 2000000001;
+const float progMem_float            PROGMEM = 3.14159265359;
+const char  progMem_string[]         PROGMEM = "Snollygoster";
+const char  progMem_string2[]        PROGMEM = "Problem Alchemist";
+const char  progMem_string3[]        PROGMEM = "Lead Paradigm Architect";
+const char  progMem_emptyString[]    PROGMEM = "";
+const float progMem_floatArray[2][5] PROGMEM = {{0.2, 0.1, 0.5, 0.7, -3.2},
+                                               {0.4, 0.2, 1.0, 1.4, -6.4}};
+
+//  NB this used to be in the form "PROGMEM const char *progMem_stringArray[] =",
+//  now the extra const is required.
+PROGMEM const char *const progMem_stringArray[] =
+{   
+  progMem_string,
+  progMem_string2,
+  progMem_string3
+};
+
+//  STRUCTS
+//  this line is a foward decleration, it allows person1 to create a valid pointer 
+//  to person2 even though person2 is not defined yet.
+extern const Person progMem_person2;
+
+const char     _name[]         PROGMEM = "Papa Smurf";
+const Person   progMem_person  PROGMEM = {189, (char *)_name, 32, (Person*)&amp;progMem_person2};
+const char     _name2[]        PROGMEM = "Muma Smurf";
+const Person   progMem_person2 PROGMEM = {160, (char *)_name2, 41, (Person*)&amp;progMem_person};
+
+//--------------------------------------------------------------------------------------------------------------
+// Stats
+//--------------------------------------------------------------------------------------------------------------
+long passCount = 0;
+long failCount = 0;
+long countAtLastNameChange = 0;
+char currentTestName[64];
+
+//--------------------------------------------------------------------------------------------------------------
+// setup and loop
+//--------------------------------------------------------------------------------------------------------------
+void setup() 
+{
+    byte localData[] = BYTE_TEST_PATTERN_DATA;
+    char buffer[MAX_STRING_SIZE];
+    
+    Serial.begin(9600);
+    
+	//JBYCDMUS = just because you can, doesn't mean you should
+	
+    Serial.println(F("---------------- single variable tests"));
+    setTestName(F("single variable tests"));
+    assert(  progMem_uchar == 130                                       ); //JBYCDMUS
+    assert(  pgm_read_byte(&amp;progMem_uchar) == 130                       );
+    assert(  progMem_int == -3021                                       ); //JBYCDMUS
+    assert(  progMem_long == 2000000001                                 ); //JBYCDMUS
+    assert(  (int)(pgm_read_float(&amp;progMem_float)*10000) == 31415       );
+    
+    Serial.println(F("---------------- array tests"));
+    setTestName(F("array tests"));
+    for(int i=0; i&lt; BYTE_TEST_PATTERN_SIZE; i++)
+    {
+        assert(   pgm_read_byte(&amp;progMem_ucharArray[i]) == localData[i] );
+    }
+    for(int i=0; i&lt;5; i++)
+    {
+        //  the easy way of accessing the array
+        float a = pgm_read_float(&amp;progMem_floatArray[0][i]);
+        //  another way of accessing the array same as [1][i]
+        float b = pgm_read_float(((unsigned int)progMem_floatArray)+(5+i)*sizeof(float));
+        a = a * 2;
+        //  to check two floating points are "equal"
+        assert (abs(a - b) &lt; 0.0001                                     );
+    }
+
+    
+    Serial.println(F("---------------- struct tests"));
+    setTestName(F("struct tests"));
+    assert(  progMem_person.height == 189                               ); //JBYCDMUS
+    assert(  pgm_read_byte(&amp;progMem_person.height) == 189               );
+    //  NB: this used to be (prog_char *)pgm_read_word(&amp;progMem_person.name) but prog_char is depreciated
+    assert(  strcmp_P("Papa Smurf", (char PROGMEM *)pgm_read_word(&amp;progMem_person.name)) == 0 );
+    assert(  pgm_read_byte(&amp;progMem_person.age) == 32                   );
+    assert(  progMem_person.age == 32                                   ); //JBYCDMUS
+    
+    //  get person1's spouse
+    Person *p= (Person *)pgm_read_word(&amp;progMem_person.spouse);
+    assert(  p == &amp;progMem_person2                                      );
+    assert(  pgm_read_byte(&amp;p-&gt;age) == 41                               );
+    //get person2's spouse
+    p = (Person *)pgm_read_word(&amp;progMem_person2.spouse);
+    assert(  p == &amp;progMem_person                                       );
+    assert(  pgm_read_byte(&amp;p-&gt;age) == 32                               );
+
+    Serial.println(F("---------------- memory operation tests"));
+    setTestName(F("memcmp [memory compare]"));
+    //  compares len bytes of the memory s1 and flash s2
+    byte data[] = BYTE_TEST_PATTERN_DATA;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) == 0 );
+    data[BYTE_TEST_PATTERN_SIZE-1] = 0;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &lt; 0  );
+    data[BYTE_TEST_PATTERN_SIZE-1] = 255;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &gt; 0  );
+    
+    //  copy len bytes from flash to SRAM
+    memset (data, 0, BYTE_TEST_PATTERN_SIZE);
+    assert(  memcpy_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &gt; 0  );
+    assert(  memcmp(data, localData, BYTE_TEST_PATTERN_SIZE) == 0            );
+    
+    Serial.println(F("---------------- string function tests"));
+    
+    //  ---- strcmp &amp; strncmp Compare two strings
+    setTestName(F("strcmp [string compare]"));
+    assert(  strcmp_P("Snollygoster", progMem_string) == 0                ); 
+    assert(  strcmp_P("sNollyGostEr", progMem_string) != 0                );
+    assert(  strcmp_P("Bug", progMem_string) &lt; 0                          );
+    assert(  strcmp_P("Zoo", progMem_string) &gt; 0                          );
+    
+    setTestName(F("strncmp [string compare, first n chars]"));
+    assert(  strncmp_P("Snollyfoobar", progMem_string, 6) == 0            );
+    assert(  strncmp_P("sNollyGostEr", progMem_string, 6) != 0            );
+    assert(  strncmp_P("Bug", progMem_string, 3) &lt; 0                      );
+    assert(  strncmp_P("Zoo", progMem_string, 3) &gt; 0                      );
+    
+    //  ---- strcasecmp &amp; strncasecmp, Compare two strings, ignoring case  
+    assert(  strcasecmp_P("Snollygoster", progMem_string) == 0            );
+    assert(  strcasecmp_P("sNollyGostEr", progMem_string) == 0            );
+    assert(  strcasecmp_P("Bug", progMem_string) &lt; 0                      );
+    assert(  strcasecmp_P("Zoo", progMem_string) &gt; 0                      );
+    
+    setTestName(F("strncasecmp [string compare ignoring case]"));
+    assert(  strncasecmp_P("Snollyfoobar", progMem_string, 6) == 0        );
+    assert(  strncasecmp_P("sNollYGostEr", progMem_string, 8) == 0        );
+    assert(  strncasecmp_P("Bug", progMem_string, 3) &lt; 0                  );
+    assert(  strncasecmp_P("Zoo", progMem_string, 3) &gt; 0                  );
+    
+    //  ---- strcpy, strlcpy &amp; strncpy: makes a copy of a string
+    setTestName(F("strcpy [copy a string]"));
+    clear(buffer, MAX_STRING_SIZE); //empty string buffer
+    assert(  strcpy_P(buffer, progMem_string) == buffer                   );
+    assert(  strncmp(buffer, "Snollygoster", MAX_STRING_SIZE) == 0        );
+    
+    setTestName(F("strlcpy [copy a string of maximim size, ensure null terminated result]"));
+    char smallBuffer[12]; //  not long enough to hold "Snollygoster" AND the final null terminator
+	
+    clear(buffer, MAX_STRING_SIZE); //  empty string buffer
+    clear(smallBuffer, 12); //empty string buffer
+
+	
+    assert(  strlcpy_P(buffer, progMem_string, MAX_STRING_SIZE) == 12     );
+    assert(  strlcpy_P(smallBuffer, progMem_string, 12) == 12             );
+    assert(  strcmp(buffer, "Snollygoster") == 0                          );
+    //  This is the difference between strlcpy and strncpy, the whole string was not copied 
+    //  to ensure a null terminator was present
+    assert(  strcmp(smallBuffer, "Snollygoste") == 0                      );
+	
+    
+    setTestName(F("strncpy [copy a string of maximim size, null terminate iff space allows]"));
+    clear(buffer, MAX_STRING_SIZE); //  empty string buffer
+    assert(  strncpy_P(buffer, progMem_string, MAX_STRING_SIZE) == buffer );
+    assert(  strcmp(buffer, "Snollygoster") == 0                          );
+    
+    //  ---- strcat, strlcat &amp; strncat: Concatenate two strings
+    setTestName(F("strcat [join two strings]"));
+    strcpy(buffer, "Chief ");
+    assert(  strcat_P(buffer, progMem_string) == buffer                   );
+    assert(  strcmp(buffer, "Chief Snollygoster") == 0                    );
+    
+	
+    setTestName(F("strlcat [join two strings, limiting final size, ensure termination]"));  
+    strcpy(smallBuffer, "Chief "); //smallBuffer is only 12 characters
+    //  NOTE strlcat_P n = sizeof destination; while strncat_P n = number of chars to copy
+    assert(  strlcat_P(smallBuffer, progMem_string, 12) == 18             );
+    //  12th character is the nul terminator
+    assert(  strcmp(smallBuffer, "Chief Snoll") == 0                      );
+    
+    strcpy(buffer, "Chief "); //smallBuffer is only 12 characters
+    assert(  strlcat_P(buffer, progMem_string, MAX_STRING_SIZE) == 18     );
+    assert(  strcmp(buffer, "Chief Snollygoster") == 0                    );
+	
+    
+    setTestName(F("strncat [join two strings, limiting final size]"));
+    strcpy(buffer, "Chief ");
+    //  NOTE strncat_P n = number of chars to copy; while strlcat_P n = sizeof destination
+    assert(  strncat_P(buffer, progMem_string, 6) == buffer               );
+    assert(  strcmp(buffer, "Chief Snolly") == 0                          );    
+	
+    
+    //  ---- strlen &amp; strnlen: Finds the length of the string (searches for the null terminator)
+    setTestName(F("strlen [find the length of a string]"));
+    assert(  strlen_P( progMem_string) == 12    );
+    setTestName(F("strnlen [find the length of a string, limited to n]"));
+    assert(  strnlen_P( progMem_string, 6) == 6                           );
+    assert(  strnlen_P( progMem_string, MAX_STRING_SIZE) == 12            );
+    
+    //  ---- strstr: searches s1 for the first occurrence of (the substring) s2
+    setTestName(F("strstr [find a string inside another string]"));
+    //  one item to find
+    strcpy(buffer, "A Snollygoster sounds like something you would find in a handkerchief.");
+    assert(  strstr_P(buffer, progMem_string) == &amp;buffer[2]               );
+    assert(  strstr_P("foobar", progMem_string) == NULL                   );
+    //  what is defined to happen when searching an empty/null strings
+    strcpy(buffer, "foobar");
+    assert(  strstr_P(buffer, NULL) == NULL              );
+    //  this is why "if(strstr_P(s1, s2) != null){...}" is a bad idea!"
+    assert(  strstr_P(buffer, progMem_emptyString) == buffer              );
+        
+    Serial.println(F("---------------- done"));
+    if(failCount &gt; 0)
+    {
+        Serial.print(passCount); Serial.println(F(" test(s) passed"));
+        Serial.print(failCount); Serial.println(F(" test(s) FAILED"));
+    }
+    else
+    {
+        Serial.print(F("All tests passed (")); Serial.print(passCount); Serial.println(F(" tests rum)"));
+    }
+}
+
+void loop() 
+{
+}
+
+void clear(char *buffer, int len)
+{
+    memset(buffer, '\0', len);
+}
+
+//----------------------------------------------------------------------------------------------------------
+// Testing framework data
+//----------------------------------------------------------------------------------------------------------
+#define TEST_NAME_BUFFER_LEN (64)
+extern long passCount;
+extern long failCount;
+extern long countAtLastNameChange;
+extern char currentTestName[TEST_NAME_BUFFER_LEN];
+
+
+
+//----------------------------------------------------------------------------------------------------------
+// Testing framework
+//----------------------------------------------------------------------------------------------------------
+
+template&lt;typename T&gt;
+__attribute__ ((noinline)) bool assert_EQ(T a, T b, Print *outStream=NULL)
+{
+	bool ok = assert(a == b, outStream);
+	if((!ok) &amp;&amp; (outStream != NULL))
+	{
+		outStream-&gt;print(F("  error:  0x"));
+		outStream-&gt;print(a, HEX);
+		outStream-&gt;print(F(" != 0x"));
+		outStream-&gt;println(b, HEX);
+	}
+}
+
+
+
+template&lt;typename T&gt;
+__attribute__ ((noinline)) bool assert_NEQ(T a, T b, Print *outStream=NULL)
+{
+	bool ok = assert(a != b, outStream);
+	if((!ok) &amp;&amp; (outStream != NULL))
+	{
+		outStream-&gt;print(F("  error:  0x"));
+		outStream-&gt;print(a, HEX);
+		outStream-&gt;print(F(" != 0x"));
+		outStream-&gt;println(b, HEX);
+	}
+}
+
+template&lt;typename T&gt;
+__attribute__ ((noinline)) bool assert_GT(T a, T b, Print *outStream=NULL)
+{
+	bool ok = assert(a &gt; b, outStream);
+	if((!ok) &amp;&amp; (outStream != NULL))
+	{
+		outStream-&gt;print(F("  error:  0x"));
+		outStream-&gt;print(a, HEX);
+		outStream-&gt;print(F(" &lt;= 0x"));
+		outStream-&gt;println(b, HEX);
+	}
+}
+template&lt;typename T&gt;
+__attribute__ ((noinline)) bool assert_LT(T a, T b, Print *outStream=NULL)
+{
+	bool ok = assert(a &lt; b, outStream);
+	if((!ok) &amp;&amp; (outStream != NULL))
+	{
+		outStream-&gt;print(F("  error:  0x"));
+		outStream-&gt;print(a, HEX);
+		outStream-&gt;print(F(" &gt;= 0x"));
+		outStream-&gt;println(b, HEX);
+	}
+}
+
+void setTestName(const __FlashStringHelper* name) 
+{
+	currentTestName[0]= 0;
+	if(name != NULL)
+	{
+		strlcpy_P(currentTestName, (const char PROGMEM *)name, TEST_NAME_BUFFER_LEN);
+	}
+	
+	countAtLastNameChange = passCount+failCount;
+}
+
+void setTestName(const char *name)
+{
+	currentTestName[0]= 0;
+	if(name != NULL)
+	{
+		strlcpy(currentTestName, name, TEST_NAME_BUFFER_LEN);
+	}
+	
+	countAtLastNameChange = passCount+failCount;
+}
+
+bool assert(bool isTrue, Print *outStream)
+{
+	if(isTrue) 
+	{
+		pass();
+		return true;
+	}
+	else 
+	{
+		fail(outStream);
+		return false;
+	}
+}
+
+void pass()
+{
+	passCount++;
+}
+
+void fail(Print *outStream)
+{
+	if(outStream != NULL)
+	{
+		outStream-&gt;print(F("TEST FAILED: "));
+		if(currentTestName != NULL)
+		{
+			int localTestNum = (passCount + failCount) - countAtLastNameChange + 1;
+			outStream-&gt;print(F("(")); 
+			outStream-&gt;print(currentTestName); 
+			outStream-&gt;print(F(" [test ")); 
+			outStream-&gt;print(localTestNum);
+			outStream-&gt;print(F("])"));
+		}
+		outStream-&gt;println();
+	}
+	failCount++;
+}
+
+void printTestSummary(Print *outStream)
+{
+	if(outStream != NULL)
+	{
+		if(failCount &gt; 0)
+		{
+			outStream-&gt;print(passCount); Serial.println(F(" test passed"));
+			outStream-&gt;print(failCount); Serial.println(F(" test FAILED"));
+		}
+		else
+		{
+			outStream-&gt;print(F("All tests passed (")); Serial.print(passCount); Serial.println(F(" tests run)"));
+		}
+	}
+}
+</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Arduino Graphing Libraries</title>
+		<link>/arduino-graphing-libraries/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 08 Feb 2016 13:58:47 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[GNUPlot]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Graphs]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=754</guid>
+
+					<description><![CDATA[Here is a library to write GNUPlot output from the Arduino. Now the Arduino can produce a graph output that is directly renderable across multiple platforms and cloud services. Does not rely on some gone tomorrow software + lets you edit the plot afterward.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p style="padding-left: 30px;">I believe strongly in plotting the data that I obtain, because plots tell you a story and they don&#8217;t mislead you like summary statistics can.</p>
+<p style="padding-left: 30px;">Often I want to plot data the arduino has acquired, but I find existing solutions don&#8217;t suit my needs. So I went out and made my own solution which writes a GNUPlot script in response to plot commands. I integrated the library with my general Arduino Toolbox (WDArduinoLib) and am releasing it under the GNU 2.0 License.</p>
+<h1>Goals</h1>
+<ul>
+<li>Professional graphics</li>
+<li>Graphs manually editable after plotting for change colours etc.</li>
+<li>Arduino outputs data that  other people can defiantly grab and use (just paste into a cloud based GNUPlot terminal)</li>
+<li>Allow embedded linux system to offload the plotting of graphs from arduino collected data</li>
+<li>Easy straight forward API</li>
+<li>Linux, Windows and Mac compatible.</li>
+<li>Quality API documentation</li>
+</ul>
+<h1>Features</h1>
+<ul>
+<li>Configurable output
+<ul>
+<li>You can use a Serial Port, SD-Card,  Telnet, TCP-IP, IrDA, whatever. So long as it derives from the Arduino Print class (ie has Print and Println()) this library can output a graph to it</li>
+</ul>
+</li>
+<li>Uses <a href="http://www.gnuplot.info/" target="_blank" rel="noopener">GNUPlot</a> as a server to execute the plot script this API outputs.
+<ul>
+<li>GNUPlot is the standard for scientific publication, it outputs presentable graphics ready for both websites, and software manuals.</li>
+<li>GNUPlot has been around forever (1986) and is still actively developed.</li>
+<li>GNUPlot can run on the Raspberry pi, PC, Mac or even online via <a href="http://plotshare.com/" target="_blank" rel="noopener">http://plotshare.com/</a></li>
+</ul>
+</li>
+<li>Extensible
+<ul>
+<li>Easily over-rideable classes to add new plot types or different output terminal (eg Matlab)</li>
+</ul>
+</li>
+<li>Built in quality colour palettes designed for graphing.
+<ul>
+<li>Sample palettes for showing importance, of keeping different coloured categories at the same intensity.</li>
+<li>Spectral palettes , optimised for on-white graphing.</li>
+<li>Colour-blind compatible palettes .</li>
+<li>Can still use arbitrary 24bit RGB colours if you like.</li>
+</ul>
+</li>
+<li>Unit tested library to support quality software development</li>
+<li>Template driven code designed for maximum data flexibility</li>
+<li>Memory Efficient.
+<ul>
+<li>Use of progmem strings supported throughout.</li>
+</ul>
+</li>
+<li>Useful, stable data format that does not rely on someone&#8217;s pet project still existing in 5 years time.</li>
+<li>All input, including text, is validated.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Examples</h1>
+<p style="padding-left: 30px;">This library is simple to use and produces clean results with minimal configuration. I present several basic examples that show the API in use and the results obtained.</p>
+<hr />
+<h2>Example: Basic Line Graph</h2>
+<p style="padding-left: 30px;">Line plots of time series data are probably the most important feature any graphing API targeted for micro-controllers can offer. This code creates such a plot. It demonstrates the use of multiple line styles.</p>
+<pre class="height-set:true height:800 lang:c++ decode:true">//main
+GNUPlotLineGraph gnuLinePlotter(&amp;Serial);
+PlotDampenedSineWaves(gnuLinePlotter);
+
+//method
+void PlotDampenedSineWaves(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Dampened Sine Wave"));
+	plot.setXAxisName(F("Time (Sec)"));
+	plot.setYAxisName(F("Voltage (V)"));
+
+	//setup series
+	plot.setSeriesName(0, F("Slow decay"));
+	plot.getLineApperance(0)-&gt;setLineStyle(LineStyles::SolidLine);
+	plot.getLineApperance(0)-&gt;setLineWidth(4);
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeBlues::Blue1);
+
+
+	plot.setSeriesName(1, F("Medium decay"));
+	plot.getLineApperance(1)-&gt;setLineStyle(LineStyles::DashedLine);
+	plot.getLineApperance(1)-&gt;setLineWidth(3);
+	plot.getLineApperance(1)-&gt;setRGB(GraphColorsSchemeBlues::Blue2);
+
+	plot.setSeriesName(2, F("Quick decay"));
+	plot.getLineApperance(2)-&gt;setLineStyle(LineStyles::DotedLine);
+	plot.getLineApperance(2)-&gt;setLineWidth(2);
+	plot.getLineApperance(2)-&gt;setRGB(GraphColorsSchemeBlues::Blue3);
+	
+        //plot graph
+	for(int i=0; i&lt;=720; i+=3)
+	{
+		float c = cos(DEG_TO_RAD*(float)i); 
+		float y1 = Dampen(i, c, 1, 1.0/360.0); 
+		float y2 = Dampen(i, c, 1, 1.0/240.0); 
+		float y3 = Dampen(i, c, 1, 1.0/180.0); 
+
+		plot.plotDatumXYn(i, y1, y2, y3);
+	}
+	plot.finishGraph();
+}
+
+</pre>
+<p><a href="/wp-content/uploads/2015/12/Damped-Sine-Wave.png" rel="attachment wp-att-757"><img loading="lazy" class="size-full wp-image-757 aligncenter" src="/wp-content/uploads/2015/12/Damped-Sine-Wave.png" alt="Damped Sine Wave" width="800" height="600" srcset="/wp-content/uploads/2015/12/Damped-Sine-Wave.png 800w, /wp-content/uploads/2015/12/Damped-Sine-Wave-300x225.png 300w, /wp-content/uploads/2015/12/Damped-Sine-Wave-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p>&nbsp;</p>
+<hr />
+<h2>Example: Plotting Points (Scatter Plot)</h2>
+<p style="padding-left: 30px;">A scatter plots, with styles colours and trimmings.</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotPointGraph gnuPointPlotter(&amp;Serial);
+PlotPointNoise(gnuPointPlotter);
+
+//method
+void PlotPointNoise(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Sine Waves with Noise"));
+	plot.setXAxisName(F("Time (Sec)"));
+	plot.setYAxisName(F("Voltage (V)"));
+	plot.setShowGrid(true);
+
+	//setup series
+	plot.setSeriesName(0, F("Pin 1"));
+	plot.getLineApperance(0)-&gt;setMarkerStyle(LineMarkers::SquareMarker);
+	plot.getLineApperance(0)-&gt;setRGB(0xff0000);
+
+	plot.setSeriesName(1, F("Pin 2"));
+	plot.getLineApperance(1)-&gt;setMarkerStyle(LineMarkers::CrossMarker);
+	plot.getLineApperance(1)-&gt;setRGB(0x00ff00);
+
+	plot.setSeriesName(2, F("Pin 3"));
+	plot.getLineApperance(2)-&gt;setMarkerStyle(LineMarkers::CircleMarker);
+	plot.getLineApperance(2)-&gt;setRGB(0x0000ff);
+	
+        //plot graph
+	for(int i=0; i&lt;=720; i+=5)
+	{
+		float c = cos(DEG_TO_RAD*(float)i); 
+		float y1 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/240.0); 
+		float y2 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/180.0)-2; 
+		float y3 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/90.0)-4; 
+
+		plot.plotDatumXYn(i, y1, y2, y3);
+	}
+	plot.finishGraph();
+}
+
+</pre>
+<p><a href="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png" rel="attachment wp-att-755"><img loading="lazy" class="size-full wp-image-755 aligncenter" src="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png" alt="Sine Wave with Noise" width="800" height="600" srcset="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png 800w, /wp-content/uploads/2015/12/Sine-Wave-with-Noise-300x225.png 300w, /wp-content/uploads/2015/12/Sine-Wave-with-Noise-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p>&nbsp;</p>
+<hr />
+<h2>Example: Plotting Arbitrary Lines</h2>
+<p style="padding-left: 30px;">Sometimes your not using time series data, and need to plot lines between arbitrary x/y positions. Many solutions for the arduino breakdown at this point. Here I demonstrate such a plot (based on the logarithmic spiral). Note I am using lines with point markers to show the actual points plotted.</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotLineGraph gnuLinePlotter(&amp;Serial);
+PlotLogarithmicSpiral(gnuLinePlotter);
+
+//method
+void PlotLogarithmicSpiral(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Logarithmic Spiral"));
+
+	//setup series
+	plot.setSeriesName(0, F("Spiral"));
+	plot.getLineApperance(0)-&gt;setLineWidth(2);
+	plot.getLineApperance(0)-&gt;setMarkerStyle(LineMarkers::SolidCircleMarker);
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeSpectral::Spectral7);
+		
+	//plot graph
+	float a = 1;
+	float b = 0.1759;
+	for(int i=0; i&lt;(int)(10.0*20.0*M_PI); i+=5)
+	{
+		float t = ((float)i) * 0.1;
+		float rt = a*pow(M_E, b* t);
+		float x = rt*cos(t);
+		float y = rt*sin(t);
+
+		plot.plotDatumXY(x, y);
+	}
+
+	plot.finishGraph();
+}</pre>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/12/Logarithmic-Spiral.png" rel="attachment wp-att-761"><img loading="lazy" class="size-full wp-image-761 aligncenter" src="/wp-content/uploads/2015/12/Logarithmic-Spiral.png" alt="Logarithmic Spiral" width="800" height="600" srcset="/wp-content/uploads/2015/12/Logarithmic-Spiral.png 800w, /wp-content/uploads/2015/12/Logarithmic-Spiral-300x225.png 300w, /wp-content/uploads/2015/12/Logarithmic-Spiral-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<hr />
+<h2>Example: Multi Column Bar Graph.</h2>
+<p style="padding-left: 30px;">Bar graphs, for histograms and such are easy in this API. The example below shows support for multi column graphs, Note: negative values are also supported. The labels for the X-Axis are plotted as standard x values (the plot command is template driven and can support many different types of data).</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotBarGraph gnuBarPlotter(&amp;Serial);
+PlotSampleBarGraph(gnuBarPlotter);
+
+//method
+void PlotSampleBarGraph(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Google Results for Instruments"));
+	plot.setXAxisName(F("Instrument"));
+	plot.setYAxisName(F("# Google Results (millions)"));
+	plot.setShowGrid(true);
+
+	//setup series
+	plot.setSeriesName(0, F("play"));
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeOranges::Orange1);
+	plot.setSeriesName(1, F("teach"));
+	plot.getLineApperance(1)-&gt;setRGB(GraphColorsSchemeBlues::Blue1);
+	plot.setSeriesName(2, F("like"));
+	plot.getLineApperance(2)-&gt;setRGB(GraphColorsSchemeGreens::Green1);
+	plot.setSeriesName(3, F("hate"));
+	plot.getLineApperance(3)-&gt;setRGB(GraphColorsSchemeReds::Red1);
+
+	//plot graph
+	//Dataset compiled by Google-ing "I X the Y"
+	//                instrument	play	teach	like	hate
+	plot.plotDatumXYn("Piano",		173,	25,		211,	21);
+	plot.plotDatumXYn("Guitar",		163,	22,		193,	27);
+	plot.plotDatumXYn("Violin",     41,		2,		43,		1);
+	plot.plotDatumXYn("Drums",		30,		8,		83,		9);
+	
+	plot.finishGraph();
+}</pre>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png" rel="attachment wp-att-762"><img loading="lazy" class="size-full wp-image-762 aligncenter" src="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png" alt="Google Results for Instruments" width="800" height="600" srcset="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png 800w, /wp-content/uploads/2015/12/Google-Results-for-Instruments-300x225.png 300w, /wp-content/uploads/2015/12/Google-Results-for-Instruments-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<h1>Installation</h1>
+<p>&nbsp;</p>
+<ol>
+<li>Get the library from its <a href="https://github.com/busyDuckman/WDArduinoLib" target="_blank" rel="noopener">github repository</a>.</li>
+<li>See the official guide on how to install libraries <a href="https://www.arduino.cc/en/Guide/Libraries" target="_blank" rel="noopener">https://www.arduino.cc/en/Guide/Libraries</a></li>
+<li>Run the provided example sketch</li>
+<li>Install GNUPlot v5.0 or later (<a href="http://www.gnuplot.info/download.html" target="_blank" rel="noopener">here</a>).</li>
+<li>Using the com port viewer, copy the output of sketch into GNUPlot.</li>
+<li>Enjoy!</li>
+</ol>
+<p>It is very possible to get the output generated by this library to GNUPlot automatically. How you achieve this is up to you.</p>
+<p>It is possible to direct the output to a SD card. See the arduino help page on the <a href="https://www.arduino.cc/en/Tutorial/Files" target="_blank" rel="noopener">file class</a>, to create you own file on a SD card. Then pass the open file object in to the constructor for your plotting class (where I used Serial in the examples).</p>
+<h1></h1>
+<h1>Documentation</h1>
+<p style="padding-left: 30px;">Full documentation available <a href="http://www.busyducks.com/downloads/doco/WDArduinoLib/index.html" target="_blank" rel="noopener">here</a>.</p>
+<p>&nbsp;</p>
+<h1>License</h1>
+<p style="padding-left: 30px;">GNU 2.0</p>
+<h1>State</h1>
+<p>Most Features are well tested, but I don&#8217;t warrant or accept liability for any of the functionality in any way.</p>
+<p>NB: some dynamic memory usage , refrain from using malloc during plotting operations to prevent possible heap fragmentation.</p>
+<ul>
+<li>Dynamic memory usage is a design decision I made weighing pro&#8217;s and con&#8217;s of the situation.</li>
+<li>Given &#8216;typical usage&#8217; scenarios of the API it should not cause heap fragmentation.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Road-Map</h1>
+<p>May happen:</p>
+<ul>
+<li>Second x/y axis support</li>
+<li>Matlab support</li>
+<li>3d plots</li>
+<li>Spectrogram</li>
+<li>Support for cloud based rendering for graphs</li>
+<li>Sage support</li>
+<li>Thousands separator (right now I could not deploy it because of a bug in the windows version of GNUPlot).</li>
+</ul>
+<p>Won&#8217;t Happen:</p>
+<ul>
+<li>Real-time visualisation (plenty of other projects to do that already)</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

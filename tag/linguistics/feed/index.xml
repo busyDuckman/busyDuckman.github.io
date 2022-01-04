@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Linguistics &#8211; Busy Ducks</title>
+	<atom:link href="/tag/linguistics/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Thu, 16 Nov 2017 10:28:29 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Linguistics &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>SpeakingDuck (Maven plugin for java resource bundle transition.)</title>
+		<link>/speakingduck-maven-plugin-for-java-resource-bundle-transitional/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 16 Nov 2017 10:28:29 +0000</pubDate>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[i18n]]></category>
+		<category><![CDATA[java]]></category>
+		<category><![CDATA[Linguistics]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=896</guid>
+
+					<description><![CDATA[Developing multi-lingual applications in java seems a pain, to me anyway. There are resource bundles and a localisation API &#8211; which are well documented. I wanted to auto translate these bundles, and then have friends look over and refine the translations later. I did not want some heavy weight application to manage properties files etc. &#8230;<br><a href="/speakingduck-maven-plugin-for-java-resource-bundle-transitional/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">SpeakingDuck (Maven plugin for java resource bundle transition.)</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Developing multi-lingual applications in java seems a pain, to me anyway.<br />
+There are resource bundles and a localisation API &#8211; which are <a href="https://docs.oracle.com/javase/tutorial/i18n/intro/steps.html">well documented</a>.</p>
+<p>I wanted to auto translate these bundles, and then have friends look over and refine the translations later.</p>
+<ul>
+<li>I did not want some heavy weight application to manage properties files etc.</li>
+<li>I found some simple auto translation tools, some free-ish, some pay-per-say. But they did not support java resource bundles.
+<ul>
+<li>I liked <a href="https://github.com/soimort/translate-shell">translate shell</a> a lot.</li>
+</ul>
+</li>
+<li>Few tools supported maven</li>
+<li>But nothing just worked</li>
+</ul>
+<p>So I created a quick maven plugin to translate resource bundles, by calling whatever tool you setup.</p>
+<p>Stuk it on github, will attempt to register it with maven.</p>
+<p><a href="https://github.com/busyDuckman/speakingDuck">https://github.com/busyDuckman/speakingDuck</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>35 Strange Alternatives for the Word &#8220;Return&#8221;.</title>
+		<link>/informal-variants-of-the-word-return/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 10 Dec 2015 15:56:38 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Archaeolinguistics]]></category>
+		<category><![CDATA[Humor]]></category>
+		<category><![CDATA[Linguistics]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=744</guid>
+
+					<description><![CDATA["Return" (based in latin) [re =back, tornare = to turn]. ie to turn back.
+Scopeturn [scope = examine] so: "on closer inspection, you can have it back". Read on for more...]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p style="padding-left: 30px;">After seeing an item stamped &#8220;return to sender&#8221;, I got thinking.<br />
+The word &#8220;return&#8221; is based in latin: <em>re</em> (back) + <em>tornare</em> (to turn). ie to turn back.</p>
+<p style="padding-left: 30px;">I figured I&#8217;d make few other useful phrases, that I could use in my postal affairs, which stemmed from the word &#8216;return&#8217;.</p>
+<h1>The List of Alternate &#8220;Returns&#8221;.</h1>
+<ul>
+<li>abturn [ab = away from]:   &#8220;quick send it anywhere, but here&#8221;</li>
+<li>scopeturn [scope = examine]:   &#8220;on closer inspection, you can have it back&#8221;</li>
+<li>teleturn [tele = distance]:   &#8220;I decided it was best to send it far, far away&#8221;</li>
+<li>anturn [an = without]:   &#8220;I sent it back empty&#8221;</li>
+<li>adturn [as = toward]:   &#8220;send to this John instead&#8221;</li>
+<li>ambiturn [ambi = both sides]:   &#8220;I don&#8217;t want it back, you have it.&#8221;</li>
+<li>antiturn [anti = against]:   &#8220;this thing seems un-returnable&#8221;</li>
+<li>disturn [dis = not]:   &#8220;I refuse to send it back&#8221;</li>
+<li>poleinturn [polein = money]:   &#8220;I will sell it back to you&#8230; how&#8217;s $50 sound?&#8221;</li>
+<li>archturn [arch = ancient]:   &#8220;It took them way too long to return it&#8230;&#8221;</li>
+<li>autoturn [auto = self]:   &#8220;Everything is sent back automatically&#8221;</li>
+<li>agereturn [agere = agent]:   &#8220;I&#8217;m sending it back on their behalf&#8221;</li>
+<li>biturn [bi = turn]:   &#8220;I sent it back in two parts&#8221;</li>
+<li>polyturn [poly = many]:   &#8220;I sent it back broken into many parts&#8221;</li>
+<li>bioturn [bio = life]:   &#8220;it turned mouldy, have it back.&#8221;</li>
+<li>mortiturn [morti = dead]:   &#8220;it died, have it back.&#8221;</li>
+<li>egoturn [ego = myself]:   &#8220;I gave it back&#8230;. to myself!&#8221;</li>
+<li>preturn [pre = before]:   &#8220;on the way to a returner&#8221;</li>
+<li>postturn [post = after]:   &#8220;on the way back from the returner&#8221;</li>
+<li>psycheturn [psyche = mind, soul]:   &#8220;believed to be returned&#8221;</li>
+<li>sinturn [sin = together]:   &#8220;returned with some other stuff as well&#8221;</li>
+<li>phageturn [phage = eat]:   &#8220;After starting to eat it, I decided to send it back.&#8221;</li>
+<li>periturn [peri = around]:   &#8220;Gave it to John, to give to Bob, to give to you.&#8221;</li>
+<li>nomenturn [nomen = name]:   &#8220;Sent it on, to the correct person&#8230;&#8221;</li>
+<li>liberturn [liber = free]:   &#8220;I set it free&#8221;</li>
+<li>publicusturn [publicus = public]:   &#8220;gave it back, but made a big scene in public.&#8221;</li>
+<li>portoturn [porto = carry]:   &#8220;I had to carry it back&#8221;</li>
+<li>maniturn [mania = obsessive]:   &#8220;absolutely has to return everything on time&#8221;</li>
+<li>fraterturn [frater = brother]:   &#8220;actually, I sent it to your brother&#8221;</li>
+<li>identurn [idem = the same]:   &#8220;returned to you something identical&#8221;</li>
+<li>homoturn [home = same]:   &#8220;returned to you something similar&#8221;</li>
+<li>geoturn [geo = earth]:   &#8220;I buried it.&#8221;</li>
+<li>exturn [ex = out]:   &#8220;I threw it outside.&#8221;</li>
+<li>epiturn [epi = over]:   &#8220;I threw it over the fence.&#8221;</li>
+<li>ripariaturn [riparia = river]:   &#8220;I threw it in the lake.&#8221;</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Crossword Software (alpha)</title>
+		<link>/crossword-software-alpha/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Sat, 20 Jun 2015 16:25:05 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Crossword]]></category>
+		<category><![CDATA[Dictionary]]></category>
+		<category><![CDATA[Linguistics]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=316</guid>
+
+					<description><![CDATA[Easy to use software to generate crossword puzzles.
+This is still very much alpha software (totally unfinished). I appreciate anyone who wants to kick the tyres and let me know what they think.]]></description>
+										<content:encoded><![CDATA[<h3>Overview</h3>
+<p>Easy to use software to generate crossword puzzles.</p>
+<p>This is still very much alpha software (totally unfinished).  This crossword puzzle generator is provided here for those who would like to kick the tyres and get a preview of some upcoming software.</p>
+<p>&nbsp;</p>
+<h3>Screenshot</h3>
+<p><a href="/wp-content/uploads/2015/06/alpha_screenshot.png"><img loading="lazy" class="alignnone wp-image-321 size-full" src="/wp-content/uploads/2015/06/alpha_screenshot.png" alt="alpha_screenshot" width="821" height="733" srcset="/wp-content/uploads/2015/06/alpha_screenshot.png 821w, /wp-content/uploads/2015/06/alpha_screenshot-300x268.png 300w, /wp-content/uploads/2015/06/alpha_screenshot-768x686.png 768w" sizes="(max-width: 821px) 100vw, 821px" /></a></p>
+<p>&nbsp;</p>
+<h3></h3>
+<h3>Download</h3>
+<p style="padding-left: 30px;">Install file <a href="http://www.busyducks.com/Software/Crossword/publish.htm" target="_blank" rel="noopener">here</a></p>
+<p>&nbsp;</p>
+<h3>Limitations:</h3>
+<ul>
+<li>Apha software (very incomplete)</li>
+<li>Unimplemented menu items are greyed out..</li>
+<li>No way to save a crossword yet.</li>
+</ul>
+<h3>What is done:</h3>
+<ul>
+<li>Generates a valid cross word, generally quickly, but may stall for 20 seconds during generation.
+<ul>
+<li>Not a bug, my algorithm is not finished. If it works itself into a corner, it tries to think its way out instead of backing up a step.</li>
+</ul>
+</li>
+<li>Supports several generation rules.</li>
+<li>&#8220;View Solution&#8221; toggle enabled</li>
+<li>Gives basic clues (just a word definition at the moment)</li>
+<li>Zooming in moving etc (few minor bugs still).</li>
+</ul>
+<h3>Next Release</h3>
+<ul>
+<li>Mark squares that must/must not be used.</li>
+<li>Dictionary management</li>
+<li> Find spot for given word</li>
+<li>Find word(s) for given spot.</li>
+<li>Restrict to words of a certain readership / usage frequency.</li>
+<li>Bitmap backgrounds.</li>
+<li>High DPI screen support.</li>
+</ul>
+<h3>Road Map</h3>
+<ul>
+<li>Proper clues</li>
+<li>Subject areas option for word selection</li>
+<li>Support for visually impaired output</li>
+<li>App(ify) / Touch screen support</li>
+<li>Support for half-toning and newsprint optimisation</li>
+<li>Awesome-sauce graphics options</li>
+<li>Artistic options</li>
+<li>Use one dictionary across a series of crosswords.</li>
+<li>Multiple languages.</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Contact / Feedback</h3>
+<p>[contact-form subject=&#8217;Crossword software (via website)&#8217;][contact-field label=&#8217;Name&#8217; type=&#8217;name&#8217; required=&#8217;1&#8217;/][contact-field label=&#8217;Email&#8217; type=&#8217;email&#8217; required=&#8217;1&#8217;/][contact-field label=&#8217;Type of comment&#8217; type=&#8217;select&#8217; options=&#8217;Support,Bug Report,Feature Request,Sales Enquiry,Other&#8217;/][contact-field label=&#8217;Comment&#8217; type=&#8217;textarea&#8217; required=&#8217;1&#8217;/][/contact-form]</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

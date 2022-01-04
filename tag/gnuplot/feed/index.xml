@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>GNUPlot &#8211; Busy Ducks</title>
+	<atom:link href="/tag/gnuplot/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Mon, 08 Feb 2016 13:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>GNUPlot &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Arduino Graphing Libraries</title>
+		<link>/arduino-graphing-libraries/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 08 Feb 2016 13:58:47 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[GNUPlot]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Graphs]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=754</guid>
+
+					<description><![CDATA[Here is a library to write GNUPlot output from the Arduino. Now the Arduino can produce a graph output that is directly renderable across multiple platforms and cloud services. Does not rely on some gone tomorrow software + lets you edit the plot afterward.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p style="padding-left: 30px;">I believe strongly in plotting the data that I obtain, because plots tell you a story and they don&#8217;t mislead you like summary statistics can.</p>
+<p style="padding-left: 30px;">Often I want to plot data the arduino has acquired, but I find existing solutions don&#8217;t suit my needs. So I went out and made my own solution which writes a GNUPlot script in response to plot commands. I integrated the library with my general Arduino Toolbox (WDArduinoLib) and am releasing it under the GNU 2.0 License.</p>
+<h1>Goals</h1>
+<ul>
+<li>Professional graphics</li>
+<li>Graphs manually editable after plotting for change colours etc.</li>
+<li>Arduino outputs data that  other people can defiantly grab and use (just paste into a cloud based GNUPlot terminal)</li>
+<li>Allow embedded linux system to offload the plotting of graphs from arduino collected data</li>
+<li>Easy straight forward API</li>
+<li>Linux, Windows and Mac compatible.</li>
+<li>Quality API documentation</li>
+</ul>
+<h1>Features</h1>
+<ul>
+<li>Configurable output
+<ul>
+<li>You can use a Serial Port, SD-Card,  Telnet, TCP-IP, IrDA, whatever. So long as it derives from the Arduino Print class (ie has Print and Println()) this library can output a graph to it</li>
+</ul>
+</li>
+<li>Uses <a href="http://www.gnuplot.info/" target="_blank" rel="noopener">GNUPlot</a> as a server to execute the plot script this API outputs.
+<ul>
+<li>GNUPlot is the standard for scientific publication, it outputs presentable graphics ready for both websites, and software manuals.</li>
+<li>GNUPlot has been around forever (1986) and is still actively developed.</li>
+<li>GNUPlot can run on the Raspberry pi, PC, Mac or even online via <a href="http://plotshare.com/" target="_blank" rel="noopener">http://plotshare.com/</a></li>
+</ul>
+</li>
+<li>Extensible
+<ul>
+<li>Easily over-rideable classes to add new plot types or different output terminal (eg Matlab)</li>
+</ul>
+</li>
+<li>Built in quality colour palettes designed for graphing.
+<ul>
+<li>Sample palettes for showing importance, of keeping different coloured categories at the same intensity.</li>
+<li>Spectral palettes , optimised for on-white graphing.</li>
+<li>Colour-blind compatible palettes .</li>
+<li>Can still use arbitrary 24bit RGB colours if you like.</li>
+</ul>
+</li>
+<li>Unit tested library to support quality software development</li>
+<li>Template driven code designed for maximum data flexibility</li>
+<li>Memory Efficient.
+<ul>
+<li>Use of progmem strings supported throughout.</li>
+</ul>
+</li>
+<li>Useful, stable data format that does not rely on someone&#8217;s pet project still existing in 5 years time.</li>
+<li>All input, including text, is validated.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Examples</h1>
+<p style="padding-left: 30px;">This library is simple to use and produces clean results with minimal configuration. I present several basic examples that show the API in use and the results obtained.</p>
+<hr />
+<h2>Example: Basic Line Graph</h2>
+<p style="padding-left: 30px;">Line plots of time series data are probably the most important feature any graphing API targeted for micro-controllers can offer. This code creates such a plot. It demonstrates the use of multiple line styles.</p>
+<pre class="height-set:true height:800 lang:c++ decode:true">//main
+GNUPlotLineGraph gnuLinePlotter(&amp;Serial);
+PlotDampenedSineWaves(gnuLinePlotter);
+
+//method
+void PlotDampenedSineWaves(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Dampened Sine Wave"));
+	plot.setXAxisName(F("Time (Sec)"));
+	plot.setYAxisName(F("Voltage (V)"));
+
+	//setup series
+	plot.setSeriesName(0, F("Slow decay"));
+	plot.getLineApperance(0)-&gt;setLineStyle(LineStyles::SolidLine);
+	plot.getLineApperance(0)-&gt;setLineWidth(4);
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeBlues::Blue1);
+
+
+	plot.setSeriesName(1, F("Medium decay"));
+	plot.getLineApperance(1)-&gt;setLineStyle(LineStyles::DashedLine);
+	plot.getLineApperance(1)-&gt;setLineWidth(3);
+	plot.getLineApperance(1)-&gt;setRGB(GraphColorsSchemeBlues::Blue2);
+
+	plot.setSeriesName(2, F("Quick decay"));
+	plot.getLineApperance(2)-&gt;setLineStyle(LineStyles::DotedLine);
+	plot.getLineApperance(2)-&gt;setLineWidth(2);
+	plot.getLineApperance(2)-&gt;setRGB(GraphColorsSchemeBlues::Blue3);
+	
+        //plot graph
+	for(int i=0; i&lt;=720; i+=3)
+	{
+		float c = cos(DEG_TO_RAD*(float)i); 
+		float y1 = Dampen(i, c, 1, 1.0/360.0); 
+		float y2 = Dampen(i, c, 1, 1.0/240.0); 
+		float y3 = Dampen(i, c, 1, 1.0/180.0); 
+
+		plot.plotDatumXYn(i, y1, y2, y3);
+	}
+	plot.finishGraph();
+}
+
+</pre>
+<p><a href="/wp-content/uploads/2015/12/Damped-Sine-Wave.png" rel="attachment wp-att-757"><img loading="lazy" class="size-full wp-image-757 aligncenter" src="/wp-content/uploads/2015/12/Damped-Sine-Wave.png" alt="Damped Sine Wave" width="800" height="600" srcset="/wp-content/uploads/2015/12/Damped-Sine-Wave.png 800w, /wp-content/uploads/2015/12/Damped-Sine-Wave-300x225.png 300w, /wp-content/uploads/2015/12/Damped-Sine-Wave-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p>&nbsp;</p>
+<hr />
+<h2>Example: Plotting Points (Scatter Plot)</h2>
+<p style="padding-left: 30px;">A scatter plots, with styles colours and trimmings.</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotPointGraph gnuPointPlotter(&amp;Serial);
+PlotPointNoise(gnuPointPlotter);
+
+//method
+void PlotPointNoise(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Sine Waves with Noise"));
+	plot.setXAxisName(F("Time (Sec)"));
+	plot.setYAxisName(F("Voltage (V)"));
+	plot.setShowGrid(true);
+
+	//setup series
+	plot.setSeriesName(0, F("Pin 1"));
+	plot.getLineApperance(0)-&gt;setMarkerStyle(LineMarkers::SquareMarker);
+	plot.getLineApperance(0)-&gt;setRGB(0xff0000);
+
+	plot.setSeriesName(1, F("Pin 2"));
+	plot.getLineApperance(1)-&gt;setMarkerStyle(LineMarkers::CrossMarker);
+	plot.getLineApperance(1)-&gt;setRGB(0x00ff00);
+
+	plot.setSeriesName(2, F("Pin 3"));
+	plot.getLineApperance(2)-&gt;setMarkerStyle(LineMarkers::CircleMarker);
+	plot.getLineApperance(2)-&gt;setRGB(0x0000ff);
+	
+        //plot graph
+	for(int i=0; i&lt;=720; i+=5)
+	{
+		float c = cos(DEG_TO_RAD*(float)i); 
+		float y1 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/240.0); 
+		float y2 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/180.0)-2; 
+		float y3 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/90.0)-4; 
+
+		plot.plotDatumXYn(i, y1, y2, y3);
+	}
+	plot.finishGraph();
+}
+
+</pre>
+<p><a href="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png" rel="attachment wp-att-755"><img loading="lazy" class="size-full wp-image-755 aligncenter" src="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png" alt="Sine Wave with Noise" width="800" height="600" srcset="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png 800w, /wp-content/uploads/2015/12/Sine-Wave-with-Noise-300x225.png 300w, /wp-content/uploads/2015/12/Sine-Wave-with-Noise-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p>&nbsp;</p>
+<hr />
+<h2>Example: Plotting Arbitrary Lines</h2>
+<p style="padding-left: 30px;">Sometimes your not using time series data, and need to plot lines between arbitrary x/y positions. Many solutions for the arduino breakdown at this point. Here I demonstrate such a plot (based on the logarithmic spiral). Note I am using lines with point markers to show the actual points plotted.</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotLineGraph gnuLinePlotter(&amp;Serial);
+PlotLogarithmicSpiral(gnuLinePlotter);
+
+//method
+void PlotLogarithmicSpiral(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Logarithmic Spiral"));
+
+	//setup series
+	plot.setSeriesName(0, F("Spiral"));
+	plot.getLineApperance(0)-&gt;setLineWidth(2);
+	plot.getLineApperance(0)-&gt;setMarkerStyle(LineMarkers::SolidCircleMarker);
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeSpectral::Spectral7);
+		
+	//plot graph
+	float a = 1;
+	float b = 0.1759;
+	for(int i=0; i&lt;(int)(10.0*20.0*M_PI); i+=5)
+	{
+		float t = ((float)i) * 0.1;
+		float rt = a*pow(M_E, b* t);
+		float x = rt*cos(t);
+		float y = rt*sin(t);
+
+		plot.plotDatumXY(x, y);
+	}
+
+	plot.finishGraph();
+}</pre>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/12/Logarithmic-Spiral.png" rel="attachment wp-att-761"><img loading="lazy" class="size-full wp-image-761 aligncenter" src="/wp-content/uploads/2015/12/Logarithmic-Spiral.png" alt="Logarithmic Spiral" width="800" height="600" srcset="/wp-content/uploads/2015/12/Logarithmic-Spiral.png 800w, /wp-content/uploads/2015/12/Logarithmic-Spiral-300x225.png 300w, /wp-content/uploads/2015/12/Logarithmic-Spiral-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<hr />
+<h2>Example: Multi Column Bar Graph.</h2>
+<p style="padding-left: 30px;">Bar graphs, for histograms and such are easy in this API. The example below shows support for multi column graphs, Note: negative values are also supported. The labels for the X-Axis are plotted as standard x values (the plot command is template driven and can support many different types of data).</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotBarGraph gnuBarPlotter(&amp;Serial);
+PlotSampleBarGraph(gnuBarPlotter);
+
+//method
+void PlotSampleBarGraph(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Google Results for Instruments"));
+	plot.setXAxisName(F("Instrument"));
+	plot.setYAxisName(F("# Google Results (millions)"));
+	plot.setShowGrid(true);
+
+	//setup series
+	plot.setSeriesName(0, F("play"));
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeOranges::Orange1);
+	plot.setSeriesName(1, F("teach"));
+	plot.getLineApperance(1)-&gt;setRGB(GraphColorsSchemeBlues::Blue1);
+	plot.setSeriesName(2, F("like"));
+	plot.getLineApperance(2)-&gt;setRGB(GraphColorsSchemeGreens::Green1);
+	plot.setSeriesName(3, F("hate"));
+	plot.getLineApperance(3)-&gt;setRGB(GraphColorsSchemeReds::Red1);
+
+	//plot graph
+	//Dataset compiled by Google-ing "I X the Y"
+	//                instrument	play	teach	like	hate
+	plot.plotDatumXYn("Piano",		173,	25,		211,	21);
+	plot.plotDatumXYn("Guitar",		163,	22,		193,	27);
+	plot.plotDatumXYn("Violin",     41,		2,		43,		1);
+	plot.plotDatumXYn("Drums",		30,		8,		83,		9);
+	
+	plot.finishGraph();
+}</pre>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png" rel="attachment wp-att-762"><img loading="lazy" class="size-full wp-image-762 aligncenter" src="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png" alt="Google Results for Instruments" width="800" height="600" srcset="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png 800w, /wp-content/uploads/2015/12/Google-Results-for-Instruments-300x225.png 300w, /wp-content/uploads/2015/12/Google-Results-for-Instruments-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<h1>Installation</h1>
+<p>&nbsp;</p>
+<ol>
+<li>Get the library from its <a href="https://github.com/busyDuckman/WDArduinoLib" target="_blank" rel="noopener">github repository</a>.</li>
+<li>See the official guide on how to install libraries <a href="https://www.arduino.cc/en/Guide/Libraries" target="_blank" rel="noopener">https://www.arduino.cc/en/Guide/Libraries</a></li>
+<li>Run the provided example sketch</li>
+<li>Install GNUPlot v5.0 or later (<a href="http://www.gnuplot.info/download.html" target="_blank" rel="noopener">here</a>).</li>
+<li>Using the com port viewer, copy the output of sketch into GNUPlot.</li>
+<li>Enjoy!</li>
+</ol>
+<p>It is very possible to get the output generated by this library to GNUPlot automatically. How you achieve this is up to you.</p>
+<p>It is possible to direct the output to a SD card. See the arduino help page on the <a href="https://www.arduino.cc/en/Tutorial/Files" target="_blank" rel="noopener">file class</a>, to create you own file on a SD card. Then pass the open file object in to the constructor for your plotting class (where I used Serial in the examples).</p>
+<h1></h1>
+<h1>Documentation</h1>
+<p style="padding-left: 30px;">Full documentation available <a href="http://www.busyducks.com/downloads/doco/WDArduinoLib/index.html" target="_blank" rel="noopener">here</a>.</p>
+<p>&nbsp;</p>
+<h1>License</h1>
+<p style="padding-left: 30px;">GNU 2.0</p>
+<h1>State</h1>
+<p>Most Features are well tested, but I don&#8217;t warrant or accept liability for any of the functionality in any way.</p>
+<p>NB: some dynamic memory usage , refrain from using malloc during plotting operations to prevent possible heap fragmentation.</p>
+<ul>
+<li>Dynamic memory usage is a design decision I made weighing pro&#8217;s and con&#8217;s of the situation.</li>
+<li>Given &#8216;typical usage&#8217; scenarios of the API it should not cause heap fragmentation.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Road-Map</h1>
+<p>May happen:</p>
+<ul>
+<li>Second x/y axis support</li>
+<li>Matlab support</li>
+<li>3d plots</li>
+<li>Spectrogram</li>
+<li>Support for cloud based rendering for graphs</li>
+<li>Sage support</li>
+<li>Thousands separator (right now I could not deploy it because of a bug in the windows version of GNUPlot).</li>
+</ul>
+<p>Won&#8217;t Happen:</p>
+<ul>
+<li>Real-time visualisation (plenty of other projects to do that already)</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

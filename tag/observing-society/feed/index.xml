@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Observing society &#8211; Busy Ducks</title>
+	<atom:link href="/tag/observing-society/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Wed, 19 Aug 2015 18:52:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Observing society &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>When a picture is worth 1000 semilegible words.</title>
+		<link>/when-a-picture-is-worth-1000-semilegible-words/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 19 Aug 2015 18:52:52 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Humor]]></category>
+		<category><![CDATA[Meme]]></category>
+		<category><![CDATA[Observing society]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=537</guid>
+
+					<description><![CDATA[(click for full size) &#160; &#160; All these uni adverts with different reasons you should attend them. None say &#8220;Hey south paws, you can actually take notes if you enrol with us&#8221;.]]></description>
+										<content:encoded><![CDATA[<p>(click for full size)<br />
+&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/08/uni_diversity_small2.jpg" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-629" src="/wp-content/uploads/2015/08/uni_diversity_small2-234x300.jpg" alt="uni_diversity_small2" width="500" height="642" srcset="/wp-content/uploads/2015/08/uni_diversity_small2-234x300.jpg 234w, /wp-content/uploads/2015/08/uni_diversity_small2-798x1024.jpg 798w, /wp-content/uploads/2015/08/uni_diversity_small2-768x986.jpg 768w, /wp-content/uploads/2015/08/uni_diversity_small2.jpg 800w" sizes="(max-width: 500px) 100vw, 500px" /></a></p>
+<p>&nbsp;</p>
+<p>All these uni adverts with different reasons you should attend them.<br />
+None say &#8220;Hey south paws, you can actually take notes if you enrol with us&#8221;.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>10 simple things search engines could do to save my sanity</title>
+		<link>/10-simple-things-search-engines-could-do-to-save-my-sanity/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 30 Jul 2015 04:40:42 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Design]]></category>
+		<category><![CDATA[HCI]]></category>
+		<category><![CDATA[List_of]]></category>
+		<category><![CDATA[Observing society]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=524</guid>
+
+					<description><![CDATA[I have felt for a while that web searching is still an awkward thing from a Human Computer Interaction point of view. So I made a wish list of simple improvements that would literally turn my world upside-down.]]></description>
+										<content:encoded><![CDATA[<h3>Introduction</h3>
+<p>I have felt for a while that web searching is still an awkward thing from a Human Computer Interaction point of view. So I made this wish list of simple improvements that would turn my world upside-down.</p>
+<h3>10 simple things search engines could do to save my sanity.</h3>
+<ol>
+<li>NOT display a 10 item &#8220;first page&#8221;, just keep results coming as I scroll down.</li>
+<li>Let me filter results by subject. (ie. shopping, info, blog, pop-culture, education, forums)</li>
+<li>Display Icons next to the search result that tell me what I am in for:
+<ul>
+<li>A sound icon if the site auto-plays music / video.</li>
+<li>Flash/java/etc icons if the website uses such</li>
+<li>Warn me about pop-ups, &#8220;intro banners&#8221; and exit prompts.</li>
+<li>NSFW Icon</li>
+<li>Does not support my browser/device icon.</li>
+<li>Valid security certificate icon.</li>
+<li>Something to indicate if most people left the site within 10 seconds of it loading.</li>
+</ul>
+</li>
+<li>Often the 2 sentences from the page shown below the result is just not enough. Give me a &#8220;more&#8221; link that expands a results preview to a couple of paragraphs.
+<ul>
+<li>If lots of people expand a particular pages preview, then just automatically do that for me.</li>
+</ul>
+</li>
+<li>Let me blacklist a domain from all my future web-searches. (Eg If I don&#8217;t like pintrist, let me remove it from my search results permanently).
+<ul>
+<li>If a lot of other people have blacklisted a domain, give me a warning icon.</li>
+</ul>
+</li>
+<li>Be like <a href="https://www.virustotal.com/">virustotal.com</a> and let me query how the site fairs against assorted virus checks.</li>
+<li>Don&#8217;t make me type in the address bar. Ending up at www,paint.net if I search &#8220;paint.net&#8221; is stupid. The whole thing is awkward and reaks of being overly dumbed-down.</li>
+<li>Bundle multiple results from the same domain into an expandable result. Eg &#8220;[+] 50 results for rubberducks in ebay.com&#8221;</li>
+<li>If the webpage is largely plagiarised&#8230; tell me and provide links to original sites(s) under the link.</li>
+<li>If other web pages address the page or website I am about to visit, let me expand a section to see what people are saying.</li>
+</ol>
+<p>&nbsp;</p>
+<h3>Conclusion</h3>
+<p>Web searching still remains very much the same as its was in the mid 90&#8217;s.</p>
+<p>The list I have created draws out certain underlying problems that were never addressed.</p>
+<ul>
+<li>When I follow a result to a new website, I just don&#8217;t know &#8220;what is behind the door&#8221;. I have to click an hope for the best. It&#8217;s 2015 and that this is still a problem seems odd.</li>
+<li>I lack control over what comes up in my results. SEO tactics dominate what I see, and my &#8220;intent&#8221; is often ignored.</li>
+<li>Websites exist in a context. They reference, each other and elaborate on each others information. We need to encapsulate this.</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Are doctors really over-prescribing antibiotics &#038; creating super-bugs that will kill us all?</title>
+		<link>/are-doctors-really-over-prescribing-antibiotics-creating-super-bugs-that-will-kill-us-all/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 11 Mar 2015 04:51:31 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Bullshit]]></category>
+		<category><![CDATA[Medical]]></category>
+		<category><![CDATA[medicine]]></category>
+		<category><![CDATA[Observing society]]></category>
+		<category><![CDATA[Skepticism]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=126</guid>
+
+					<description><![CDATA["Antibiotics are over prescribed by doctors and that's creating super-bugs that will kill us all".
+I know many of my friends will hate me for this, but I'm calling bullshit. 
+Here is the story of how I recently changed my stance on the issue.]]></description>
+										<content:encoded><![CDATA[<p>Yet another media headline..<span style="text-decoration: underline;"><br />
+</span>&#8220;Antibiotics are over prescribed by doctors and that&#8217;s creating super-bugs that will kill us all&#8221;.</p>
+<p>I know many of my friends will hate me for this, but I&#8217;m calling bullshit.<br />
+Here is the story of how I recently changed my stance on the issue.</p>
+<p>Ok so every media outlet publishes several stories a year about how we are creating &#8216;superbugs&#8217; that are multi-drug resistant because, apparently, doctors are prescribing antibiotics un-necessarily. So my inner skeptic said to me &#8220;wait doctors are responsible, and medicine is one of the most regulated industries in the world; and most things to the contrary are some form of anti-vaccine/anti pharmaceutical quackery&#8221;. How could it be that the medical industry would put all of us at risk because they like to prescribe antibiotics (for some reason). I have rarely ever been given antibiotics; and even then it was a tentative thing because antibiotics have lots of nasty side effects. I never met a doctor who was like &#8220;hey you gota try these antibiotics man!&#8221;</p>
+<p>Surely Wikipedia will give me lots of information on this subject, it is a major problem that will affect everyone when the super-bugs come to kill us all. <a href="http://en.wikipedia.org/wiki/Antibiotic_misuse" target="_blank" rel="noopener">http://en.wikipedia.org/wiki/Antibiotic_misuse</a> &#8212; Well 4 short paragraphs does not help much at all. Ok, so I read 20 odd articles; they made vague claims, blamed doctors for everything. Some blamed GP&#8217;s exclusively and others said the blame was with hospital doctors. No articles gave their sources of information, often saying &#8220;authorities say&#8221;. But not telling me which authority. Many facts quoted in the articles evolved like a bad game of Chinese whispers. For example &#8220;USA total antibiotic prescription averaged out would be four treatments per five people&#8221; became &#8220;USA gives anitbiotcs to four out of every five people&#8221;.</p>
+<p>So, I did a quick google scholar search, surely there must be a big study, covering tens of thousands of cases of these super bugs and clearly showing that these bugs were more common in areas where doctors were: A) more prevalent. B) where doctors favoured antibiotic treatment more. &#8211; Ok so no, that didn&#8217;t exist (or at least I cant find it). So lets look at the world health authority webpage; they never suck at telling it like it is. Hmm turns out &#8220;antibiotic overperscirption&#8221; is not a topic they list on their &#8216;big fucking list of everything that affects our health&#8217; (<a href="http://www.who.int/topics/en/" target="_blank" rel="noopener">here</a>)   &#8211; Oh my god, how could they miss it; its like in every fucking newspaper!</p>
+<p>The world health authority does talk about <em>&#8220;<span style="text-decoration: underline;">antimicrobials resistance&#8221;</span></em> however. And shit, it is like a mega big problem! And these super bug outbreaks are real and could have an impact on our lives if we don&#8217;t do something. Heck, our best scientists and medical researchers got together to figure out what to do and created a list of 68 prioritized recommendations to fix the issue. Phew was I relived. Its all under control. I&#8217;ll open up this document and see the big print telling doctors to quit over-prescribing antibiotics as like the first point on the prioritized recommendations to fix the issue.</p>
+<p>And yes there it is:    #1: &#8220;Educate patients and the general community on the appropriate use of antimicrobials&#8221;</p>
+<p>Wait, what?&#8230;. I thought it was evil fucking uneducated doctors causing the problem, not us. I mean I read all the magazines and watch the news. Seriously they tell me its the doctors to blame.</p>
+<p>Well, I could refute this report, and thus stay popular with all my other intellectual friends&#8230; But heck; I&#8217;m sure to piss them all off for some other reason anyway. So, If my radical notions against commonly accepted facts are enticing you to read more about the global strategies against &#8220;antimicrobial resistance&#8221;; namely:</p>
+<ul>
+<li> reducing the disease burden and the spread of infection</li>
+<li> improving access to appropriate antimicrobials</li>
+<li> improving use of antimicrobials</li>
+<li> strengthening health systems and their surveillance capabilities</li>
+<li> enforcing regulations and legislation</li>
+<li> encouraging the development of appropriate new drugs and vaccines</li>
+</ul>
+<p>Then I suggest reading this:<br />
+<a href="http://www.who.int/drugresi…/WHO_Global_Strategy_English.pdf" target="_blank" rel="noopener">http://www.who.int/drugresi…/WHO_Global_Strategy_English.pdf</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>43 email sign-offs, and what they really mean to an Australian.</title>
+		<link>/43-email-sign-offs-and-what-they-really-mean-to-an-australian/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 10 Mar 2015 06:23:57 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Bad humor]]></category>
+		<category><![CDATA[e-mail]]></category>
+		<category><![CDATA[Humor]]></category>
+		<category><![CDATA[Humour]]></category>
+		<category><![CDATA[Neuroticism]]></category>
+		<category><![CDATA[Observing society]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=115</guid>
+
+					<description><![CDATA[A list of what people are really saying when they sign of an e-mail.]]></description>
+										<content:encoded><![CDATA[<p>A list of what people are really saying when they sign off an e-mail.<br />
+<strong><br />
+</strong></p>
+<p>Sign-offs used formally in the first messages sent between two parties.</p>
+<ul>
+<li><strong>Yours sincerely</strong>, this is our &#8216;first formal email&#8217;.  BTW: If this is <span style="text-decoration: underline;">not</span> our first formal email, things are not progressing well.</li>
+<li><strong>Best regards,</strong> I liked your &#8216;first formal email&#8217;, lets use &#8220;Cheers,&#8221; from now on.</li>
+<li><strong>Regards,</strong> I disliked your &#8216;first formal email&#8217;.</li>
+</ul>
+<p>Common sign-offs.</p>
+<ul>
+<li><strong>Sincerely,   </strong>This message started with &#8220;Dear [insert name here]&#8221;.</li>
+<li><strong>Sincerely yours,</strong>  I like to read flowery romance novels.</li>
+<li><strong>-[My Name], </strong>Your on my shit list</li>
+<li><strong>-[My initials], </strong>So many emails have gone back and forth its more like a chat, so I am dropping the sign off.</li>
+</ul>
+<ul>
+<li><strong>Cheers,  </strong>Standard casual and friendly sign off. your not on my shit list.</li>
+<li><strong>Cheers!,</strong> I&#8217;m an American, but trying not to act like it.</li>
+<li><strong>Hope this helps,</strong> I just solved your problem, big time!</li>
+</ul>
+<p>When people actually still use &#8216;yours&#8217;</p>
+<ul>
+<li><strong>Yours,</strong> Hint, hint&#8230;</li>
+<li><strong>Yours truly,</strong> Can I please be your pen-pal?</li>
+</ul>
+<p>Politely worded insults.</p>
+<ul>
+<li><strong>Awaiting your response, </strong>Had enough of your bullshit, This email conversation is being recorded.</li>
+<li><strong>I am, Sir, your most humble and obedient servant,</strong>  You can totally get fucked, I got a new job lined up.</li>
+<li><strong>I beg to remain, Sir, your most humble and obedient servant</strong> Oops, the other job I had lined up didn&#8217;t work out.</li>
+<li><strong>Take care,</strong> &#8230;as I expect to not hear from you for a while.</li>
+</ul>
+<p>Romantic undertones?</p>
+<ul>
+<li><strong>Warm regards,</strong> by the way, are you single?</li>
+<li><strong>Warmest regards,</strong> I&#8217;m a bit creepy..</li>
+</ul>
+<p>Business speak.</p>
+<ul>
+<li><strong>Looking forward to meeting you,</strong>  your resume was very good.</li>
+<li><strong>Looking forward to our next meeting,</strong>  That last meeting didn&#8217;t suck.</li>
+</ul>
+<p>Messages of thanks.</p>
+<ul>
+<li><strong>Thanks, </strong>The author hands out a lot of tasks.</li>
+<li><strong>Thanks!  </strong>The author hands out a lot of tasks, and is a bit of jerk.</li>
+<li><strong>THANKS!!!</strong>  The appreciative author is not accustomed to giving praise.</li>
+<li><strong>Thanks-you so much,</strong> Author is genuinely appreciative.</li>
+<li><strong>Many thanks,</strong> I&#8217;m a genuinely appreciative person, who works in finance.</li>
+<li><strong>10q.</strong> Appreciative maths geek.. [say &#8220;10q&#8221; out loud]</li>
+<li><strong>Tanks very much,</strong>  When you have a second, I also need help with the spelling auto-correct.</li>
+<li><strong>THX,</strong> Appreciative person who answers emails via their cell phone.</li>
+</ul>
+<p>Affectionate.</p>
+<ul>
+<li><strong>Best wishes,</strong> This e-mail was in lieu of a greeting card.</li>
+<li><strong>Love, </strong>If you don&#8217;t also rely with &#8216;Love&#8217;, its probably going to get a bit awkward.</li>
+<li><strong>TTFN,</strong> Author is not yet sick of the response &#8216;What does TTFN mean?&#8217;.</li>
+<li><strong>XOXO,</strong> Author is a teenager&#8230; or a cougar.</li>
+<li><strong>Keep in touch, </strong>Further correspondence is your responsibility.</li>
+</ul>
+<p>Auto Generated..</p>
+<ul>
+<li><strong>Sent from my iPhone,  </strong>Typos never looked so cool.</li>
+<li><strong>Please consider the environment before printing this e-mail. </strong>Seriously dude its 2015, and I&#8217;m sick of you printing out my emails.</li>
+</ul>
+<p>Unusual, but refusing to die.</p>
+<ul>
+<li><strong>Sounds awesome,</strong> Let me rap with you, younger person.</li>
+<li><strong>Ciao!</strong>  I&#8217;m an American, but trying not to act like it (see Cheers!).</li>
+<li><strong>Adiós muchachos!,</strong> (I&#8217;m an American, but trying not to act like it (see Cheers!).</li>
+<li><strong>See you in Church,  </strong>Yay we are in the same club.</li>
+<li><strong>God Bless, </strong>  Because invoking the Lords blessing is not uncomfortable in a business setting at all.</li>
+<li><strong>No probs, </strong>Relax, I got this.<strong><br />
+</strong></li>
+</ul>
+<p>Misc,</p>
+<ul>
+<li><strong>Hasta la vista baby</strong>, This was either the coolest or dorkiest e-mail ever!</li>
+</ul>
+<p>and finally&#8230;.</p>
+<ul>
+<li><strong>This email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this e-mail by mistake you must notify the sender immediately and delete this e-mail from your system. Be advised that any unauthorised use, dissemination, forwarding, printing or copying of this information is strictly prohibited.  &#8211; </strong>See how my company lawyer likes to say these things; just like you (or the courts) would give a shit. Please don&#8217;t take the fact that this e-mail closes with threats of legal action personally.<strong><br />
+</strong></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

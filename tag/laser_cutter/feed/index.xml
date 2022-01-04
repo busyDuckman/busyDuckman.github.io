@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Laser_Cutter &#8211; Busy Ducks</title>
+	<atom:link href="/tag/laser_cutter/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Fri, 26 Jan 2018 04:12:23 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Laser_Cutter &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>What is the difference between a laser that will cut metals and one that won&#8217;t?</title>
+		<link>/what-is-the-difference-between-a-laser-that-will-cut-metals-and-one-that-wont/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Fri, 26 Jan 2018 04:12:23 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Laser_Cutter]]></category>
+		<category><![CDATA[Manufacturing]]></category>
+		<category><![CDATA[Metal-work]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=905</guid>
+
+					<description><![CDATA[A friend who recently acquired a CO2 laser cutter for his school recently sent me a message. "What is the difference between a laser that will cut metals and one that won't?". I thought this is a good question, as the answer will help with understanding how to work with many materials.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p>A friend who recently acquired a CO2 laser cutter for his school sent me a message. &#8220;What is the difference between a laser that will cut metals and one that won&#8217;t?&#8221;. I thought this is a good question, as the answer will help with understanding how to work with many materials.</p>
+<p>But before the answer will make sense, we need to revisit the basics of how a laser cutter works in more detail.</p>
+<figure id="attachment_906" aria-describedby="caption-attachment-906" style="width: 300px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o.jpg"><img loading="lazy" class="wp-image-906 size-medium" src="/wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-300x242.jpg" alt="" width="300" height="242" srcset="/wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-300x242.jpg 300w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-1024x827.jpg 1024w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-768x620.jpg 768w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-1536x1240.jpg 1536w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-1568x1266.jpg 1568w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o.jpg 1624w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-906" class="wp-caption-text">Nick Bannon (left) and Myself (right) [amongst others not pictured], setting up the laser cutting area at the Perth Aritifactoty &#8211; 2013.</figcaption></figure>
+<p>&nbsp;</p>
+<h1>How the laser cutter works: 101</h1>
+<p>The common C02 laser cutter can be thought of as &#8220;thick&#8221; beam of IR light that moves out of a laser tube, bounces of mirrors until to get to the head. In the head it passes through a lens that focuses the beam, such that it is strong enough to ablate certain material though heat. A jet of air clears debris, and if upgraded from the piddly inbuilt compressor, will minimise scorching on materials like wood. The fact the beam is wide means that it can be bounced around off mirrors wit out imparting too much energy to one spot, such that it burns though a mirror, or the lens.</p>
+<p>&nbsp;</p>
+<h1>How the laser cutter works: 102</h1>
+<figure id="attachment_907" aria-describedby="caption-attachment-907" style="width: 229px" class="wp-caption alignright"><a href="/wp-content/uploads/2018/01/laser-cutter.jpg"><img loading="lazy" class="wp-image-907 size-medium" src="/wp-content/uploads/2018/01/laser-cutter-229x300.jpg" alt="Laser cutter beam focus" width="229" height="300" srcset="/wp-content/uploads/2018/01/laser-cutter-229x300.jpg 229w, /wp-content/uploads/2018/01/laser-cutter-780x1024.jpg 780w, /wp-content/uploads/2018/01/laser-cutter-768x1008.jpg 768w, /wp-content/uploads/2018/01/laser-cutter-1170x1536.jpg 1170w, /wp-content/uploads/2018/01/laser-cutter-1561x2048.jpg 1561w, /wp-content/uploads/2018/01/laser-cutter-1568x2058.jpg 1568w, /wp-content/uploads/2018/01/laser-cutter-scaled.jpg 1951w" sizes="(max-width: 229px) 100vw, 229px" /></a><figcaption id="caption-attachment-907" class="wp-caption-text">A CO2 laser produces an Infra red beam that is more intense in the centre. The beam is focused through a quartz lens.</figcaption></figure>
+<p>Now think of a laser cut in slow motion and zoomed in massively.  The laser hits a material. The focal point is probably beneath the surface and the beam is still a bit wide (less hot).</p>
+<p>The area at the surface vaporises and a little pilot hole forms. This hole is like the first domino, the material near it is now deformed. This deformed material (sub millimetre area) is like the plastic left in the sun, less robust and more sensitive to light. The cut now picks up momentum and deepens as a “pool of vaporising material eating into the ground”. The air stream is ejecting loose material and anything &#8216;molten&#8217; that was not instantly vaporised.</p>
+<p>The ability to cut well is a balance of many factors, primarily the right laser strength, air flow and movement speed &#8211; for a given material at a certain thickness.</p>
+<p>Relevant to later discussions with metal, is getting a good movement speed.</p>
+<ul>
+<li>Slow enough that the pit will work all the way through, before the beam moves on.</li>
+<li>Fast enough that the material is not given too much heat (see diagram to right, not all the beam is vaporising goodness and its not all equal in strengths.
+<ul>
+<li>From the parts of the beam not near the focal point that are not hot enough .</li>
+<li>From outer areas of the beam not as intense</li>
+</ul>
+</li>
+<li>Different lenses will help with thicker materials, butt you first limitation is you will need more power for thicker materials. Otherwise you will need to move at a slow speed that brings many other problems of heat dissipation.</li>
+</ul>
+<p>Reading the above may lead you to think you will need to get the most powerful laser cutter you can afford, for those times when you want to do a thick material. But&#8230; power is a two edged sword. The laser will only fire at a minimum of say 40%. So your 120W laser that will get you through 20mm acrylic, won’t be any good for etching designs on clothing (it will punch straight through at it minimum of 48W).</p>
+<h1>Problems that will affect metal</h1>
+<ul>
+<li>Many metals are reflective of IR beams (C02 lasers), preventing even etching of the surface.
+<ul>
+<li>NB: other lasers, such as solid state lasers which work with a different wavelength will be several times more efficient than C02 lasers for most metals.</li>
+</ul>
+</li>
+<li>Metal is a heat sink, it will draw heat away from the cut. Preventing the laser beam from melting any of the metal, or forming the initial pit.</li>
+<li>Many metals are not cool/safe in gaseous form. You may need venting.</li>
+</ul>
+<h2>Etching metal</h2>
+<p>Your enemy for etching, is not the heat conductivity of the metal, it’s the fact it reflects.<br />
+On cutters around your size it is often possible to etch certain metal. You will need to paint the surface with something (there are products that are sold for this purpose, but some people just use black $3 fiddly bit paint from buntings). The pit will form in the paint and you will get sufficient heat in to mark the metal. But then go no further down.</p>
+<p>&nbsp;</p>
+<h2>Cutting metal</h2>
+<p>Generally laser cut metal is not ablated/vaporised (turned to gas) like other materials. It is instead it is melted (turned to liquid), and blown out of the way by forced airflow. This is sometimes referred to as ‘melt and blow’ cutting. It is messy and provides issues that can damage a machine:</p>
+<ul>
+<li>Bits of molten metal can settle on the lens, this will absorb heat that the lens would otherwise transmit. The lens will now heat up and be damaged / burnt though.</li>
+<li>The metal / molten metal can reflect focused beam of light back at the lens. This can damage the lens, because the amount of IR radiation passing though it is now double.
+<ul>
+<li>The focused light can even propagate back along the mirrors and into the laser tube (damaging the very expensive parts of the machine).</li>
+</ul>
+</li>
+</ul>
+<p>Its worth mentioning that metal needs a lot more power to get the piloting pit going. And the pit is not a nice vaporised area with laser friendly material next to it. It’s a stubborn pool of liquid that sits in the way of your laser. This means cutting requires bigger lasers, or one or more assisting technologies to reduce the necessitated “bigness” of your laser.</p>
+<p>Such assisting technologies, for CO2 lasers, may include.</p>
+<ul>
+<li>High pressure gas, to blow the molten metal out of the hole.</li>
+<li>Blowing Oxygen or Nitrogen into the cut to make things more efficient.</li>
+<li>Using a more focused beam to get the metal to melt before heat dissipation sets in.</li>
+<li>A lens that moves, so that the focal point travels with your pit as it goes down.</li>
+</ul>
+<h1>As some lasers can be coerced into cutting metal, why is it not more common?</h1>
+<p>Firstly, the risk to the machine means many operators don&#8217;t feel it is worth it.</p>
+<p>But there are other issues:</p>
+<ul>
+<li>Solid state lasers are becoming more popular for cutting metal over the use of a large C02 Laser.</li>
+<li>The cut speed of lasers on metal can be slow, and the depth of cut limited.</li>
+<li>Tuning air/ laser/ lens /speed parameters is more difficult, and the results are not always a clean cut for inexperienced operators.</li>
+</ul>
+<p>But more importantly there are many <span style="text-decoration: underline;">more attractive  alternatives</span> for cutting of metal, including water jet cutting and CNC milling.</p>
+<p>&nbsp;</p>
+<h1>Further reading:</h1>
+<p>For clarity I simplified and glossed over some less important concepts in the above explanation.</p>
+<p>The following industry articles explore things in more depth:</p>
+<ul>
+<li>Laser comparison – cutting speed and rate of feed. <a href="http://jmtusa.com/laser-comparison-cutting-speed-and-rate-of-feed/">http://jmtusa.com/laser-comparison-cutting-speed-and-rate-of-feed/</a></li>
+<li>Lasing reflective metals <a href="http://www.fsmdirect.com/cutting/laser-cutting/326-lasing-reflective-metals">http://www.fsmdirect.com/cutting/laser-cutting/326-lasing-reflective-metals</a></li>
+<li>Back to basics: The subtle science of burr-free laser cutting. <a href="https://www.thefabricator.com/article/lasercutting/back-to-basics-the-subtle-science-of-burr-free-laser-cutting">https://www.thefabricator.com/article/lasercutting/back-to-basics-the-subtle-science-of-burr-free-laser-cutting</a></li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Making a Train Set: Part 1 &#8211; Design and Woodwork.</title>
+		<link>/making-a-train-set/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 03 Aug 2017 21:45:22 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[CAD]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Laser_Cutter]]></category>
+		<category><![CDATA[Trains]]></category>
+		<category><![CDATA[Woodwork]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=862</guid>
+
+					<description><![CDATA[Recently I have been building a train set, I will blog the progress, in six parts, highlighting how I get certain things done.]]></description>
+										<content:encoded><![CDATA[<h1>Overview</h1>
+<p>Recently I have been building a train set, I will blog the progress, in six parts, highlighting how I get certain things done.</p>
+<ul>
+<li><strong>Part 1 &#8211; Design and Woodwork</strong></li>
+<li>Part 2 &#8211; Electrical design.</li>
+<li>Part 3 &#8211; Mechanical servicing</li>
+<li>Part 4 &#8211; Construction</li>
+<li>Part 5 &#8211; Painting of buildings and natural elements.</li>
+<li>Part 6 &#8211; Embedded computing and setup of DCC controllers.</li>
+</ul>
+<h1></h1>
+<h1>Base Setup</h1>
+<p>Firstly I am designing a track that is movable from a storage hook on a garage, to a pool table in my living. This requires a baseboard, which I constructed with three cross breams, an MDF sheet and Tasmanian oak edging.</p>
+<p>&nbsp;</p>
+<h1>Designing the layout.</h1>
+<p>I used  the Simple Computer Aided Railway Modeller (<a href="https://www.scarm.info/index.php" target="_blank" rel="noopener">SCARM</a>) to plan my layout.  A read over an old German railway construction guide gave me a lot of practical hints as to what made a good layout.</p>
+<p><a href="/wp-content/uploads/2017/08/front.png"><img loading="lazy" class="alignnone size-large wp-image-866" src="/wp-content/uploads/2017/08/front-1024x531.png" alt="" width="640" height="332" srcset="/wp-content/uploads/2017/08/front-1024x531.png 1024w, /wp-content/uploads/2017/08/front-300x156.png 300w, /wp-content/uploads/2017/08/front-768x399.png 768w, /wp-content/uploads/2017/08/front.png 1216w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p style="padding-left: 30px;">Layout as viewed from the front.</p>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2017/08/rear.png"><img loading="lazy" class="alignnone size-large wp-image-867" src="/wp-content/uploads/2017/08/rear-1024x531.png" alt="" width="640" height="332" srcset="/wp-content/uploads/2017/08/rear-1024x531.png 1024w, /wp-content/uploads/2017/08/rear-300x156.png 300w, /wp-content/uploads/2017/08/rear-768x399.png 768w, /wp-content/uploads/2017/08/rear.png 1216w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p style="padding-left: 30px;">layout as viewed from the rear.</p>
+<h1></h1>
+<h1>Setting up the levels for hills and track.</h1>
+<p>The frame work is wood and MDF. Before getting into some neat tricks, lets look at a time lapse.</p>
+<p>&nbsp;</p>
+<p><iframe loading="lazy" title="trainset" width="940" height="529" src="https://www.youtube.com/embed/mskjXSk1HVI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>Steps:</p>
+<ul>
+<li>The track plan is printed 1:1 on a standard printer using 40 pieces of paper, there is a <a href="http://www.scarm.info/blog/advanced-techniques/print-whole-layout-in-1to1-scale/">trick to doing this in SCARM</a>.</li>
+<li>The layout is placed on the board and a toy train is run over it, just to get a feel for what it will be like to interact with.</li>
+<li>Spacers are cut on a table saw, so that the MDF can be set to the correct height for the track.</li>
+<li>Contours are cut from MDF using a jigsaw and the track carver up and placed on top of the MDF.</li>
+<li>Everything is assembled, a brad gun and wood glue is a quick way to get this done. I screw down the MDF, without glue, so I can  run wires later.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Train storage Cabinet.</h1>
+<p>I built a cabinet to hold the trains and keep them dust free.</p>
+<ul>
+<li>It is build like a picture frame, but I used the table saw to create a &#8216;grove cut&#8217; on the frame.</li>
+<li>The grove allows two pieces of acrylic to slide like doors in the frame.</li>
+<li>If your not 100% on table saws, <a href="http://www.powertoolinstitute.com/pti-pages/videos/safetyvideo_3_TableSawSafety_eng-youtube.asp">this video is terrific</a>. (10:20 explains grove cuts).</li>
+<li>Using acrylic instead of glass lets me insert the doors after assembly (acrylic bends)</li>
+<li>The wood is Tasmanian oak (to match the table) and the finish is Linseed oil followed by a glossy furniture polish.
+<ul>
+<li>Frame Cutting  in Tasmanian oak is fraught with random peril. If you cut the long edges first, you can reuse failed cuts for the short edges, saving timber.</li>
+</ul>
+</li>
+</ul>
+
+<a href='/making-a-train-set/olympus-digital-camera/'><img width="940" height="705" src="/wp-content/uploads/2017/08/P1012419-1024x768.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="/wp-content/uploads/2017/08/P1012419-1024x768.jpg 1024w, /wp-content/uploads/2017/08/P1012419-300x225.jpg 300w, /wp-content/uploads/2017/08/P1012419-768x576.jpg 768w, /wp-content/uploads/2017/08/P1012419-1536x1152.jpg 1536w, /wp-content/uploads/2017/08/P1012419-2048x1536.jpg 2048w, /wp-content/uploads/2017/08/P1012419-1568x1176.jpg 1568w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href='/making-a-train-set/olympus-digital-camera-2/'><img width="940" height="705" src="/wp-content/uploads/2017/08/P1012426-1024x768.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="/wp-content/uploads/2017/08/P1012426-1024x768.jpg 1024w, /wp-content/uploads/2017/08/P1012426-300x225.jpg 300w, /wp-content/uploads/2017/08/P1012426-768x576.jpg 768w, /wp-content/uploads/2017/08/P1012426-1536x1152.jpg 1536w, /wp-content/uploads/2017/08/P1012426-2048x1536.jpg 2048w, /wp-content/uploads/2017/08/P1012426-1568x1176.jpg 1568w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href='/making-a-train-set/olympus-digital-camera-4/'><img width="940" height="705" src="/wp-content/uploads/2017/08/P1012413-1024x768.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="/wp-content/uploads/2017/08/P1012413-1024x768.jpg 1024w, /wp-content/uploads/2017/08/P1012413-300x225.jpg 300w, /wp-content/uploads/2017/08/P1012413-768x576.jpg 768w, /wp-content/uploads/2017/08/P1012413-1536x1152.jpg 1536w, /wp-content/uploads/2017/08/P1012413-2048x1536.jpg 2048w, /wp-content/uploads/2017/08/P1012413-1568x1176.jpg 1568w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href='/making-a-train-set/olympus-digital-camera-3/'><img width="940" height="705" src="/wp-content/uploads/2017/08/P1012425-1024x768.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="/wp-content/uploads/2017/08/P1012425-1024x768.jpg 1024w, /wp-content/uploads/2017/08/P1012425-300x225.jpg 300w, /wp-content/uploads/2017/08/P1012425-768x576.jpg 768w, /wp-content/uploads/2017/08/P1012425-1536x1152.jpg 1536w, /wp-content/uploads/2017/08/P1012425-2048x1536.jpg 2048w, /wp-content/uploads/2017/08/P1012425-1568x1176.jpg 1568w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>I reckon my fan guard design is pretty damn neat.  (Free Plans)</title>
+		<link>/i-reckon-my-fan-guard-design-is-pretty-damn-neat-free-plans/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 17 Aug 2015 19:13:24 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[CAD]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[DXF]]></category>
+		<category><![CDATA[Laser_Cutter]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=597</guid>
+
+					<description><![CDATA[I needed some fan guards for my arcade machine and for a neat little entertainment centre hack. Playing around I made a fish-eye honey-comb screen that looked pretty good. The pattern has larger holes near the centre of the fan and smaller holes where it counts.]]></description>
+										<content:encoded><![CDATA[<p>&nbsp;</p>
+<h3>Introduction:</h3>
+<p>I needed some fan guards for my arcade machine and for a neat little <a href="http://busyducks.com/wp_4_1/2015/08/17/cheap-and-easy-temperature-controlled-cabinate-fan/">entertainment centre hack</a>.</p>
+<p>Playing around I made a fish-eye honey-comb screen that looked pretty good. The pattern has larger holes near the centre of the fan and smaller holes where it counts.</p>
+<p><a href="/wp-content/uploads/2015/08/fan_grill.jpg"><img loading="lazy" class="alignnone size-medium wp-image-602" src="/wp-content/uploads/2015/08/fan_grill-300x266.jpg" alt="fan_grill" width="300" height="266" srcset="/wp-content/uploads/2015/08/fan_grill-300x266.jpg 300w, /wp-content/uploads/2015/08/fan_grill-768x681.jpg 768w, /wp-content/uploads/2015/08/fan_grill.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<h3>How to make your own (with plans):</h3>
+<p>Making this is pretty easy if you have a laser cutter. If you don&#8217;t grab the .dxf  file and head of to your local laser/acrylic cutting business or makerspace.</p>
+<p><a href="/wp-content/uploads/2015/08/rendered_plans.png"><img loading="lazy" class="alignnone wp-image-603 size-large" src="/wp-content/uploads/2015/08/rendered_plans-1024x507.png" alt="rendered_plans" width="640" height="317" srcset="/wp-content/uploads/2015/08/rendered_plans-1024x507.png 1024w, /wp-content/uploads/2015/08/rendered_plans-300x149.png 300w, /wp-content/uploads/2015/08/rendered_plans-768x380.png 768w, /wp-content/uploads/2015/08/rendered_plans-1536x761.png 1536w, /wp-content/uploads/2015/08/rendered_plans-1568x776.png 1568w, /wp-content/uploads/2015/08/rendered_plans.png 1969w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>The .dxf file is downloadable <a href="http://www.busyducks.com/downloads/dxf/fans_and_template.dxf" target="_blank" rel="noopener noreferrer">here</a>.<br />
+A printable .png (good for the template) is downloadable <a href="http://www.busyducks.com/downloads/dxf/fans_and_template.png" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p><strong>Q: I&#8217;m too lazy, can you sell me one?</strong></p>
+<p>Not any more (sorry).</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>How to make coloured text in acrylic with spray paint.</title>
+		<link>/paint-coloured-text-on-acrylic/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Fri, 24 Jul 2015 19:32:25 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Fonts]]></category>
+		<category><![CDATA[Laser_Cutter]]></category>
+		<category><![CDATA[Paint]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=509</guid>
+
+					<description><![CDATA[Laser engraving text on acrylic / perspex does not create a lot of contrast. This leads to the subject of painting text on the acrylic. I have developed some useful methods of achieving this that I thought I would share.]]></description>
+										<content:encoded><![CDATA[<p>&nbsp;</p>
+<h3>Introduction</h3>
+<p>Laser engraving text on acrylic / perspex does not create a lot of contrast. This leads to the subject of painting text on the acrylic. I have developed some useful methods of achieving this that I thought I would share.</p>
+<p>My techniques achieve a good hard wearing result. One of them allows for painting everything except the text, to allow for back lighting. Note: As I often have to bend and mould Perspex, I needed a procedure that could be implemented on the final moulded pieces. This meant that using a laser cutter to remove paint was not an option.</p>
+<h3>Technique 1, Painting the text.</h3>
+<p>This effect is a little more difficult than would appear at first glance. You want to paint the whole area and remove only the paint that&#8217;s not in the text. Problem is doing this by washing with solvents will thin the paint and dilute the finish, reducing the contrast. There is a neat trick you an use however, it involves pouring water over an oil based paint to form a gum in the lettering, which is resistant to solvents.</p>
+<ul>
+<li>Laser engrave the text with a deep cut (1mm -ish).</li>
+<li>Prepare the piece (bend, polish etc.)</li>
+<li>Spray paint with a cheap oil based paint (the kind that gums with water). The &#8220;Fiddly Bits&#8221; brand works well.</li>
+<li>Wait 30sec to a minute.</li>
+<li>Place piece under running water for a couple of seconds.</li>
+<li>You should now be looking at a complete disaster, the finish is ruined and everything is a kinda horrid sticky mess.</li>
+<li>Get a thin micro-fiber disposable cloth, dip in turpentine.</li>
+<li>Scrub the surface (will require elbow grease and persistence).</li>
+<li>Presto, the only stuff you cant scrub out is this awesome looking text.</li>
+</ul>
+<p><img loading="lazy" class="alignnone wp-image-511" src="/wp-content/uploads/2015/07/paint_can-102x300.png" alt="paint_can" width="81" height="238" srcset="/wp-content/uploads/2015/07/paint_can-102x300.png 102w, /wp-content/uploads/2015/07/paint_can.png 160w" sizes="(max-width: 81px) 100vw, 81px" /> <a href="/wp-content/uploads/2015/07/front_panel-black.jpg"><img loading="lazy" class="alignnone wp-image-514" src="/wp-content/uploads/2015/07/front_panel-black-300x294.jpg" alt="front_panel black" width="235" height="230" srcset="/wp-content/uploads/2015/07/front_panel-black-300x294.jpg 300w, /wp-content/uploads/2015/07/front_panel-black-768x752.jpg 768w, /wp-content/uploads/2015/07/front_panel-black.jpg 900w" sizes="(max-width: 235px) 100vw, 235px" />   <img loading="lazy" class="alignnone wp-image-512" src="/wp-content/uploads/2015/07/text_close_up-300x256.jpg" alt="text_close_up" width="271" height="231" srcset="/wp-content/uploads/2015/07/text_close_up-300x256.jpg 300w, /wp-content/uploads/2015/07/text_close_up-768x654.jpg 768w, /wp-content/uploads/2015/07/text_close_up.jpg 926w" sizes="(max-width: 271px) 100vw, 271px" /></a></p>
+<p>&nbsp;</p>
+<h3>Technique 2, Painting everything that is not text.</h3>
+<p>This seems like an odd way of doing things, but offers some interesting advantages:</p>
+<ul>
+<li>Done on translucent acrylic, you can now do back-lighting</li>
+<li>You can paint gradients / flames etc. and still have blacked out text.</li>
+<li>You can always find the right coloured paint on short notice, while acrylic colours are at the mercy of your supplier.</li>
+</ul>
+<p>This technique is actually a lot simpler than the first technique, but a lot less forgiving to errors.</p>
+<ul>
+<li>Engrave text with the quick shallow cut. You basicly just want to rough the surface.</li>
+<li>Prepare the piece (bend, polish etc.)</li>
+<li>Wipe turpentine over the piece with a cloth.</li>
+<li>Gently (half) dry the surface with a dry cloth. Leave the thinnest smear don&#8217;t dry out the letters.</li>
+<li>Wait 20 seconds to allow for some evaporation to occur.</li>
+<li>Spray paint a very thin layer.</li>
+<li>The text area will still have some turps, and also possesses a higher surface tension due to its roughness.
+<ul>
+<li>The paint will move away from the text forming on the flat, smooth areas.</li>
+</ul>
+</li>
+<li>Repeat coats using this procedure as needed.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img loading="lazy" class="alignnone wp-image-515 size-medium" src="/wp-content/uploads/2015/07/front-panel-300x244.jpg" alt="front panel" width="300" height="244" srcset="/wp-content/uploads/2015/07/front-panel-300x244.jpg 300w, /wp-content/uploads/2015/07/front-panel-768x625.jpg 768w, /wp-content/uploads/2015/07/front-panel.jpg 961w" sizes="(max-width: 300px) 100vw, 300px" />   <a href="/wp-content/uploads/2015/07/front_pane_white.jpg"><img loading="lazy" class="alignnone wp-image-516" src="/wp-content/uploads/2015/07/front_pane_white-300x279.jpg" alt="front_pane_white" width="262" height="244" srcset="/wp-content/uploads/2015/07/front_pane_white-300x279.jpg 300w, /wp-content/uploads/2015/07/front_pane_white-768x713.jpg 768w, /wp-content/uploads/2015/07/front_pane_white.jpg 969w" sizes="(max-width: 262px) 100vw, 262px" /><br />
+</a>(Left, final product. Right. first coat)</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,1224 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Edcucational &#8211; Busy Ducks</title>
+	<atom:link href="/tag/edcucational/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Fri, 26 Jan 2018 04:12:23 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Edcucational &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>What is the difference between a laser that will cut metals and one that won&#8217;t?</title>
+		<link>/what-is-the-difference-between-a-laser-that-will-cut-metals-and-one-that-wont/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Fri, 26 Jan 2018 04:12:23 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Laser_Cutter]]></category>
+		<category><![CDATA[Manufacturing]]></category>
+		<category><![CDATA[Metal-work]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=905</guid>
+
+					<description><![CDATA[A friend who recently acquired a CO2 laser cutter for his school recently sent me a message. "What is the difference between a laser that will cut metals and one that won't?". I thought this is a good question, as the answer will help with understanding how to work with many materials.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p>A friend who recently acquired a CO2 laser cutter for his school sent me a message. &#8220;What is the difference between a laser that will cut metals and one that won&#8217;t?&#8221;. I thought this is a good question, as the answer will help with understanding how to work with many materials.</p>
+<p>But before the answer will make sense, we need to revisit the basics of how a laser cutter works in more detail.</p>
+<figure id="attachment_906" aria-describedby="caption-attachment-906" style="width: 300px" class="wp-caption aligncenter"><a href="/wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o.jpg"><img loading="lazy" class="wp-image-906 size-medium" src="/wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-300x242.jpg" alt="" width="300" height="242" srcset="/wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-300x242.jpg 300w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-1024x827.jpg 1024w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-768x620.jpg 768w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-1536x1240.jpg 1536w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o-1568x1266.jpg 1568w, /wp-content/uploads/2018/01/1397657_10151706305006956_1694737819_o.jpg 1624w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-906" class="wp-caption-text">Nick Bannon (left) and Myself (right) [amongst others not pictured], setting up the laser cutting area at the Perth Aritifactoty &#8211; 2013.</figcaption></figure>
+<p>&nbsp;</p>
+<h1>How the laser cutter works: 101</h1>
+<p>The common C02 laser cutter can be thought of as &#8220;thick&#8221; beam of IR light that moves out of a laser tube, bounces of mirrors until to get to the head. In the head it passes through a lens that focuses the beam, such that it is strong enough to ablate certain material though heat. A jet of air clears debris, and if upgraded from the piddly inbuilt compressor, will minimise scorching on materials like wood. The fact the beam is wide means that it can be bounced around off mirrors wit out imparting too much energy to one spot, such that it burns though a mirror, or the lens.</p>
+<p>&nbsp;</p>
+<h1>How the laser cutter works: 102</h1>
+<figure id="attachment_907" aria-describedby="caption-attachment-907" style="width: 229px" class="wp-caption alignright"><a href="/wp-content/uploads/2018/01/laser-cutter.jpg"><img loading="lazy" class="wp-image-907 size-medium" src="/wp-content/uploads/2018/01/laser-cutter-229x300.jpg" alt="Laser cutter beam focus" width="229" height="300" srcset="/wp-content/uploads/2018/01/laser-cutter-229x300.jpg 229w, /wp-content/uploads/2018/01/laser-cutter-780x1024.jpg 780w, /wp-content/uploads/2018/01/laser-cutter-768x1008.jpg 768w, /wp-content/uploads/2018/01/laser-cutter-1170x1536.jpg 1170w, /wp-content/uploads/2018/01/laser-cutter-1561x2048.jpg 1561w, /wp-content/uploads/2018/01/laser-cutter-1568x2058.jpg 1568w, /wp-content/uploads/2018/01/laser-cutter-scaled.jpg 1951w" sizes="(max-width: 229px) 100vw, 229px" /></a><figcaption id="caption-attachment-907" class="wp-caption-text">A CO2 laser produces an Infra red beam that is more intense in the centre. The beam is focused through a quartz lens.</figcaption></figure>
+<p>Now think of a laser cut in slow motion and zoomed in massively.  The laser hits a material. The focal point is probably beneath the surface and the beam is still a bit wide (less hot).</p>
+<p>The area at the surface vaporises and a little pilot hole forms. This hole is like the first domino, the material near it is now deformed. This deformed material (sub millimetre area) is like the plastic left in the sun, less robust and more sensitive to light. The cut now picks up momentum and deepens as a “pool of vaporising material eating into the ground”. The air stream is ejecting loose material and anything &#8216;molten&#8217; that was not instantly vaporised.</p>
+<p>The ability to cut well is a balance of many factors, primarily the right laser strength, air flow and movement speed &#8211; for a given material at a certain thickness.</p>
+<p>Relevant to later discussions with metal, is getting a good movement speed.</p>
+<ul>
+<li>Slow enough that the pit will work all the way through, before the beam moves on.</li>
+<li>Fast enough that the material is not given too much heat (see diagram to right, not all the beam is vaporising goodness and its not all equal in strengths.
+<ul>
+<li>From the parts of the beam not near the focal point that are not hot enough .</li>
+<li>From outer areas of the beam not as intense</li>
+</ul>
+</li>
+<li>Different lenses will help with thicker materials, butt you first limitation is you will need more power for thicker materials. Otherwise you will need to move at a slow speed that brings many other problems of heat dissipation.</li>
+</ul>
+<p>Reading the above may lead you to think you will need to get the most powerful laser cutter you can afford, for those times when you want to do a thick material. But&#8230; power is a two edged sword. The laser will only fire at a minimum of say 40%. So your 120W laser that will get you through 20mm acrylic, won’t be any good for etching designs on clothing (it will punch straight through at it minimum of 48W).</p>
+<h1>Problems that will affect metal</h1>
+<ul>
+<li>Many metals are reflective of IR beams (C02 lasers), preventing even etching of the surface.
+<ul>
+<li>NB: other lasers, such as solid state lasers which work with a different wavelength will be several times more efficient than C02 lasers for most metals.</li>
+</ul>
+</li>
+<li>Metal is a heat sink, it will draw heat away from the cut. Preventing the laser beam from melting any of the metal, or forming the initial pit.</li>
+<li>Many metals are not cool/safe in gaseous form. You may need venting.</li>
+</ul>
+<h2>Etching metal</h2>
+<p>Your enemy for etching, is not the heat conductivity of the metal, it’s the fact it reflects.<br />
+On cutters around your size it is often possible to etch certain metal. You will need to paint the surface with something (there are products that are sold for this purpose, but some people just use black $3 fiddly bit paint from buntings). The pit will form in the paint and you will get sufficient heat in to mark the metal. But then go no further down.</p>
+<p>&nbsp;</p>
+<h2>Cutting metal</h2>
+<p>Generally laser cut metal is not ablated/vaporised (turned to gas) like other materials. It is instead it is melted (turned to liquid), and blown out of the way by forced airflow. This is sometimes referred to as ‘melt and blow’ cutting. It is messy and provides issues that can damage a machine:</p>
+<ul>
+<li>Bits of molten metal can settle on the lens, this will absorb heat that the lens would otherwise transmit. The lens will now heat up and be damaged / burnt though.</li>
+<li>The metal / molten metal can reflect focused beam of light back at the lens. This can damage the lens, because the amount of IR radiation passing though it is now double.
+<ul>
+<li>The focused light can even propagate back along the mirrors and into the laser tube (damaging the very expensive parts of the machine).</li>
+</ul>
+</li>
+</ul>
+<p>Its worth mentioning that metal needs a lot more power to get the piloting pit going. And the pit is not a nice vaporised area with laser friendly material next to it. It’s a stubborn pool of liquid that sits in the way of your laser. This means cutting requires bigger lasers, or one or more assisting technologies to reduce the necessitated “bigness” of your laser.</p>
+<p>Such assisting technologies, for CO2 lasers, may include.</p>
+<ul>
+<li>High pressure gas, to blow the molten metal out of the hole.</li>
+<li>Blowing Oxygen or Nitrogen into the cut to make things more efficient.</li>
+<li>Using a more focused beam to get the metal to melt before heat dissipation sets in.</li>
+<li>A lens that moves, so that the focal point travels with your pit as it goes down.</li>
+</ul>
+<h1>As some lasers can be coerced into cutting metal, why is it not more common?</h1>
+<p>Firstly, the risk to the machine means many operators don&#8217;t feel it is worth it.</p>
+<p>But there are other issues:</p>
+<ul>
+<li>Solid state lasers are becoming more popular for cutting metal over the use of a large C02 Laser.</li>
+<li>The cut speed of lasers on metal can be slow, and the depth of cut limited.</li>
+<li>Tuning air/ laser/ lens /speed parameters is more difficult, and the results are not always a clean cut for inexperienced operators.</li>
+</ul>
+<p>But more importantly there are many <span style="text-decoration: underline;">more attractive  alternatives</span> for cutting of metal, including water jet cutting and CNC milling.</p>
+<p>&nbsp;</p>
+<h1>Further reading:</h1>
+<p>For clarity I simplified and glossed over some less important concepts in the above explanation.</p>
+<p>The following industry articles explore things in more depth:</p>
+<ul>
+<li>Laser comparison – cutting speed and rate of feed. <a href="http://jmtusa.com/laser-comparison-cutting-speed-and-rate-of-feed/">http://jmtusa.com/laser-comparison-cutting-speed-and-rate-of-feed/</a></li>
+<li>Lasing reflective metals <a href="http://www.fsmdirect.com/cutting/laser-cutting/326-lasing-reflective-metals">http://www.fsmdirect.com/cutting/laser-cutting/326-lasing-reflective-metals</a></li>
+<li>Back to basics: The subtle science of burr-free laser cutting. <a href="https://www.thefabricator.com/article/lasercutting/back-to-basics-the-subtle-science-of-burr-free-laser-cutting">https://www.thefabricator.com/article/lasercutting/back-to-basics-the-subtle-science-of-burr-free-laser-cutting</a></li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Surface Preparation and Finger Prints. How bad are they?</title>
+		<link>/surface-preparation-and-finger-prints-how-bad-are-they/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 24 Jan 2017 13:45:25 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Finger Prints]]></category>
+		<category><![CDATA[Glue]]></category>
+		<category><![CDATA[Industry]]></category>
+		<category><![CDATA[PCB]]></category>
+		<category><![CDATA[Solder]]></category>
+		<category><![CDATA[Woodwork]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=828</guid>
+
+					<description><![CDATA[In preparing a surface for paint / glue / thermal paste / soldering / whatever, there is one thing to remember. A normal finger print is of similar thickness to cling wrap (0.01mm). A thick (eg post pizza) print, where the ridges are no longer visible, is closer to the thickness of a sheet of paper (0.1mm).
+
+Rule of thumb. If you would you would not be happy with this kind of material on the surface of whatever you are coating, remove your finger prints.]]></description>
+										<content:encoded><![CDATA[<p>In preparing a surface for paint / glue / thermal paste / soldering / whatever, there is one thing to remember. A normal finger print is of similar thickness to cling wrap (0.01mm). A thick (eg post pizza) print, where the ridges are no longer visible, is closer to the thickness of a sheet of paper (0.1mm).</p>
+<p>Rule of thumb. If you would you would not be happy with this kind of material on the surface of whatever you are coating, remove your finger prints.</p>
+<ul>
+<li>So a very thin coat of paint is 0.02mm, but often thicker.  So wash your hands, then it&#8217;s probably OK to touch. But don&#8217;t &#8220;Pizza and Paint&#8221;.</li>
+<li>Thermal paste on your CPU is 0.07mm  to 0.12mm thick, So Pizza hands are a definite problem. A single normal finger print may well produce a small but noticeable effect to cooling. A well handled CPU with a few prints is probably not good, you would not leave scraps of plastic wrap on the CPU after all.</li>
+<li>Some glues may dilute your finger print and not care (super glue). While other (silicone adhesives) will probably bond poorly.</li>
+<li>Solder &#8211; The NASA soldering standards (<a href="https://www.hq.nasa.gov/office/codeq/doctree/canceled/NS87393-Ch5.pdf">NASA_STD_8739 .3</a>) state: <em>&#8220;When handling metal surfaces that are to be soldered is unavoidable, clean, lint-free gloves or finger cots shall be used. &#8220;</em>. Many commercial soldering standards also follow this advise for handling of both solder and parts.
+<ul>
+<li>Whats interesting is that some manufactures are particularly concerned about what is on your hands (moisturisers and hand lotions cited as being particularly problematic to solder).</li>
+<li>The finger print contamination of solder joints is often resolved by just keeping the joint hot until the solder takes. This extra heating burns of enough contaminate to allow solder to flow, but can damage components amongst other problems.</li>
+<li>UPDATE: The new IPC standards (<a href="https://www.ipc.org/4.0_Knowledge/4.1_Standards/IPC-J-STD-001ES.pdf">IPC-J-STD-001ES</a>), which NASA, and many other companies, have adopted, don&#8217;t mention fingers or gloves specifically. They only broadly reference that handling mechanisms stall not contaminate the board or parts.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>ASCII-Art Arduino Pinouts</title>
+		<link>/ascii-art-arduino-pinouts/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 16 Nov 2015 18:09:31 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=704</guid>
+
+					<description><![CDATA[Managing arduino projects can be a nightmare because its hard to keep track of your hardware setup in your code comments.  To enable easy documentation of pin assignments, I created a couple of ASCII art arduino pin-outs.
+
+These come complete with ports, PWM and coms all marked. Simply paste as a comment into your code and marvel at your new found organisation.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p style="padding-left: 30px;">Managing arduino projects can be a nightmare because you only see the software side in your code documentation, the hardware is hard to keep track off.</p>
+<p style="padding-left: 30px;">To enable easy documentation of pin assignments, I created a couple of ASCII art arduinos; complete with ports, PWM and coms all marked. Simply paste as a comment into your code and marvel at your new found organisation.</p>
+<p style="padding-left: 30px;">I suggest altering the image (eg. a letter or X in the [ ]) to keep track of the pins you ended up using.</p>
+<p style="padding-left: 30px;">Find this project on <a href="https://github.com/busyDuckman/ascii-art-arduinos">gitHub</a></p>
+<h1>Plain Text &#8211; Arduino Pinout</h1>
+<p style="padding-left: 30px;">Here is copy/paste-able Arduino Pinout ASCII art ready to go (tip: you can use the copy button, at the top of each ASCII art piece, to make the process easy).<br />
+<em>     <span style="color: #999999;">I place them in the Creatice Commons [Creative Commons Attribution (BY) license]. </span></em><br />
+<span style="color: #999999;"><em>     Attribution via the url: &#8220;http://busyducks.com/ascii-art-arduinos&#8221;</em></span></p>
+<pre class="lang:c++ decode:true">                                      +-----+
+         +----[PWR]-------------------| USB |--+
+         |                            +-----+  |
+         |         GND/RST2  [ ][ ]            |
+         |       MOSI2/SCK2  [ ][ ]  A5/SCL[ ] |   C5 
+         |          5V/MISO2 [ ][ ]  A4/SDA[ ] |   C4 
+         |                             AREF[ ] |
+         |                              GND[ ] |
+         | [ ]N/C                    SCK/13[ ] |   B5
+         | [ ]IOREF                 MISO/12[ ] |   .
+         | [ ]RST                   MOSI/11[ ]~|   .
+         | [ ]3V3    +---+               10[ ]~|   .
+         | [ ]5v    -| A |-               9[ ]~|   .
+         | [ ]GND   -| R |-               8[ ] |   B0
+         | [ ]GND   -| D |-                    |
+         | [ ]Vin   -| U |-               7[ ] |   D7
+         |          -| I |-               6[ ]~|   .
+         | [ ]A0    -| N |-               5[ ]~|   .
+         | [ ]A1    -| O |-               4[ ] |   .
+         | [ ]A2     +---+           INT1/3[ ]~|   .
+         | [ ]A3                     INT0/2[ ] |   .
+         | [ ]A4/SDA  RST SCK MISO     TX&gt;1[ ] |   .
+         | [ ]A5/SCL  [ ] [ ] [ ]      RX&lt;0[ ] |   D0
+         |            [ ] [ ] [ ]              |
+         |  UNO_R3    GND MOSI 5V  ____________/
+          \_______________________/
+		  
+		  http://busyducks.com/ascii-art-arduinos</pre>
+<pre class="lang:c++ decode:true ">                                      +-----+
+         +----[PWR]-------------------| USB |--+
+         |                            +-----+  |
+         |           GND/RST2  [ ] [ ]         |
+         |         MOSI2/SCK2  [ ] [ ]  SCL[ ] |   D0
+         |            5V/MISO2 [ ] [ ]  SDA[ ] |   D1
+         |                             AREF[ ] |
+         |                              GND[ ] |
+         | [ ]N/C                        13[ ]~|   B7
+         | [ ]IOREF                      12[ ]~|   B6
+         | [ ]RST                        11[ ]~|   B5
+         | [ ]3V3      +----------+      10[ ]~|   B4
+         | [ ]5v       | ARDUINO  |       9[ ]~|   H6
+         | [ ]GND      |   MEGA   |       8[ ]~|   H5
+         | [ ]GND      +----------+            |
+         | [ ]Vin                         7[ ]~|   H4
+         |                                6[ ]~|   H3
+         | [ ]A0                          5[ ]~|   E3
+         | [ ]A1                          4[ ]~|   G5
+         | [ ]A2                     INT5/3[ ]~|   E5
+         | [ ]A3                     INT4/2[ ]~|   E4
+         | [ ]A4                       TX&gt;1[ ]~|   E1
+         | [ ]A5                       RX&lt;0[ ]~|   E0
+         | [ ]A6                               |   
+         | [ ]A7                     TX3/14[ ] |   J1
+         |                           RX3/15[ ] |   J0
+         | [ ]A8                     TX2/16[ ] |   H1         
+         | [ ]A9                     RX2/17[ ] |   H0
+         | [ ]A10               TX1/INT3/18[ ] |   D3         
+         | [ ]A11               RX1/INT2/19[ ] |   D2
+         | [ ]A12           I2C-SDA/INT1/20[ ] |   D1         
+         | [ ]A13           I2C-SCL/INT0/21[ ] |   D0
+         | [ ]A14                              |            
+         | [ ]A15                              |   Ports:
+         |                RST SCK MISO         |    22=A0  23=A1   
+         |         ICSP   [ ] [ ] [ ]          |    24=A2  25=A3   
+         |                [ ] [ ] [ ]          |    26=A4  27=A5   
+         |                GND MOSI 5V          |    28=A6  29=A7   
+         | G                                   |    30=C7  31=C6   
+         | N 5 5 4 4 4 4 4 3 3 3 3 3 2 2 2 2 5 |    32=C5  33=C4   
+         | D 2 0 8 6 4 2 0 8 6 4 2 0 8 6 4 2 V |    34=C3  35=C2   
+         |         ~ ~                         |    36=C1  37=C0   
+         | @ # # # # # # # # # # # # # # # # @ |    38=D7  39=G2    
+         | @ # # # # # # # # # # # # # # # # @ |    40=G1  41=G0   
+         |           ~                         |    42=L7  43=L6   
+         | G 5 5 4 4 4 4 4 3 3 3 3 3 2 2 2 2 5 |    44=L5  45=L4   
+         | N 3 1 9 7 5 3 1 9 7 5 3 1 9 7 5 3 V |    46=L3  47=L2   
+         | D                                   |    48=L1  49=L0    SPI:
+         |                                     |    50=B3  51=B2     50=MISO 51=MOSI
+         |     2560                ____________/    52=B1  53=B0     52=SCK  53=SS 
+          \_______________________/         
+         
+         http://busyducks.com/ascii-art-arduinos</pre>
+<p style="padding-left: 30px;">You may notice that the clean layout of these diagrams makes them very readable, personally I feel many graphical versions present too much information at once.</p>
+<h3>Some Updates (new models)</h3>
+<p style="padding-left: 30px;">This idea seems to have caught on quickly, so I will keep the art coming.</p>
+<p style="padding-left: 30px;">Redit user <em>plasticluthier</em> adapted a nano version <a href="https://www.reddit.com/r/arduino/comments/3tb0d2/i_made_some_asciiart_arduinos_to_paste_in/" target="_blank" rel="noopener">here</a>, I thought that was spiffy, so I fixed an error tweaked it a bit and added chips and ports.</p>
+<pre class="lang:c++ decode:true">                      +-----+
+         +------------| USB |------------+
+         |            +-----+            |
+    B5   | [ ]D13/SCK        MISO/D12[ ] |   B4
+         | [ ]3.3V           MOSI/D11[ ]~|   B3
+         | [ ]V.ref     ___    SS/D10[ ]~|   B2
+    C0   | [ ]A0       / N \       D9[ ]~|   B1
+    C1   | [ ]A1      /  A  \      D8[ ] |   B0
+    C2   | [ ]A2      \  N  /      D7[ ] |   D7
+    C3   | [ ]A3       \_0_/       D6[ ]~|   D6
+    C4   | [ ]A4/SDA               D5[ ]~|   D5
+    C5   | [ ]A5/SCL               D4[ ] |   D4
+         | [ ]A6              INT1/D3[ ]~|   D3
+         | [ ]A7              INT0/D2[ ] |   D2
+         | [ ]5V                  GND[ ] |     
+    C6   | [ ]RST                 RST[ ] |   C6
+         | [ ]GND   5V MOSI GND   TX1[ ] |   D0
+         | [ ]Vin   [ ] [ ] [ ]   RX1[ ] |   D1
+         |          [ ] [ ] [ ]          |
+         |          MISO SCK RST         |
+         | NANO-V3                       |
+         +-------------------------------+
+         
+         http://busyducks.com/ascii-art-arduinos</pre>
+<p style="padding-left: 30px;">I have a Pro Mini project coming up, so knocked one of these out as well.</p>
+<pre class="lang:c++ decode:true">		                  D0   D1   RST
+		   GND  GND  VCC  RX   TX   /DTR
+        +--------------------------------+
+        |  [ ]  [ ]  [ ]  [ ]  [ ]  [ ]  |
+        |              FTDI              |
+    D1  | [ ]1/TX                 RAW[ ] |    
+    D0  | [ ]0/RX                 GND[ ] |    
+        | [ ]RST        SCL/A5[ ] RST[ ] |   C6
+        | [ ]GND        SDA/A4[ ] VCC[ ] |    
+    D2  | [ ]2/INT0    ___         A3[ ] |   C3
+    D3  |~[ ]3/INT1   /   \        A2[ ] |   C2
+    D4  | [ ]4       /PRO  \       A1[ ] |   C1
+    D5  |~[ ]5       \ MINI/       A0[ ] |   C0
+    D6  |~[ ]6        \___/    SCK/13[ ] |   B5
+    D7  | [ ]7          A7[ ] MISO/12[ ] |   B4
+    B0  | [ ]8          A6[ ] MOSI/11[ ]~|   B3
+    B1  |~[ ]9                  SS/10[ ]~|   B2
+        |           [RST-BTN]            |    
+        +--------------------------------+  
+		
+		http://busyducks.com/ascii-art-arduinos</pre>
+<h1>How to use them</h1>
+<p style="padding-left: 30px;">Just fill in the spaces, either with an X, or with a reference letter which you document below the ASCII art.</p>
+<p style="padding-left: 30px;">They can be pasted into code comments, (use /* and */ in the arduino IDE to create a block comment). They can also be useful in forums, when you need a quick arduino diagram, but don&#8217;t want to fire up an image editor.</p>
+<p><a href="/wp-content/uploads/2015/11/Arduino_UNO_pinout.png"><img loading="lazy" class="alignnone wp-image-705 size-full" src="/wp-content/uploads/2015/11/Arduino_UNO_pinout.png" alt="Arduino_UNO_pinout" width="473" height="533" srcset="/wp-content/uploads/2015/11/Arduino_UNO_pinout.png 473w, /wp-content/uploads/2015/11/Arduino_UNO_pinout-266x300.png 266w" sizes="(max-width: 473px) 100vw, 473px" /></a></p>
+<p><a href="/wp-content/uploads/2015/11/Arduino_mega_pinout2.png"><img loading="lazy" class="alignnone size-full wp-image-714" src="/wp-content/uploads/2015/11/Arduino_mega_pinout2.png" alt="Arduino_mega_pinout2" width="585" height="786" srcset="/wp-content/uploads/2015/11/Arduino_mega_pinout2.png 585w, /wp-content/uploads/2015/11/Arduino_mega_pinout2-223x300.png 223w" sizes="(max-width: 585px) 100vw, 585px" /></a></p>
+<p>&nbsp;</p>
+<p>This is a snippet from a recent project. The sketch starts out with comments that set-out how the hardware is setup, this helps me a lot when I have to look at it again in a years time. Its also great if I want to share the code, as people don&#8217;t need to dig-around in the code to see how to connect the arduino to other devices.</p>
+<pre class="height-set:true height:600 lang:c++ decode:true" title="Exaple usage in an arduino sketch">/*
+
+                                      +-----+
+         +----[PWR]-------------------| USB |--+
+         |                            +-----+  |
+         |           GND/RST2  [ ] [ ]         |
+         |         MOSI2/SCK2  [ ] [ ]  SCL[ ] |   C5
+         |            5V/MISO2 [ ] [ ]  SDA[ ] |   C4
+         |                             AREF[ ] |
+         |                              GND[ ] |
+         | [ ]N/C                    SCK/13[A] |   B5
+         | [ ]v.ref                 MISO/12[A] |   .
+         | [ ]RST                   MOSI/11[A]~|   .
+         | [ ]3V3    +---+               10[ ]~|   .
+         | [ ]5v     | A |                9[ ]~|   .
+         | [ ]GND   -| R |-               8[B] |   B0
+         | [ ]GND   -| D |-                    |
+         | [ ]Vin   -| U |-               7[A] |   D7
+         |          -| I |-               6[A]~|   .
+         | [ ]A0    -| N |-               5[C]~|   .
+         | [ ]A1    -| O |-               4[A] |   .
+         | [ ]A2     +---+           INT1/3[A]~|   .
+         | [ ]A3                     INT0/2[ ] |   .
+         | [ ]A4      RST SCK MISO     TX&gt;1[ ] |   .
+         | [ ]A5      [ ] [ ] [ ]      RX&lt;0[ ] |   D0
+         |            [ ] [ ] [ ]              |
+         |  UNO_R3    GND MOSI 5V  ____________/
+          \_______________________/
+		  
+		  http://busyducks.com/ascii-art-arduinos
+*/
+
+//------------------------------------------------------------------ 
+// [A]		Adafruit music shield
+//------------------------------------------------------------------ 
+// Connect CLK, MISO and MOSI to hardware SPI pins. 
+// SPI Clock, shared with SD card
+#define CLK_PIN (13)       
+// Input data, from VS1053/SD card
+#define MISO_PIN (12)      
+// Output data, to VS1053/SD card
+#define MOSI_PIN (11)      
+
+// VS1053 reset pin (unused!)
+#define SHIELD_RESET_PIN  (-1)   
+// VS1053 chip select pin (output)
+#define SHIELD_CS_PIN     (7)      
+// VS1053 Data/command select pin (output)
+#define SHIELD_DCS_PIN    (6)      
+// Card chip select pin
+#define CARDCS_PIN (4)     
+// VS1053 Data request, ideally an Interrupt pin
+#define DREQ_PIN (3)       
+
+//------------------------------------------------------------------  
+// [B]		WS2811 LED stip
+//------------------------------------------------------------------ 
+#define LED_STIP_PIN  (8)
+
+//------------------------------------------------------------------  
+// [C]		Servo Motor
+//------------------------------------------------------------------ 
+#define SERVO_PIN (5)</pre>
+<p>&nbsp;</p>
+<h1>Related Projects (based on this work)</h1>
+<ul>
+<li>I modified a version of this for <a href="http://casual-effects.com/markdeep/" target="_blank" rel="noopener">markdeep</a> and made it available for download  <a href="http://busyducks.com/downloads/random_blog_stuff/ascii_art_arduino_markdeep.zip" target="_blank" rel="noopener">here</a>.
+<ul>
+<li>There is a unofficial mirror (by <a class="author may-blank id-t2_6hpwy" href="https://www.reddit.com/user/vanderZwan">vanderZwan</a>) of the markdeep work <a href="http://blindedcyclops.neocities.org/asciiino/arduino.md.html" target="_blank" rel="noopener">here</a></li>
+</ul>
+</li>
+<li>A console version, by paulfantom, for terminal users is available <a href="https://github.com/paulfantom/Arduino-colors" target="_blank" rel="noopener">here</a>.</li>
+</ul>
+<p style="padding-left: 30px;"><a href="http://busyducks.com/downloads/random_blog_stuff/ascii_art_arduino_markdeep.zip"><img loading="lazy" class="alignnone wp-image-731 size-full" src="/wp-content/uploads/2015/11/md-ascii-arduino.png" alt="md-ascii-arduino" width="411" height="492" srcset="/wp-content/uploads/2015/11/md-ascii-arduino.png 411w, /wp-content/uploads/2015/11/md-ascii-arduino-251x300.png 251w" sizes="(max-width: 411px) 100vw, 411px" /></a></p>
+<p style="padding-left: 90px;"><strong>Our markdeep version (click image to download)</strong></p>
+<p>&nbsp;</p>
+<h2>Stay Up To date and Provide Feedback</h2>
+<ul>
+<li>Contribute  to the project on <a href="https://github.com/busyDuckman/ascii-art-arduinos">https://github.com/busyDuckman/ascii-art-arduinos</a></li>
+<li>I will check back on the facebook page for any comments, like the page to stay up to date.
+<ul>
+<li><a href="https://www.facebook.com/BusyDucks/" target="_blank" rel="noopener">https://www.facebook.com/BusyDucks/</a></li>
+</ul>
+</li>
+<li>I set up a redirected URL <a href="http://busyducks.com/ascii-art-arduinos" target="_blank" rel="noopener">http://busyducks.com/ascii-art-arduinos</a>  that is both the CC-BY attribution line, and will always redirect to the latest version of these ascii art arduinos.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Version History</h1>
+<ul>
+<li>18-11-2015   markdeep version added (as suggested by vanderZwan <a href="https://www.reddit.com/r/arduino/comments/3tb0d2/i_made_some_asciiart_arduinos_to_paste_in/" target="_blank" rel="noopener">here</a>)</li>
+<li>19-11-2015   typos fixed (as noted by oroki <a href="https://www.reddit.com/r/arduino/comments/3tb0d2/i_made_some_asciiart_arduinos_to_paste_in/" target="_blank" rel="noopener">here</a>)</li>
+<li>21-112015    Added nano (derived from <em>plasticluthier&#8217;s contributions</em> ) &amp;  Pro Mini</li>
+<li>1-12-2015     Fixed typo&#8217;s spotted by Basile Laderchi. Also minor visual tweak to the arduino CPU.</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Practical Iterative K-ary Tree (aka n-ary, n-tree) Traversal in C#.  A surprisingly useful tool for the average programmer.</title>
+		<link>/practical-generic-k-ary-tree-n-tree-traversal-in-c/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 10 Aug 2015 15:02:54 +0000</pubDate>
+				<category><![CDATA[C#]]></category>
+		<category><![CDATA[Data Structures]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Data_Structures]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[WDLib]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=546</guid>
+
+					<description><![CDATA[Introduction: A lot of components in the C# environment are essentially a K-ary [kay-er-ee] tree. From tree-view nodes, to serialising a type via reflection, to directory listings to menu hierarchies, and so on. Often we need to iterate through these types of structures, or our own trees, and we just write some code to do &#8230;<br><a href="/practical-generic-k-ary-tree-n-tree-traversal-in-c/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">Practical Iterative K-ary Tree (aka n-ary, n-tree) Traversal in C#.  A surprisingly useful tool for the average programmer.</span></a>]]></description>
+										<content:encoded><![CDATA[<h3>Introduction:</h3>
+<p>A lot of components in the C# environment are essentially a K-ary [kay-er-ee] tree. From tree-view nodes, to serialising a type via reflection, to directory listings to menu hierarchies, and so on.</p>
+<p>Often we need to iterate through these types of structures, or our own trees, and we just write some code to do it as needed. This code is often problematic as it&#8217;s non-trivial to do well, because:</p>
+<ul>
+<li>It&#8217;s complex to do certain traversals in an iterative manor. (non recursive);</li>
+<li>Traversal is prone to bugs, as there are many edge cases;</li>
+<li>Software hangs if a circular reference exists and you don&#8217;t catch it;</li>
+<li>Unit-testing of once-off code is often neglected;</li>
+<li>Examining / verifying correct behaviour of tree traversal algorithms is difficult in the debugger.</li>
+</ul>
+<p>Wanting to rid myself of this re-occurring situation I built a few helper methods to do the following traversals iteratively:</p>
+<ul>
+<li>Depth First Pre Order</li>
+<li>Depth First Post Order,</li>
+<li>Breadth First</li>
+</ul>
+<p>The helpers are generic [BYO data type] and dont require a specific interface. You just supply a Func to return a nodes sub nodes. Thus you can drop a working tested algorithm onto whatever situation you encounter.</p>
+<h3>Iteration</h3>
+<p>Example:</p>
+<ul>
+<li>Made using an example data type &#8220;Node&#8221;
+<ul>
+<li>See the unit-tests at the  bottom of the page for implementation</li>
+</ul>
+</li>
+<li>First it shows using a foreach loop on a depth first pre-order iterator</li>
+<li>Then is shows using a breadth-first iterator to convert a tree to an array using Linq.</li>
+</ul>
+<pre class="lang:c# decode:true">/*
+* Test tree
+*                  A
+*                / | \ 
+*              B   C   D
+*            / |       | \
+*          E   F       G   H
+*        / |         / | \
+*       I  J        K  L  M
+*/
+Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+//EXAMPLE 1: Pre-order traversal via foreach loop
+foreach(var node in  Misc.EnumerateNodes(tree, 
+                                    N =&gt; N.Nodes, 
+                                    NodeVisitOrder.DepthFirstPreOrder))
+{
+    Console.Out.Write(node.Item);
+}
+Console.Out.WriteLine();
+//outputs ABEIJFCDGKLMH
+
+//EXAMPLE 2: Creating an array via breadth first traversal 
+string s = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, NodeVisitOrder.BredthFirst)
+                            .Select(N =&gt; N.Item)
+                            .ToArray());
+Console.Out.WriteLine(s);
+//outputs ABCDEFGHIJKLM</pre>
+<p>This was a simplistic example, but it works, its unit-tested, its efficient and non-recursive. It all ties into linq and IEnumerable so many neat tricks are possible.</p>
+<p>Lets examine the crucial line in detail.</p>
+<pre class="lang:c# decode:true">EnumerateNodes(tree, N =&gt; N.Nodes, NodeVisitOrder.DepthFirstPreOrder)
+</pre>
+<ul>
+<li>The first parameter is the root node. This is method is generic, so any class type will do.</li>
+<li>The second is a lambda expression for an enumerable  set of sub-nodes</li>
+<li>The third is the traversal method.</li>
+</ul>
+<p>Another example of how flexible the method is, using DirectoryInfo as the node, and iterating over all subdirectories:</p>
+<ul>
+<li>This time we use the optional forth parameter to enable circular reference checking. this prevents any chance of an infinite loop</li>
+</ul>
+<pre class="lang:c# decode:true">DirectoryInfo root = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+ 
+var dirs = Misc.EnumerateNodes(
+                root,
+                N =&gt; { try { return N.GetDirectories();  } 
+                       catch (Exception) { return null; } },
+                NodeVisitOrder.DepthFirstPreOrder, 
+                CircularRefernceBehaviour.Skip);
+ 
+foreach (var dir in dirs)
+{
+}</pre>
+<h3>Duplication</h3>
+<p>Often you just need to copy one tree structure to another (possibly of a different type):</p>
+<ul>
+<li>Loading a directory structure into a TreeView control</li>
+<li>Turning a tree of commands into Menu Items</li>
+<li>Working with expression parsing  and evaluation</li>
+<li>Just making a deep copy of a tree structure</li>
+</ul>
+<pre class="lang:c# decode:true">/*
+* Test tree
+*                  A
+*                / | \ 
+*              B   C   D
+*            / |       | \
+*          E   F       G   H
+*        / |         / | \
+*       I  J        K  L  M
+*/
+Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+TreeNode n = Misc.RebuildTree(tree,  
+							 N =&gt; N.Nodes, 
+							 N =&gt; new TreeNode("" + N.Item), 
+							 (T, N) =&gt; T.Nodes.AddRange(N.ToArray()));</pre>
+<p>Neeto, one line of code, and our <span style="text-decoration: underline;">tree is duplicated into a TreeView</span> (or whatever) in a efficient, reliable manor.</p>
+<p>RebuildTree takes five parameters:</p>
+<ol>
+<li>The root of the tree to be copied.</li>
+<li>Func for an enumerating sub-nodes in the source structure</li>
+<li>Func to create a new destination  node form a source node
+<ul>
+<li>Just the data of the node, Leave the child nodes unpopulated</li>
+</ul>
+</li>
+<li>Action to add a collection of Nodes to an existing node (destination structure)</li>
+<li>Circular reference checking behaviour</li>
+</ol>
+<h3>Core Algorithms</h3>
+<h4>Depth First Pre-Order</h4>
+<ul>
+<li>Note: visitOk(&#8230;) returns true unless a circular reference is detected.</li>
+<li>This works by feeding al nodes onto a stack, a basic way to resolve the recursion.</li>
+<li>Child nodes are pushed in reverse order, so they are pop&#8217;ed in the correct order.</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Pop();
+	if (visitOk(item, visited, checkType))
+	{
+		yield return item;
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse());
+	}
+}
+</pre>
+<h4>Depth First Post-Order</h4>
+<ul>
+<li>Depth First Post-Order is actually pretty tricky, a few algorithms exist.</li>
+<li>This one initially traverses the entire tree O(n) to fill a stack, then returns each item in the stack.</li>
+<li>The overall time is O(n), with the first iteration being O(n) and all subsequent  iterations being O(1)</li>
+<li>There s a requirement for  extra memory for this to work, but its not too bad.</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+Stack output = new Stack();
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Pop();
+	if (visitOk(item, visited, checkType))
+	{
+		output.Push(item);
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+	}
+}
+foreach (T item in output)
+{
+	yield return item;
+}
+
+</pre>
+<h4>Breadth First</h4>
+<ul>
+<li>This works by feeding al nodes onto a queue, as opposed to the depth first &#8211; pre order, which uses a stack.
+<ul>
+<li>This time Child nodes are not added in reverse order, however</li>
+</ul>
+</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Dequeue();
+	if (visitOk(item, visited, checkType))
+	{
+		yield return item;
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+	}
+}
+break;
+}
+</pre>
+<h3>Source Code:</h3>
+<pre class="height-set:true lang:c# decode:true ">/*
+Available under the BSD 3-Clause License
+Copyright (c) 2015, Dr Warren Creemers All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using WD_toolbox;
+
+namespace WD_toolbox
+{
+    public enum NodeVisitOrder { DepthFirstPreOrder, DepthFirstPostOrder, BredthFirst }
+
+    public enum CircularRefernceBehaviour { DontCheck, ThrowException, Skip }
+
+    public class NodeTraversalException : Exception
+    {
+        public NodeTraversalException(string message) : base(message) { }
+        public NodeTraversalException() : base() { }
+        public static NodeTraversalException VisitedTwice(object item) {return new NodeTraversalException("Node already visied: " + item.ToString());} 
+    }
+
+    public static class Misc
+    {
+        /// &lt;summary&gt;
+        /// Enumerates any Tree/graph in a non-recursive manor.
+        /// Does not check for circularReferences.
+        /// &lt;/summary&gt;
+        /// &lt;param name="node"&gt;Root node.&lt;/param&gt;
+        /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="order"&gt;The visit order.&lt;/param&gt;
+        /// &lt;param name="checkType"&gt;If circular references should be checked, and how to handle them. 
+        /// Note (1): Checks repeated node, which is not nesesiarly a circular reference (but all circulare references have a repeated node).
+        /// Note (2): performance hit reduced if  node generates a good hashcode.
+        /// &lt;/param&gt;
+        public static IEnumerable&lt;T&gt; EnumerateNodes&lt;T&gt;( T node, 
+                                                        Func&lt;T, IEnumerable&lt;T&gt;&gt; getSubNodes,
+                                                        NodeVisitOrder order = NodeVisitOrder.DepthFirstPreOrder,
+                                                        CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where T : class
+        {
+            if (node != null) //assuming null indicats an empty tree
+            {
+                //this acts as a stack or queue to resolve the recursion
+                LinkedList&lt;T&gt; list = new LinkedList&lt;T&gt;();
+                HashSet&lt;T&gt; visited = new HashSet&lt;T&gt;();
+
+                switch (order)
+                {
+                    case NodeVisitOrder.DepthFirstPreOrder:
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Pop();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                yield return item;
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse());
+                            }
+                        }
+                        break;
+
+                    case NodeVisitOrder.DepthFirstPostOrder:
+                        //This has a side effects, the first iteeration is slow (also memory consuming) 
+                        //as the entire structure is copied into a stack 
+                        Stack&lt;T&gt; output = new Stack&lt;T&gt;();
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Pop();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                output.Push(item);
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+                            }
+                        }
+                        foreach (T item in output)
+                        {
+                            yield return item;
+                        }
+                        break;
+
+                    case NodeVisitOrder.BredthFirst:
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Dequeue();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                yield return item;
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+                            }
+                        }
+                        break;
+                }
+            }
+        }
+
+        // Because getSubNodes(T) may return null to indicate no nodes.
+        private static IEnumerable&lt;T&gt; getSubNodesSafe&lt;T&gt;(T node, Func&lt;T, IEnumerable&lt;T&gt;&gt; getSubNodes)
+        {
+            if ((node != null) &amp;&amp; (getSubNodes != null))
+            {
+                IEnumerable&lt;T&gt; subNodes = getSubNodes(node);
+                return (subNodes != null) ? subNodes : new List&lt;T&gt;();
+            }
+            return new List&lt;T&gt;();
+        }
+
+        private static bool visitOk&lt;T&gt;(T item, HashSet&lt;T&gt; visited, CircularRefernceBehaviour checkType)
+        {
+            if (checkType != CircularRefernceBehaviour.DontCheck)
+            {
+                if (visited.Contains(item))
+                {
+                    // error
+                    if (checkType == CircularRefernceBehaviour.ThrowException)
+                    {
+                        throw NodeTraversalException.VisitedTwice(item);
+                    }
+                    return false; //indicate it's not ok to visit (ie skip)
+                }
+
+                //no error
+                visited.Add(item);
+                return true;
+            }
+
+            //no check
+            return true;
+        }
+
+
+        /// &lt;summary&gt;
+        /// Copies a tree structure. (useful in copying a tree structure to a tree view).
+        /// &lt;/summary&gt;
+        /// &lt;typeparam name="A"&gt;The node type of the tree to copy.&lt;/typeparam&gt;
+        /// &lt;typeparam name="B"&gt;The destination node type.&lt;/typeparam&gt;
+        /// /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="newNode"&gt;To create a simple non-recursive copy of a node.&lt;/param&gt;
+        /// &lt;param name="addSubNodes"&gt;&lt;/param&gt;
+        /// &lt;param name="checkType"&gt; Type of circular reference checking to perform.&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static B RebuildTree&lt;A, B&gt;(A srcNode,
+                                           Func&lt;A, IEnumerable&lt;A&gt;&gt; getSubNodes,
+                                           Func&lt;A, B&gt; newNode,
+                                           Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes,
+                                           CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where A : class
+            where B : class
+        {
+            return RebuildTree(srcNode, getSubNodes, newNode, addSubNodes, P =&gt; true, checkType);
+        }
+        
+        /// &lt;summary&gt;
+        /// Copies a tree structure. (useful in copying a tree structure to a tree view).
+        /// &lt;/summary&gt;
+        /// &lt;typeparam name="A"&gt;The node type of the tree to copy.&lt;/typeparam&gt;
+        /// &lt;typeparam name="B"&gt;The destination node type.&lt;/typeparam&gt;
+        /// /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="newNode"&gt;To create a simple non-recursive copy of a node.&lt;/param&gt;
+        /// &lt;param name="addSubNodes"&gt;&lt;/param&gt;
+        /// &lt;param name="where"&gt;&lt;/param&gt;
+        /// &lt;param name="checkType"&gt; Type of circular reference checking to perform.&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static B RebuildTree&lt;A, B&gt;( A srcNode,
+                                           Func&lt;A, IEnumerable&lt;A&gt;&gt; getSubNodes, 
+                                           Func&lt;A, B&gt; newNode,
+                                           Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes,
+                                           Predicate&lt;A&gt; where,
+                                           CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where A : class
+            where B : class
+        {
+
+
+            LinkedList&lt;Tuple&lt;A, B&gt;&gt; list = new LinkedList&lt;Tuple&lt;A, B&gt;&gt;();
+            HashSet&lt;A&gt; visited = new HashSet&lt;A&gt;();
+            B newRootNode = null;
+
+            list.AddLast(new Tuple&lt;A, B&gt;(srcNode, null));
+            while (list.Count &gt; 0)
+            {
+                var tuple = list.Pop();
+                A item = tuple.Item1;
+                B parent = tuple.Item2;
+
+                if (visitOk(item, visited, checkType))
+                {
+                    if (where(item))
+                    {
+                        B newItem = newNode(item);
+                        if (newRootNode == null) //root node
+                        {
+                            newRootNode = newItem;
+                        }
+
+                        safeAddSubNode(parent, newItem, addSubNodes);
+                        
+                        list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse().Select(N =&gt; new Tuple&lt;A, B&gt;(N, newItem)));
+                    }
+                }
+            }
+
+            //done
+            return newRootNode;
+        }
+
+        private static void safeAddSubNode&lt;B&gt;(B parent, B child, Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes)
+        {
+            if ((addSubNodes != null) &amp;&amp; (parent != null) &amp;&amp; (child != null))
+            {
+                addSubNodes(parent, new B[] { child });
+            }
+        }
+    }
+}
+</pre>
+<p>Requires The following Extension class to make LinkedList sane.</p>
+<pre class="height-set:true height:500 lang:c# decode:true ">/*
+Available under the BSD 3-Clause License
+Copyright (c) 2015, Dr Warren Creemers All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/// &lt;summary&gt;
+/// These extensions make usage of the LinkedList more consise.
+/// &lt;/summary&gt;
+public static class LinkedListExtension
+{
+	/// &lt;summary&gt;
+	/// Pops the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the (formerly) last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T Pop&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		T item = list.Last.Value;
+		list.RemoveLast(); //throws InvalidOperationException
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Dequeues the first value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the (formerly) first item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T Dequeue&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		T item = list.First.Value;
+		list.RemoveFirst(); //throws InvalidOperationException
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Gets the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T PeekLast&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		if (list.Count &lt;= 0)
+		{
+			throw new InvalidOperationException("LinkedList is empty (call to PeekLast)");
+		}
+
+		T item = list.Last.Value;
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Gets the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T PeekFirst&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		if (list.Count &lt;= 0)
+		{
+			throw new InvalidOperationException("LinkedList is empty (call to PeekFirst)");
+		}
+
+		T item = list.First.Value;
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Addss items to the end of the list.
+	/// &lt;/summary&gt;
+	/// &lt;param name="items"&gt;Items to add.&lt;/param&gt;
+	public static void AddLastAll&lt;T&gt;(this LinkedList&lt;T&gt; list, IEnumerable&lt;T&gt; items)
+	{
+		foreach (T item in items)
+		{
+			list.AddLast(item);
+		}
+	}
+
+	/// &lt;summary&gt;
+	/// Addss items to the end of the list.
+	/// &lt;/summary&gt;
+	/// &lt;param name="items"&gt;Items to add.&lt;/param&gt;
+	public static void AddFirstAll&lt;T&gt;(this LinkedList&lt;T&gt; list, IEnumerable&lt;T&gt; items)
+	{
+		foreach (T item in items)
+		{
+			list.AddFirst(item);
+		}
+	}
+}</pre>
+<h3>Unit Tests:</h3>
+<pre class="height-set:true height:500 lang:c# decode:true ">       [TestMethod()]
+        public void EnumerateNodesTest()
+        {
+            /*
+            * Test tree
+            *                  A
+            *                / | \ 
+            *              B   C   D
+            *            / |       | \
+            *          E   F       G   H
+            *        / |         / | \
+            *       I  J        K  L  M
+            */
+            Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+            Node&lt;char&gt; coruptTree = Node&lt;char&gt;.TestTree();
+            //point L  to A
+            coruptTree.Nodes[2].Nodes[0].Nodes[1].Nodes.Add(coruptTree); 
+
+            //DepthFirstPreOrder
+            string res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                        NodeVisitOrder.DepthFirstPreOrder, 
+                                                        CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+
+
+
+            //System.Diagnostics.Trace.WriteLine("Hello World");
+            Assert.AreEqual("ABEIJFCDGKLMH", res);
+            
+            //DepthFirstProstOrder
+            res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                    NodeVisitOrder.DepthFirstPostOrder,
+                                                    CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+            Assert.IsTrue(res == "IJEFBCKLMGHDA");
+
+            //BredthFirst
+            res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                 NodeVisitOrder.BredthFirst,
+                                                 CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+            Assert.AreEqual("ABCDEFGHIJKLM", res);
+
+            //just to check no exception thrown
+            TreeNode n = Misc.RebuildTree(tree,  
+                                         N =&gt; N.Nodes, 
+                                         N =&gt; new TreeNode("" + N.Item),
+                                         (T, N) =&gt; T.Nodes.AddRange(N.ToArray()), 
+                                         CircularRefernceBehaviour.ThrowException);
+
+            //Check an exception is thrown for curupted tree
+
+            try
+            {
+                n = Misc.RebuildTree(coruptTree,
+                                             N =&gt; N.Nodes,
+                                             N =&gt; new TreeNode("" + N.Item),
+                                             (T, N) =&gt; T.Nodes.AddRange(N.ToArray()),
+                                             CircularRefernceBehaviour.ThrowException);
+
+                Assert.Fail("Should never reach this line of code");
+            }
+            catch (Exception)
+            {
+            }
+
+            //Just handle a corupt tree by not going backward.
+            n = Misc.RebuildTree(coruptTree,
+                                 N =&gt; N.Nodes,
+                                 N =&gt; new TreeNode("" + N.Item),
+                                 (T, N) =&gt; T.Nodes.AddRange(N.ToArray()),
+                                 CircularRefernceBehaviour.Skip);
+
+            //NB: Infinite loop on fail
+
+        }
+
+        
+
+        public class Node&lt;T&gt;
+        {
+            public List&lt;Node&lt;T&gt;&gt; Nodes = new List&lt;Node&lt;T&gt;&gt;();
+            public T Item;
+            public Node(T item, IList&lt;Node&lt;T&gt;&gt; nodes = null)
+            {
+                Item = item;
+                if (nodes != null)
+                {
+                    Nodes.AddRange(nodes);
+                }
+            }
+
+            private static Node&lt;T&gt; NODE&lt;T&gt;(T item, params Node&lt;T&gt;[] Nodes)
+            {
+                return new Node&lt;T&gt;(item, Nodes);
+            }
+
+            public static Node&lt;char&gt; TestTree()
+            {
+                /*
+                * Test tree
+                *                  A
+                *                / | \ 
+                *              B   C   D
+                *            / |       | \
+                *          E   F       G   H
+                *        / |         / | \
+                *       I  J        K  L  M
+                */
+
+
+                Node&lt;char&gt; tree =
+                    NODE('A',
+                        NODE('B',
+                            NODE('E',
+                                NODE('I'),
+                                NODE('J')
+                                ),
+                            NODE('F')
+                            ),
+                        NODE('C'),
+                        NODE('D',
+                            NODE('G',
+                                NODE('K'),
+                                NODE('L'),
+                                NODE('M')
+                                ),
+                            NODE('H')
+                            )
+                        );
+
+                return tree;
+            }
+        }
+    }</pre>
+<h3>WDLib Library:</h3>
+<p>This is part of my personal toolbox, WDLib (in the misc class, which is abridged for clarity on this page). I am moving to open source the library at the moment.</p>
+<h3>Limitations and Usage:</h3>
+<ul>
+<li>The circular reference check just checks for a repeated node, which is not necessarily a circular reference (but all circular references have a repeated node). This may deny some malformed trees that could otherwise be safely parsed. Checking can always be disabled if this is your intent.</li>
+<li>Be aware the first iteration of the Depth First Post-Order has a O(n) overhead.</li>
+</ul>
+<h3></h3>
+<h3>Contact / Feedback</h3>
+<p>[Sorry I had to remove this, because hundreds of spam emails about SEO]</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Maze Making Software</title>
+		<link>/maze-software/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Fri, 03 Jul 2015 09:34:35 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Maze]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=476</guid>
+
+					<description><![CDATA[This software creates mazes of different sizes and configurable appearance. It is designed for teachers. It can save the output as printable sheets or bitmap images.]]></description>
+										<content:encoded><![CDATA[<h3>Overview</h3>
+<p>This software creates mazes of different sizes and configurable appearance. It is designed for teachers and makers. It can save the output as printable sheets or bitmap images.</p>
+<p>[updated terms]</p>
+<ul>
+<li>This software is provided free to use for all commercial / non-commercial / educational, puzzle publication purposes.</li>
+<li>The code is licensed under the MIT licence</li>
+<li>see <a href="https://github.com/busyDuckman/MazeMaker">https://github.com/busyDuckman/MazeMaker</a></li>
+</ul>
+<p>[how to show appreciation]</p>
+<ul>
+<li>I super appreciate getting some credit for the work, especially if you are printing a book of puzzles. Something like &#8220;puzzles created using Maze Maker software, by Dr Warren Creemers&#8221;.</li>
+<li>If you make something cool with it, I would love to see a photo/link.</li>
+<li>If you make a kids book or something like that, I&#8217;d really get a kick out of getting a free copy. Gestures like that make my day <img src="https://s.w.org/images/core/emoji/13.1.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></li>
+</ul>
+<h3>Screenshot</h3>
+<p><a href="/wp-content/uploads/2015/07/maze.png"><img loading="lazy" class="alignnone wp-image-477 size-full" src="/wp-content/uploads/2015/07/maze.png" alt="maze" width="715" height="453" srcset="/wp-content/uploads/2015/07/maze.png 715w, /wp-content/uploads/2015/07/maze-300x190.png 300w" sizes="(max-width: 715px) 100vw, 715px" /></a></p>
+<h3>Examples of different types of output</h3>
+<p><img loading="lazy" class="alignnone wp-image-480 size-full" src="/wp-content/uploads/2015/07/output_examples1.png" alt="Example Maze" width="640" height="640" srcset="/wp-content/uploads/2015/07/output_examples1.png 640w, /wp-content/uploads/2015/07/output_examples1-300x300.png 300w, /wp-content/uploads/2015/07/output_examples1-150x150.png 150w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<p>Can it do large mazes, like really large mazes?&#8230; <a href="http://www.busyducks.com/Software/_relevant_downloads/big_maze.png" target="_blank" rel="noopener noreferrer">YES</a>.</p>
+<h3>Download</h3>
+<p style="padding-left: 30px;">Install from the latest <a href="https://github.com/busyDuckman/MazeMaker/releases">release on github</a></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Download <a href="https://github.com/busyDuckman/MazeMaker/releases/download/v_0.9/maze_v0.9.zip">zip file</a>.</li>
+<li>Unzip file</li>
+<li>run setup.exe</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 30px;">First created:  2016-9-29<br />
+First published to github: 2019-09-13</p>
+<h3>Limitations:</h3>
+<ul>
+<li>Beta software (minor bugs to iron out, but quite usable)</li>
+<li>Smooth edges when wall width is set to 1 are buggy.</li>
+<li>Even line widths produce a better output.</li>
+</ul>
+<h3>What is done:</h3>
+<ul>
+<li>Generates a valid maze.</li>
+<li>Appearance is configurable.</li>
+<li>Maze size is configurable.</li>
+<li>Printing is enabled (adjust blockSize to alter print output size)</li>
+<li>Zooming in, moving etc (few minor bugs still).</li>
+<li>Support for DPI / block size.</li>
+</ul>
+<h3>Next Release</h3>
+<ul>
+<li>Bug fixes</li>
+<li>Support for graphical inserts</li>
+<li>Ascii output</li>
+</ul>
+<h3>Road Map</h3>
+<ul>
+<li>Will probably combine this with other software I have written to create a puzzle creation suite.</li>
+</ul>
+<h3>Update:</h3>
+<p>I have tentatively started working (April 2019) on a online version of this software, to be open sourced.</p>
+<h3>Contact / Feedback</h3>
+<p>Please leave feedback and bug reports via: <a href="https://github.com/busyDuckman/MazeMaker/issues">https://github.com/busyDuckman/MazeMaker/issues</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What&#8217;s inside an integrated circuit? We broke one open and scanned it for you at 12,800DPI</title>
+		<link>/whats-inside-an-integrated-circuit/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 24 Jun 2015 07:09:19 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Hi-Res Scan]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=368</guid>
+
+					<description><![CDATA[Because you always wondered what was inside. See if you can guess which IC it was? Useful image for teachers, overhead slides etc. NB: This is not always a good DIY or classroom activity. Be aware that some electrical components create a seriously hazardous dust when broken open. Rectifiers, Hi Power transistors, Older IC&#8217;s &#38; IC&#8217;s with certain &#8230;<br><a href="/whats-inside-an-integrated-circuit/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">What&#8217;s inside an integrated circuit? We broke one open and scanned it for you at 12,800DPI</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Because you always wondered what was inside. See if you can guess which IC it was?</p>
+<p>Useful image for teachers, overhead slides etc.<br />
+<em>NB: This is not always a good DIY or classroom activity. Be aware that some electrical components create a seriously hazardous dust when broken open. Rectifiers, Hi Power transistors, Older IC&#8217;s &amp; IC&#8217;s with certain head spreaders as well as some IC&#8217;s designed for use in microwaves contain Beryllium Oxide.  While safe to handle, the dust particles created when they are damaged will make you gravely ill.</em></p>
+<p>Download large and detailed image [4096 x 5686] (1.5mb) <a href="http://www.busyducks.com/downloads/ic_[4096].jpg" target="_blank" rel="noopener">here</a><br />
+Download full scan [16394 x 22761] (27mb, <strong>use save as</strong>, because <span style="text-decoration: underline;">images this large still crash some broswers</span>) <a href="http://www.busyducks.com/downloads/ic128000.jpg" target="_blank" rel="noopener">here</a></p>
+<figure id="attachment_371" aria-describedby="caption-attachment-371" style="width: 800px" class="wp-caption alignnone"><a href="/wp-content/uploads/2015/06/ic_800.jpg"><img loading="lazy" class="wp-image-371 size-full" src="/wp-content/uploads/2015/06/ic_800.jpg" alt="Inside an integrated circuit." width="800" height="1110" srcset="/wp-content/uploads/2015/06/ic_800.jpg 800w, /wp-content/uploads/2015/06/ic_800-216x300.jpg 216w, /wp-content/uploads/2015/06/ic_800-738x1024.jpg 738w, /wp-content/uploads/2015/06/ic_800-768x1066.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /></a><figcaption id="caption-attachment-371" class="wp-caption-text">Inside an integrated circuit.</figcaption></figure>
+<p><em>What&#8217;s the white grid? Its a standard prototyping board, used to protect the scanner from the IC&#8217;s pins.</em></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

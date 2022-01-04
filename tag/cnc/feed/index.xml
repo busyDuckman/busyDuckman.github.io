@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CNC &#8211; Busy Ducks</title>
+	<atom:link href="/tag/cnc/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Thu, 18 Jun 2015 17:37:07 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>CNC &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Spice Rack Plans (Woodworking)</title>
+		<link>/spice-rack-plans-woodworking/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 18 Jun 2015 17:37:07 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[3D-Printing]]></category>
+		<category><![CDATA[CAD]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[CNC]]></category>
+		<category><![CDATA[DXF]]></category>
+		<category><![CDATA[Woodwork]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=284</guid>
+
+					<description><![CDATA[My Spice Rack plans and effect were quite solid. As people still remark on the unit, I will share the design. DXF included.]]></description>
+										<content:encoded><![CDATA[<p>This spice rack was my first CAD design for a CNC router build. The plans and effect were quite solid and people still remark on the unit, so I will share the design.</p>
+<p>I originally designed this as a two shelf unit, but trivially built it as a three shelf unit. The indents in the shelf place McCormick brand spices (Australian jar) at a pleasing interval, and seat them snugly. The rail is at the right height to keep the label viable and support the jar, without making removal difficult.</p>
+<p>Machining was done on the <a href="http://artifactory.org.au/" target="_blank" rel="noopener">artifactory</a>&#8216;s  CNC-router.</p>
+<p>&nbsp;</p>
+<h2>Final Result</h2>
+<p>&nbsp;</p>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/06/rack.jpg"><img loading="lazy" class="alignnone wp-image-292 " src="/wp-content/uploads/2015/06/rack-656x1024.jpg" alt="rack" width="414" height="646" srcset="/wp-content/uploads/2015/06/rack-656x1024.jpg 656w, /wp-content/uploads/2015/06/rack-192x300.jpg 192w, /wp-content/uploads/2015/06/rack-768x1199.jpg 768w, /wp-content/uploads/2015/06/rack-984x1536.jpg 984w, /wp-content/uploads/2015/06/rack-1312x2048.jpg 1312w, /wp-content/uploads/2015/06/rack-1568x2448.jpg 1568w, /wp-content/uploads/2015/06/rack-scaled.jpg 1640w" sizes="(max-width: 414px) 100vw, 414px" /></a></p>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/06/IMG_0040-2.jpg"><img loading="lazy" class="alignnone  wp-image-286" src="/wp-content/uploads/2015/06/IMG_0040-2-300x225.jpg" alt="IMG_0040 (2)" width="549" height="412" /></a></p>
+<h2>Blue Prints</h2>
+<p>Image (click for larger)</p>
+<p><a href="/wp-content/uploads/2015/06/blue-print.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-293 size-large" src="/wp-content/uploads/2015/06/blue-print-1024x726.png" alt="blue print" width="640" height="454" srcset="/wp-content/uploads/2015/06/blue-print-1024x726.png 1024w, /wp-content/uploads/2015/06/blue-print-300x213.png 300w, /wp-content/uploads/2015/06/blue-print-768x544.png 768w, /wp-content/uploads/2015/06/blue-print.png 1187w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<h2>Download</h2>
+<p>DXF (cad file)  <a href="http://www.busyducks.com/downloads/blueprints_spicerack.dxf" target="_blank" rel="noopener">here</a></p>
+<p>&nbsp;</p>
+<h2>Construction Notes</h2>
+<p>NB: I could not quite let go of my old school woodworking tendencies, so I made all tabs fit the slots exactly&#8230; This meant that after the router made its cut, the wood would expand a little and not fit in the slot. This is just what I wanted, preferring a bit of sanding at the end, so all would fit very snug. Nowadays I would wind back the slots 0.3 of a millimetre and let the glue do the rest.</p>
+<p>The spices escutcheons I ended up 3d &#8211; printing and painting.  Nowadays there are plenty of 3d printing services should could offer a much better finish.</p>
+<p>The stain I used was Wattyl Wood Gel &#8211; Honey Oak. I like how easy and fool proof these stains are. The results not bad either.</p>
+<p>Photos of actual parts.</p>
+
+<a href='/wp-content/uploads/2015/06/parts-4-scaled.jpg'><img width="300" height="225" src="/wp-content/uploads/2015/06/parts-4-300x225.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/parts-4-300x225.jpg 300w, /wp-content/uploads/2015/06/parts-4-1024x768.jpg 1024w, /wp-content/uploads/2015/06/parts-4-768x576.jpg 768w, /wp-content/uploads/2015/06/parts-4-1536x1152.jpg 1536w, /wp-content/uploads/2015/06/parts-4-2048x1536.jpg 2048w, /wp-content/uploads/2015/06/parts-4-1568x1176.jpg 1568w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+<a href='/wp-content/uploads/2015/06/IMG_0050-scaled.jpg'><img width="300" height="225" src="/wp-content/uploads/2015/06/IMG_0050-300x225.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/IMG_0050-300x225.jpg 300w, /wp-content/uploads/2015/06/IMG_0050-1024x768.jpg 1024w, /wp-content/uploads/2015/06/IMG_0050-768x576.jpg 768w, /wp-content/uploads/2015/06/IMG_0050-1536x1152.jpg 1536w, /wp-content/uploads/2015/06/IMG_0050-2048x1536.jpg 2048w, /wp-content/uploads/2015/06/IMG_0050-1568x1176.jpg 1568w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+<a href='/wp-content/uploads/2015/06/IMG_0040-2-scaled.jpg'><img width="225" height="300" src="/wp-content/uploads/2015/06/IMG_0040-2-225x300.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/IMG_0040-2-225x300.jpg 225w, /wp-content/uploads/2015/06/IMG_0040-2-768x1024.jpg 768w, /wp-content/uploads/2015/06/IMG_0040-2-1152x1536.jpg 1152w, /wp-content/uploads/2015/06/IMG_0040-2-1536x2048.jpg 1536w, /wp-content/uploads/2015/06/IMG_0040-2-1568x2091.jpg 1568w, /wp-content/uploads/2015/06/IMG_0040-2-scaled.jpg 1920w" sizes="(max-width: 225px) 100vw, 225px" /></a>
+<a href='/wp-content/uploads/2015/06/bits-4-scaled.jpg'><img width="300" height="225" src="/wp-content/uploads/2015/06/bits-4-300x225.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/bits-4-300x225.jpg 300w, /wp-content/uploads/2015/06/bits-4-1024x768.jpg 1024w, /wp-content/uploads/2015/06/bits-4-768x576.jpg 768w, /wp-content/uploads/2015/06/bits-4-1536x1152.jpg 1536w, /wp-content/uploads/2015/06/bits-4-2048x1536.jpg 2048w, /wp-content/uploads/2015/06/bits-4-1568x1176.jpg 1568w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+<a href='/wp-content/uploads/2015/06/sign-4-scaled.jpg'><img width="300" height="225" src="/wp-content/uploads/2015/06/sign-4-300x225.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/sign-4-300x225.jpg 300w, /wp-content/uploads/2015/06/sign-4-1024x768.jpg 1024w, /wp-content/uploads/2015/06/sign-4-768x576.jpg 768w, /wp-content/uploads/2015/06/sign-4-1536x1152.jpg 1536w, /wp-content/uploads/2015/06/sign-4-2048x1536.jpg 2048w, /wp-content/uploads/2015/06/sign-4-1568x1176.jpg 1568w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

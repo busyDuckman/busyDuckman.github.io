@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Hi-Res Scan &#8211; Busy Ducks</title>
+	<atom:link href="/tag/hi-res-scan/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Wed, 24 Jun 2015 07:09:19 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Hi-Res Scan &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>What&#8217;s inside an integrated circuit? We broke one open and scanned it for you at 12,800DPI</title>
+		<link>/whats-inside-an-integrated-circuit/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 24 Jun 2015 07:09:19 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Hi-Res Scan]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=368</guid>
+
+					<description><![CDATA[Because you always wondered what was inside. See if you can guess which IC it was? Useful image for teachers, overhead slides etc. NB: This is not always a good DIY or classroom activity. Be aware that some electrical components create a seriously hazardous dust when broken open. Rectifiers, Hi Power transistors, Older IC&#8217;s &#38; IC&#8217;s with certain &#8230;<br><a href="/whats-inside-an-integrated-circuit/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">What&#8217;s inside an integrated circuit? We broke one open and scanned it for you at 12,800DPI</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Because you always wondered what was inside. See if you can guess which IC it was?</p>
+<p>Useful image for teachers, overhead slides etc.<br />
+<em>NB: This is not always a good DIY or classroom activity. Be aware that some electrical components create a seriously hazardous dust when broken open. Rectifiers, Hi Power transistors, Older IC&#8217;s &amp; IC&#8217;s with certain head spreaders as well as some IC&#8217;s designed for use in microwaves contain Beryllium Oxide.  While safe to handle, the dust particles created when they are damaged will make you gravely ill.</em></p>
+<p>Download large and detailed image [4096 x 5686] (1.5mb) <a href="http://www.busyducks.com/downloads/ic_[4096].jpg" target="_blank" rel="noopener">here</a><br />
+Download full scan [16394 x 22761] (27mb, <strong>use save as</strong>, because <span style="text-decoration: underline;">images this large still crash some broswers</span>) <a href="http://www.busyducks.com/downloads/ic128000.jpg" target="_blank" rel="noopener">here</a></p>
+<figure id="attachment_371" aria-describedby="caption-attachment-371" style="width: 800px" class="wp-caption alignnone"><a href="/wp-content/uploads/2015/06/ic_800.jpg"><img loading="lazy" class="wp-image-371 size-full" src="/wp-content/uploads/2015/06/ic_800.jpg" alt="Inside an integrated circuit." width="800" height="1110" srcset="/wp-content/uploads/2015/06/ic_800.jpg 800w, /wp-content/uploads/2015/06/ic_800-216x300.jpg 216w, /wp-content/uploads/2015/06/ic_800-738x1024.jpg 738w, /wp-content/uploads/2015/06/ic_800-768x1066.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /></a><figcaption id="caption-attachment-371" class="wp-caption-text">Inside an integrated circuit.</figcaption></figure>
+<p><em>What&#8217;s the white grid? Its a standard prototyping board, used to protect the scanner from the IC&#8217;s pins.</em></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

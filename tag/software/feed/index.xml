@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Software &#8211; Busy Ducks</title>
+	<atom:link href="/tag/software/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Fri, 03 Jul 2015 09:34:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Software &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Maze Making Software</title>
+		<link>/maze-software/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Fri, 03 Jul 2015 09:34:35 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Maze]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=476</guid>
+
+					<description><![CDATA[This software creates mazes of different sizes and configurable appearance. It is designed for teachers. It can save the output as printable sheets or bitmap images.]]></description>
+										<content:encoded><![CDATA[<h3>Overview</h3>
+<p>This software creates mazes of different sizes and configurable appearance. It is designed for teachers and makers. It can save the output as printable sheets or bitmap images.</p>
+<p>[updated terms]</p>
+<ul>
+<li>This software is provided free to use for all commercial / non-commercial / educational, puzzle publication purposes.</li>
+<li>The code is licensed under the MIT licence</li>
+<li>see <a href="https://github.com/busyDuckman/MazeMaker">https://github.com/busyDuckman/MazeMaker</a></li>
+</ul>
+<p>[how to show appreciation]</p>
+<ul>
+<li>I super appreciate getting some credit for the work, especially if you are printing a book of puzzles. Something like &#8220;puzzles created using Maze Maker software, by Dr Warren Creemers&#8221;.</li>
+<li>If you make something cool with it, I would love to see a photo/link.</li>
+<li>If you make a kids book or something like that, I&#8217;d really get a kick out of getting a free copy. Gestures like that make my day <img src="https://s.w.org/images/core/emoji/13.1.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></li>
+</ul>
+<h3>Screenshot</h3>
+<p><a href="/wp-content/uploads/2015/07/maze.png"><img loading="lazy" class="alignnone wp-image-477 size-full" src="/wp-content/uploads/2015/07/maze.png" alt="maze" width="715" height="453" srcset="/wp-content/uploads/2015/07/maze.png 715w, /wp-content/uploads/2015/07/maze-300x190.png 300w" sizes="(max-width: 715px) 100vw, 715px" /></a></p>
+<h3>Examples of different types of output</h3>
+<p><img loading="lazy" class="alignnone wp-image-480 size-full" src="/wp-content/uploads/2015/07/output_examples1.png" alt="Example Maze" width="640" height="640" srcset="/wp-content/uploads/2015/07/output_examples1.png 640w, /wp-content/uploads/2015/07/output_examples1-300x300.png 300w, /wp-content/uploads/2015/07/output_examples1-150x150.png 150w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<p>Can it do large mazes, like really large mazes?&#8230; <a href="http://www.busyducks.com/Software/_relevant_downloads/big_maze.png" target="_blank" rel="noopener noreferrer">YES</a>.</p>
+<h3>Download</h3>
+<p style="padding-left: 30px;">Install from the latest <a href="https://github.com/busyDuckman/MazeMaker/releases">release on github</a></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Download <a href="https://github.com/busyDuckman/MazeMaker/releases/download/v_0.9/maze_v0.9.zip">zip file</a>.</li>
+<li>Unzip file</li>
+<li>run setup.exe</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 30px;">First created:  2016-9-29<br />
+First published to github: 2019-09-13</p>
+<h3>Limitations:</h3>
+<ul>
+<li>Beta software (minor bugs to iron out, but quite usable)</li>
+<li>Smooth edges when wall width is set to 1 are buggy.</li>
+<li>Even line widths produce a better output.</li>
+</ul>
+<h3>What is done:</h3>
+<ul>
+<li>Generates a valid maze.</li>
+<li>Appearance is configurable.</li>
+<li>Maze size is configurable.</li>
+<li>Printing is enabled (adjust blockSize to alter print output size)</li>
+<li>Zooming in, moving etc (few minor bugs still).</li>
+<li>Support for DPI / block size.</li>
+</ul>
+<h3>Next Release</h3>
+<ul>
+<li>Bug fixes</li>
+<li>Support for graphical inserts</li>
+<li>Ascii output</li>
+</ul>
+<h3>Road Map</h3>
+<ul>
+<li>Will probably combine this with other software I have written to create a puzzle creation suite.</li>
+</ul>
+<h3>Update:</h3>
+<p>I have tentatively started working (April 2019) on a online version of this software, to be open sourced.</p>
+<h3>Contact / Feedback</h3>
+<p>Please leave feedback and bug reports via: <a href="https://github.com/busyDuckman/MazeMaker/issues">https://github.com/busyDuckman/MazeMaker/issues</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Crossword Software (alpha)</title>
+		<link>/crossword-software-alpha/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Sat, 20 Jun 2015 16:25:05 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Crossword]]></category>
+		<category><![CDATA[Dictionary]]></category>
+		<category><![CDATA[Linguistics]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=316</guid>
+
+					<description><![CDATA[Easy to use software to generate crossword puzzles.
+This is still very much alpha software (totally unfinished). I appreciate anyone who wants to kick the tyres and let me know what they think.]]></description>
+										<content:encoded><![CDATA[<h3>Overview</h3>
+<p>Easy to use software to generate crossword puzzles.</p>
+<p>This is still very much alpha software (totally unfinished).  This crossword puzzle generator is provided here for those who would like to kick the tyres and get a preview of some upcoming software.</p>
+<p>&nbsp;</p>
+<h3>Screenshot</h3>
+<p><a href="/wp-content/uploads/2015/06/alpha_screenshot.png"><img loading="lazy" class="alignnone wp-image-321 size-full" src="/wp-content/uploads/2015/06/alpha_screenshot.png" alt="alpha_screenshot" width="821" height="733" srcset="/wp-content/uploads/2015/06/alpha_screenshot.png 821w, /wp-content/uploads/2015/06/alpha_screenshot-300x268.png 300w, /wp-content/uploads/2015/06/alpha_screenshot-768x686.png 768w" sizes="(max-width: 821px) 100vw, 821px" /></a></p>
+<p>&nbsp;</p>
+<h3></h3>
+<h3>Download</h3>
+<p style="padding-left: 30px;">Install file <a href="http://www.busyducks.com/Software/Crossword/publish.htm" target="_blank" rel="noopener">here</a></p>
+<p>&nbsp;</p>
+<h3>Limitations:</h3>
+<ul>
+<li>Apha software (very incomplete)</li>
+<li>Unimplemented menu items are greyed out..</li>
+<li>No way to save a crossword yet.</li>
+</ul>
+<h3>What is done:</h3>
+<ul>
+<li>Generates a valid cross word, generally quickly, but may stall for 20 seconds during generation.
+<ul>
+<li>Not a bug, my algorithm is not finished. If it works itself into a corner, it tries to think its way out instead of backing up a step.</li>
+</ul>
+</li>
+<li>Supports several generation rules.</li>
+<li>&#8220;View Solution&#8221; toggle enabled</li>
+<li>Gives basic clues (just a word definition at the moment)</li>
+<li>Zooming in moving etc (few minor bugs still).</li>
+</ul>
+<h3>Next Release</h3>
+<ul>
+<li>Mark squares that must/must not be used.</li>
+<li>Dictionary management</li>
+<li> Find spot for given word</li>
+<li>Find word(s) for given spot.</li>
+<li>Restrict to words of a certain readership / usage frequency.</li>
+<li>Bitmap backgrounds.</li>
+<li>High DPI screen support.</li>
+</ul>
+<h3>Road Map</h3>
+<ul>
+<li>Proper clues</li>
+<li>Subject areas option for word selection</li>
+<li>Support for visually impaired output</li>
+<li>App(ify) / Touch screen support</li>
+<li>Support for half-toning and newsprint optimisation</li>
+<li>Awesome-sauce graphics options</li>
+<li>Artistic options</li>
+<li>Use one dictionary across a series of crosswords.</li>
+<li>Multiple languages.</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Contact / Feedback</h3>
+<p>[contact-form subject=&#8217;Crossword software (via website)&#8217;][contact-field label=&#8217;Name&#8217; type=&#8217;name&#8217; required=&#8217;1&#8217;/][contact-field label=&#8217;Email&#8217; type=&#8217;email&#8217; required=&#8217;1&#8217;/][contact-field label=&#8217;Type of comment&#8217; type=&#8217;select&#8217; options=&#8217;Support,Bug Report,Feature Request,Sales Enquiry,Other&#8217;/][contact-field label=&#8217;Comment&#8217; type=&#8217;textarea&#8217; required=&#8217;1&#8217;/][/contact-form]</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Images that use one of every colour + Free Software to make your own.</title>
+		<link>/images-that-use-one-of-every-colour/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 16 Jun 2015 04:57:03 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[C#]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=218</guid>
+
+					<description><![CDATA[Its kinda captivating, an image that uses only one of every colour possible on your computer. It makes for an odd desktop background on a 4K screen.]]></description>
+										<content:encoded><![CDATA[<p>When I got my first 4K screen and looked  at the specs I realised something. We are getting very close to the point where a screen will be able to show every possible (24 bit) pixel colour at once.</p>
+<p>Testing this out on screen with a big colour palate would be kinda boring, so I made some software to take a large image and convert it to use one of every colour.<br />
+I am using  4096 * 4096  = 16,777,216 (or 2<sup>24</sup>) images to do this.</p>
+<p>I played around with a few algorithms, but found the best results came from a very simple idea:</p>
+<ol>
+<li>Start with a image containing all colours.</li>
+<li>Inspect two pixels</li>
+<li>Swap the two pixels, if that would make If the image more like the target.</li>
+<li>Repeat steps 2 &#8211; 4, until the image looks good.</li>
+</ol>
+<p>Immediately I was stunned by the results.</p>
+<ul>
+<li>The Images actually worked, they looked like the source image.</li>
+<li>Parts of the image which where pulled toward a different colour and showed a very interesting (and accurate) image segmentation,</li>
+<li>The algorithm handled both photographs and solid colour cartoons well.</li>
+</ul>
+<h2>Example Images:</h2>
+<p>Firstly these files, produced by this method are are 50mb, and don&#8217;t compress well. I scaled them down for the website. If you want the verbatim image; you will have to download the software and make your own. (BTW: Did you notice the unusual beverage flavor in the vending machine pic, when you see it&#8230;).</p>
+
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/bottles_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/bottles_1024.jpg 1024w, /wp-content/uploads/2015/06/bottles_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/bottles_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/bottles_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/bottles_done_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/bottles_done_1024.jpg 1024w, /wp-content/uploads/2015/06/bottles_done_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/bottles_done_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/bottles_done_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/clackline_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/clackline_1024.jpg 1024w, /wp-content/uploads/2015/06/clackline_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/clackline_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/clackline_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/clackline_done_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/clackline_done_1024.jpg 1024w, /wp-content/uploads/2015/06/clackline_done_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/clackline_done_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/clackline_done_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/mass_fort_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/mass_fort_1024.jpg 1024w, /wp-content/uploads/2015/06/mass_fort_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/mass_fort_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/mass_fort_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/mass_fort_done_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/mass_fort_done_1024.jpg 1024w, /wp-content/uploads/2015/06/mass_fort_done_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/mass_fort_done_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/mass_fort_done_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/cassette-tape_small.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/cassette-tape_small.jpg 1024w, /wp-content/uploads/2015/06/cassette-tape_small-300x300.jpg 300w, /wp-content/uploads/2015/06/cassette-tape_small-150x150.jpg 150w, /wp-content/uploads/2015/06/cassette-tape_small-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/cassette-tape_done_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/cassette-tape_done_1024.jpg 1024w, /wp-content/uploads/2015/06/cassette-tape_done_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/cassette-tape_done_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/cassette-tape_done_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/tasmania_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/tasmania_1024.jpg 1024w, /wp-content/uploads/2015/06/tasmania_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/tasmania_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/tasmania_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/tasmania_done.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/tasmania_done.jpg 1024w, /wp-content/uploads/2015/06/tasmania_done-300x300.jpg 300w, /wp-content/uploads/2015/06/tasmania_done-150x150.jpg 150w, /wp-content/uploads/2015/06/tasmania_done-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/Fly_Agaric_1024.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/Fly_Agaric_1024.jpg 1024w, /wp-content/uploads/2015/06/Fly_Agaric_1024-300x300.jpg 300w, /wp-content/uploads/2015/06/Fly_Agaric_1024-150x150.jpg 150w, /wp-content/uploads/2015/06/Fly_Agaric_1024-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img width="1024" height="1024" src="/wp-content/uploads/2015/06/Fly_Agaric_done.jpg" class="attachment-full size-full" alt="" loading="lazy" link="none" size="full" type="slideshow" ids="231,232,233,234,235,236,227,237,242,241,244,243" orderby="post__in" include="231,232,233,234,235,236,227,237,242,241,244,243" srcset="/wp-content/uploads/2015/06/Fly_Agaric_done.jpg 1024w, /wp-content/uploads/2015/06/Fly_Agaric_done-300x300.jpg 300w, /wp-content/uploads/2015/06/Fly_Agaric_done-150x150.jpg 150w, /wp-content/uploads/2015/06/Fly_Agaric_done-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+
+<p>&nbsp;</p>
+<h2>Download the software:</h2>
+<p style="padding-left: 30px;">Install file:  <a href="http://www.busyducks.com/Software/ImageOfEveryColor/publish.htm" target="_blank" rel="noopener">here</a><br />
+Oneclick: <a href="http://www.busyducks.com/Software/ImageOfEveryColor_oneclick/publish.htm" target="_blank" rel="noopener">here</a></p>
+<h2></h2>
+<h2>Screen Shot</h2>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/06/application.jpg"><img loading="lazy" class="alignnone wp-image-230 " src="/wp-content/uploads/2015/06/application.jpg" alt="Application Screen Shot" width="819" height="453" srcset="/wp-content/uploads/2015/06/application.jpg 1070w, /wp-content/uploads/2015/06/application-300x166.jpg 300w, /wp-content/uploads/2015/06/application-1024x567.jpg 1024w, /wp-content/uploads/2015/06/application-768x425.jpg 768w" sizes="(max-width: 819px) 100vw, 819px" /></a></p>
+<h2>Software usage note(s):</h2>
+<ul>
+<li>Application works on high DPI screens.</li>
+<li>Some images prefer that I choose one of the pixels in a structured sequential fashion, others prefer both to be picked at random.
+<ul>
+<li>I solved this by doing n iterative rounds, followed by x minutes of random swapping.</li>
+<li>The software lets you set these options.</li>
+<li>Iterative rounds produce good results very quickly, but will leave some lines on cartoons.</li>
+<li>Random rounds are slow to improve the image. A minute is a good buffer to clean up an image, but consider 40+ minutes for cleaner results.</li>
+</ul>
+</li>
+<li>Uses many threads, and hogs the system bus. Will give the CPU a quick workout.</li>
+<li>Can be used in a command line mode, Suit batch processing.
+<ul>
+<li>To do this, provide one optional parameter (directory with images).</li>
+<li>Finds all pictures in directory that don&#8217;t have &#8220;_done&#8221; or &#8220;_ignore&#8221; in the name.</li>
+<li>Saves a new image with _done added to the file name.</li>
+<li>Overrides that image without prompting!</li>
+</ul>
+</li>
+<li>Save as bitmap If you don&#8217;t want the jpeg compression to alter the validity of the &#8220;every single colour&#8221; image.</li>
+</ul>
+<p>On images heavily biased to one colour, the iterative pass may exhaust that colour to the top of its run.<br />
+eg..</p>
+<p><a href="/wp-content/uploads/2015/06/working.jpg"><img loading="lazy" class="alignnone wp-image-240 " src="/wp-content/uploads/2015/06/working.jpg" alt="working" width="779" height="432" srcset="/wp-content/uploads/2015/06/working.jpg 1036w, /wp-content/uploads/2015/06/working-300x166.jpg 300w, /wp-content/uploads/2015/06/working-1024x567.jpg 1024w, /wp-content/uploads/2015/06/working-768x426.jpg 768w" sizes="(max-width: 779px) 100vw, 779px" /></a><a href="/wp-content/uploads/2015/06/working.jpg"> </a></p>
+<p>In this case, set &#8220;Iteration Runs&#8221; to 0. This will disable the iterative passes and go strait to random passes.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Contact / Feedback</h3>
+<p>[contact-form subject=&#8217;All Colour Software (via website)&#8217;][contact-field label=&#8217;Name&#8217; type=&#8217;name&#8217; required=&#8217;1&#8217;/][contact-field label=&#8217;Email&#8217; type=&#8217;email&#8217; required=&#8217;1&#8217;/][contact-field label=&#8217;Type of comment&#8217; type=&#8217;select&#8217; options=&#8217;Support,Bug Report,Feature Request,Sales Enquiry,Other&#8217;/][contact-field label=&#8217;Comment&#8217; type=&#8217;textarea&#8217; required=&#8217;1&#8217;/][/contact-form]</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

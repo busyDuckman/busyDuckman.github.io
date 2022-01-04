@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Datasets &#8211; Busy Ducks</title>
+	<atom:link href="/tag/datasets/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Sun, 08 Mar 2015 16:00:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Datasets &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Large &#038; Interesting Datasets</title>
+		<link>/large-interesting-datasets/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Sun, 08 Mar 2015 16:00:03 +0000</pubDate>
+				<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Datasets]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=82</guid>
+
+					<description><![CDATA[This is a list of impressive / interesting data-sets I have come across. They are typically free, machine readable, downloadable and extensive.
+
+]]></description>
+										<content:encoded><![CDATA[<p>This is a list of impressive / interesting data-sets I have come across. They are typically free (or cost-price of media), machine readable, downloadable and extensive.</p>
+<p>Text:</p>
+<ul>
+<li>&#8216;Project Gutenberg&#8217; massive collection of books older than 80 years (expired copyright). via custom iso image <a href="http://pgiso.pglaf.org/" target="_blank" rel="noopener">here</a>, iso of popular books <a href="http://www.gutenberg.org/wiki/Gutenberg:The_CD_and_DVD_Project" target="_blank" rel="noopener">here</a>, or via rsync <a href="http://www.gutenberg.org/wiki/Gutenberg:Mirroring_How-To" target="_blank" rel="noopener">here</a>.</li>
+<li>&#8216;Enron corpus&#8217;  500,000ish actual emails. <a href="http://www.cs.cmu.edu/~./enron/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;ClueWeb09 Datase&#8217; 2009 Archive of 1 billion web pages (various languages) [5 TB, compressed. 25 TB, uncompressed.]. <a href="http://lemurproject.org/clueweb09/index.php#Using" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;arXiv archive&#8217;. Giant collection of scientific papers in pdf format.  <a href="http://arxiv.org/help/bulk_data_s3" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;SMS Spam Collection&#8217; 5000+ SMS messages tagged as spam or not. <a href="http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/" target="_blank" rel="noopener">here</a></li>
+<li>Google n-grams (from web pages)  <a href="https://catalog.ldc.upenn.edu/LDC2006T13">here</a></li>
+<li>Google n-grams (from books) <a href="http://commondatastorage.googleapis.com/books/syntactic-ngrams/index.html">here</a></li>
+</ul>
+<p>Linguistics</p>
+<ul>
+<li>&#8216;Wordnet&#8217; Database of English words.  Words are grouped, linked and organised. <a href="http://wordnet.princeton.edu/" target="_blank" rel="noopener">here</a>.</li>
+<li>Yahoo labs. A collection of data from Yahoo searches/questions/ratings/images <a href="http://webscope.sandbox.yahoo.com/catalog.php" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>Knowledge</p>
+<ul>
+<li>&#8216;Freebase&#8217;  cira 1 billion facts. [will be retired July 2015] <a href="https://developers.google.com/freebase/index" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Mizar Project&#8217; 10&#8217;s of thousands of mathematical definitions, formulas and proofs; in machine readable format. <a href="http://mizar.org/project/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Stack Exchange&#8217; Questions and answers from many popular forums. Computer readable dumps and a query API. <a href="http://data.stackexchange.com/help" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;DBpedia&#8217; Parsed and structured information extracted from Wikipedia.  <a href="http://dbpedia.org/About" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Cross-Lingual Dictionary for English Wikipedia Concepts&#8217;  Maps concepts to relevant Wikipedia articles. <a href="http://www-nlp.stanford.edu/pubs/crosswikis-data.tar.bz2/" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>Images</p>
+<ul>
+<li>&#8216;Visual Dictionary&#8217; Images for 50,000+ nouns in the English language, by MIT.  <a href="http://groups.csail.mit.edu/vision/TinyImages/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Imagenet&#8217; Pictures matching the hierarchy of Word-net noun nodes. <a href="//www.image-net.org/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;MNIST database&#8217;  70,000 handwritten digits. <a href="http://yann.lecun.com/exdb/mnist/" target="_blank" rel="noopener">here</a></li>
+<li>&#8221; An index to all sorts of computer vision data-sets. <a href="http://riemenschneider.hayko.at/vision/dataset/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Label me&#8217; Labeled things in images from MIT <a href="http://labelme.csail.mit.edu/Release3.0/browserTools/php/dataset.php" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;KTH-TIPS&#8217; Textures under varying illumination, pose and scale. <a href="http://www.nada.kth.se/cvap/databases/kth-tips/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;MS COCO&#8217; 91 object-types, 2.5 million labels in 328,000 images. <a href="http://mscoco.org/">here</a></li>
+</ul>
+<p>Music</p>
+<ul>
+<li>&#8216;Million Song Data Set&#8217; Audio features and other meta data for a million modern popular music tracks. <a href="http://labrosa.ee.columbia.edu/millionsong/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Last.fm API&#8217; Access to all  last.fm user/playlist/music/artist/geo/genre/tag data. A history of who listened to what/when/where   <a href="http://www.last.fm/api" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>Society</p>
+<ul>
+<li>WHO &#8216;Global Health Observatory&#8217;  Lots of usable data about all heal related issues.  <a href="http://www.who.int/gho/database/en/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;ICPSR 4572&#8217;  Extensive stats on (USA) prisoners.  <a href="http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/4572?q=&amp;paging.rows=25&amp;sortBy=10" target="_blank" rel="noopener">here</a></li>
+<li>Drug usage (USA) , large survey with many variables, who/what/why  <a href="http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/34933?q=&amp;paging.rows=25&amp;sortBy=10" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>Social Networks</p>
+<ul>
+<li>&#8216;Social Network Analysis Interactive Dataset Library&#8217;. Contains computer readable images of 300+ online social networks. <a href="http://arcane-coast-3553.herokuapp.com/overview" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Stanford Large Network Dataset Collection&#8217; Graphs of assorted webpages (eg. Facebook / Twitter) <a href="http://snap.stanford.edu/data/" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>Geology:</p>
+<ul>
+<li>&#8216;Global Historical Earthquakes&#8217;  All known earthquakes (prior to 1903). <a href="http://www.globalquakemodel.org/what/seismic-hazard/historical-catalogue/" target="_blank" rel="noopener">here</a> and also <a href="http://www.emidius.eu/GEH/" target="_blank" rel="noopener">this</a>.</li>
+</ul>
+<p>Misc</p>
+<ul>
+<li>&#8216;Open Product Data&#8217;. International set of product bar-codes. <a href="http://www.product-open-data.com/en/1-home.html" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Amazon reviews&#8217; 34 million product reviews covering 2 million products. <a href="https://snap.stanford.edu/data/web-Amazon.html" target="_blank" rel="noopener">here</a>.</li>
+<li>&#8216;USDA National Nutrient Database for Standard Reference&#8217; The nutrients (typically) found in different foods. <a href="https://www.ars.usda.gov/Services/docs.htm?docid=8964" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Open Library Data Dumps&#8217; Very large dump of library records (author, work, revision, etc). <a href="https://openlibrary.org/developers/dumps" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;List of lists of lists&#8217;  The pages listing lists got so prolific&#8230; we needed a list of them.  <a href="http://en.wikipedia.org/wiki/List_of_lists_of_lists" target="_blank" rel="noopener">here</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,1762 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Arduino &#8211; Busy Ducks</title>
+	<atom:link href="/tag/arduino/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Tue, 21 Apr 2020 02:27:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Arduino &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Upgrading Robie The Robot.</title>
+		<link>/upgrading-robie-the-robot/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 21 Apr 2020 02:27:55 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[3D-Printing]]></category>
+		<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[raspberry_pi]]></category>
+		<category><![CDATA[Robot]]></category>
+		<category><![CDATA[vintage]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=1018</guid>
+
+					<description><![CDATA[Part one, in a journey to upgrade an old robot. This classic 80's robot This robot was also known as: Tandy Robie, Radio Shack Robie, Robie the Robot, Talking Robie, RS 4061, Robocom 1000, Robie Parlant, and Robocom Robot (Super).]]></description>
+										<content:encoded><![CDATA[
+<h2>A Rare Find</h2>
+
+
+
+<p>I was in an vintage collectables store and saw a beaten up old &#8216;Robie the Robot&#8217; forgotten at the back of a shelf. It&#8217;s dome was cracked and it&#8217;s remote missing. Robot collectors are quite voracious in Canberra with most robots snapped up within days. However, it seems nobody relished this rough robotic remnant, so I got it cheap.</p>
+
+
+
+<p>This robot was also known as: <em>Tandy Robie, Radio Shack Robie, Robie the Robot, Talking Robie, RS 4061, Robocom 1000, Robie Parlant, Robocom Robot (Super)</em>. There is a good write up about the robot on <a rel="noreferrer noopener" href="http://www.theoldrobots.com/talkrobie2.html" target="_blank">theoldrobots</a>.</p>
+
+
+
+<figure class="wp-block-image size-large"><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/robbie-1024x768.jpeg" alt="" class="wp-image-1019"/><figcaption>Robie The Robot, as purchased.</figcaption></figure>
+
+
+
+<h2>Tear Down</h2>
+
+
+
+<p>Disassembling Robie I discovered a typical 80&#8217;s remote control toy. RC circuitry oozing with leaking capacitor electrolyte and decayed protective lacquer. Apparently the built in speaker could talk, but looking at the circuitry, my guess is it functioned as a wally talky, playing a voice signal from the remote.  I didn&#8217;t have the remote so I can&#8217;t confirm.<br><br>The motors were the &#8220;old style&#8221;; power hungry and weak. The Achilles heel that made all 80&#8217;s moving toys kinda nerfed.</p>
+
+
+
+<p>The front screen was fake, the heads and arms were not designed to move. I will need to fix all this.</p>
+
+
+
+<h2>A New Brain.</h2>
+
+
+
+<p>Decided to throw a pi in there, with a monitor that fits the front screen and a camera because that would be cool. <br></p>
+
+
+
+<figure class="wp-block-image size-large"><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/pi-1024x768.jpeg" alt="" class="wp-image-1020"/></figure>
+
+
+
+<p>For the display, a generic five dollar 2.2&#8243; SPI TFT LCD&nbsp;that sells for arduino projects works well (fits just behind the front monitor panel). The stock plastic used for Robies display is way to dark for the screen to be visible, so I used a Fresnel lens instead (you can get them from the two dollar shop, sold a book magnifiers). </p>
+
+
+
+<p>A front assembly was 3d printed to hold the pi, monitor and camera (such that everything lined up, and the camera could see out of the hole previously used for the frontal on/off switch.</p>
+
+
+
+<figure class="wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img loading="lazy" width="1024" height="768" src="/wp-content/uploads/2020/04/front_asm_render.jpg" alt="" data-id="1021" data-link="http://busyducks.com/wp_4_1/?attachment_id=1021#main" class="wp-image-1021" srcset="/wp-content/uploads/2020/04/front_asm_render.jpg 1024w, /wp-content/uploads/2020/04/front_asm_render-300x225.jpg 300w, /wp-content/uploads/2020/04/front_asm_render-768x576.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="blocks-gallery-item__caption">Design in Fusion 360, screen is mounted on the green sled.</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158235-768x1024.jpg" alt="" data-id="1034" data-link="http://busyducks.com/wp_4_1/?attachment_id=1034#main" class="wp-image-1034"/><figcaption class="blocks-gallery-item__caption">Rear</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158236-768x1024.jpg" alt="" data-id="1035" data-link="http://busyducks.com/wp_4_1/?attachment_id=1035#main" class="wp-image-1035"/><figcaption class="blocks-gallery-item__caption">Front</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158224-1024x768.jpg" alt="" data-id="1037" data-full-url="/wp-content/uploads/2020/04/P4158224-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1037#main" class="wp-image-1037"/><figcaption class="blocks-gallery-item__caption">Empty shell, wit Fresnel lens.</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158223-1024x768.jpg" alt="" data-id="1036" data-full-url="/wp-content/uploads/2020/04/P4158223-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1036#main" class="wp-image-1036"/><figcaption class="blocks-gallery-item__caption">Mount pi.</figcaption></figure></li></ul></figure>
+
+
+
+<h2>Motorising the Head</h2>
+
+
+
+<p>A turntable system was created in OpenSCAD, using the awesome parametric gear library by Dr Jörg Janssen. I didn&#8217;t have a 3d printer, so I printed via the ANU Makerspace.</p>
+
+
+
+<figure class="wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img loading="lazy" width="1024" height="586" src="/wp-content/uploads/2020/04/head_gears_lower-1024x586.png" alt="" data-id="1023" data-link="http://busyducks.com/wp_4_1/?attachment_id=1023#main" class="wp-image-1023" srcset="/wp-content/uploads/2020/04/head_gears_lower-1024x586.png 1024w, /wp-content/uploads/2020/04/head_gears_lower-300x172.png 300w, /wp-content/uploads/2020/04/head_gears_lower-768x439.png 768w, /wp-content/uploads/2020/04/head_gears_lower.png 1103w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></li><li class="blocks-gallery-item"><figure><img loading="lazy" width="1024" height="691" src="/wp-content/uploads/2020/04/P6185667_close_up-1024x691.jpg" alt="" data-id="1024" data-link="http://busyducks.com/wp_4_1/?attachment_id=1024#main" class="wp-image-1024" srcset="/wp-content/uploads/2020/04/P6185667_close_up-1024x691.jpg 1024w, /wp-content/uploads/2020/04/P6185667_close_up-300x202.jpg 300w, /wp-content/uploads/2020/04/P6185667_close_up-768x518.jpg 768w, /wp-content/uploads/2020/04/P6185667_close_up-1536x1036.jpg 1536w, /wp-content/uploads/2020/04/P6185667_close_up-2048x1381.jpg 2048w, /wp-content/uploads/2020/04/P6185667_close_up-1568x1057.jpg 1568w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/inside_a-906x1024.jpg" alt="" data-id="1025" data-full-url="/wp-content/uploads/2020/04/inside_a-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1025#main" class="wp-image-1025"/></figure></li><li class="blocks-gallery-item"><figure><img loading="lazy" width="674" height="440" src="/wp-content/uploads/2020/04/head_gears_upper.png" alt="" data-id="1022" data-link="http://busyducks.com/wp_4_1/?attachment_id=1022#main" class="wp-image-1022" srcset="/wp-content/uploads/2020/04/head_gears_upper.png 674w, /wp-content/uploads/2020/04/head_gears_upper-300x196.png 300w" sizes="(max-width: 674px) 100vw, 674px" /></figure></li></ul></figure>
+
+
+
+<p>The turntable is driven by a 28byj-48 stepper motor, with a ULN2003 Darlington transistor array driver. <br></p>
+
+
+
+<p>I discovered the original broken dome was most likely not a custom mould,  but a security camera dome. I had some difficulty justifying a proper replacement as Australian retailers wanted over $50 for a replacement security camera dome (just the one piece of plastic). So I just replaced the head with a plastic dome from a toy shop.<br><br>The result is not quite as fast as I would like, but it was unexpectedly charming.</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="P6235685" width="940" height="529" src="https://www.youtube.com/embed/sQd-v5fpN5s?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<h2>Getting the arms to move.</h2>
+
+
+
+<p>A bracket was designed to get some cheap tower-pro servos to fit aligned with the arms. The brackets neatly affixes to old circuit mounting points in the plastic. A custom servo horn will friction fitted the arms to the servo. The existing arm bearing was sanded a bit to get it to slide freely. The result is a much more expressive robot. </p>
+
+
+
+<figure class="wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058095-768x1024.jpg" alt="" data-id="1026" data-link="http://busyducks.com/wp_4_1/?attachment_id=1026#main" class="wp-image-1026"/><figcaption class="blocks-gallery-item__caption">Servo mount rear</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058096-768x1024.jpg" alt="" data-id="1027" data-link="http://busyducks.com/wp_4_1/?attachment_id=1027#main" class="wp-image-1027"/><figcaption class="blocks-gallery-item__caption">Servo mount top</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058110-1024x768.jpg" alt="" data-id="1028" data-link="http://busyducks.com/wp_4_1/?attachment_id=1028#main" class="wp-image-1028"/><figcaption class="blocks-gallery-item__caption">friction fit arm</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058101-1024x768.jpg" alt="" data-id="1029" data-link="http://busyducks.com/wp_4_1/?attachment_id=1029#main" class="wp-image-1029"/><figcaption class="blocks-gallery-item__caption">servos installed</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058108-1024x768.jpg" alt="" data-id="1030" data-full-url="/wp-content/uploads/2020/04/P4058108-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1030#main" class="wp-image-1030"/><figcaption class="blocks-gallery-item__caption">servo horns installed</figcaption></figure></li></ul></figure>
+
+
+
+<h2>Whats next.</h2>
+
+
+
+<p>I have made files for the progress thus far available via github, encase anyone has a Robie of their own and wants to try this. <a href="https://github.com/busyDuckman/robbie">https://github.com/busyDuckman/robbie</a></p>
+
+
+
+<p>Next up I will work on:</p>
+
+
+
+<ul><li>Drive system so Robie can move around.</li><li>Microphone array so voice interaction is possible.</li><li>Control software.</li><li>Personality and human interaction.</li></ul>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[UPDATE] Comprehensive Arduino Flash Memory via PROGMEM</title>
+		<link>/update-comprehensive-arduino-flash-memory-via-progmem/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 11 Feb 2016 05:46:20 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Progmem]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=795</guid>
+
+					<description><![CDATA[[Updated for arduino v1.6] This post is a huge set of PROGMEM examples (done as unit tests) which you can freely copy and paste into your work.
+
+The readership level is set at those who are already familiar with the arduino PROGMEM documentation here and the use of the F() macro and __FlashStringHelper*
+
+ Its designed as a reference to save you the "lets see how to make this work" time and communicate common pitfalls. Search for the method you need to use, and see it running in working tested code]]></description>
+										<content:encoded><![CDATA[<p>A Few years ago I posed an encyclopaedic set of unit tests (<a href="http://busyducks.com/wp_4_1/2015/03/09/comprehensive-example-code-demonstrating-using-arduino-flash-memory-via-progmem/" target="_blank" rel="noopener">here</a>) that showed how to do anything in progmem.  It went through structs, strings, arrays and all the library functions that could use progmem. However as of arduino V1.55 a it was broken as things on the Arduino platform had changed, v1.6 compounded the issues. As I regularly get visitors to this page, I thought it was in need of an update.</p>
+<p>So I present the code, updated to work on the latest platform. As per the last article:</p>
+<ul>
+<li><strong>This is not an intro to progmem article.</strong> The readership level is set at those who are already familiar with the arduino PROGMEM documentation <a href="http://arduino.cc/en/Reference/PROGMEM" target="_blank" rel="noopener">here </a>and the use of the F() macro and __FlashStringHelper*.</li>
+<li>Its&#8217; designed as a reference on how to accomplish many different common tasks in PROGMEM.</li>
+<li>It&#8217;s  here  to save you the &#8220;lets see how to make this work&#8221; time and communicate common pitfalls.</li>
+<li>The code is well documented, so you should be able to find what you need quickly.</li>
+<li>There is data declarations out front,  assorted unit tests in setup() and a simple unit testing framework at the end of the file.</li>
+<li>Some of the examples have  //JBYCDMUS after the line. This stands for &#8220;just because you can, doesn&#8217;t mean you should&#8221; implying It works but is not recommended.</li>
+<li><strong>To use this search for the method you need to use, and see it running in working tested code.</strong></li>
+</ul>
+<p>&nbsp;</p>
+<pre class="lang:c++ decode:true ">//----------------------------------------------------------------------------------//
+//                                    BUSYDUCKS.COM                                 //
+//                           _         _                  _                         //
+//                         ( o)&gt;     ( o)&lt;     __       ( o)&lt;                       //
+//                      ____\\    ____\\   __ (.. )  \\\_\\                         //
+//                 ~~~~\_///__)~~\_///__)~~\_\\V__)~~\_____)~~~~~                   //
+//                                                                                  //
+//                            Making you pro-duck-tive                              //
+//                                                                                  //
+//  Author: Duckman   Date: 08/02/16   Ver: 1.6   Licence: Creative Commons (by-sa) //
+//                                                                                  //
+//  Demonstrates the use of PROGMEM.                                                //
+//  Compile with Arduino environment 1.6 or later                                   //
+//                                                                                  //
+//  Permision given to freely copy/paste "code snippets" into your own code. For    //
+//  other uses (e.g. derivative works) the Creative Commons Attribution Share-      //
+//  alike license applies (cite busyducks.com). This means comerical use is ok.     //
+//----------------------------------------------------------------------------------//
+
+#if !(defined(ARDUINO) &amp;&amp; ARDUINO &gt;= 140)
+#include &lt;environment.h&gt;
+#endif
+
+void setTestName(const __FlashStringHelper* name);
+void setTestName(const char *name);
+bool assert(bool isTrue, Print *outStream=NULL);
+void pass();
+void fail(Print *outStream=NULL);
+void printTestSummary(Print *outStream);
+
+/*
+char,                             (1 byte)    -127 to 128 also letters i.e. 'a'     pgm_read_byte
+unsigned char, byte               (1 byte)    0 to 255                              pgm_read_byte
+int, short                        (2 bytes)   -32,767 to 32,768                     pgm_read_word
+unsigned int, unsigned short      (2 bytes)   0 to 65,535                           pgm_read_word
+long                              (4 bytes)   -2,147,483,648 to 2,147,483,647       pgm_read_dword
+unsigned long                     (4 bytes)   0 to 4,294,967,295                    pgm_read_dword
+
+For ATMEGA based arduino's double is the same as float
+float, double                     (4 bytes)   -3.4028235E+38 to 3.4028235E+38       pgm_read_float
+*/
+
+//--------------------------------------------------------------------------------------------------------------
+// Data structures for test
+//--------------------------------------------------------------------------------------------------------------
+struct Person
+{
+  int height;
+  char *name;
+  int age;
+  Person *spouse;
+};
+
+//--------------------------------------------------------------------------------------------------------------
+// Test Data Sets
+//--------------------------------------------------------------------------------------------------------------
+#define BYTE_TEST_PATTERN_DATA {0, 1, 2, 3, 4, 9, 15, 16, 21, 31, 32, 64, 100, 201, 212, 255, 7}
+#define BYTE_TEST_PATTERN_SIZE 17
+#define MAX_STRING_SIZE 100
+
+//--------------------------------------------------------------------------------------------------------------
+// Test Data
+//--------------------------------------------------------------------------------------------------------------
+//  regular data
+const byte  progMem_ucharArray[]     PROGMEM = BYTE_TEST_PATTERN_DATA;
+const byte  progMem_uchar            PROGMEM = 130;
+const int   progMem_int              PROGMEM = -3021;
+const long  progMem_long             PROGMEM = 2000000001;
+const float progMem_float            PROGMEM = 3.14159265359;
+const char  progMem_string[]         PROGMEM = "Snollygoster";
+const char  progMem_string2[]        PROGMEM = "Problem Alchemist";
+const char  progMem_string3[]        PROGMEM = "Lead Paradigm Architect";
+const char  progMem_emptyString[]    PROGMEM = "";
+const float progMem_floatArray[2][5] PROGMEM = {{0.2, 0.1, 0.5, 0.7, -3.2},
+                                               {0.4, 0.2, 1.0, 1.4, -6.4}};
+
+//  NB this used to be in the form "PROGMEM const char *progMem_stringArray[] =",
+//  now the extra const is required.
+PROGMEM const char *const progMem_stringArray[] =
+{   
+  progMem_string,
+  progMem_string2,
+  progMem_string3
+};
+
+//  STRUCTS
+//  this line is a foward decleration, it allows person1 to create a valid pointer 
+//  to person2 even though person2 is not defined yet.
+extern const Person progMem_person2;
+
+const char     _name[]         PROGMEM = "Papa Smurf";
+const Person   progMem_person  PROGMEM = {189, (char *)_name, 32, (Person*)&amp;progMem_person2};
+const char     _name2[]        PROGMEM = "Muma Smurf";
+const Person   progMem_person2 PROGMEM = {160, (char *)_name2, 41, (Person*)&amp;progMem_person};
+
+//--------------------------------------------------------------------------------------------------------------
+// Stats
+//--------------------------------------------------------------------------------------------------------------
+long passCount = 0;
+long failCount = 0;
+long countAtLastNameChange = 0;
+char currentTestName[64];
+
+//--------------------------------------------------------------------------------------------------------------
+// setup and loop
+//--------------------------------------------------------------------------------------------------------------
+void setup() 
+{
+    byte localData[] = BYTE_TEST_PATTERN_DATA;
+    char buffer[MAX_STRING_SIZE];
+    
+    Serial.begin(9600);
+    
+	//JBYCDMUS = just because you can, doesn't mean you should
+	
+    Serial.println(F("---------------- single variable tests"));
+    setTestName(F("single variable tests"));
+    assert(  progMem_uchar == 130                                       ); //JBYCDMUS
+    assert(  pgm_read_byte(&amp;progMem_uchar) == 130                       );
+    assert(  progMem_int == -3021                                       ); //JBYCDMUS
+    assert(  progMem_long == 2000000001                                 ); //JBYCDMUS
+    assert(  (int)(pgm_read_float(&amp;progMem_float)*10000) == 31415       );
+    
+    Serial.println(F("---------------- array tests"));
+    setTestName(F("array tests"));
+    for(int i=0; i&lt; BYTE_TEST_PATTERN_SIZE; i++)
+    {
+        assert(   pgm_read_byte(&amp;progMem_ucharArray[i]) == localData[i] );
+    }
+    for(int i=0; i&lt;5; i++)
+    {
+        //  the easy way of accessing the array
+        float a = pgm_read_float(&amp;progMem_floatArray[0][i]);
+        //  another way of accessing the array same as [1][i]
+        float b = pgm_read_float(((unsigned int)progMem_floatArray)+(5+i)*sizeof(float));
+        a = a * 2;
+        //  to check two floating points are "equal"
+        assert (abs(a - b) &lt; 0.0001                                     );
+    }
+
+    
+    Serial.println(F("---------------- struct tests"));
+    setTestName(F("struct tests"));
+    assert(  progMem_person.height == 189                               ); //JBYCDMUS
+    assert(  pgm_read_byte(&amp;progMem_person.height) == 189               );
+    //  NB: this used to be (prog_char *)pgm_read_word(&amp;progMem_person.name) but prog_char is depreciated
+    assert(  strcmp_P("Papa Smurf", (char PROGMEM *)pgm_read_word(&amp;progMem_person.name)) == 0 );
+    assert(  pgm_read_byte(&amp;progMem_person.age) == 32                   );
+    assert(  progMem_person.age == 32                                   ); //JBYCDMUS
+    
+    //  get person1's spouse
+    Person *p= (Person *)pgm_read_word(&amp;progMem_person.spouse);
+    assert(  p == &amp;progMem_person2                                      );
+    assert(  pgm_read_byte(&amp;p-&gt;age) == 41                               );
+    //get person2's spouse
+    p = (Person *)pgm_read_word(&amp;progMem_person2.spouse);
+    assert(  p == &amp;progMem_person                                       );
+    assert(  pgm_read_byte(&amp;p-&gt;age) == 32                               );
+
+    Serial.println(F("---------------- memory operation tests"));
+    setTestName(F("memcmp [memory compare]"));
+    //  compares len bytes of the memory s1 and flash s2
+    byte data[] = BYTE_TEST_PATTERN_DATA;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) == 0 );
+    data[BYTE_TEST_PATTERN_SIZE-1] = 0;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &lt; 0  );
+    data[BYTE_TEST_PATTERN_SIZE-1] = 255;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &gt; 0  );
+    
+    //  copy len bytes from flash to SRAM
+    memset (data, 0, BYTE_TEST_PATTERN_SIZE);
+    assert(  memcpy_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &gt; 0  );
+    assert(  memcmp(data, localData, BYTE_TEST_PATTERN_SIZE) == 0            );
+    
+    Serial.println(F("---------------- string function tests"));
+    
+    //  ---- strcmp &amp; strncmp Compare two strings
+    setTestName(F("strcmp [string compare]"));
+    assert(  strcmp_P("Snollygoster", progMem_string) == 0                ); 
+    assert(  strcmp_P("sNollyGostEr", progMem_string) != 0                );
+    assert(  strcmp_P("Bug", progMem_string) &lt; 0                          );
+    assert(  strcmp_P("Zoo", progMem_string) &gt; 0                          );
+    
+    setTestName(F("strncmp [string compare, first n chars]"));
+    assert(  strncmp_P("Snollyfoobar", progMem_string, 6) == 0            );
+    assert(  strncmp_P("sNollyGostEr", progMem_string, 6) != 0            );
+    assert(  strncmp_P("Bug", progMem_string, 3) &lt; 0                      );
+    assert(  strncmp_P("Zoo", progMem_string, 3) &gt; 0                      );
+    
+    //  ---- strcasecmp &amp; strncasecmp, Compare two strings, ignoring case  
+    assert(  strcasecmp_P("Snollygoster", progMem_string) == 0            );
+    assert(  strcasecmp_P("sNollyGostEr", progMem_string) == 0            );
+    assert(  strcasecmp_P("Bug", progMem_string) &lt; 0                      );
+    assert(  strcasecmp_P("Zoo", progMem_string) &gt; 0                      );
+    
+    setTestName(F("strncasecmp [string compare ignoring case]"));
+    assert(  strncasecmp_P("Snollyfoobar", progMem_string, 6) == 0        );
+    assert(  strncasecmp_P("sNollYGostEr", progMem_string, 8) == 0        );
+    assert(  strncasecmp_P("Bug", progMem_string, 3) &lt; 0                  );
+    assert(  strncasecmp_P("Zoo", progMem_string, 3) &gt; 0                  );
+    
+    //  ---- strcpy, strlcpy &amp; strncpy: makes a copy of a string
+    setTestName(F("strcpy [copy a string]"));
+    clear(buffer, MAX_STRING_SIZE); //empty string buffer
+    assert(  strcpy_P(buffer, progMem_string) == buffer                   );
+    assert(  strncmp(buffer, "Snollygoster", MAX_STRING_SIZE) == 0        );
+    
+    setTestName(F("strlcpy [copy a string of maximim size, ensure null terminated result]"));
+    char smallBuffer[12]; //  not long enough to hold "Snollygoster" AND the final null terminator
+	
+    clear(buffer, MAX_STRING_SIZE); //  empty string buffer
+    clear(smallBuffer, 12); //empty string buffer
+
+	
+    assert(  strlcpy_P(buffer, progMem_string, MAX_STRING_SIZE) == 12     );
+    assert(  strlcpy_P(smallBuffer, progMem_string, 12) == 12             );
+    assert(  strcmp(buffer, "Snollygoster") == 0                          );
+    //  This is the difference between strlcpy and strncpy, the whole string was not copied 
+    //  to ensure a null terminator was present
+    assert(  strcmp(smallBuffer, "Snollygoste") == 0                      );
+	
+    
+    setTestName(F("strncpy [copy a string of maximim size, null terminate iff space allows]"));
+    clear(buffer, MAX_STRING_SIZE); //  empty string buffer
+    assert(  strncpy_P(buffer, progMem_string, MAX_STRING_SIZE) == buffer );
+    assert(  strcmp(buffer, "Snollygoster") == 0                          );
+    
+    //  ---- strcat, strlcat &amp; strncat: Concatenate two strings
+    setTestName(F("strcat [join two strings]"));
+    strcpy(buffer, "Chief ");
+    assert(  strcat_P(buffer, progMem_string) == buffer                   );
+    assert(  strcmp(buffer, "Chief Snollygoster") == 0                    );
+    
+	
+    setTestName(F("strlcat [join two strings, limiting final size, ensure termination]"));  
+    strcpy(smallBuffer, "Chief "); //smallBuffer is only 12 characters
+    //  NOTE strlcat_P n = sizeof destination; while strncat_P n = number of chars to copy
+    assert(  strlcat_P(smallBuffer, progMem_string, 12) == 18             );
+    //  12th character is the nul terminator
+    assert(  strcmp(smallBuffer, "Chief Snoll") == 0                      );
+    
+    strcpy(buffer, "Chief "); //smallBuffer is only 12 characters
+    assert(  strlcat_P(buffer, progMem_string, MAX_STRING_SIZE) == 18     );
+    assert(  strcmp(buffer, "Chief Snollygoster") == 0                    );
+	
+    
+    setTestName(F("strncat [join two strings, limiting final size]"));
+    strcpy(buffer, "Chief ");
+    //  NOTE strncat_P n = number of chars to copy; while strlcat_P n = sizeof destination
+    assert(  strncat_P(buffer, progMem_string, 6) == buffer               );
+    assert(  strcmp(buffer, "Chief Snolly") == 0                          );    
+	
+    
+    //  ---- strlen &amp; strnlen: Finds the length of the string (searches for the null terminator)
+    setTestName(F("strlen [find the length of a string]"));
+    assert(  strlen_P( progMem_string) == 12    );
+    setTestName(F("strnlen [find the length of a string, limited to n]"));
+    assert(  strnlen_P( progMem_string, 6) == 6                           );
+    assert(  strnlen_P( progMem_string, MAX_STRING_SIZE) == 12            );
+    
+    //  ---- strstr: searches s1 for the first occurrence of (the substring) s2
+    setTestName(F("strstr [find a string inside another string]"));
+    //  one item to find
+    strcpy(buffer, "A Snollygoster sounds like something you would find in a handkerchief.");
+    assert(  strstr_P(buffer, progMem_string) == &amp;buffer[2]               );
+    assert(  strstr_P("foobar", progMem_string) == NULL                   );
+    //  what is defined to happen when searching an empty/null strings
+    strcpy(buffer, "foobar");
+    assert(  strstr_P(buffer, NULL) == NULL              );
+    //  this is why "if(strstr_P(s1, s2) != null){...}" is a bad idea!"
+    assert(  strstr_P(buffer, progMem_emptyString) == buffer              );
+        
+    Serial.println(F("---------------- done"));
+    if(failCount &gt; 0)
+    {
+        Serial.print(passCount); Serial.println(F(" test(s) passed"));
+        Serial.print(failCount); Serial.println(F(" test(s) FAILED"));
+    }
+    else
+    {
+        Serial.print(F("All tests passed (")); Serial.print(passCount); Serial.println(F(" tests rum)"));
+    }
+}
+
+void loop() 
+{
+}
+
+void clear(char *buffer, int len)
+{
+    memset(buffer, '\0', len);
+}
+
+//----------------------------------------------------------------------------------------------------------
+// Testing framework data
+//----------------------------------------------------------------------------------------------------------
+#define TEST_NAME_BUFFER_LEN (64)
+extern long passCount;
+extern long failCount;
+extern long countAtLastNameChange;
+extern char currentTestName[TEST_NAME_BUFFER_LEN];
+
+
+
+//----------------------------------------------------------------------------------------------------------
+// Testing framework
+//----------------------------------------------------------------------------------------------------------
+
+template&lt;typename T&gt;
+__attribute__ ((noinline)) bool assert_EQ(T a, T b, Print *outStream=NULL)
+{
+	bool ok = assert(a == b, outStream);
+	if((!ok) &amp;&amp; (outStream != NULL))
+	{
+		outStream-&gt;print(F("  error:  0x"));
+		outStream-&gt;print(a, HEX);
+		outStream-&gt;print(F(" != 0x"));
+		outStream-&gt;println(b, HEX);
+	}
+}
+
+
+
+template&lt;typename T&gt;
+__attribute__ ((noinline)) bool assert_NEQ(T a, T b, Print *outStream=NULL)
+{
+	bool ok = assert(a != b, outStream);
+	if((!ok) &amp;&amp; (outStream != NULL))
+	{
+		outStream-&gt;print(F("  error:  0x"));
+		outStream-&gt;print(a, HEX);
+		outStream-&gt;print(F(" != 0x"));
+		outStream-&gt;println(b, HEX);
+	}
+}
+
+template&lt;typename T&gt;
+__attribute__ ((noinline)) bool assert_GT(T a, T b, Print *outStream=NULL)
+{
+	bool ok = assert(a &gt; b, outStream);
+	if((!ok) &amp;&amp; (outStream != NULL))
+	{
+		outStream-&gt;print(F("  error:  0x"));
+		outStream-&gt;print(a, HEX);
+		outStream-&gt;print(F(" &lt;= 0x"));
+		outStream-&gt;println(b, HEX);
+	}
+}
+template&lt;typename T&gt;
+__attribute__ ((noinline)) bool assert_LT(T a, T b, Print *outStream=NULL)
+{
+	bool ok = assert(a &lt; b, outStream);
+	if((!ok) &amp;&amp; (outStream != NULL))
+	{
+		outStream-&gt;print(F("  error:  0x"));
+		outStream-&gt;print(a, HEX);
+		outStream-&gt;print(F(" &gt;= 0x"));
+		outStream-&gt;println(b, HEX);
+	}
+}
+
+void setTestName(const __FlashStringHelper* name) 
+{
+	currentTestName[0]= 0;
+	if(name != NULL)
+	{
+		strlcpy_P(currentTestName, (const char PROGMEM *)name, TEST_NAME_BUFFER_LEN);
+	}
+	
+	countAtLastNameChange = passCount+failCount;
+}
+
+void setTestName(const char *name)
+{
+	currentTestName[0]= 0;
+	if(name != NULL)
+	{
+		strlcpy(currentTestName, name, TEST_NAME_BUFFER_LEN);
+	}
+	
+	countAtLastNameChange = passCount+failCount;
+}
+
+bool assert(bool isTrue, Print *outStream)
+{
+	if(isTrue) 
+	{
+		pass();
+		return true;
+	}
+	else 
+	{
+		fail(outStream);
+		return false;
+	}
+}
+
+void pass()
+{
+	passCount++;
+}
+
+void fail(Print *outStream)
+{
+	if(outStream != NULL)
+	{
+		outStream-&gt;print(F("TEST FAILED: "));
+		if(currentTestName != NULL)
+		{
+			int localTestNum = (passCount + failCount) - countAtLastNameChange + 1;
+			outStream-&gt;print(F("(")); 
+			outStream-&gt;print(currentTestName); 
+			outStream-&gt;print(F(" [test ")); 
+			outStream-&gt;print(localTestNum);
+			outStream-&gt;print(F("])"));
+		}
+		outStream-&gt;println();
+	}
+	failCount++;
+}
+
+void printTestSummary(Print *outStream)
+{
+	if(outStream != NULL)
+	{
+		if(failCount &gt; 0)
+		{
+			outStream-&gt;print(passCount); Serial.println(F(" test passed"));
+			outStream-&gt;print(failCount); Serial.println(F(" test FAILED"));
+		}
+		else
+		{
+			outStream-&gt;print(F("All tests passed (")); Serial.print(passCount); Serial.println(F(" tests run)"));
+		}
+	}
+}
+</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Arduino Graphing Libraries</title>
+		<link>/arduino-graphing-libraries/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 08 Feb 2016 13:58:47 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[GNUPlot]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Graphs]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=754</guid>
+
+					<description><![CDATA[Here is a library to write GNUPlot output from the Arduino. Now the Arduino can produce a graph output that is directly renderable across multiple platforms and cloud services. Does not rely on some gone tomorrow software + lets you edit the plot afterward.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p style="padding-left: 30px;">I believe strongly in plotting the data that I obtain, because plots tell you a story and they don&#8217;t mislead you like summary statistics can.</p>
+<p style="padding-left: 30px;">Often I want to plot data the arduino has acquired, but I find existing solutions don&#8217;t suit my needs. So I went out and made my own solution which writes a GNUPlot script in response to plot commands. I integrated the library with my general Arduino Toolbox (WDArduinoLib) and am releasing it under the GNU 2.0 License.</p>
+<h1>Goals</h1>
+<ul>
+<li>Professional graphics</li>
+<li>Graphs manually editable after plotting for change colours etc.</li>
+<li>Arduino outputs data that  other people can defiantly grab and use (just paste into a cloud based GNUPlot terminal)</li>
+<li>Allow embedded linux system to offload the plotting of graphs from arduino collected data</li>
+<li>Easy straight forward API</li>
+<li>Linux, Windows and Mac compatible.</li>
+<li>Quality API documentation</li>
+</ul>
+<h1>Features</h1>
+<ul>
+<li>Configurable output
+<ul>
+<li>You can use a Serial Port, SD-Card,  Telnet, TCP-IP, IrDA, whatever. So long as it derives from the Arduino Print class (ie has Print and Println()) this library can output a graph to it</li>
+</ul>
+</li>
+<li>Uses <a href="http://www.gnuplot.info/" target="_blank" rel="noopener">GNUPlot</a> as a server to execute the plot script this API outputs.
+<ul>
+<li>GNUPlot is the standard for scientific publication, it outputs presentable graphics ready for both websites, and software manuals.</li>
+<li>GNUPlot has been around forever (1986) and is still actively developed.</li>
+<li>GNUPlot can run on the Raspberry pi, PC, Mac or even online via <a href="http://plotshare.com/" target="_blank" rel="noopener">http://plotshare.com/</a></li>
+</ul>
+</li>
+<li>Extensible
+<ul>
+<li>Easily over-rideable classes to add new plot types or different output terminal (eg Matlab)</li>
+</ul>
+</li>
+<li>Built in quality colour palettes designed for graphing.
+<ul>
+<li>Sample palettes for showing importance, of keeping different coloured categories at the same intensity.</li>
+<li>Spectral palettes , optimised for on-white graphing.</li>
+<li>Colour-blind compatible palettes .</li>
+<li>Can still use arbitrary 24bit RGB colours if you like.</li>
+</ul>
+</li>
+<li>Unit tested library to support quality software development</li>
+<li>Template driven code designed for maximum data flexibility</li>
+<li>Memory Efficient.
+<ul>
+<li>Use of progmem strings supported throughout.</li>
+</ul>
+</li>
+<li>Useful, stable data format that does not rely on someone&#8217;s pet project still existing in 5 years time.</li>
+<li>All input, including text, is validated.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Examples</h1>
+<p style="padding-left: 30px;">This library is simple to use and produces clean results with minimal configuration. I present several basic examples that show the API in use and the results obtained.</p>
+<hr />
+<h2>Example: Basic Line Graph</h2>
+<p style="padding-left: 30px;">Line plots of time series data are probably the most important feature any graphing API targeted for micro-controllers can offer. This code creates such a plot. It demonstrates the use of multiple line styles.</p>
+<pre class="height-set:true height:800 lang:c++ decode:true">//main
+GNUPlotLineGraph gnuLinePlotter(&amp;Serial);
+PlotDampenedSineWaves(gnuLinePlotter);
+
+//method
+void PlotDampenedSineWaves(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Dampened Sine Wave"));
+	plot.setXAxisName(F("Time (Sec)"));
+	plot.setYAxisName(F("Voltage (V)"));
+
+	//setup series
+	plot.setSeriesName(0, F("Slow decay"));
+	plot.getLineApperance(0)-&gt;setLineStyle(LineStyles::SolidLine);
+	plot.getLineApperance(0)-&gt;setLineWidth(4);
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeBlues::Blue1);
+
+
+	plot.setSeriesName(1, F("Medium decay"));
+	plot.getLineApperance(1)-&gt;setLineStyle(LineStyles::DashedLine);
+	plot.getLineApperance(1)-&gt;setLineWidth(3);
+	plot.getLineApperance(1)-&gt;setRGB(GraphColorsSchemeBlues::Blue2);
+
+	plot.setSeriesName(2, F("Quick decay"));
+	plot.getLineApperance(2)-&gt;setLineStyle(LineStyles::DotedLine);
+	plot.getLineApperance(2)-&gt;setLineWidth(2);
+	plot.getLineApperance(2)-&gt;setRGB(GraphColorsSchemeBlues::Blue3);
+	
+        //plot graph
+	for(int i=0; i&lt;=720; i+=3)
+	{
+		float c = cos(DEG_TO_RAD*(float)i); 
+		float y1 = Dampen(i, c, 1, 1.0/360.0); 
+		float y2 = Dampen(i, c, 1, 1.0/240.0); 
+		float y3 = Dampen(i, c, 1, 1.0/180.0); 
+
+		plot.plotDatumXYn(i, y1, y2, y3);
+	}
+	plot.finishGraph();
+}
+
+</pre>
+<p><a href="/wp-content/uploads/2015/12/Damped-Sine-Wave.png" rel="attachment wp-att-757"><img loading="lazy" class="size-full wp-image-757 aligncenter" src="/wp-content/uploads/2015/12/Damped-Sine-Wave.png" alt="Damped Sine Wave" width="800" height="600" srcset="/wp-content/uploads/2015/12/Damped-Sine-Wave.png 800w, /wp-content/uploads/2015/12/Damped-Sine-Wave-300x225.png 300w, /wp-content/uploads/2015/12/Damped-Sine-Wave-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p>&nbsp;</p>
+<hr />
+<h2>Example: Plotting Points (Scatter Plot)</h2>
+<p style="padding-left: 30px;">A scatter plots, with styles colours and trimmings.</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotPointGraph gnuPointPlotter(&amp;Serial);
+PlotPointNoise(gnuPointPlotter);
+
+//method
+void PlotPointNoise(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Sine Waves with Noise"));
+	plot.setXAxisName(F("Time (Sec)"));
+	plot.setYAxisName(F("Voltage (V)"));
+	plot.setShowGrid(true);
+
+	//setup series
+	plot.setSeriesName(0, F("Pin 1"));
+	plot.getLineApperance(0)-&gt;setMarkerStyle(LineMarkers::SquareMarker);
+	plot.getLineApperance(0)-&gt;setRGB(0xff0000);
+
+	plot.setSeriesName(1, F("Pin 2"));
+	plot.getLineApperance(1)-&gt;setMarkerStyle(LineMarkers::CrossMarker);
+	plot.getLineApperance(1)-&gt;setRGB(0x00ff00);
+
+	plot.setSeriesName(2, F("Pin 3"));
+	plot.getLineApperance(2)-&gt;setMarkerStyle(LineMarkers::CircleMarker);
+	plot.getLineApperance(2)-&gt;setRGB(0x0000ff);
+	
+        //plot graph
+	for(int i=0; i&lt;=720; i+=5)
+	{
+		float c = cos(DEG_TO_RAD*(float)i); 
+		float y1 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/240.0); 
+		float y2 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/180.0)-2; 
+		float y3 = c + Dampen(i, ((float)(random(100)-50)) *0.1, 1, 1.0/90.0)-4; 
+
+		plot.plotDatumXYn(i, y1, y2, y3);
+	}
+	plot.finishGraph();
+}
+
+</pre>
+<p><a href="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png" rel="attachment wp-att-755"><img loading="lazy" class="size-full wp-image-755 aligncenter" src="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png" alt="Sine Wave with Noise" width="800" height="600" srcset="/wp-content/uploads/2015/12/Sine-Wave-with-Noise.png 800w, /wp-content/uploads/2015/12/Sine-Wave-with-Noise-300x225.png 300w, /wp-content/uploads/2015/12/Sine-Wave-with-Noise-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p>&nbsp;</p>
+<hr />
+<h2>Example: Plotting Arbitrary Lines</h2>
+<p style="padding-left: 30px;">Sometimes your not using time series data, and need to plot lines between arbitrary x/y positions. Many solutions for the arduino breakdown at this point. Here I demonstrate such a plot (based on the logarithmic spiral). Note I am using lines with point markers to show the actual points plotted.</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotLineGraph gnuLinePlotter(&amp;Serial);
+PlotLogarithmicSpiral(gnuLinePlotter);
+
+//method
+void PlotLogarithmicSpiral(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Logarithmic Spiral"));
+
+	//setup series
+	plot.setSeriesName(0, F("Spiral"));
+	plot.getLineApperance(0)-&gt;setLineWidth(2);
+	plot.getLineApperance(0)-&gt;setMarkerStyle(LineMarkers::SolidCircleMarker);
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeSpectral::Spectral7);
+		
+	//plot graph
+	float a = 1;
+	float b = 0.1759;
+	for(int i=0; i&lt;(int)(10.0*20.0*M_PI); i+=5)
+	{
+		float t = ((float)i) * 0.1;
+		float rt = a*pow(M_E, b* t);
+		float x = rt*cos(t);
+		float y = rt*sin(t);
+
+		plot.plotDatumXY(x, y);
+	}
+
+	plot.finishGraph();
+}</pre>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/12/Logarithmic-Spiral.png" rel="attachment wp-att-761"><img loading="lazy" class="size-full wp-image-761 aligncenter" src="/wp-content/uploads/2015/12/Logarithmic-Spiral.png" alt="Logarithmic Spiral" width="800" height="600" srcset="/wp-content/uploads/2015/12/Logarithmic-Spiral.png 800w, /wp-content/uploads/2015/12/Logarithmic-Spiral-300x225.png 300w, /wp-content/uploads/2015/12/Logarithmic-Spiral-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<hr />
+<h2>Example: Multi Column Bar Graph.</h2>
+<p style="padding-left: 30px;">Bar graphs, for histograms and such are easy in this API. The example below shows support for multi column graphs, Note: negative values are also supported. The labels for the X-Axis are plotted as standard x values (the plot command is template driven and can support many different types of data).</p>
+<pre class="height-set:true lang:c++ decode:true">//main
+GNUPlotBarGraph gnuBarPlotter(&amp;Serial);
+PlotSampleBarGraph(gnuBarPlotter);
+
+//method
+void PlotSampleBarGraph(SerialGraph&amp; plot)
+{
+	//setup graph
+	plot.newGraph();
+	plot.enableSaveImageFile(true);
+	plot.setTitle(F("Google Results for Instruments"));
+	plot.setXAxisName(F("Instrument"));
+	plot.setYAxisName(F("# Google Results (millions)"));
+	plot.setShowGrid(true);
+
+	//setup series
+	plot.setSeriesName(0, F("play"));
+	plot.getLineApperance(0)-&gt;setRGB(GraphColorsSchemeOranges::Orange1);
+	plot.setSeriesName(1, F("teach"));
+	plot.getLineApperance(1)-&gt;setRGB(GraphColorsSchemeBlues::Blue1);
+	plot.setSeriesName(2, F("like"));
+	plot.getLineApperance(2)-&gt;setRGB(GraphColorsSchemeGreens::Green1);
+	plot.setSeriesName(3, F("hate"));
+	plot.getLineApperance(3)-&gt;setRGB(GraphColorsSchemeReds::Red1);
+
+	//plot graph
+	//Dataset compiled by Google-ing "I X the Y"
+	//                instrument	play	teach	like	hate
+	plot.plotDatumXYn("Piano",		173,	25,		211,	21);
+	plot.plotDatumXYn("Guitar",		163,	22,		193,	27);
+	plot.plotDatumXYn("Violin",     41,		2,		43,		1);
+	plot.plotDatumXYn("Drums",		30,		8,		83,		9);
+	
+	plot.finishGraph();
+}</pre>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png" rel="attachment wp-att-762"><img loading="lazy" class="size-full wp-image-762 aligncenter" src="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png" alt="Google Results for Instruments" width="800" height="600" srcset="/wp-content/uploads/2015/12/Google-Results-for-Instruments.png 800w, /wp-content/uploads/2015/12/Google-Results-for-Instruments-300x225.png 300w, /wp-content/uploads/2015/12/Google-Results-for-Instruments-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<h1>Installation</h1>
+<p>&nbsp;</p>
+<ol>
+<li>Get the library from its <a href="https://github.com/busyDuckman/WDArduinoLib" target="_blank" rel="noopener">github repository</a>.</li>
+<li>See the official guide on how to install libraries <a href="https://www.arduino.cc/en/Guide/Libraries" target="_blank" rel="noopener">https://www.arduino.cc/en/Guide/Libraries</a></li>
+<li>Run the provided example sketch</li>
+<li>Install GNUPlot v5.0 or later (<a href="http://www.gnuplot.info/download.html" target="_blank" rel="noopener">here</a>).</li>
+<li>Using the com port viewer, copy the output of sketch into GNUPlot.</li>
+<li>Enjoy!</li>
+</ol>
+<p>It is very possible to get the output generated by this library to GNUPlot automatically. How you achieve this is up to you.</p>
+<p>It is possible to direct the output to a SD card. See the arduino help page on the <a href="https://www.arduino.cc/en/Tutorial/Files" target="_blank" rel="noopener">file class</a>, to create you own file on a SD card. Then pass the open file object in to the constructor for your plotting class (where I used Serial in the examples).</p>
+<h1></h1>
+<h1>Documentation</h1>
+<p style="padding-left: 30px;">Full documentation available <a href="http://www.busyducks.com/downloads/doco/WDArduinoLib/index.html" target="_blank" rel="noopener">here</a>.</p>
+<p>&nbsp;</p>
+<h1>License</h1>
+<p style="padding-left: 30px;">GNU 2.0</p>
+<h1>State</h1>
+<p>Most Features are well tested, but I don&#8217;t warrant or accept liability for any of the functionality in any way.</p>
+<p>NB: some dynamic memory usage , refrain from using malloc during plotting operations to prevent possible heap fragmentation.</p>
+<ul>
+<li>Dynamic memory usage is a design decision I made weighing pro&#8217;s and con&#8217;s of the situation.</li>
+<li>Given &#8216;typical usage&#8217; scenarios of the API it should not cause heap fragmentation.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Road-Map</h1>
+<p>May happen:</p>
+<ul>
+<li>Second x/y axis support</li>
+<li>Matlab support</li>
+<li>3d plots</li>
+<li>Spectrogram</li>
+<li>Support for cloud based rendering for graphs</li>
+<li>Sage support</li>
+<li>Thousands separator (right now I could not deploy it because of a bug in the windows version of GNUPlot).</li>
+</ul>
+<p>Won&#8217;t Happen:</p>
+<ul>
+<li>Real-time visualisation (plenty of other projects to do that already)</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>ASCII-Art Arduino Pinouts</title>
+		<link>/ascii-art-arduino-pinouts/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 16 Nov 2015 18:09:31 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=704</guid>
+
+					<description><![CDATA[Managing arduino projects can be a nightmare because its hard to keep track of your hardware setup in your code comments.  To enable easy documentation of pin assignments, I created a couple of ASCII art arduino pin-outs.
+
+These come complete with ports, PWM and coms all marked. Simply paste as a comment into your code and marvel at your new found organisation.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p style="padding-left: 30px;">Managing arduino projects can be a nightmare because you only see the software side in your code documentation, the hardware is hard to keep track off.</p>
+<p style="padding-left: 30px;">To enable easy documentation of pin assignments, I created a couple of ASCII art arduinos; complete with ports, PWM and coms all marked. Simply paste as a comment into your code and marvel at your new found organisation.</p>
+<p style="padding-left: 30px;">I suggest altering the image (eg. a letter or X in the [ ]) to keep track of the pins you ended up using.</p>
+<p style="padding-left: 30px;">Find this project on <a href="https://github.com/busyDuckman/ascii-art-arduinos">gitHub</a></p>
+<h1>Plain Text &#8211; Arduino Pinout</h1>
+<p style="padding-left: 30px;">Here is copy/paste-able Arduino Pinout ASCII art ready to go (tip: you can use the copy button, at the top of each ASCII art piece, to make the process easy).<br />
+<em>     <span style="color: #999999;">I place them in the Creatice Commons [Creative Commons Attribution (BY) license]. </span></em><br />
+<span style="color: #999999;"><em>     Attribution via the url: &#8220;http://busyducks.com/ascii-art-arduinos&#8221;</em></span></p>
+<pre class="lang:c++ decode:true">                                      +-----+
+         +----[PWR]-------------------| USB |--+
+         |                            +-----+  |
+         |         GND/RST2  [ ][ ]            |
+         |       MOSI2/SCK2  [ ][ ]  A5/SCL[ ] |   C5 
+         |          5V/MISO2 [ ][ ]  A4/SDA[ ] |   C4 
+         |                             AREF[ ] |
+         |                              GND[ ] |
+         | [ ]N/C                    SCK/13[ ] |   B5
+         | [ ]IOREF                 MISO/12[ ] |   .
+         | [ ]RST                   MOSI/11[ ]~|   .
+         | [ ]3V3    +---+               10[ ]~|   .
+         | [ ]5v    -| A |-               9[ ]~|   .
+         | [ ]GND   -| R |-               8[ ] |   B0
+         | [ ]GND   -| D |-                    |
+         | [ ]Vin   -| U |-               7[ ] |   D7
+         |          -| I |-               6[ ]~|   .
+         | [ ]A0    -| N |-               5[ ]~|   .
+         | [ ]A1    -| O |-               4[ ] |   .
+         | [ ]A2     +---+           INT1/3[ ]~|   .
+         | [ ]A3                     INT0/2[ ] |   .
+         | [ ]A4/SDA  RST SCK MISO     TX&gt;1[ ] |   .
+         | [ ]A5/SCL  [ ] [ ] [ ]      RX&lt;0[ ] |   D0
+         |            [ ] [ ] [ ]              |
+         |  UNO_R3    GND MOSI 5V  ____________/
+          \_______________________/
+		  
+		  http://busyducks.com/ascii-art-arduinos</pre>
+<pre class="lang:c++ decode:true ">                                      +-----+
+         +----[PWR]-------------------| USB |--+
+         |                            +-----+  |
+         |           GND/RST2  [ ] [ ]         |
+         |         MOSI2/SCK2  [ ] [ ]  SCL[ ] |   D0
+         |            5V/MISO2 [ ] [ ]  SDA[ ] |   D1
+         |                             AREF[ ] |
+         |                              GND[ ] |
+         | [ ]N/C                        13[ ]~|   B7
+         | [ ]IOREF                      12[ ]~|   B6
+         | [ ]RST                        11[ ]~|   B5
+         | [ ]3V3      +----------+      10[ ]~|   B4
+         | [ ]5v       | ARDUINO  |       9[ ]~|   H6
+         | [ ]GND      |   MEGA   |       8[ ]~|   H5
+         | [ ]GND      +----------+            |
+         | [ ]Vin                         7[ ]~|   H4
+         |                                6[ ]~|   H3
+         | [ ]A0                          5[ ]~|   E3
+         | [ ]A1                          4[ ]~|   G5
+         | [ ]A2                     INT5/3[ ]~|   E5
+         | [ ]A3                     INT4/2[ ]~|   E4
+         | [ ]A4                       TX&gt;1[ ]~|   E1
+         | [ ]A5                       RX&lt;0[ ]~|   E0
+         | [ ]A6                               |   
+         | [ ]A7                     TX3/14[ ] |   J1
+         |                           RX3/15[ ] |   J0
+         | [ ]A8                     TX2/16[ ] |   H1         
+         | [ ]A9                     RX2/17[ ] |   H0
+         | [ ]A10               TX1/INT3/18[ ] |   D3         
+         | [ ]A11               RX1/INT2/19[ ] |   D2
+         | [ ]A12           I2C-SDA/INT1/20[ ] |   D1         
+         | [ ]A13           I2C-SCL/INT0/21[ ] |   D0
+         | [ ]A14                              |            
+         | [ ]A15                              |   Ports:
+         |                RST SCK MISO         |    22=A0  23=A1   
+         |         ICSP   [ ] [ ] [ ]          |    24=A2  25=A3   
+         |                [ ] [ ] [ ]          |    26=A4  27=A5   
+         |                GND MOSI 5V          |    28=A6  29=A7   
+         | G                                   |    30=C7  31=C6   
+         | N 5 5 4 4 4 4 4 3 3 3 3 3 2 2 2 2 5 |    32=C5  33=C4   
+         | D 2 0 8 6 4 2 0 8 6 4 2 0 8 6 4 2 V |    34=C3  35=C2   
+         |         ~ ~                         |    36=C1  37=C0   
+         | @ # # # # # # # # # # # # # # # # @ |    38=D7  39=G2    
+         | @ # # # # # # # # # # # # # # # # @ |    40=G1  41=G0   
+         |           ~                         |    42=L7  43=L6   
+         | G 5 5 4 4 4 4 4 3 3 3 3 3 2 2 2 2 5 |    44=L5  45=L4   
+         | N 3 1 9 7 5 3 1 9 7 5 3 1 9 7 5 3 V |    46=L3  47=L2   
+         | D                                   |    48=L1  49=L0    SPI:
+         |                                     |    50=B3  51=B2     50=MISO 51=MOSI
+         |     2560                ____________/    52=B1  53=B0     52=SCK  53=SS 
+          \_______________________/         
+         
+         http://busyducks.com/ascii-art-arduinos</pre>
+<p style="padding-left: 30px;">You may notice that the clean layout of these diagrams makes them very readable, personally I feel many graphical versions present too much information at once.</p>
+<h3>Some Updates (new models)</h3>
+<p style="padding-left: 30px;">This idea seems to have caught on quickly, so I will keep the art coming.</p>
+<p style="padding-left: 30px;">Redit user <em>plasticluthier</em> adapted a nano version <a href="https://www.reddit.com/r/arduino/comments/3tb0d2/i_made_some_asciiart_arduinos_to_paste_in/" target="_blank" rel="noopener">here</a>, I thought that was spiffy, so I fixed an error tweaked it a bit and added chips and ports.</p>
+<pre class="lang:c++ decode:true">                      +-----+
+         +------------| USB |------------+
+         |            +-----+            |
+    B5   | [ ]D13/SCK        MISO/D12[ ] |   B4
+         | [ ]3.3V           MOSI/D11[ ]~|   B3
+         | [ ]V.ref     ___    SS/D10[ ]~|   B2
+    C0   | [ ]A0       / N \       D9[ ]~|   B1
+    C1   | [ ]A1      /  A  \      D8[ ] |   B0
+    C2   | [ ]A2      \  N  /      D7[ ] |   D7
+    C3   | [ ]A3       \_0_/       D6[ ]~|   D6
+    C4   | [ ]A4/SDA               D5[ ]~|   D5
+    C5   | [ ]A5/SCL               D4[ ] |   D4
+         | [ ]A6              INT1/D3[ ]~|   D3
+         | [ ]A7              INT0/D2[ ] |   D2
+         | [ ]5V                  GND[ ] |     
+    C6   | [ ]RST                 RST[ ] |   C6
+         | [ ]GND   5V MOSI GND   TX1[ ] |   D0
+         | [ ]Vin   [ ] [ ] [ ]   RX1[ ] |   D1
+         |          [ ] [ ] [ ]          |
+         |          MISO SCK RST         |
+         | NANO-V3                       |
+         +-------------------------------+
+         
+         http://busyducks.com/ascii-art-arduinos</pre>
+<p style="padding-left: 30px;">I have a Pro Mini project coming up, so knocked one of these out as well.</p>
+<pre class="lang:c++ decode:true">		                  D0   D1   RST
+		   GND  GND  VCC  RX   TX   /DTR
+        +--------------------------------+
+        |  [ ]  [ ]  [ ]  [ ]  [ ]  [ ]  |
+        |              FTDI              |
+    D1  | [ ]1/TX                 RAW[ ] |    
+    D0  | [ ]0/RX                 GND[ ] |    
+        | [ ]RST        SCL/A5[ ] RST[ ] |   C6
+        | [ ]GND        SDA/A4[ ] VCC[ ] |    
+    D2  | [ ]2/INT0    ___         A3[ ] |   C3
+    D3  |~[ ]3/INT1   /   \        A2[ ] |   C2
+    D4  | [ ]4       /PRO  \       A1[ ] |   C1
+    D5  |~[ ]5       \ MINI/       A0[ ] |   C0
+    D6  |~[ ]6        \___/    SCK/13[ ] |   B5
+    D7  | [ ]7          A7[ ] MISO/12[ ] |   B4
+    B0  | [ ]8          A6[ ] MOSI/11[ ]~|   B3
+    B1  |~[ ]9                  SS/10[ ]~|   B2
+        |           [RST-BTN]            |    
+        +--------------------------------+  
+		
+		http://busyducks.com/ascii-art-arduinos</pre>
+<h1>How to use them</h1>
+<p style="padding-left: 30px;">Just fill in the spaces, either with an X, or with a reference letter which you document below the ASCII art.</p>
+<p style="padding-left: 30px;">They can be pasted into code comments, (use /* and */ in the arduino IDE to create a block comment). They can also be useful in forums, when you need a quick arduino diagram, but don&#8217;t want to fire up an image editor.</p>
+<p><a href="/wp-content/uploads/2015/11/Arduino_UNO_pinout.png"><img loading="lazy" class="alignnone wp-image-705 size-full" src="/wp-content/uploads/2015/11/Arduino_UNO_pinout.png" alt="Arduino_UNO_pinout" width="473" height="533" srcset="/wp-content/uploads/2015/11/Arduino_UNO_pinout.png 473w, /wp-content/uploads/2015/11/Arduino_UNO_pinout-266x300.png 266w" sizes="(max-width: 473px) 100vw, 473px" /></a></p>
+<p><a href="/wp-content/uploads/2015/11/Arduino_mega_pinout2.png"><img loading="lazy" class="alignnone size-full wp-image-714" src="/wp-content/uploads/2015/11/Arduino_mega_pinout2.png" alt="Arduino_mega_pinout2" width="585" height="786" srcset="/wp-content/uploads/2015/11/Arduino_mega_pinout2.png 585w, /wp-content/uploads/2015/11/Arduino_mega_pinout2-223x300.png 223w" sizes="(max-width: 585px) 100vw, 585px" /></a></p>
+<p>&nbsp;</p>
+<p>This is a snippet from a recent project. The sketch starts out with comments that set-out how the hardware is setup, this helps me a lot when I have to look at it again in a years time. Its also great if I want to share the code, as people don&#8217;t need to dig-around in the code to see how to connect the arduino to other devices.</p>
+<pre class="height-set:true height:600 lang:c++ decode:true" title="Exaple usage in an arduino sketch">/*
+
+                                      +-----+
+         +----[PWR]-------------------| USB |--+
+         |                            +-----+  |
+         |           GND/RST2  [ ] [ ]         |
+         |         MOSI2/SCK2  [ ] [ ]  SCL[ ] |   C5
+         |            5V/MISO2 [ ] [ ]  SDA[ ] |   C4
+         |                             AREF[ ] |
+         |                              GND[ ] |
+         | [ ]N/C                    SCK/13[A] |   B5
+         | [ ]v.ref                 MISO/12[A] |   .
+         | [ ]RST                   MOSI/11[A]~|   .
+         | [ ]3V3    +---+               10[ ]~|   .
+         | [ ]5v     | A |                9[ ]~|   .
+         | [ ]GND   -| R |-               8[B] |   B0
+         | [ ]GND   -| D |-                    |
+         | [ ]Vin   -| U |-               7[A] |   D7
+         |          -| I |-               6[A]~|   .
+         | [ ]A0    -| N |-               5[C]~|   .
+         | [ ]A1    -| O |-               4[A] |   .
+         | [ ]A2     +---+           INT1/3[A]~|   .
+         | [ ]A3                     INT0/2[ ] |   .
+         | [ ]A4      RST SCK MISO     TX&gt;1[ ] |   .
+         | [ ]A5      [ ] [ ] [ ]      RX&lt;0[ ] |   D0
+         |            [ ] [ ] [ ]              |
+         |  UNO_R3    GND MOSI 5V  ____________/
+          \_______________________/
+		  
+		  http://busyducks.com/ascii-art-arduinos
+*/
+
+//------------------------------------------------------------------ 
+// [A]		Adafruit music shield
+//------------------------------------------------------------------ 
+// Connect CLK, MISO and MOSI to hardware SPI pins. 
+// SPI Clock, shared with SD card
+#define CLK_PIN (13)       
+// Input data, from VS1053/SD card
+#define MISO_PIN (12)      
+// Output data, to VS1053/SD card
+#define MOSI_PIN (11)      
+
+// VS1053 reset pin (unused!)
+#define SHIELD_RESET_PIN  (-1)   
+// VS1053 chip select pin (output)
+#define SHIELD_CS_PIN     (7)      
+// VS1053 Data/command select pin (output)
+#define SHIELD_DCS_PIN    (6)      
+// Card chip select pin
+#define CARDCS_PIN (4)     
+// VS1053 Data request, ideally an Interrupt pin
+#define DREQ_PIN (3)       
+
+//------------------------------------------------------------------  
+// [B]		WS2811 LED stip
+//------------------------------------------------------------------ 
+#define LED_STIP_PIN  (8)
+
+//------------------------------------------------------------------  
+// [C]		Servo Motor
+//------------------------------------------------------------------ 
+#define SERVO_PIN (5)</pre>
+<p>&nbsp;</p>
+<h1>Related Projects (based on this work)</h1>
+<ul>
+<li>I modified a version of this for <a href="http://casual-effects.com/markdeep/" target="_blank" rel="noopener">markdeep</a> and made it available for download  <a href="http://busyducks.com/downloads/random_blog_stuff/ascii_art_arduino_markdeep.zip" target="_blank" rel="noopener">here</a>.
+<ul>
+<li>There is a unofficial mirror (by <a class="author may-blank id-t2_6hpwy" href="https://www.reddit.com/user/vanderZwan">vanderZwan</a>) of the markdeep work <a href="http://blindedcyclops.neocities.org/asciiino/arduino.md.html" target="_blank" rel="noopener">here</a></li>
+</ul>
+</li>
+<li>A console version, by paulfantom, for terminal users is available <a href="https://github.com/paulfantom/Arduino-colors" target="_blank" rel="noopener">here</a>.</li>
+</ul>
+<p style="padding-left: 30px;"><a href="http://busyducks.com/downloads/random_blog_stuff/ascii_art_arduino_markdeep.zip"><img loading="lazy" class="alignnone wp-image-731 size-full" src="/wp-content/uploads/2015/11/md-ascii-arduino.png" alt="md-ascii-arduino" width="411" height="492" srcset="/wp-content/uploads/2015/11/md-ascii-arduino.png 411w, /wp-content/uploads/2015/11/md-ascii-arduino-251x300.png 251w" sizes="(max-width: 411px) 100vw, 411px" /></a></p>
+<p style="padding-left: 90px;"><strong>Our markdeep version (click image to download)</strong></p>
+<p>&nbsp;</p>
+<h2>Stay Up To date and Provide Feedback</h2>
+<ul>
+<li>Contribute  to the project on <a href="https://github.com/busyDuckman/ascii-art-arduinos">https://github.com/busyDuckman/ascii-art-arduinos</a></li>
+<li>I will check back on the facebook page for any comments, like the page to stay up to date.
+<ul>
+<li><a href="https://www.facebook.com/BusyDucks/" target="_blank" rel="noopener">https://www.facebook.com/BusyDucks/</a></li>
+</ul>
+</li>
+<li>I set up a redirected URL <a href="http://busyducks.com/ascii-art-arduinos" target="_blank" rel="noopener">http://busyducks.com/ascii-art-arduinos</a>  that is both the CC-BY attribution line, and will always redirect to the latest version of these ascii art arduinos.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Version History</h1>
+<ul>
+<li>18-11-2015   markdeep version added (as suggested by vanderZwan <a href="https://www.reddit.com/r/arduino/comments/3tb0d2/i_made_some_asciiart_arduinos_to_paste_in/" target="_blank" rel="noopener">here</a>)</li>
+<li>19-11-2015   typos fixed (as noted by oroki <a href="https://www.reddit.com/r/arduino/comments/3tb0d2/i_made_some_asciiart_arduinos_to_paste_in/" target="_blank" rel="noopener">here</a>)</li>
+<li>21-112015    Added nano (derived from <em>plasticluthier&#8217;s contributions</em> ) &amp;  Pro Mini</li>
+<li>1-12-2015     Fixed typo&#8217;s spotted by Basile Laderchi. Also minor visual tweak to the arduino CPU.</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>RGB Bias Lighting with Arduino (Part 1)</title>
+		<link>/rgb-bias-lighting-with-arduino-part-1/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 09 Nov 2015 17:55:35 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<category><![CDATA[WS2811]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=679</guid>
+
+					<description><![CDATA[We are setting up an arduino with a WS2811 LED strip to do RGB based bias lighting effects.]]></description>
+										<content:encoded><![CDATA[<h1>Introduction</h1>
+<p>Bias Lighting is a light around your display that helps you perceive contrast and reduces eye stress. It also just looks just plain cool, and create a kind of relaxed vibe.</p>
+<p>There is a lot of theory on optimising bias lighting, but really any light will help quite a bit. So why not see if we can do anything inventive with the bias lighting colour.</p>
+<h1>The Idea</h1>
+<p>Lets use a bias lighting that changes colour, and experiment with:</p>
+<ul>
+<li>Altering the colour to  correspond with the time of a day</li>
+<li>Blink light to warn you that you have a meeting soon</li>
+<li>Having the colour change match the movement of the sun</li>
+<li>Changing the colour to green (or whatever) when its your &#8220;bed time&#8221;</li>
+<li>Using a colour change scheme set to work with your circadian rhythm</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Materials</h1>
+<p>What you will need:</p>
+<ul>
+<li>Some WS2811 LED strips (approx 30cm per monitor)</li>
+<li>An arduino</li>
+<li>Some 3 core wire</li>
+<li>About an hour free time</li>
+<li>Electrical tape</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Results</h1>
+<p>&nbsp;</p>
+<p><iframe loading="lazy" title="RGB Bias lighting on three monitors (using an arduino)." width="940" height="529" src="https://www.youtube.com/embed/_tsl4WFH_8o?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>&nbsp;</p>
+<h1>WS2811 RGB Strips</h1>
+<p>WS2811 strips can be acquired via <a href="http://www.aliexpress.com/w/wholesale-ws2811-led-strip.html" target="_blank" rel="noopener">Ali Express</a> at a reasonable price, they are a strip of RGB LED&#8217;s that are individually addressable (set any LED to any colour).</p>
+<p>Pros&#8217;</p>
+<ul>
+<li>Each chip has an active data repeater that forwards the data signal. Provided the 5v power to the strip is strong, the data signal is propagated to as many chips as you like.</li>
+<li>Very good value</li>
+<li>Strong bright lights</li>
+<li>Fast data channel</li>
+<li>Only requires one GPIO pin.</li>
+</ul>
+<p>Cons&#8217;</p>
+<ul>
+<li>PWM control used for arbitrary colours is not super fast. Use of 7 colours that involve any LED being either full on or gull off produces results that work better for moving items / camera.</li>
+<li>Poor build quality occasionally causes minor issues</li>
+<li>Some visual artefacts from &#8220;fast moving pixels&#8221;.  (that can look very cool if used correctly).</li>
+</ul>
+<p>The strips look like what you see below. They can be cut to length, and have a soldered connection every 30cm or so.  The arrows indicate the direction the data signal is propagated in, your controller (eg an arduino) must be connected to the left most (first) arrow. However the voltage to run the strip can be applied anywhere.</p>
+<p><a href="/wp-content/uploads/2015/11/WS2811_strip.jpg" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-694 size-large" src="/wp-content/uploads/2015/11/WS2811_strip-1024x193.jpg" alt="WS2811_strip" width="640" height="121" srcset="/wp-content/uploads/2015/11/WS2811_strip-1024x193.jpg 1024w, /wp-content/uploads/2015/11/WS2811_strip-300x57.jpg 300w, /wp-content/uploads/2015/11/WS2811_strip-768x145.jpg 768w, /wp-content/uploads/2015/11/WS2811_strip-1536x290.jpg 1536w, /wp-content/uploads/2015/11/WS2811_strip-2048x386.jpg 2048w, /wp-content/uploads/2015/11/WS2811_strip-1568x296.jpg 1568w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>A close up look shows a chip (black part on the left) and three LED&#8217;s, the middle one being red.</p>
+<p style="padding-left: 90px;"><a href="/wp-content/uploads/2015/11/WS2811_single2.jpg" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-696 size-medium" src="/wp-content/uploads/2015/11/WS2811_single2-300x226.jpg" alt="WS2811_single2" width="300" height="226" srcset="/wp-content/uploads/2015/11/WS2811_single2-300x226.jpg 300w, /wp-content/uploads/2015/11/WS2811_single2-1024x770.jpg 1024w, /wp-content/uploads/2015/11/WS2811_single2-768x578.jpg 768w, /wp-content/uploads/2015/11/WS2811_single2.jpg 1391w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>&nbsp;</p>
+<h1>Arduino Setup</h1>
+<p>For effective bias lighting, stick an adhesive LED strip to the back of your monitor, about 5cm from the top. The arduino can be mounted with stick on velcro to what have you. If necessary, connect up multiple sections of LED strips (one for each monitor) using a good 3 core wire.</p>
+<p>The LED strip&#8217;s data line is connected to a single arduino GPIO pin configured as an output.  Its important to note the <span style="text-decoration: underline;">strip has an arrow on it</span>, this arrow shows the direction the data will travel. Your data cable must be connected to the first  LED in the strip (not the last).</p>
+<p>For my three monitors I was able to power the strip directly from my arduino, using only USB power. Though your mileage may vary.</p>
+<p><strong>Setup via USB Power</strong></p>
+<p>If you can get away with it wire up the strips shown in the top diagram. Be aware that your PC or USB hub will be responsible for providing power to a large set of lights.</p>
+<p>Consider some issues with this:</p>
+<ul>
+<li>There will remain a significant current draw on the PC even while its in sleep mode (or running of batteries).  Be aware not all PC power supplies sleep well , they may turn their fans off even though you are drawing enough current to necessitate a low amount of active cooling.</li>
+<li>Your arduinos regulator will may get hot.</li>
+<li>Your USB port may well not be up to task.</li>
+</ul>
+<p><span style="color: #000000;">For these reasons I would advise:</span></p>
+<ul>
+<li><span style="color: #000000;">Connection via a powered USB hub. </span></li>
+<li>Use of a <a href="http://amzn.to/1Qok8qt" target="_blank" rel="noopener">USB Doctor Device</a> to check your current draw is sensible (eg 350mA or below, the 500mA max in the USB spec does not always pan out well)</li>
+<li>Configuring the brightness of the LED output (programmatically) to reduce current draw.</li>
+<li>Don&#8217;t connect the Arduous power jack to a DC wall adapter (see note on ground loops later in this article).</li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/11/rgb_leds_usb.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-688 size-large" src="/wp-content/uploads/2015/11/rgb_leds_usb-1024x371.png" alt="rgb_leds_usb" width="640" height="232" srcset="/wp-content/uploads/2015/11/rgb_leds_usb-1024x371.png 1024w, /wp-content/uploads/2015/11/rgb_leds_usb-300x109.png 300w, /wp-content/uploads/2015/11/rgb_leds_usb-768x278.png 768w, /wp-content/uploads/2015/11/rgb_leds_usb-1536x557.png 1536w, /wp-content/uploads/2015/11/rgb_leds_usb-1568x568.png 1568w, /wp-content/uploads/2015/11/rgb_leds_usb.png 1644w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<p>If your Arduino fails to start, or the strip displays a gaudy set of flashing bright colours, you will need to use external power to run the strip. The cutt-off regarding how long your strip can be, before problems appear varies greatly between different production runs (of the RGB strip, not the arduino).</p>
+<p><strong>Setup via External 5V power supply</strong></p>
+<p>To use an external power supply  to power the strip is not difficult (see image below). But it leaves us with the annoying issue of ground loops (see ground loop section later in this article).</p>
+<p>To use external 5V power:</p>
+<ul>
+<li>Connect the 5V ground to both the arduinos ground and the LED strips ground.</li>
+<li>Set-up a 7V(ish) power for the arduinos DC Jack, and use a cheap buck DC-DC power supply (eg <a href="http://amzn.to/1NlT1ac" target="_blank" rel="noopener">LM2596 module</a>) to drop that voltage down to 5V, which is connected to the LED strips power supply.</li>
+<li>Resist the urge to just get a 5V power supply and connect it to both the arduous 5V pin and the LED strip, unless you have a good regulated 5V supply.</li>
+</ul>
+<p><a href="/wp-content/uploads/2015/11/rgb_leds_dc_jack.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-689 size-large" src="/wp-content/uploads/2015/11/rgb_leds_dc_jack-1024x420.png" alt="rgb_leds_dc_jack" width="640" height="263" srcset="/wp-content/uploads/2015/11/rgb_leds_dc_jack-1024x420.png 1024w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-300x123.png 300w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-768x315.png 768w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-1536x631.png 1536w, /wp-content/uploads/2015/11/rgb_leds_dc_jack-1568x644.png 1568w, /wp-content/uploads/2015/11/rgb_leds_dc_jack.png 1644w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<h2>A little more safety to this circuit</h2>
+<p>The soldering of wiring to the LED strip is often problematic, and the area is often moved / stressed / bent.  This can cause the electrical connection to come loose, short or form an intermittent contact.</p>
+<p>We may want to protect the first LED package in the strip from damage caused by too much current passing though the data line (I suggest using a 330 ohm resistor).  It&#8217;s also not a bad idea to provide a 1000uF decoupling capacitor (use an electrolytic capacitor and watch the polarity). Without this you risk a wiring issue, or power connection issue, damaging the first LED unit on the strip.</p>
+<p>In practice, you may never have a problem without these extra components, and the damage is often repaired easily by removing the first pixel and re-soldering. So the decision is yours, a &#8216;best practice&#8217; version of the above circuits is shown below.</p>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/11/rgb_leds_better.png" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-690 size-large" src="/wp-content/uploads/2015/11/rgb_leds_better-1024x739.png" alt="rgb_leds_better" width="640" height="462" srcset="/wp-content/uploads/2015/11/rgb_leds_better-1024x739.png 1024w, /wp-content/uploads/2015/11/rgb_leds_better-300x217.png 300w, /wp-content/uploads/2015/11/rgb_leds_better-768x554.png 768w, /wp-content/uploads/2015/11/rgb_leds_better-1536x1109.png 1536w, /wp-content/uploads/2015/11/rgb_leds_better-1568x1132.png 1568w, /wp-content/uploads/2015/11/rgb_leds_better.png 1833w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<h2>Watchout for ground loops</h2>
+<p>If you need more power than just the USB connection you will have to give some thought to protecting your computer from ground loops.</p>
+<p>The possibility of a ground loop exists when your arduino is connected to the PC via a USB cable and both the arduino (or connected circuitry) and the PC are mains connected in some way (even via a plug pack).</p>
+<p>Possible solutions include:</p>
+<ul>
+<li>USB isolator (eg: <a href="http://amzn.to/1Pktq7r" target="_blank" rel="noopener">this one</a>)</li>
+<li>Powering the PC from battery (eg laptop)</li>
+<li>Powering the arduino from battery (eg 6v SLA)</li>
+<li>Powering the arduino and circuitry from a plug-pack and using a wireless connection to communicate to the arduino</li>
+<li>Don&#8217;t connect the usb cable
+<ul>
+<li>Use a network enabled board (the network ports are very well isolated). The <a href="http://www.freetronics.com.au/products/etherten#.VkCYO7crJhE" target="_blank" rel="noopener">etherten </a>is great for this.</li>
+<li>Use wifi via a $5 esp8266 (for example <a href="http://amzn.to/1QdHAY4" target="_blank" rel="noopener">this one</a>)</li>
+<li>Use an infra red serial connection (2400 baud)</li>
+</ul>
+</li>
+<li>Just live with a potential ground loop
+<ul>
+<li>Plug everything into the same wall socket and keep your fingers crossed.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Basic arduino code to test out the LED Strip</h3>
+<p>Now we have to check our electrical project functions as predicted. For this article, and part 2, I will be using the <a href="https://github.com/nethoncho/FastSPI_LED2" target="_blank" rel="noopener">FastSPI_LED2 </a>library from  <a href="http://fastled.io/" target="_blank" rel="noopener">fastled.io</a>.</p>
+<p>This demo code will create the effect shown in the video at the top of this article. If all you wanted was cool looking bias lighting, your&#8217;e done!</p>
+<pre class="font:monospace height-set:true height:500 lang:c++ decode:true ">#include "FastSPI_LED2.h"
+
+//----------------------------------------------------------------------------------------
+//
+// LED stip driver for smooth HUE trnsitions radiating from the middle of the LED strip.
+//
+//----------------------------------------------------------------------------------------
+
+//Alter this to suit your setup
+#define NUM_LEDS 91
+#define PIN_LED 4
+
+//This is where the individual pixel for ever LED is stored.
+//use LEDS.show(); to sync the strip with the data in this array.
+struct CRGB leds[NUM_LEDS];
+
+void setup() 
+{
+	  // sanity check delay - allows reprogramming if accidently blowing power w/leds
+   	delay(2000);
+
+   	//to prevent too high  a power draw use 25% brightness
+   	LEDS.setBrightness(64);
+
+    //setup the LED controller
+    LEDS.addLeds&lt;WS2811, PIN_LED, RGB&gt;(leds, NUM_LEDS);
+}
+
+
+void loop()
+{ 
+  byte hueMiddle=0;
+  byte hueEdge=0;
+  byte hueStep = 48;
+  int maxHue = 255; //NB: hue may not be in the range 0-255, if we use a differnt hsv2rgb function.
+  bool sync = false;
+  
+  while(true)
+  {
+    //pause a second
+    delay(1000);
+
+    //push the hue of the middle part of the bias light forward
+    for(int s=0; s&lt; hueStep; s++)
+    {
+        hueMiddle++;
+        if(hueMiddle &gt;= maxHue)
+        {
+          sync = true;
+          break;
+        }
+        updateStrip(hueMiddle, hueEdge);
+    }
+
+    //have the edge of the bias light catch up to the hue in the middle
+    for(int s=0; s&lt; hueStep; s++)
+    {
+        hueEdge++;
+        if(hueEdge &gt;= maxHue)
+        {
+          sync = true;
+          break;
+        }
+       updateStrip(hueMiddle, hueEdge);
+    }
+
+    // Reached the end of the hue cycle, wrap to the begining.
+    // We do it this way because if the hueMiddle wraps around, but the
+    // hueEdge remains before the end, then a full rainbow is creted
+    // when updateStrip smooths the pixels over the strip
+    if(sync)
+    {
+       hueMiddle = 0;
+       hueEdge = 0;
+       sync = false;
+    } 
+  }
+}
+
+
+// This method creates a smooth transition of pixels, from one hue in the middle
+// to another hue at the edge.
+//
+//note: Could be faster with symetry away from middle.
+//note: Could be faster with integer math.
+//note: Because of the long delay, this does not need to be fast.
+void updateStrip(byte hueMiddle, byte hueEdge)
+{
+    float mid = NUM_LEDS/2;
+    int hueDiff =  hueEdge - hueMiddle;
+    for(int i = 0; i &lt; NUM_LEDS; i++) 
+    {
+        //get the hue for the pixel
+        CRGB pixel;
+        float h = abs(i-mid)/mid; //0 at mid, 1 at edge
+        h *= hueDiff; //0 at mid, hueDiff at edge
+        h += hueMiddle; //hueMiddle at mid, hueEdge at edge
+
+        //set the pixel
+        hsv2rgb_spectrum(CHSV((byte)round(h), 255, 255), pixel);
+        leds[i] = pixel;
+    }
+    delay(150);
+    LEDS.show();
+}
+</pre>
+<p>&nbsp;</p>
+<h3>What&#8217;s next?</h3>
+<p>In a follow-up article (part-2) we will cover syncing your arduino to the computers clock, choosing good colours for different times of the day and using your location to calculate where the sun is (in case you want to tune your your lighting to the time of the day).</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Comprehensive Example Code Demonstrating using Arduino Flash Memory via PROGMEM</title>
+		<link>/comprehensive-example-code-demonstrating-using-arduino-flash-memory-via-progmem/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 09 Mar 2015 08:05:38 +0000</pubDate>
+				<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Progmem]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=94</guid>
+
+					<description><![CDATA[The post is a huge set of PROGMEM examples (done as unit tests) which you can freely copy and paste into your work.
+
+The readership level is set at those who are already familiar with the arduino PROGMEM documentation here and the use of the F() macro and __FlashStringHelper*. Its designed as a reference on how to accomplish many different common tasks in PROGMEM , from standard string functions, to structures and arrays. The idea is to save you the "lets see how to make this work" time and communicate common pitfalls.]]></description>
+										<content:encoded><![CDATA[<p>&nbsp;</p>
+<p><strong>[<span style="color: #ff0000;">Note</span>: This page is only applicable to older arduino versions. For version 1.5 onwards <a href="http://busyducks.com/wp_4_1/2016/02/11/update-comprehensive-arduino-flash-memory-via-progmem/">see this page instead</a>].</strong></p>
+<p>This post is a huge set of PROGMEM examples (done as unit tests) which you can freely copy and paste into your work.</p>
+<p>The readership level is set at those who are already familiar with the arduino PROGMEM documentation <a href="http://arduino.cc/en/Reference/PROGMEM" target="_blank" rel="noopener">here </a>and the use of the F() macro and __FlashStringHelper*. Its designed as a reference on how to accomplish many different common tasks in PROGMEM , from standard string functions, to structures and arrays. The idea is to save you the &#8220;lets see how to make this work&#8221; time and communicate common pitfalls.</p>
+<p>The code is well documented, so you should be able to find what you need quickly. There is data declarations out front,  sets of unit tests in setup() and a simple unit testing framework at the end of the file.</p>
+<p>NB: some of the examples have  //JBYCDMUS after the line.<br />
+This stands for &#8220;just because you can, doesn&#8217;t mean you should&#8221; implying It works but is not recommended.</p>
+<p>&nbsp;</p>
+<pre class="" mark="104,112,130,148,163">//----------------------------------------------------------------------------------//
+//                                    BUSYDUCKS.COM                                 //
+//                           _         _                  _                         //
+//                         ( o)&gt;     ( o)&lt;     __       ( o)&lt;                       //
+//                      ____\\    ____\\   __ (.. )  \\\_\\                         //
+//                 ~~~~\_///__)~~\_///__)~~\_\\V__)~~\_____)~~~~~                   //
+//                                                                                  //
+//                            Making you pro-duck-tive                              //
+//                                                                                  //
+//  Author: Duckman   Date: 20/3/13   Ver: 1.0   Licence: Creative Commons (by-sa)  //
+//                                                                                  //
+//  Demonstrates the use of PROGMEM.                                                //
+//  Compile with Arduino environment 1.02 or later                                  //
+//                                                                                  //
+//  Permision given to freely copy/paste "code snippets" into your own code. For    //
+//  other uses (e.g. derivative works) the Creative Commons Attribution Share-      //
+//  alike license applies (cite busyducks.com). This means comerical use is ok.     //
+//----------------------------------------------------------------------------------//
+#include <environment.h>
+
+/*
+char,                             (1 byte)    -127 to 128 also letters i.e. 'a'     pgm_read_byte
+unsigned char, byte               (1 byte)    0 to 255                              pgm_read_byte
+int, short                        (2 bytes)   -32,767 to 32,768                     pgm_read_word
+unsigned int, unsigned short      (2 bytes)   0 to 65,535                           pgm_read_word
+long                              (4 bytes)   -2,147,483,648 to 2,147,483,647       pgm_read_dword
+unsigned long                     (4 bytes)   0 to 4,294,967,295                    pgm_read_dword
+
+For ATMEGA based arduino's double is the same as float
+float, double                     (4 bytes)   -3.4028235E+38 to 3.4028235E+38       pgm_read_float
+*/
+
+//--------------------------------------------------------------------------------------------------------------
+// Data structures for test
+//--------------------------------------------------------------------------------------------------------------
+struct Person
+{
+  int height;
+  char *name;
+  int age;
+  Person *spouse;
+};
+
+//--------------------------------------------------------------------------------------------------------------
+// Test Data Sets
+//--------------------------------------------------------------------------------------------------------------
+#define BYTE_TEST_PATTERN_DATA {0, 1, 2, 3, 4, 9, 15, 16, 21, 31, 32, 64, 100, 201, 212, 255, 7}
+#define BYTE_TEST_PATTERN_SIZE 17
+#define MAX_STRING_SIZE 100
+
+//--------------------------------------------------------------------------------------------------------------
+// Test Data
+//--------------------------------------------------------------------------------------------------------------
+//regular data
+const byte  progMem_ucharArray[]     PROGMEM = BYTE_TEST_PATTERN_DATA;
+const byte  progMem_uchar            PROGMEM = 130;
+const int   progMem_int              PROGMEM = -3021;
+const long  progMem_long             PROGMEM = 2000000001;
+const float progMem_float            PROGMEM = 3.14159265359;
+const char  progMem_string[]         PROGMEM = "Snollygoster";
+const char  progMem_string2[]        PROGMEM = "Problem Alchemist";
+const char  progMem_string3[]        PROGMEM = "Lead Paradigm Architect";
+const char  progMem_emptyString[]    PROGMEM = "";
+const float progMem_floatArray[2][5] PROGMEM = {{0.2, 0.1, 0.5, 0.7, -3.2},
+                                               {0.4, 0.2, 1.0, 1.4, -6.4}};
+
+PROGMEM const char *progMem_stringArray[] =
+{   
+  progMem_string,
+  progMem_string2,
+  progMem_string3
+};
+
+//structs
+//this line is a foward decleration, it allows person1 to create a valid pointer 
+//to person2 even though person2 is not defined yet.
+extern const Person progMem_person2;
+
+const char     _name[]         PROGMEM = "Papa Smurf";
+const Person   progMem_person  PROGMEM = {189, (char *)_name, 32, (Person*)&amp;progMem_person2};
+const char     _name2[]        PROGMEM = "Muma Smurf";
+const Person   progMem_person2 PROGMEM = {160, (char *)_name2, 41, (Person*)&amp;progMem_person};
+
+//--------------------------------------------------------------------------------------------------------------
+// Stats
+//--------------------------------------------------------------------------------------------------------------
+long passCount = 0;
+long failCount = 0;
+long countAtLastNameChange = 0;
+char currentTestName[64];
+
+//--------------------------------------------------------------------------------------------------------------
+// setup and loop
+//--------------------------------------------------------------------------------------------------------------
+void setup() 
+{
+    byte localData[] = BYTE_TEST_PATTERN_DATA;
+    char buffer[MAX_STRING_SIZE];
+    
+    Serial.begin(9600);
+    
+	//JBYCDMUS = just because you can, doesn't mean you should
+	
+    Serial.println(F("---------------- single variable tests"));
+    setTestName("single variable tests");
+    assert(  progMem_uchar == 130                                       ); //JBYCDMUS
+    assert(  pgm_read_byte(&amp;progMem_uchar) == 130                       );
+    assert(  progMem_int == -3021                                       ); //JBYCDMUS
+    assert(  progMem_long == 2000000001                                 ); //JBYCDMUS
+    assert(  (int)(pgm_read_float(&amp;progMem_float)*10000) == 31415       );
+    
+    Serial.println(F("---------------- array tests"));
+    setTestName("array tests");
+    for(int i=0; i&lt; BYTE_TEST_PATTERN_SIZE; i++)
+    {
+        assert(   pgm_read_byte(&amp;progMem_ucharArray[i]) == localData[i] );
+    }
+    for(int i=0; i&lt;5; i++)
+    {
+        //the easy way of accessing the array
+        float a = pgm_read_float(&amp;progMem_floatArray[0][i]);
+        //another way of accessing the array same as [1][i]
+        float b = pgm_read_float(((unsigned int)progMem_floatArray)+(5+i)*sizeof(float));
+        a = a * 2;
+        //to check two floating points are "equal"
+        assert (abs(a - b) &lt; 0.0001                                     );     }          Serial.println(F("---------------- struct tests"));     setTestName("struct tests");     assert(  progMem_person.height == 189                               ); //JBYCDMUS     assert(  pgm_read_byte(&amp;progMem_person.height) == 189               );     //to get a string use: (prog_char *)pgm_read_word(&amp;progMem_person.name)         assert(  strcmp_P("Papa Smurf", (prog_char *)pgm_read_word(&amp;progMem_person.name)) == 0 );     assert(  pgm_read_byte(&amp;progMem_person.age) == 32                   );     assert(  progMem_person.age == 32                                   ); //JBYCDMUS          //get person1's spouse     Person *p= (Person *)pgm_read_word(&amp;progMem_person.spouse);     assert(  p == &amp;progMem_person2                                      );     assert(  pgm_read_byte(&amp;p-&gt;age) == 41                               );
+    //get person2's spouse
+    p = (Person *)pgm_read_word(&amp;progMem_person2.spouse);
+    assert(  p == &amp;progMem_person                                       );
+    assert(  pgm_read_byte(&amp;p-&gt;age) == 32                               );
+
+    Serial.println(F("---------------- memory operation tests"));
+    setTestName("memcmp [memory compare]");
+    //compares len bytes of the memory s1 and flash s2
+    byte data[] = BYTE_TEST_PATTERN_DATA;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) == 0 );
+    data[BYTE_TEST_PATTERN_SIZE-1] = 0;
+    assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &lt; 0  );     data[BYTE_TEST_PATTERN_SIZE-1] = 255;     assert(  memcmp_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &gt; 0  );
+    
+    //copy len bytes from flash to SRAM
+    memset (data, 0, BYTE_TEST_PATTERN_SIZE);
+    assert(  memcpy_P(data, progMem_ucharArray, BYTE_TEST_PATTERN_SIZE) &gt; 0  );
+    assert(  memcmp(data, localData, BYTE_TEST_PATTERN_SIZE) == 0            );
+    
+    Serial.println(F("---------------- string function tests"));
+    
+    //---- strcmp &amp; strncmp Compare two strings
+    setTestName("strcmp [string compare]");
+    assert(  strcmp_P("Snollygoster", progMem_string) == 0                ); 
+    assert(  strcmp_P("sNollyGostEr", progMem_string) != 0                );
+    assert(  strcmp_P("Bug", progMem_string) &lt; 0                          );     assert(  strcmp_P("Zoo", progMem_string) &gt; 0                          );
+    
+    setTestName("strncmp [string compare, first n chars]");
+    assert(  strncmp_P("Snollyfoobar", progMem_string, 6) == 0            );
+    assert(  strncmp_P("sNollyGostEr", progMem_string, 6) != 0            );
+    assert(  strncmp_P("Bug", progMem_string, 3) &lt; 0                      );     assert(  strncmp_P("Zoo", progMem_string, 3) &gt; 0                      );
+    
+    //---- strcasecmp &amp; strncasecmp, Compare two strings, ignoring case  
+    assert(  strcasecmp_P("Snollygoster", progMem_string) == 0            );
+    assert(  strcasecmp_P("sNollyGostEr", progMem_string) == 0            );
+    assert(  strcasecmp_P("Bug", progMem_string) &lt; 0                      );     assert(  strcasecmp_P("Zoo", progMem_string) &gt; 0                      );
+    
+    setTestName("strncasecmp [string compare ignoring case]");
+    assert(  strncasecmp_P("Snollyfoobar", progMem_string, 6) == 0        );
+    assert(  strncasecmp_P("sNollYGostEr", progMem_string, 8) == 0        );
+    assert(  strncasecmp_P("Bug", progMem_string, 3) &lt; 0                  );     assert(  strncasecmp_P("Zoo", progMem_string, 3) &gt; 0                  );
+    
+    //---- strcpy, strlcpy &amp; strncpy: makes a copy of a string
+    setTestName("strcpy [copy a string]");
+    clear(buffer, MAX_STRING_SIZE); //empty string buffer
+    assert(  strcpy_P(buffer, progMem_string) == buffer                   );
+    assert(  strncmp(buffer, "Snollygoster", MAX_STRING_SIZE) == 0        );
+    
+    setTestName("strlcpy [copy a string of maximim size, ensure null terminated result]");
+    char smallBuffer[12]; //not long enough to hold "Snollygoster" AND the final null terminator
+    clear(buffer, MAX_STRING_SIZE); //empty string buffer
+    clear(smallBuffer, 12); //empty string buffer
+    assert(  strlcpy_P(buffer, progMem_string, MAX_STRING_SIZE) == 12     );
+    assert(  strlcpy_P(smallBuffer, progMem_string, 12) == 12             );
+    assert(  strcmp(buffer, "Snollygoster") == 0                          );
+    //This is the difference between strlcpy and strncpy, the whole string was not copied 
+    //to ensure a null terminator was present
+    assert(  strcmp(smallBuffer, "Snollygoste") == 0                      );
+
+    
+    setTestName("strncpy [copy a string of maximim size, null terminate iff space allows]");
+    clear(buffer, MAX_STRING_SIZE); //empty string buffer
+    assert(  strncpy_P(buffer, progMem_string, MAX_STRING_SIZE) == buffer );
+    assert(  strcmp(buffer, "Snollygoster") == 0                          );
+    
+    //---- strcat, strlcat &amp; strncat: Concatenate two strings
+    setTestName("strcat [join two strings]");
+    strcpy(buffer, "Chief ");
+    assert(  strcat_P(buffer, progMem_string) == buffer                   );
+    assert(  strcmp(buffer, "Chief Snollygoster") == 0                    );
+    
+    setTestName("strlcat [join two strings, limiting final size, ensure termination]");  
+    strcpy(smallBuffer, "Chief "); //smallBuffer is only 12 characters
+    //NOTE strlcat_P n = sizeof destination; while strncat_P n = number of chars to copy
+    assert(  strlcat_P(smallBuffer, progMem_string, 12) == 18             );
+    //12th character is the nul terminator
+    assert(  strcmp(smallBuffer, "Chief Snoll") == 0                      );
+    
+    strcpy(buffer, "Chief "); //smallBuffer is only 12 characters
+    assert(  strlcat_P(buffer, progMem_string, MAX_STRING_SIZE) == 18     );
+    assert(  strcmp(buffer, "Chief Snollygoster") == 0                    );
+    
+    setTestName("strncat [join two strings, limiting final size]");
+    strcpy(buffer, "Chief ");
+     //NOTE strncat_P n = number of chars to copy; while strlcat_P n = sizeof destination
+    assert(  strncat_P(buffer, progMem_string, 6) == buffer               );
+    assert(  strcmp(buffer, "Chief Snolly") == 0                          );    
+    
+    //---- strlen &amp; strnlen: Finds the length of the string (searches for the null terminator)
+    setTestName("strlen [find the length of a string]");
+    assert(  strlen_P( progMem_string) == 12    );
+    setTestName("strnlen [find the length of a string, limited to n]");
+    assert(  strnlen_P( progMem_string, 6) == 6                           );
+    assert(  strnlen_P( progMem_string, MAX_STRING_SIZE) == 12            );
+    
+    //---- strstr: searches s1 for the first occurrence of (the substring) s2
+    setTestName("strstr [find a string inside another string]");
+    //one item to find
+    strcpy(buffer, "A Snollygoster sounds like something you would find in a handkerchief.");
+    assert(  strstr_P(buffer, progMem_string) == &amp;buffer[2]               );
+    assert(  strstr_P("foobar", progMem_string) == NULL                   );
+    //what is defined to happen when searching an empty/null strings
+    strcpy(buffer, "foobar");
+    assert(  strstr_P(buffer, NULL) == NULL              );
+    //this is why "if(strstr_P(s1, s2) != null){...}" is a bad idea!"
+    assert(  strstr_P(buffer, progMem_emptyString) == buffer              );
+        
+    Serial.println(F("---------------- done"));
+    if(failCount &gt; 0)
+    {
+        Serial.print(passCount); Serial.println(" test passed");
+        Serial.print(failCount); Serial.println(" test FAILED");
+    }
+    else
+    {
+        Serial.print("All tests passed ("); Serial.print(passCount); Serial.println(" tests rum)");
+    }
+}
+
+void loop() 
+{
+}
+
+void clear(char *buffer, int len)
+{
+    memset(buffer, '\0', len);
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Testing framework
+//--------------------------------------------------------------------------------------------------------------
+void setTestName(const char *name)
+{
+  strcpy(currentTestName, name);
+  countAtLastNameChange = passCount+failCount;
+}
+
+void assert(bool isTrue)
+{
+  if(isTrue) {
+    pass();
+  }
+  else {
+    fail();
+  }
+}
+
+void pass()
+{
+  passCount++;
+}
+
+void fail()
+{
+    Serial.print("TEST FAILED: ");
+    if(currentTestName != NULL)
+    {
+        int localTestNum = (passCount + failCount) - countAtLastNameChange + 1;
+        Serial.print("("); 
+        Serial.print(currentTestName); 
+        Serial.print(" test "); 
+        Serial.print(localTestNum);
+        Serial.print(")");
+    }
+    Serial.println("");
+    failCount++;
+}
+
+</pre>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

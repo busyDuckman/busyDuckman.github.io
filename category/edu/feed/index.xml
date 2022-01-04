@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Educational &#8211; Busy Ducks</title>
+	<atom:link href="/category/edu/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Mon, 10 Aug 2015 15:02:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Educational &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Practical Iterative K-ary Tree (aka n-ary, n-tree) Traversal in C#.  A surprisingly useful tool for the average programmer.</title>
+		<link>/practical-generic-k-ary-tree-n-tree-traversal-in-c/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Mon, 10 Aug 2015 15:02:54 +0000</pubDate>
+				<category><![CDATA[C#]]></category>
+		<category><![CDATA[Data Structures]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Data_Structures]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[WDLib]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=546</guid>
+
+					<description><![CDATA[Introduction: A lot of components in the C# environment are essentially a K-ary [kay-er-ee] tree. From tree-view nodes, to serialising a type via reflection, to directory listings to menu hierarchies, and so on. Often we need to iterate through these types of structures, or our own trees, and we just write some code to do &#8230;<br><a href="/practical-generic-k-ary-tree-n-tree-traversal-in-c/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">Practical Iterative K-ary Tree (aka n-ary, n-tree) Traversal in C#.  A surprisingly useful tool for the average programmer.</span></a>]]></description>
+										<content:encoded><![CDATA[<h3>Introduction:</h3>
+<p>A lot of components in the C# environment are essentially a K-ary [kay-er-ee] tree. From tree-view nodes, to serialising a type via reflection, to directory listings to menu hierarchies, and so on.</p>
+<p>Often we need to iterate through these types of structures, or our own trees, and we just write some code to do it as needed. This code is often problematic as it&#8217;s non-trivial to do well, because:</p>
+<ul>
+<li>It&#8217;s complex to do certain traversals in an iterative manor. (non recursive);</li>
+<li>Traversal is prone to bugs, as there are many edge cases;</li>
+<li>Software hangs if a circular reference exists and you don&#8217;t catch it;</li>
+<li>Unit-testing of once-off code is often neglected;</li>
+<li>Examining / verifying correct behaviour of tree traversal algorithms is difficult in the debugger.</li>
+</ul>
+<p>Wanting to rid myself of this re-occurring situation I built a few helper methods to do the following traversals iteratively:</p>
+<ul>
+<li>Depth First Pre Order</li>
+<li>Depth First Post Order,</li>
+<li>Breadth First</li>
+</ul>
+<p>The helpers are generic [BYO data type] and dont require a specific interface. You just supply a Func to return a nodes sub nodes. Thus you can drop a working tested algorithm onto whatever situation you encounter.</p>
+<h3>Iteration</h3>
+<p>Example:</p>
+<ul>
+<li>Made using an example data type &#8220;Node&#8221;
+<ul>
+<li>See the unit-tests at the  bottom of the page for implementation</li>
+</ul>
+</li>
+<li>First it shows using a foreach loop on a depth first pre-order iterator</li>
+<li>Then is shows using a breadth-first iterator to convert a tree to an array using Linq.</li>
+</ul>
+<pre class="lang:c# decode:true">/*
+* Test tree
+*                  A
+*                / | \ 
+*              B   C   D
+*            / |       | \
+*          E   F       G   H
+*        / |         / | \
+*       I  J        K  L  M
+*/
+Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+//EXAMPLE 1: Pre-order traversal via foreach loop
+foreach(var node in  Misc.EnumerateNodes(tree, 
+                                    N =&gt; N.Nodes, 
+                                    NodeVisitOrder.DepthFirstPreOrder))
+{
+    Console.Out.Write(node.Item);
+}
+Console.Out.WriteLine();
+//outputs ABEIJFCDGKLMH
+
+//EXAMPLE 2: Creating an array via breadth first traversal 
+string s = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, NodeVisitOrder.BredthFirst)
+                            .Select(N =&gt; N.Item)
+                            .ToArray());
+Console.Out.WriteLine(s);
+//outputs ABCDEFGHIJKLM</pre>
+<p>This was a simplistic example, but it works, its unit-tested, its efficient and non-recursive. It all ties into linq and IEnumerable so many neat tricks are possible.</p>
+<p>Lets examine the crucial line in detail.</p>
+<pre class="lang:c# decode:true">EnumerateNodes(tree, N =&gt; N.Nodes, NodeVisitOrder.DepthFirstPreOrder)
+</pre>
+<ul>
+<li>The first parameter is the root node. This is method is generic, so any class type will do.</li>
+<li>The second is a lambda expression for an enumerable  set of sub-nodes</li>
+<li>The third is the traversal method.</li>
+</ul>
+<p>Another example of how flexible the method is, using DirectoryInfo as the node, and iterating over all subdirectories:</p>
+<ul>
+<li>This time we use the optional forth parameter to enable circular reference checking. this prevents any chance of an infinite loop</li>
+</ul>
+<pre class="lang:c# decode:true">DirectoryInfo root = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+ 
+var dirs = Misc.EnumerateNodes(
+                root,
+                N =&gt; { try { return N.GetDirectories();  } 
+                       catch (Exception) { return null; } },
+                NodeVisitOrder.DepthFirstPreOrder, 
+                CircularRefernceBehaviour.Skip);
+ 
+foreach (var dir in dirs)
+{
+}</pre>
+<h3>Duplication</h3>
+<p>Often you just need to copy one tree structure to another (possibly of a different type):</p>
+<ul>
+<li>Loading a directory structure into a TreeView control</li>
+<li>Turning a tree of commands into Menu Items</li>
+<li>Working with expression parsing  and evaluation</li>
+<li>Just making a deep copy of a tree structure</li>
+</ul>
+<pre class="lang:c# decode:true">/*
+* Test tree
+*                  A
+*                / | \ 
+*              B   C   D
+*            / |       | \
+*          E   F       G   H
+*        / |         / | \
+*       I  J        K  L  M
+*/
+Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+TreeNode n = Misc.RebuildTree(tree,  
+							 N =&gt; N.Nodes, 
+							 N =&gt; new TreeNode("" + N.Item), 
+							 (T, N) =&gt; T.Nodes.AddRange(N.ToArray()));</pre>
+<p>Neeto, one line of code, and our <span style="text-decoration: underline;">tree is duplicated into a TreeView</span> (or whatever) in a efficient, reliable manor.</p>
+<p>RebuildTree takes five parameters:</p>
+<ol>
+<li>The root of the tree to be copied.</li>
+<li>Func for an enumerating sub-nodes in the source structure</li>
+<li>Func to create a new destination  node form a source node
+<ul>
+<li>Just the data of the node, Leave the child nodes unpopulated</li>
+</ul>
+</li>
+<li>Action to add a collection of Nodes to an existing node (destination structure)</li>
+<li>Circular reference checking behaviour</li>
+</ol>
+<h3>Core Algorithms</h3>
+<h4>Depth First Pre-Order</h4>
+<ul>
+<li>Note: visitOk(&#8230;) returns true unless a circular reference is detected.</li>
+<li>This works by feeding al nodes onto a stack, a basic way to resolve the recursion.</li>
+<li>Child nodes are pushed in reverse order, so they are pop&#8217;ed in the correct order.</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Pop();
+	if (visitOk(item, visited, checkType))
+	{
+		yield return item;
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse());
+	}
+}
+</pre>
+<h4>Depth First Post-Order</h4>
+<ul>
+<li>Depth First Post-Order is actually pretty tricky, a few algorithms exist.</li>
+<li>This one initially traverses the entire tree O(n) to fill a stack, then returns each item in the stack.</li>
+<li>The overall time is O(n), with the first iteration being O(n) and all subsequent  iterations being O(1)</li>
+<li>There s a requirement for  extra memory for this to work, but its not too bad.</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+Stack output = new Stack();
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Pop();
+	if (visitOk(item, visited, checkType))
+	{
+		output.Push(item);
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+	}
+}
+foreach (T item in output)
+{
+	yield return item;
+}
+
+</pre>
+<h4>Breadth First</h4>
+<ul>
+<li>This works by feeding al nodes onto a queue, as opposed to the depth first &#8211; pre order, which uses a stack.
+<ul>
+<li>This time Child nodes are not added in reverse order, however</li>
+</ul>
+</li>
+</ul>
+<pre class="lang:c# decode:true">LinkedList list = new LinkedList();
+HashSet visited = new HashSet();
+
+list.AddLast(node);
+while (list.Count &gt; 0)
+{
+	T item = list.Dequeue();
+	if (visitOk(item, visited, checkType))
+	{
+		yield return item;
+		list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+	}
+}
+break;
+}
+</pre>
+<h3>Source Code:</h3>
+<pre class="height-set:true lang:c# decode:true ">/*
+Available under the BSD 3-Clause License
+Copyright (c) 2015, Dr Warren Creemers All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using WD_toolbox;
+
+namespace WD_toolbox
+{
+    public enum NodeVisitOrder { DepthFirstPreOrder, DepthFirstPostOrder, BredthFirst }
+
+    public enum CircularRefernceBehaviour { DontCheck, ThrowException, Skip }
+
+    public class NodeTraversalException : Exception
+    {
+        public NodeTraversalException(string message) : base(message) { }
+        public NodeTraversalException() : base() { }
+        public static NodeTraversalException VisitedTwice(object item) {return new NodeTraversalException("Node already visied: " + item.ToString());} 
+    }
+
+    public static class Misc
+    {
+        /// &lt;summary&gt;
+        /// Enumerates any Tree/graph in a non-recursive manor.
+        /// Does not check for circularReferences.
+        /// &lt;/summary&gt;
+        /// &lt;param name="node"&gt;Root node.&lt;/param&gt;
+        /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="order"&gt;The visit order.&lt;/param&gt;
+        /// &lt;param name="checkType"&gt;If circular references should be checked, and how to handle them. 
+        /// Note (1): Checks repeated node, which is not nesesiarly a circular reference (but all circulare references have a repeated node).
+        /// Note (2): performance hit reduced if  node generates a good hashcode.
+        /// &lt;/param&gt;
+        public static IEnumerable&lt;T&gt; EnumerateNodes&lt;T&gt;( T node, 
+                                                        Func&lt;T, IEnumerable&lt;T&gt;&gt; getSubNodes,
+                                                        NodeVisitOrder order = NodeVisitOrder.DepthFirstPreOrder,
+                                                        CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where T : class
+        {
+            if (node != null) //assuming null indicats an empty tree
+            {
+                //this acts as a stack or queue to resolve the recursion
+                LinkedList&lt;T&gt; list = new LinkedList&lt;T&gt;();
+                HashSet&lt;T&gt; visited = new HashSet&lt;T&gt;();
+
+                switch (order)
+                {
+                    case NodeVisitOrder.DepthFirstPreOrder:
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Pop();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                yield return item;
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse());
+                            }
+                        }
+                        break;
+
+                    case NodeVisitOrder.DepthFirstPostOrder:
+                        //This has a side effects, the first iteeration is slow (also memory consuming) 
+                        //as the entire structure is copied into a stack 
+                        Stack&lt;T&gt; output = new Stack&lt;T&gt;();
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Pop();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                output.Push(item);
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+                            }
+                        }
+                        foreach (T item in output)
+                        {
+                            yield return item;
+                        }
+                        break;
+
+                    case NodeVisitOrder.BredthFirst:
+                        list.AddLast(node);
+                        while (list.Count &gt; 0)
+                        {
+                            T item = list.Dequeue();
+                            if (visitOk(item, visited, checkType))
+                            {
+                                yield return item;
+                                list.AddLastAll(getSubNodesSafe(item, getSubNodes));
+                            }
+                        }
+                        break;
+                }
+            }
+        }
+
+        // Because getSubNodes(T) may return null to indicate no nodes.
+        private static IEnumerable&lt;T&gt; getSubNodesSafe&lt;T&gt;(T node, Func&lt;T, IEnumerable&lt;T&gt;&gt; getSubNodes)
+        {
+            if ((node != null) &amp;&amp; (getSubNodes != null))
+            {
+                IEnumerable&lt;T&gt; subNodes = getSubNodes(node);
+                return (subNodes != null) ? subNodes : new List&lt;T&gt;();
+            }
+            return new List&lt;T&gt;();
+        }
+
+        private static bool visitOk&lt;T&gt;(T item, HashSet&lt;T&gt; visited, CircularRefernceBehaviour checkType)
+        {
+            if (checkType != CircularRefernceBehaviour.DontCheck)
+            {
+                if (visited.Contains(item))
+                {
+                    // error
+                    if (checkType == CircularRefernceBehaviour.ThrowException)
+                    {
+                        throw NodeTraversalException.VisitedTwice(item);
+                    }
+                    return false; //indicate it's not ok to visit (ie skip)
+                }
+
+                //no error
+                visited.Add(item);
+                return true;
+            }
+
+            //no check
+            return true;
+        }
+
+
+        /// &lt;summary&gt;
+        /// Copies a tree structure. (useful in copying a tree structure to a tree view).
+        /// &lt;/summary&gt;
+        /// &lt;typeparam name="A"&gt;The node type of the tree to copy.&lt;/typeparam&gt;
+        /// &lt;typeparam name="B"&gt;The destination node type.&lt;/typeparam&gt;
+        /// /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="newNode"&gt;To create a simple non-recursive copy of a node.&lt;/param&gt;
+        /// &lt;param name="addSubNodes"&gt;&lt;/param&gt;
+        /// &lt;param name="checkType"&gt; Type of circular reference checking to perform.&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static B RebuildTree&lt;A, B&gt;(A srcNode,
+                                           Func&lt;A, IEnumerable&lt;A&gt;&gt; getSubNodes,
+                                           Func&lt;A, B&gt; newNode,
+                                           Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes,
+                                           CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where A : class
+            where B : class
+        {
+            return RebuildTree(srcNode, getSubNodes, newNode, addSubNodes, P =&gt; true, checkType);
+        }
+        
+        /// &lt;summary&gt;
+        /// Copies a tree structure. (useful in copying a tree structure to a tree view).
+        /// &lt;/summary&gt;
+        /// &lt;typeparam name="A"&gt;The node type of the tree to copy.&lt;/typeparam&gt;
+        /// &lt;typeparam name="B"&gt;The destination node type.&lt;/typeparam&gt;
+        /// /// &lt;param name="getSubNodes"&gt; Get the sub-nodes of any given node.&lt;/param&gt;
+        /// &lt;param name="newNode"&gt;To create a simple non-recursive copy of a node.&lt;/param&gt;
+        /// &lt;param name="addSubNodes"&gt;&lt;/param&gt;
+        /// &lt;param name="where"&gt;&lt;/param&gt;
+        /// &lt;param name="checkType"&gt; Type of circular reference checking to perform.&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static B RebuildTree&lt;A, B&gt;( A srcNode,
+                                           Func&lt;A, IEnumerable&lt;A&gt;&gt; getSubNodes, 
+                                           Func&lt;A, B&gt; newNode,
+                                           Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes,
+                                           Predicate&lt;A&gt; where,
+                                           CircularRefernceBehaviour checkType = CircularRefernceBehaviour.DontCheck)
+            where A : class
+            where B : class
+        {
+
+
+            LinkedList&lt;Tuple&lt;A, B&gt;&gt; list = new LinkedList&lt;Tuple&lt;A, B&gt;&gt;();
+            HashSet&lt;A&gt; visited = new HashSet&lt;A&gt;();
+            B newRootNode = null;
+
+            list.AddLast(new Tuple&lt;A, B&gt;(srcNode, null));
+            while (list.Count &gt; 0)
+            {
+                var tuple = list.Pop();
+                A item = tuple.Item1;
+                B parent = tuple.Item2;
+
+                if (visitOk(item, visited, checkType))
+                {
+                    if (where(item))
+                    {
+                        B newItem = newNode(item);
+                        if (newRootNode == null) //root node
+                        {
+                            newRootNode = newItem;
+                        }
+
+                        safeAddSubNode(parent, newItem, addSubNodes);
+                        
+                        list.AddLastAll(getSubNodesSafe(item, getSubNodes).Reverse().Select(N =&gt; new Tuple&lt;A, B&gt;(N, newItem)));
+                    }
+                }
+            }
+
+            //done
+            return newRootNode;
+        }
+
+        private static void safeAddSubNode&lt;B&gt;(B parent, B child, Action&lt;B, IEnumerable&lt;B&gt;&gt; addSubNodes)
+        {
+            if ((addSubNodes != null) &amp;&amp; (parent != null) &amp;&amp; (child != null))
+            {
+                addSubNodes(parent, new B[] { child });
+            }
+        }
+    }
+}
+</pre>
+<p>Requires The following Extension class to make LinkedList sane.</p>
+<pre class="height-set:true height:500 lang:c# decode:true ">/*
+Available under the BSD 3-Clause License
+Copyright (c) 2015, Dr Warren Creemers All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/// &lt;summary&gt;
+/// These extensions make usage of the LinkedList more consise.
+/// &lt;/summary&gt;
+public static class LinkedListExtension
+{
+	/// &lt;summary&gt;
+	/// Pops the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the (formerly) last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T Pop&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		T item = list.Last.Value;
+		list.RemoveLast(); //throws InvalidOperationException
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Dequeues the first value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the (formerly) first item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T Dequeue&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		T item = list.First.Value;
+		list.RemoveFirst(); //throws InvalidOperationException
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Gets the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T PeekLast&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		if (list.Count &lt;= 0)
+		{
+			throw new InvalidOperationException("LinkedList is empty (call to PeekLast)");
+		}
+
+		T item = list.Last.Value;
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Gets the last value of the linked list.
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt; Value of the last item in the list. &lt;/returns&gt;
+	/// &lt;exception cref="System.InvalidOperationException"&gt; The LinkedList is empty.&lt;/exception&gt;
+	public static T PeekFirst&lt;T&gt;(this LinkedList&lt;T&gt; list)
+	{
+		if (list.Count &lt;= 0)
+		{
+			throw new InvalidOperationException("LinkedList is empty (call to PeekFirst)");
+		}
+
+		T item = list.First.Value;
+		return item;
+	}
+
+	/// &lt;summary&gt;
+	/// Addss items to the end of the list.
+	/// &lt;/summary&gt;
+	/// &lt;param name="items"&gt;Items to add.&lt;/param&gt;
+	public static void AddLastAll&lt;T&gt;(this LinkedList&lt;T&gt; list, IEnumerable&lt;T&gt; items)
+	{
+		foreach (T item in items)
+		{
+			list.AddLast(item);
+		}
+	}
+
+	/// &lt;summary&gt;
+	/// Addss items to the end of the list.
+	/// &lt;/summary&gt;
+	/// &lt;param name="items"&gt;Items to add.&lt;/param&gt;
+	public static void AddFirstAll&lt;T&gt;(this LinkedList&lt;T&gt; list, IEnumerable&lt;T&gt; items)
+	{
+		foreach (T item in items)
+		{
+			list.AddFirst(item);
+		}
+	}
+}</pre>
+<h3>Unit Tests:</h3>
+<pre class="height-set:true height:500 lang:c# decode:true ">       [TestMethod()]
+        public void EnumerateNodesTest()
+        {
+            /*
+            * Test tree
+            *                  A
+            *                / | \ 
+            *              B   C   D
+            *            / |       | \
+            *          E   F       G   H
+            *        / |         / | \
+            *       I  J        K  L  M
+            */
+            Node&lt;char&gt; tree = Node&lt;char&gt;.TestTree();
+
+            Node&lt;char&gt; coruptTree = Node&lt;char&gt;.TestTree();
+            //point L  to A
+            coruptTree.Nodes[2].Nodes[0].Nodes[1].Nodes.Add(coruptTree); 
+
+            //DepthFirstPreOrder
+            string res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                        NodeVisitOrder.DepthFirstPreOrder, 
+                                                        CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+
+
+
+            //System.Diagnostics.Trace.WriteLine("Hello World");
+            Assert.AreEqual("ABEIJFCDGKLMH", res);
+            
+            //DepthFirstProstOrder
+            res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                    NodeVisitOrder.DepthFirstPostOrder,
+                                                    CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+            Assert.IsTrue(res == "IJEFBCKLMGHDA");
+
+            //BredthFirst
+            res = new String(Misc.EnumerateNodes(tree, N =&gt; N.Nodes, 
+                                                 NodeVisitOrder.BredthFirst,
+                                                 CircularRefernceBehaviour.ThrowException).Select(N =&gt; N.Item).ToArray());
+            Assert.AreEqual("ABCDEFGHIJKLM", res);
+
+            //just to check no exception thrown
+            TreeNode n = Misc.RebuildTree(tree,  
+                                         N =&gt; N.Nodes, 
+                                         N =&gt; new TreeNode("" + N.Item),
+                                         (T, N) =&gt; T.Nodes.AddRange(N.ToArray()), 
+                                         CircularRefernceBehaviour.ThrowException);
+
+            //Check an exception is thrown for curupted tree
+
+            try
+            {
+                n = Misc.RebuildTree(coruptTree,
+                                             N =&gt; N.Nodes,
+                                             N =&gt; new TreeNode("" + N.Item),
+                                             (T, N) =&gt; T.Nodes.AddRange(N.ToArray()),
+                                             CircularRefernceBehaviour.ThrowException);
+
+                Assert.Fail("Should never reach this line of code");
+            }
+            catch (Exception)
+            {
+            }
+
+            //Just handle a corupt tree by not going backward.
+            n = Misc.RebuildTree(coruptTree,
+                                 N =&gt; N.Nodes,
+                                 N =&gt; new TreeNode("" + N.Item),
+                                 (T, N) =&gt; T.Nodes.AddRange(N.ToArray()),
+                                 CircularRefernceBehaviour.Skip);
+
+            //NB: Infinite loop on fail
+
+        }
+
+        
+
+        public class Node&lt;T&gt;
+        {
+            public List&lt;Node&lt;T&gt;&gt; Nodes = new List&lt;Node&lt;T&gt;&gt;();
+            public T Item;
+            public Node(T item, IList&lt;Node&lt;T&gt;&gt; nodes = null)
+            {
+                Item = item;
+                if (nodes != null)
+                {
+                    Nodes.AddRange(nodes);
+                }
+            }
+
+            private static Node&lt;T&gt; NODE&lt;T&gt;(T item, params Node&lt;T&gt;[] Nodes)
+            {
+                return new Node&lt;T&gt;(item, Nodes);
+            }
+
+            public static Node&lt;char&gt; TestTree()
+            {
+                /*
+                * Test tree
+                *                  A
+                *                / | \ 
+                *              B   C   D
+                *            / |       | \
+                *          E   F       G   H
+                *        / |         / | \
+                *       I  J        K  L  M
+                */
+
+
+                Node&lt;char&gt; tree =
+                    NODE('A',
+                        NODE('B',
+                            NODE('E',
+                                NODE('I'),
+                                NODE('J')
+                                ),
+                            NODE('F')
+                            ),
+                        NODE('C'),
+                        NODE('D',
+                            NODE('G',
+                                NODE('K'),
+                                NODE('L'),
+                                NODE('M')
+                                ),
+                            NODE('H')
+                            )
+                        );
+
+                return tree;
+            }
+        }
+    }</pre>
+<h3>WDLib Library:</h3>
+<p>This is part of my personal toolbox, WDLib (in the misc class, which is abridged for clarity on this page). I am moving to open source the library at the moment.</p>
+<h3>Limitations and Usage:</h3>
+<ul>
+<li>The circular reference check just checks for a repeated node, which is not necessarily a circular reference (but all circular references have a repeated node). This may deny some malformed trees that could otherwise be safely parsed. Checking can always be disabled if this is your intent.</li>
+<li>Be aware the first iteration of the Depth First Post-Order has a O(n) overhead.</li>
+</ul>
+<h3></h3>
+<h3>Contact / Feedback</h3>
+<p>[Sorry I had to remove this, because hundreds of spam emails about SEO]</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>How to make coloured text in acrylic with spray paint.</title>
+		<link>/paint-coloured-text-on-acrylic/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Fri, 24 Jul 2015 19:32:25 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Fonts]]></category>
+		<category><![CDATA[Laser_Cutter]]></category>
+		<category><![CDATA[Paint]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=509</guid>
+
+					<description><![CDATA[Laser engraving text on acrylic / perspex does not create a lot of contrast. This leads to the subject of painting text on the acrylic. I have developed some useful methods of achieving this that I thought I would share.]]></description>
+										<content:encoded><![CDATA[<p>&nbsp;</p>
+<h3>Introduction</h3>
+<p>Laser engraving text on acrylic / perspex does not create a lot of contrast. This leads to the subject of painting text on the acrylic. I have developed some useful methods of achieving this that I thought I would share.</p>
+<p>My techniques achieve a good hard wearing result. One of them allows for painting everything except the text, to allow for back lighting. Note: As I often have to bend and mould Perspex, I needed a procedure that could be implemented on the final moulded pieces. This meant that using a laser cutter to remove paint was not an option.</p>
+<h3>Technique 1, Painting the text.</h3>
+<p>This effect is a little more difficult than would appear at first glance. You want to paint the whole area and remove only the paint that&#8217;s not in the text. Problem is doing this by washing with solvents will thin the paint and dilute the finish, reducing the contrast. There is a neat trick you an use however, it involves pouring water over an oil based paint to form a gum in the lettering, which is resistant to solvents.</p>
+<ul>
+<li>Laser engrave the text with a deep cut (1mm -ish).</li>
+<li>Prepare the piece (bend, polish etc.)</li>
+<li>Spray paint with a cheap oil based paint (the kind that gums with water). The &#8220;Fiddly Bits&#8221; brand works well.</li>
+<li>Wait 30sec to a minute.</li>
+<li>Place piece under running water for a couple of seconds.</li>
+<li>You should now be looking at a complete disaster, the finish is ruined and everything is a kinda horrid sticky mess.</li>
+<li>Get a thin micro-fiber disposable cloth, dip in turpentine.</li>
+<li>Scrub the surface (will require elbow grease and persistence).</li>
+<li>Presto, the only stuff you cant scrub out is this awesome looking text.</li>
+</ul>
+<p><img loading="lazy" class="alignnone wp-image-511" src="/wp-content/uploads/2015/07/paint_can-102x300.png" alt="paint_can" width="81" height="238" srcset="/wp-content/uploads/2015/07/paint_can-102x300.png 102w, /wp-content/uploads/2015/07/paint_can.png 160w" sizes="(max-width: 81px) 100vw, 81px" /> <a href="/wp-content/uploads/2015/07/front_panel-black.jpg"><img loading="lazy" class="alignnone wp-image-514" src="/wp-content/uploads/2015/07/front_panel-black-300x294.jpg" alt="front_panel black" width="235" height="230" srcset="/wp-content/uploads/2015/07/front_panel-black-300x294.jpg 300w, /wp-content/uploads/2015/07/front_panel-black-768x752.jpg 768w, /wp-content/uploads/2015/07/front_panel-black.jpg 900w" sizes="(max-width: 235px) 100vw, 235px" />   <img loading="lazy" class="alignnone wp-image-512" src="/wp-content/uploads/2015/07/text_close_up-300x256.jpg" alt="text_close_up" width="271" height="231" srcset="/wp-content/uploads/2015/07/text_close_up-300x256.jpg 300w, /wp-content/uploads/2015/07/text_close_up-768x654.jpg 768w, /wp-content/uploads/2015/07/text_close_up.jpg 926w" sizes="(max-width: 271px) 100vw, 271px" /></a></p>
+<p>&nbsp;</p>
+<h3>Technique 2, Painting everything that is not text.</h3>
+<p>This seems like an odd way of doing things, but offers some interesting advantages:</p>
+<ul>
+<li>Done on translucent acrylic, you can now do back-lighting</li>
+<li>You can paint gradients / flames etc. and still have blacked out text.</li>
+<li>You can always find the right coloured paint on short notice, while acrylic colours are at the mercy of your supplier.</li>
+</ul>
+<p>This technique is actually a lot simpler than the first technique, but a lot less forgiving to errors.</p>
+<ul>
+<li>Engrave text with the quick shallow cut. You basicly just want to rough the surface.</li>
+<li>Prepare the piece (bend, polish etc.)</li>
+<li>Wipe turpentine over the piece with a cloth.</li>
+<li>Gently (half) dry the surface with a dry cloth. Leave the thinnest smear don&#8217;t dry out the letters.</li>
+<li>Wait 20 seconds to allow for some evaporation to occur.</li>
+<li>Spray paint a very thin layer.</li>
+<li>The text area will still have some turps, and also possesses a higher surface tension due to its roughness.
+<ul>
+<li>The paint will move away from the text forming on the flat, smooth areas.</li>
+</ul>
+</li>
+<li>Repeat coats using this procedure as needed.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img loading="lazy" class="alignnone wp-image-515 size-medium" src="/wp-content/uploads/2015/07/front-panel-300x244.jpg" alt="front panel" width="300" height="244" srcset="/wp-content/uploads/2015/07/front-panel-300x244.jpg 300w, /wp-content/uploads/2015/07/front-panel-768x625.jpg 768w, /wp-content/uploads/2015/07/front-panel.jpg 961w" sizes="(max-width: 300px) 100vw, 300px" />   <a href="/wp-content/uploads/2015/07/front_pane_white.jpg"><img loading="lazy" class="alignnone wp-image-516" src="/wp-content/uploads/2015/07/front_pane_white-300x279.jpg" alt="front_pane_white" width="262" height="244" srcset="/wp-content/uploads/2015/07/front_pane_white-300x279.jpg 300w, /wp-content/uploads/2015/07/front_pane_white-768x713.jpg 768w, /wp-content/uploads/2015/07/front_pane_white.jpg 969w" sizes="(max-width: 262px) 100vw, 262px" /><br />
+</a>(Left, final product. Right. first coat)</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What&#8217;s inside an integrated circuit? We broke one open and scanned it for you at 12,800DPI</title>
+		<link>/whats-inside-an-integrated-circuit/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 24 Jun 2015 07:09:19 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Hi-Res Scan]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=368</guid>
+
+					<description><![CDATA[Because you always wondered what was inside. See if you can guess which IC it was? Useful image for teachers, overhead slides etc. NB: This is not always a good DIY or classroom activity. Be aware that some electrical components create a seriously hazardous dust when broken open. Rectifiers, Hi Power transistors, Older IC&#8217;s &#38; IC&#8217;s with certain &#8230;<br><a href="/whats-inside-an-integrated-circuit/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">What&#8217;s inside an integrated circuit? We broke one open and scanned it for you at 12,800DPI</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Because you always wondered what was inside. See if you can guess which IC it was?</p>
+<p>Useful image for teachers, overhead slides etc.<br />
+<em>NB: This is not always a good DIY or classroom activity. Be aware that some electrical components create a seriously hazardous dust when broken open. Rectifiers, Hi Power transistors, Older IC&#8217;s &amp; IC&#8217;s with certain head spreaders as well as some IC&#8217;s designed for use in microwaves contain Beryllium Oxide.  While safe to handle, the dust particles created when they are damaged will make you gravely ill.</em></p>
+<p>Download large and detailed image [4096 x 5686] (1.5mb) <a href="http://www.busyducks.com/downloads/ic_[4096].jpg" target="_blank" rel="noopener">here</a><br />
+Download full scan [16394 x 22761] (27mb, <strong>use save as</strong>, because <span style="text-decoration: underline;">images this large still crash some broswers</span>) <a href="http://www.busyducks.com/downloads/ic128000.jpg" target="_blank" rel="noopener">here</a></p>
+<figure id="attachment_371" aria-describedby="caption-attachment-371" style="width: 800px" class="wp-caption alignnone"><a href="/wp-content/uploads/2015/06/ic_800.jpg"><img loading="lazy" class="wp-image-371 size-full" src="/wp-content/uploads/2015/06/ic_800.jpg" alt="Inside an integrated circuit." width="800" height="1110" srcset="/wp-content/uploads/2015/06/ic_800.jpg 800w, /wp-content/uploads/2015/06/ic_800-216x300.jpg 216w, /wp-content/uploads/2015/06/ic_800-738x1024.jpg 738w, /wp-content/uploads/2015/06/ic_800-768x1066.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /></a><figcaption id="caption-attachment-371" class="wp-caption-text">Inside an integrated circuit.</figcaption></figure>
+<p><em>What&#8217;s the white grid? Its a standard prototyping board, used to protect the scanner from the IC&#8217;s pins.</em></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Neat maths trick with an orange. Bonus: the worst duck joke ever!</title>
+		<link>/neat-maths-trick-with-an-orange-bonus-the-worst-duck-joke-ever/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Wed, 24 Jun 2015 05:25:05 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[Bad humor]]></category>
+		<category><![CDATA[Humor]]></category>
+		<category><![CDATA[Maths]]></category>
+		<category><![CDATA[Oranges]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<category><![CDATA[Rubber Ducks]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=375</guid>
+
+					<description><![CDATA[Draw five dots anywhere on an orange with a white board marker.  There is a way to cut the orange exactly in half so that at least four of the dots are visible on one side.  Can you figure out how? Solution in this video.]]></description>
+										<content:encoded><![CDATA[<p>Draw five dots anywhere on an orange with a white board marker.  There is a way to cut the orange exactly in half so that at least four of the dots are visible on one side.  Can you figure out how?</p>
+<p>Solution in this video.</p>
+<p><iframe loading="lazy" title="Maths trick with an orange, great for teaching and parties." width="940" height="529" src="https://www.youtube.com/embed/aabF_IBlLdE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Quick Graphs to make PCB Track Width and Silkscreen Ratios easy.</title>
+		<link>/quick-graphs-to-make-pcb-track-width-and-silkscreen-ratios-easy/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 19 Mar 2015 12:10:07 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[CAD]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Eagle Cad]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Fonts]]></category>
+		<category><![CDATA[Matlab]]></category>
+		<category><![CDATA[PCB]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=130</guid>
+
+					<description><![CDATA[Recently I had to make a series of circuit boards using Eagle Cad.
+
+I spent a lot of time calculating track widths to make sure my circuit board could handle the current I was using.
+Then I had to do more calculations for font ratios. so that that all lines were wide enough to work with the silk screening process.
+
+Sick of this; I quickly used matlab to create a few charts so I could look up the answers quickly.
+I thought I would share these charts and the matlab scripts, hope they are useful.]]></description>
+										<content:encoded><![CDATA[<p>Recently I had to make a series of circuit boards using Eagle Cad.</p>
+<p>I spent a lot of time calculating track widths to make sure my circuit board could handle the current I was using.<br />
+Then I had to do more calculations for font ratios. so that that all lines were wide enough to work with the silk screening process.</p>
+<p>Sick of this; I quickly used matlab to create a few charts so I could look up the answers quickly.<br />
+I thought I would share these charts and the matlab scripts, hope they are useful.</p>
+<h1>Font Ratio Chart</h1>
+<p>To my experience, In Eagle Cad (and others) font ratios for silk screens work best using vector fonts. The cam processor, other tools, and factory will often use vector fonts regardless; &#8211; so using vector fonts tends to keep things compatible. In the text properties dialogue you must set the ratio correctly so that (Size * Ratio) &gt; &#8220;Factory Minimum Line Width&#8221;.  To make it worse, fonts are best wrangled using Mils (1/1000th of an inch [<a href="http://gwydir.demon.co.uk/jo/units/length.htm" target="_blank" rel="noopener">what&#8217;s an inch</a>]).</p>
+<p>Typically in Eagle Cad, I would set up text for silk-screening as follows.</p>
+<p><a href="/wp-content/uploads/2015/03/eagl_cad_text_font_how_to.png"><img loading="lazy" class=" wp-image-146 size-full aligncenter" src="/wp-content/uploads/2015/03/eagl_cad_text_font_how_to.png" alt="" width="379" height="441" srcset="/wp-content/uploads/2015/03/eagl_cad_text_font_how_to.png 379w, /wp-content/uploads/2015/03/eagl_cad_text_font_how_to-258x300.png 258w" sizes="(max-width: 379px) 100vw, 379px" /></a></p>
+<p>&nbsp;</p>
+<h3>Anyway, here is the chart</h3>
+<p>To use it:</p>
+<ul>
+<li>Find the colour that corresponds to your manufactures minimum silk screen resolution.</li>
+<li>Find your font height in the x-axis</li>
+<li>The corresponding ratio is given in the y-axis.</li>
+</ul>
+<p><a href="/wp-content/uploads/2015/03/silkscreen.png"><img loading="lazy" class=" wp-image-134 size-large aligncenter" src="/wp-content/uploads/2015/03/silkscreen-1024x774.png" alt="silkscreen" width="640" height="484" srcset="/wp-content/uploads/2015/03/silkscreen-1024x774.png 1024w, /wp-content/uploads/2015/03/silkscreen-300x227.png 300w, /wp-content/uploads/2015/03/silkscreen-768x581.png 768w, /wp-content/uploads/2015/03/silkscreen.png 1038w" sizes="(max-width: 640px) 100vw, 640px" /><br />
+</a></p>
+<h1>PCB Track Width Chart</h1>
+<p>Track width is related to a lot of factors (acceptable temperatures. how insulated the tracks are from the air, current, acceptable power loss, etc). For anything complicated (internal PCB layers, high currents/voltages, installation in a vehicle/ heater / oven) go do proper calculations!</p>
+<p>Looking for a good track width calculator, I found this and like it a lot:  <a href="http://www.4pcb.com/trace-width-calculator.html" target="_blank" rel="noopener">http://www.4pcb.com/trace-width-calculator.html</a></p>
+<p>99% of the time, as a hobbyist, you just want an external PCB track that does not raise in temperature by more than 10ºC. You would be using either 0.5, 1 or 2 oz copper tracks (eek, more imperial units). So I implemented the formula presented on the calculator mentioned above in matlab.  Then I plotted 3 lines, one for each common copper thickness, creating charts that seem correct for normal hobbyist type situations.</p>
+<p>Four charts follow metric and imperial versions of high and low current situations. Find the graph that suits you and keep it handy.</p>
+<p><em>Disclaimer: Your mileage may vary. A) I may be wrong, and accept <span style="text-decoration: underline;">no</span> liability for that. B) Silkscreens, lacquer, protective coatings, hot electrical components may invalidate these figures.  If your doing anything medical / military /  safety critical / mass produced / potentially dangerous; this page is not an appropriate source of information, go find an engineering book, or something peer reviewed.</em></p>
+<p><em> </em></p>
+<h2>Metric &#8211; High Amps</h2>
+<p><a href="/wp-content/uploads/2015/03/track_width_metric.png"><img loading="lazy" class=" wp-image-135 size-large aligncenter" src="/wp-content/uploads/2015/03/track_width_metric-1024x768.png" alt="track_width_metric" width="640" height="480" srcset="/wp-content/uploads/2015/03/track_width_metric-1024x768.png 1024w, /wp-content/uploads/2015/03/track_width_metric-300x225.png 300w, /wp-content/uploads/2015/03/track_width_metric-768x576.png 768w, /wp-content/uploads/2015/03/track_width_metric.png 1201w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<h2>Metric &#8211; Low Amps</h2>
+<p><a href="/wp-content/uploads/2015/03/track_width_mils.png"><img loading="lazy" class=" wp-image-131 size-large aligncenter" src="/wp-content/uploads/2015/03/track_width_metric_small-1024x768.png" alt="track_width_metric_small" width="640" height="480" srcset="/wp-content/uploads/2015/03/track_width_metric_small-1024x768.png 1024w, /wp-content/uploads/2015/03/track_width_metric_small-300x225.png 300w, /wp-content/uploads/2015/03/track_width_metric_small-768x576.png 768w, /wp-content/uploads/2015/03/track_width_metric_small.png 1201w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Mils (Imperial)- High Amps</h2>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/03/track_width_mils.png"><img loading="lazy" class=" wp-image-132 size-large aligncenter" src="/wp-content/uploads/2015/03/track_width_mils-1024x768.png" alt="track_width_mils" width="640" height="480" srcset="/wp-content/uploads/2015/03/track_width_mils-1024x768.png 1024w, /wp-content/uploads/2015/03/track_width_mils-300x225.png 300w, /wp-content/uploads/2015/03/track_width_mils-768x576.png 768w, /wp-content/uploads/2015/03/track_width_mils.png 1201w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<h2>Mils (Imperial)- Low Amps</h2>
+<p><img loading="lazy" class=" wp-image-133 size-large aligncenter" src="/wp-content/uploads/2015/03/track_width_mils_small-1024x768.png" alt="track_width_mils_small" width="640" height="480" srcset="/wp-content/uploads/2015/03/track_width_mils_small-1024x768.png 1024w, /wp-content/uploads/2015/03/track_width_mils_small-300x225.png 300w, /wp-content/uploads/2015/03/track_width_mils_small-768x576.png 768w, /wp-content/uploads/2015/03/track_width_mils_small.png 1201w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<p>&nbsp;</p>
+<h2>Source Code</h2>
+<h3>Fonts</h3>
+<p>&nbsp;</p>
+<pre class="height-set:true scroll:true lang:matlab decode:true " title="plotSilkScreenRatio.m">%----------------------------------------------------------------------------------%
+%                                    BUSYDUCKS.COM                                 %
+%                            Making you pro-duck-tive                              %
+%                                                                                  %
+%  Author: Duckman   Date: 10/3/15   Ver: 1.0   Licence: Creative Commons (by-sa)  %
+%                                                                                  %
+%  Calculates silckscreen font ratios.                                             %
+%  Compile with Matlab / Possibly Octave                                           %
+%                                                                                  %
+%  Permision given to freely copy/paste "code snippets" into your own code. For    %
+%  other uses (e.g. derivative works) the Creative Commons Attribution Share-      %
+%  alike license applies (cite busyducks.com). This means commercial use is ok.    %
+%----------------------------------------------------------------------------------%
+s = [10 : 5 : 100];
+r = zeros(7, max(size(s)))
+
+for x = 2:8
+    r(x-1,:) = ((x*100) ./ s)';
+    plot(s, r);
+end
+
+plot(s, r);
+title('PCB Silk Screen Font Ratios')
+xlabel('Font Height (Mils)')
+ylabel('Font Ratio (%)')
+legend('2 Mil', '3 Mil', '4 Mil', '5 Mil', '6 Mil', '7 Mil', '8 Mil');
+grid on
+</pre>
+<h3>Track Width</h3>
+<p>&nbsp;</p>
+<pre class="height-set:true scroll:true lang:c++ decode:true " title="plotTraceWidth.m">%----------------------------------------------------------------------------------%
+%                                    BUSYDUCKS.COM                                 %
+%                            Making you pro-duck-tive                              %
+%                                                                                  %
+%  Author: Duckman   Date: 10/3/15   Ver: 1.0   Licence: Creative Commons (by-sa)  %
+%                                                                                  %
+%  Calculates Track widths.                                                        %
+%  Compile with Matlab / Possibly Octave                                           %
+%                                                                                  %
+%  Permision given to freely copy/paste "code snippets" into your own code. For    %
+%  other uses (e.g. derivative works) the Creative Commons Attribution Share-      %
+%  alike license applies (cite busyducks.com). This means commercial use is ok.    %
+%----------------------------------------------------------------------------------%
+function plotTraceWidth (metric, small)
+%Formula from: http://www.4pcb.com/trace-width-calculator.html
+%sample usage: plotTraceWidth(true, false);  
+%will save a .png to the current working directory;  
+
+amps = [0.1 : 0.1 : 10];
+thickness = [0.5, 1, 2];
+
+if(small)
+    amps = amps * 0.2;
+end
+
+%external layers, IPC-2221
+ k = 0.048;
+ b = 0.44;
+ c = 0.725;
+ tempRise = 10; %deg C
+
+factor = (k*tempRise^b);
+
+for it = 1:3
+    t = thickness(it);
+    area = amps./factor;
+    area = area.^(1/c);
+    width(it,:) = (area./(t*1.378))';
+end
+
+if (metric)
+    %convert to metric
+    mmPerMil = 0.0254;
+    width = width .* mmPerMil;
+end
+
+plot(amps, width);
+title('PCB Track Width')
+xlabel('Amps')
+legend('0.5 oz', '1 oz', '2 oz', 2);
+
+name = 'track_width';
+if (metric)
+    ylabel('Track Width (mm)')
+    ticks = [1:15];
+    name = [name '_metric'];
+    if(small)
+        ticks  = [0.2:0.2:2];
+        name = [name '_small'];
+    end
+else
+    ylabel('Track Width (Mils)')
+    name = [name '_mils'];
+    ticks = [50:50:2000];
+    if(small)
+         ticks = [10:10:200];
+        name = [name '_small'];
+    end
+end
+set(gca,'Ytick', ticks)
+grid on
+saveas(gcf, [name '.png']);
+</pre>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Large &#038; Interesting Datasets</title>
+		<link>/large-interesting-datasets/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Sun, 08 Mar 2015 16:00:03 +0000</pubDate>
+				<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Datasets]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=82</guid>
+
+					<description><![CDATA[This is a list of impressive / interesting data-sets I have come across. They are typically free, machine readable, downloadable and extensive.
+
+]]></description>
+										<content:encoded><![CDATA[<p>This is a list of impressive / interesting data-sets I have come across. They are typically free (or cost-price of media), machine readable, downloadable and extensive.</p>
+<p>Text:</p>
+<ul>
+<li>&#8216;Project Gutenberg&#8217; massive collection of books older than 80 years (expired copyright). via custom iso image <a href="http://pgiso.pglaf.org/" target="_blank" rel="noopener">here</a>, iso of popular books <a href="http://www.gutenberg.org/wiki/Gutenberg:The_CD_and_DVD_Project" target="_blank" rel="noopener">here</a>, or via rsync <a href="http://www.gutenberg.org/wiki/Gutenberg:Mirroring_How-To" target="_blank" rel="noopener">here</a>.</li>
+<li>&#8216;Enron corpus&#8217;  500,000ish actual emails. <a href="http://www.cs.cmu.edu/~./enron/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;ClueWeb09 Datase&#8217; 2009 Archive of 1 billion web pages (various languages) [5 TB, compressed. 25 TB, uncompressed.]. <a href="http://lemurproject.org/clueweb09/index.php#Using" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;arXiv archive&#8217;. Giant collection of scientific papers in pdf format.  <a href="http://arxiv.org/help/bulk_data_s3" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;SMS Spam Collection&#8217; 5000+ SMS messages tagged as spam or not. <a href="http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/" target="_blank" rel="noopener">here</a></li>
+<li>Google n-grams (from web pages)  <a href="https://catalog.ldc.upenn.edu/LDC2006T13">here</a></li>
+<li>Google n-grams (from books) <a href="http://commondatastorage.googleapis.com/books/syntactic-ngrams/index.html">here</a></li>
+</ul>
+<p>Linguistics</p>
+<ul>
+<li>&#8216;Wordnet&#8217; Database of English words.  Words are grouped, linked and organised. <a href="http://wordnet.princeton.edu/" target="_blank" rel="noopener">here</a>.</li>
+<li>Yahoo labs. A collection of data from Yahoo searches/questions/ratings/images <a href="http://webscope.sandbox.yahoo.com/catalog.php" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>Knowledge</p>
+<ul>
+<li>&#8216;Freebase&#8217;  cira 1 billion facts. [will be retired July 2015] <a href="https://developers.google.com/freebase/index" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Mizar Project&#8217; 10&#8217;s of thousands of mathematical definitions, formulas and proofs; in machine readable format. <a href="http://mizar.org/project/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Stack Exchange&#8217; Questions and answers from many popular forums. Computer readable dumps and a query API. <a href="http://data.stackexchange.com/help" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;DBpedia&#8217; Parsed and structured information extracted from Wikipedia.  <a href="http://dbpedia.org/About" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Cross-Lingual Dictionary for English Wikipedia Concepts&#8217;  Maps concepts to relevant Wikipedia articles. <a href="http://www-nlp.stanford.edu/pubs/crosswikis-data.tar.bz2/" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>Images</p>
+<ul>
+<li>&#8216;Visual Dictionary&#8217; Images for 50,000+ nouns in the English language, by MIT.  <a href="http://groups.csail.mit.edu/vision/TinyImages/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Imagenet&#8217; Pictures matching the hierarchy of Word-net noun nodes. <a href="//www.image-net.org/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;MNIST database&#8217;  70,000 handwritten digits. <a href="http://yann.lecun.com/exdb/mnist/" target="_blank" rel="noopener">here</a></li>
+<li>&#8221; An index to all sorts of computer vision data-sets. <a href="http://riemenschneider.hayko.at/vision/dataset/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Label me&#8217; Labeled things in images from MIT <a href="http://labelme.csail.mit.edu/Release3.0/browserTools/php/dataset.php" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;KTH-TIPS&#8217; Textures under varying illumination, pose and scale. <a href="http://www.nada.kth.se/cvap/databases/kth-tips/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;MS COCO&#8217; 91 object-types, 2.5 million labels in 328,000 images. <a href="http://mscoco.org/">here</a></li>
+</ul>
+<p>Music</p>
+<ul>
+<li>&#8216;Million Song Data Set&#8217; Audio features and other meta data for a million modern popular music tracks. <a href="http://labrosa.ee.columbia.edu/millionsong/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Last.fm API&#8217; Access to all  last.fm user/playlist/music/artist/geo/genre/tag data. A history of who listened to what/when/where   <a href="http://www.last.fm/api" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>Society</p>
+<ul>
+<li>WHO &#8216;Global Health Observatory&#8217;  Lots of usable data about all heal related issues.  <a href="http://www.who.int/gho/database/en/" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;ICPSR 4572&#8217;  Extensive stats on (USA) prisoners.  <a href="http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/4572?q=&amp;paging.rows=25&amp;sortBy=10" target="_blank" rel="noopener">here</a></li>
+<li>Drug usage (USA) , large survey with many variables, who/what/why  <a href="http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/34933?q=&amp;paging.rows=25&amp;sortBy=10" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>Social Networks</p>
+<ul>
+<li>&#8216;Social Network Analysis Interactive Dataset Library&#8217;. Contains computer readable images of 300+ online social networks. <a href="http://arcane-coast-3553.herokuapp.com/overview" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Stanford Large Network Dataset Collection&#8217; Graphs of assorted webpages (eg. Facebook / Twitter) <a href="http://snap.stanford.edu/data/" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>Geology:</p>
+<ul>
+<li>&#8216;Global Historical Earthquakes&#8217;  All known earthquakes (prior to 1903). <a href="http://www.globalquakemodel.org/what/seismic-hazard/historical-catalogue/" target="_blank" rel="noopener">here</a> and also <a href="http://www.emidius.eu/GEH/" target="_blank" rel="noopener">this</a>.</li>
+</ul>
+<p>Misc</p>
+<ul>
+<li>&#8216;Open Product Data&#8217;. International set of product bar-codes. <a href="http://www.product-open-data.com/en/1-home.html" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Amazon reviews&#8217; 34 million product reviews covering 2 million products. <a href="https://snap.stanford.edu/data/web-Amazon.html" target="_blank" rel="noopener">here</a>.</li>
+<li>&#8216;USDA National Nutrient Database for Standard Reference&#8217; The nutrients (typically) found in different foods. <a href="https://www.ars.usda.gov/Services/docs.htm?docid=8964" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;Open Library Data Dumps&#8217; Very large dump of library records (author, work, revision, etc). <a href="https://openlibrary.org/developers/dumps" target="_blank" rel="noopener">here</a></li>
+<li>&#8216;List of lists of lists&#8217;  The pages listing lists got so prolific&#8230; we needed a list of them.  <a href="http://en.wikipedia.org/wiki/List_of_lists_of_lists" target="_blank" rel="noopener">here</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

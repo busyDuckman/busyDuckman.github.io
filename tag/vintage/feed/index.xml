@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>vintage &#8211; Busy Ducks</title>
+	<atom:link href="/tag/vintage/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Tue, 21 Apr 2020 02:27:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>vintage &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Upgrading Robie The Robot.</title>
+		<link>/upgrading-robie-the-robot/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 21 Apr 2020 02:27:55 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[3D-Printing]]></category>
+		<category><![CDATA[Arduino]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[raspberry_pi]]></category>
+		<category><![CDATA[Robot]]></category>
+		<category><![CDATA[vintage]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=1018</guid>
+
+					<description><![CDATA[Part one, in a journey to upgrade an old robot. This classic 80's robot This robot was also known as: Tandy Robie, Radio Shack Robie, Robie the Robot, Talking Robie, RS 4061, Robocom 1000, Robie Parlant, and Robocom Robot (Super).]]></description>
+										<content:encoded><![CDATA[
+<h2>A Rare Find</h2>
+
+
+
+<p>I was in an vintage collectables store and saw a beaten up old &#8216;Robie the Robot&#8217; forgotten at the back of a shelf. It&#8217;s dome was cracked and it&#8217;s remote missing. Robot collectors are quite voracious in Canberra with most robots snapped up within days. However, it seems nobody relished this rough robotic remnant, so I got it cheap.</p>
+
+
+
+<p>This robot was also known as: <em>Tandy Robie, Radio Shack Robie, Robie the Robot, Talking Robie, RS 4061, Robocom 1000, Robie Parlant, Robocom Robot (Super)</em>. There is a good write up about the robot on <a rel="noreferrer noopener" href="http://www.theoldrobots.com/talkrobie2.html" target="_blank">theoldrobots</a>.</p>
+
+
+
+<figure class="wp-block-image size-large"><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/robbie-1024x768.jpeg" alt="" class="wp-image-1019"/><figcaption>Robie The Robot, as purchased.</figcaption></figure>
+
+
+
+<h2>Tear Down</h2>
+
+
+
+<p>Disassembling Robie I discovered a typical 80&#8217;s remote control toy. RC circuitry oozing with leaking capacitor electrolyte and decayed protective lacquer. Apparently the built in speaker could talk, but looking at the circuitry, my guess is it functioned as a wally talky, playing a voice signal from the remote.  I didn&#8217;t have the remote so I can&#8217;t confirm.<br><br>The motors were the &#8220;old style&#8221;; power hungry and weak. The Achilles heel that made all 80&#8217;s moving toys kinda nerfed.</p>
+
+
+
+<p>The front screen was fake, the heads and arms were not designed to move. I will need to fix all this.</p>
+
+
+
+<h2>A New Brain.</h2>
+
+
+
+<p>Decided to throw a pi in there, with a monitor that fits the front screen and a camera because that would be cool. <br></p>
+
+
+
+<figure class="wp-block-image size-large"><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/pi-1024x768.jpeg" alt="" class="wp-image-1020"/></figure>
+
+
+
+<p>For the display, a generic five dollar 2.2&#8243; SPI TFT LCD&nbsp;that sells for arduino projects works well (fits just behind the front monitor panel). The stock plastic used for Robies display is way to dark for the screen to be visible, so I used a Fresnel lens instead (you can get them from the two dollar shop, sold a book magnifiers). </p>
+
+
+
+<p>A front assembly was 3d printed to hold the pi, monitor and camera (such that everything lined up, and the camera could see out of the hole previously used for the frontal on/off switch.</p>
+
+
+
+<figure class="wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img loading="lazy" width="1024" height="768" src="/wp-content/uploads/2020/04/front_asm_render.jpg" alt="" data-id="1021" data-link="http://busyducks.com/wp_4_1/?attachment_id=1021#main" class="wp-image-1021" srcset="/wp-content/uploads/2020/04/front_asm_render.jpg 1024w, /wp-content/uploads/2020/04/front_asm_render-300x225.jpg 300w, /wp-content/uploads/2020/04/front_asm_render-768x576.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="blocks-gallery-item__caption">Design in Fusion 360, screen is mounted on the green sled.</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158235-768x1024.jpg" alt="" data-id="1034" data-link="http://busyducks.com/wp_4_1/?attachment_id=1034#main" class="wp-image-1034"/><figcaption class="blocks-gallery-item__caption">Rear</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158236-768x1024.jpg" alt="" data-id="1035" data-link="http://busyducks.com/wp_4_1/?attachment_id=1035#main" class="wp-image-1035"/><figcaption class="blocks-gallery-item__caption">Front</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158224-1024x768.jpg" alt="" data-id="1037" data-full-url="/wp-content/uploads/2020/04/P4158224-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1037#main" class="wp-image-1037"/><figcaption class="blocks-gallery-item__caption">Empty shell, wit Fresnel lens.</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4158223-1024x768.jpg" alt="" data-id="1036" data-full-url="/wp-content/uploads/2020/04/P4158223-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1036#main" class="wp-image-1036"/><figcaption class="blocks-gallery-item__caption">Mount pi.</figcaption></figure></li></ul></figure>
+
+
+
+<h2>Motorising the Head</h2>
+
+
+
+<p>A turntable system was created in OpenSCAD, using the awesome parametric gear library by Dr Jörg Janssen. I didn&#8217;t have a 3d printer, so I printed via the ANU Makerspace.</p>
+
+
+
+<figure class="wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img loading="lazy" width="1024" height="586" src="/wp-content/uploads/2020/04/head_gears_lower-1024x586.png" alt="" data-id="1023" data-link="http://busyducks.com/wp_4_1/?attachment_id=1023#main" class="wp-image-1023" srcset="/wp-content/uploads/2020/04/head_gears_lower-1024x586.png 1024w, /wp-content/uploads/2020/04/head_gears_lower-300x172.png 300w, /wp-content/uploads/2020/04/head_gears_lower-768x439.png 768w, /wp-content/uploads/2020/04/head_gears_lower.png 1103w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></li><li class="blocks-gallery-item"><figure><img loading="lazy" width="1024" height="691" src="/wp-content/uploads/2020/04/P6185667_close_up-1024x691.jpg" alt="" data-id="1024" data-link="http://busyducks.com/wp_4_1/?attachment_id=1024#main" class="wp-image-1024" srcset="/wp-content/uploads/2020/04/P6185667_close_up-1024x691.jpg 1024w, /wp-content/uploads/2020/04/P6185667_close_up-300x202.jpg 300w, /wp-content/uploads/2020/04/P6185667_close_up-768x518.jpg 768w, /wp-content/uploads/2020/04/P6185667_close_up-1536x1036.jpg 1536w, /wp-content/uploads/2020/04/P6185667_close_up-2048x1381.jpg 2048w, /wp-content/uploads/2020/04/P6185667_close_up-1568x1057.jpg 1568w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/inside_a-906x1024.jpg" alt="" data-id="1025" data-full-url="/wp-content/uploads/2020/04/inside_a-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1025#main" class="wp-image-1025"/></figure></li><li class="blocks-gallery-item"><figure><img loading="lazy" width="674" height="440" src="/wp-content/uploads/2020/04/head_gears_upper.png" alt="" data-id="1022" data-link="http://busyducks.com/wp_4_1/?attachment_id=1022#main" class="wp-image-1022" srcset="/wp-content/uploads/2020/04/head_gears_upper.png 674w, /wp-content/uploads/2020/04/head_gears_upper-300x196.png 300w" sizes="(max-width: 674px) 100vw, 674px" /></figure></li></ul></figure>
+
+
+
+<p>The turntable is driven by a 28byj-48 stepper motor, with a ULN2003 Darlington transistor array driver. <br></p>
+
+
+
+<p>I discovered the original broken dome was most likely not a custom mould,  but a security camera dome. I had some difficulty justifying a proper replacement as Australian retailers wanted over $50 for a replacement security camera dome (just the one piece of plastic). So I just replaced the head with a plastic dome from a toy shop.<br><br>The result is not quite as fast as I would like, but it was unexpectedly charming.</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="P6235685" width="940" height="529" src="https://www.youtube.com/embed/sQd-v5fpN5s?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<h2>Getting the arms to move.</h2>
+
+
+
+<p>A bracket was designed to get some cheap tower-pro servos to fit aligned with the arms. The brackets neatly affixes to old circuit mounting points in the plastic. A custom servo horn will friction fitted the arms to the servo. The existing arm bearing was sanded a bit to get it to slide freely. The result is a much more expressive robot. </p>
+
+
+
+<figure class="wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058095-768x1024.jpg" alt="" data-id="1026" data-link="http://busyducks.com/wp_4_1/?attachment_id=1026#main" class="wp-image-1026"/><figcaption class="blocks-gallery-item__caption">Servo mount rear</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058096-768x1024.jpg" alt="" data-id="1027" data-link="http://busyducks.com/wp_4_1/?attachment_id=1027#main" class="wp-image-1027"/><figcaption class="blocks-gallery-item__caption">Servo mount top</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058110-1024x768.jpg" alt="" data-id="1028" data-link="http://busyducks.com/wp_4_1/?attachment_id=1028#main" class="wp-image-1028"/><figcaption class="blocks-gallery-item__caption">friction fit arm</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058101-1024x768.jpg" alt="" data-id="1029" data-link="http://busyducks.com/wp_4_1/?attachment_id=1029#main" class="wp-image-1029"/><figcaption class="blocks-gallery-item__caption">servos installed</figcaption></figure></li><li class="blocks-gallery-item"><figure><img src="http://busyducks.com/wp_4_1/wp-content/uploads/2020/04/P4058108-1024x768.jpg" alt="" data-id="1030" data-full-url="/wp-content/uploads/2020/04/P4058108-scaled-1.jpg" data-link="http://busyducks.com/wp_4_1/?attachment_id=1030#main" class="wp-image-1030"/><figcaption class="blocks-gallery-item__caption">servo horns installed</figcaption></figure></li></ul></figure>
+
+
+
+<h2>Whats next.</h2>
+
+
+
+<p>I have made files for the progress thus far available via github, encase anyone has a Robie of their own and wants to try this. <a href="https://github.com/busyDuckman/robbie">https://github.com/busyDuckman/robbie</a></p>
+
+
+
+<p>Next up I will work on:</p>
+
+
+
+<ul><li>Drive system so Robie can move around.</li><li>Microphone array so voice interaction is possible.</li><li>Control software.</li><li>Personality and human interaction.</li></ul>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

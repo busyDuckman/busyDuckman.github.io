@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Eagle Cad &#8211; Busy Ducks</title>
+	<atom:link href="/tag/eagle-cad/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Thu, 19 Mar 2015 12:10:07 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Eagle Cad &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Quick Graphs to make PCB Track Width and Silkscreen Ratios easy.</title>
+		<link>/quick-graphs-to-make-pcb-track-width-and-silkscreen-ratios-easy/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 19 Mar 2015 12:10:07 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Educational]]></category>
+		<category><![CDATA[CAD]]></category>
+		<category><![CDATA[CAM]]></category>
+		<category><![CDATA[Eagle Cad]]></category>
+		<category><![CDATA[Electronics]]></category>
+		<category><![CDATA[Fonts]]></category>
+		<category><![CDATA[Matlab]]></category>
+		<category><![CDATA[PCB]]></category>
+		<category><![CDATA[Sample Code]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=130</guid>
+
+					<description><![CDATA[Recently I had to make a series of circuit boards using Eagle Cad.
+
+I spent a lot of time calculating track widths to make sure my circuit board could handle the current I was using.
+Then I had to do more calculations for font ratios. so that that all lines were wide enough to work with the silk screening process.
+
+Sick of this; I quickly used matlab to create a few charts so I could look up the answers quickly.
+I thought I would share these charts and the matlab scripts, hope they are useful.]]></description>
+										<content:encoded><![CDATA[<p>Recently I had to make a series of circuit boards using Eagle Cad.</p>
+<p>I spent a lot of time calculating track widths to make sure my circuit board could handle the current I was using.<br />
+Then I had to do more calculations for font ratios. so that that all lines were wide enough to work with the silk screening process.</p>
+<p>Sick of this; I quickly used matlab to create a few charts so I could look up the answers quickly.<br />
+I thought I would share these charts and the matlab scripts, hope they are useful.</p>
+<h1>Font Ratio Chart</h1>
+<p>To my experience, In Eagle Cad (and others) font ratios for silk screens work best using vector fonts. The cam processor, other tools, and factory will often use vector fonts regardless; &#8211; so using vector fonts tends to keep things compatible. In the text properties dialogue you must set the ratio correctly so that (Size * Ratio) &gt; &#8220;Factory Minimum Line Width&#8221;.  To make it worse, fonts are best wrangled using Mils (1/1000th of an inch [<a href="http://gwydir.demon.co.uk/jo/units/length.htm" target="_blank" rel="noopener">what&#8217;s an inch</a>]).</p>
+<p>Typically in Eagle Cad, I would set up text for silk-screening as follows.</p>
+<p><a href="/wp-content/uploads/2015/03/eagl_cad_text_font_how_to.png"><img loading="lazy" class=" wp-image-146 size-full aligncenter" src="/wp-content/uploads/2015/03/eagl_cad_text_font_how_to.png" alt="" width="379" height="441" srcset="/wp-content/uploads/2015/03/eagl_cad_text_font_how_to.png 379w, /wp-content/uploads/2015/03/eagl_cad_text_font_how_to-258x300.png 258w" sizes="(max-width: 379px) 100vw, 379px" /></a></p>
+<p>&nbsp;</p>
+<h3>Anyway, here is the chart</h3>
+<p>To use it:</p>
+<ul>
+<li>Find the colour that corresponds to your manufactures minimum silk screen resolution.</li>
+<li>Find your font height in the x-axis</li>
+<li>The corresponding ratio is given in the y-axis.</li>
+</ul>
+<p><a href="/wp-content/uploads/2015/03/silkscreen.png"><img loading="lazy" class=" wp-image-134 size-large aligncenter" src="/wp-content/uploads/2015/03/silkscreen-1024x774.png" alt="silkscreen" width="640" height="484" srcset="/wp-content/uploads/2015/03/silkscreen-1024x774.png 1024w, /wp-content/uploads/2015/03/silkscreen-300x227.png 300w, /wp-content/uploads/2015/03/silkscreen-768x581.png 768w, /wp-content/uploads/2015/03/silkscreen.png 1038w" sizes="(max-width: 640px) 100vw, 640px" /><br />
+</a></p>
+<h1>PCB Track Width Chart</h1>
+<p>Track width is related to a lot of factors (acceptable temperatures. how insulated the tracks are from the air, current, acceptable power loss, etc). For anything complicated (internal PCB layers, high currents/voltages, installation in a vehicle/ heater / oven) go do proper calculations!</p>
+<p>Looking for a good track width calculator, I found this and like it a lot:  <a href="http://www.4pcb.com/trace-width-calculator.html" target="_blank" rel="noopener">http://www.4pcb.com/trace-width-calculator.html</a></p>
+<p>99% of the time, as a hobbyist, you just want an external PCB track that does not raise in temperature by more than 10ºC. You would be using either 0.5, 1 or 2 oz copper tracks (eek, more imperial units). So I implemented the formula presented on the calculator mentioned above in matlab.  Then I plotted 3 lines, one for each common copper thickness, creating charts that seem correct for normal hobbyist type situations.</p>
+<p>Four charts follow metric and imperial versions of high and low current situations. Find the graph that suits you and keep it handy.</p>
+<p><em>Disclaimer: Your mileage may vary. A) I may be wrong, and accept <span style="text-decoration: underline;">no</span> liability for that. B) Silkscreens, lacquer, protective coatings, hot electrical components may invalidate these figures.  If your doing anything medical / military /  safety critical / mass produced / potentially dangerous; this page is not an appropriate source of information, go find an engineering book, or something peer reviewed.</em></p>
+<p><em> </em></p>
+<h2>Metric &#8211; High Amps</h2>
+<p><a href="/wp-content/uploads/2015/03/track_width_metric.png"><img loading="lazy" class=" wp-image-135 size-large aligncenter" src="/wp-content/uploads/2015/03/track_width_metric-1024x768.png" alt="track_width_metric" width="640" height="480" srcset="/wp-content/uploads/2015/03/track_width_metric-1024x768.png 1024w, /wp-content/uploads/2015/03/track_width_metric-300x225.png 300w, /wp-content/uploads/2015/03/track_width_metric-768x576.png 768w, /wp-content/uploads/2015/03/track_width_metric.png 1201w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<h2>Metric &#8211; Low Amps</h2>
+<p><a href="/wp-content/uploads/2015/03/track_width_mils.png"><img loading="lazy" class=" wp-image-131 size-large aligncenter" src="/wp-content/uploads/2015/03/track_width_metric_small-1024x768.png" alt="track_width_metric_small" width="640" height="480" srcset="/wp-content/uploads/2015/03/track_width_metric_small-1024x768.png 1024w, /wp-content/uploads/2015/03/track_width_metric_small-300x225.png 300w, /wp-content/uploads/2015/03/track_width_metric_small-768x576.png 768w, /wp-content/uploads/2015/03/track_width_metric_small.png 1201w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Mils (Imperial)- High Amps</h2>
+<p>&nbsp;</p>
+<p><a href="/wp-content/uploads/2015/03/track_width_mils.png"><img loading="lazy" class=" wp-image-132 size-large aligncenter" src="/wp-content/uploads/2015/03/track_width_mils-1024x768.png" alt="track_width_mils" width="640" height="480" srcset="/wp-content/uploads/2015/03/track_width_mils-1024x768.png 1024w, /wp-content/uploads/2015/03/track_width_mils-300x225.png 300w, /wp-content/uploads/2015/03/track_width_mils-768x576.png 768w, /wp-content/uploads/2015/03/track_width_mils.png 1201w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<h2>Mils (Imperial)- Low Amps</h2>
+<p><img loading="lazy" class=" wp-image-133 size-large aligncenter" src="/wp-content/uploads/2015/03/track_width_mils_small-1024x768.png" alt="track_width_mils_small" width="640" height="480" srcset="/wp-content/uploads/2015/03/track_width_mils_small-1024x768.png 1024w, /wp-content/uploads/2015/03/track_width_mils_small-300x225.png 300w, /wp-content/uploads/2015/03/track_width_mils_small-768x576.png 768w, /wp-content/uploads/2015/03/track_width_mils_small.png 1201w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<p>&nbsp;</p>
+<h2>Source Code</h2>
+<h3>Fonts</h3>
+<p>&nbsp;</p>
+<pre class="height-set:true scroll:true lang:matlab decode:true " title="plotSilkScreenRatio.m">%----------------------------------------------------------------------------------%
+%                                    BUSYDUCKS.COM                                 %
+%                            Making you pro-duck-tive                              %
+%                                                                                  %
+%  Author: Duckman   Date: 10/3/15   Ver: 1.0   Licence: Creative Commons (by-sa)  %
+%                                                                                  %
+%  Calculates silckscreen font ratios.                                             %
+%  Compile with Matlab / Possibly Octave                                           %
+%                                                                                  %
+%  Permision given to freely copy/paste "code snippets" into your own code. For    %
+%  other uses (e.g. derivative works) the Creative Commons Attribution Share-      %
+%  alike license applies (cite busyducks.com). This means commercial use is ok.    %
+%----------------------------------------------------------------------------------%
+s = [10 : 5 : 100];
+r = zeros(7, max(size(s)))
+
+for x = 2:8
+    r(x-1,:) = ((x*100) ./ s)';
+    plot(s, r);
+end
+
+plot(s, r);
+title('PCB Silk Screen Font Ratios')
+xlabel('Font Height (Mils)')
+ylabel('Font Ratio (%)')
+legend('2 Mil', '3 Mil', '4 Mil', '5 Mil', '6 Mil', '7 Mil', '8 Mil');
+grid on
+</pre>
+<h3>Track Width</h3>
+<p>&nbsp;</p>
+<pre class="height-set:true scroll:true lang:c++ decode:true " title="plotTraceWidth.m">%----------------------------------------------------------------------------------%
+%                                    BUSYDUCKS.COM                                 %
+%                            Making you pro-duck-tive                              %
+%                                                                                  %
+%  Author: Duckman   Date: 10/3/15   Ver: 1.0   Licence: Creative Commons (by-sa)  %
+%                                                                                  %
+%  Calculates Track widths.                                                        %
+%  Compile with Matlab / Possibly Octave                                           %
+%                                                                                  %
+%  Permision given to freely copy/paste "code snippets" into your own code. For    %
+%  other uses (e.g. derivative works) the Creative Commons Attribution Share-      %
+%  alike license applies (cite busyducks.com). This means commercial use is ok.    %
+%----------------------------------------------------------------------------------%
+function plotTraceWidth (metric, small)
+%Formula from: http://www.4pcb.com/trace-width-calculator.html
+%sample usage: plotTraceWidth(true, false);  
+%will save a .png to the current working directory;  
+
+amps = [0.1 : 0.1 : 10];
+thickness = [0.5, 1, 2];
+
+if(small)
+    amps = amps * 0.2;
+end
+
+%external layers, IPC-2221
+ k = 0.048;
+ b = 0.44;
+ c = 0.725;
+ tempRise = 10; %deg C
+
+factor = (k*tempRise^b);
+
+for it = 1:3
+    t = thickness(it);
+    area = amps./factor;
+    area = area.^(1/c);
+    width(it,:) = (area./(t*1.378))';
+end
+
+if (metric)
+    %convert to metric
+    mmPerMil = 0.0254;
+    width = width .* mmPerMil;
+end
+
+plot(amps, width);
+title('PCB Track Width')
+xlabel('Amps')
+legend('0.5 oz', '1 oz', '2 oz', 2);
+
+name = 'track_width';
+if (metric)
+    ylabel('Track Width (mm)')
+    ticks = [1:15];
+    name = [name '_metric'];
+    if(small)
+        ticks  = [0.2:0.2:2];
+        name = [name '_small'];
+    end
+else
+    ylabel('Track Width (Mils)')
+    name = [name '_mils'];
+    ticks = [50:50:2000];
+    if(small)
+         ticks = [10:10:200];
+        name = [name '_small'];
+    end
+end
+set(gca,'Ytick', ticks)
+grid on
+saveas(gcf, [name '.png']);
+</pre>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

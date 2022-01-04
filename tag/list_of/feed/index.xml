@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>List_of &#8211; Busy Ducks</title>
+	<atom:link href="/tag/list_of/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Thu, 30 Jul 2015 04:40:42 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>List_of &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>10 simple things search engines could do to save my sanity</title>
+		<link>/10-simple-things-search-engines-could-do-to-save-my-sanity/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Thu, 30 Jul 2015 04:40:42 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Design]]></category>
+		<category><![CDATA[HCI]]></category>
+		<category><![CDATA[List_of]]></category>
+		<category><![CDATA[Observing society]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=524</guid>
+
+					<description><![CDATA[I have felt for a while that web searching is still an awkward thing from a Human Computer Interaction point of view. So I made a wish list of simple improvements that would literally turn my world upside-down.]]></description>
+										<content:encoded><![CDATA[<h3>Introduction</h3>
+<p>I have felt for a while that web searching is still an awkward thing from a Human Computer Interaction point of view. So I made this wish list of simple improvements that would turn my world upside-down.</p>
+<h3>10 simple things search engines could do to save my sanity.</h3>
+<ol>
+<li>NOT display a 10 item &#8220;first page&#8221;, just keep results coming as I scroll down.</li>
+<li>Let me filter results by subject. (ie. shopping, info, blog, pop-culture, education, forums)</li>
+<li>Display Icons next to the search result that tell me what I am in for:
+<ul>
+<li>A sound icon if the site auto-plays music / video.</li>
+<li>Flash/java/etc icons if the website uses such</li>
+<li>Warn me about pop-ups, &#8220;intro banners&#8221; and exit prompts.</li>
+<li>NSFW Icon</li>
+<li>Does not support my browser/device icon.</li>
+<li>Valid security certificate icon.</li>
+<li>Something to indicate if most people left the site within 10 seconds of it loading.</li>
+</ul>
+</li>
+<li>Often the 2 sentences from the page shown below the result is just not enough. Give me a &#8220;more&#8221; link that expands a results preview to a couple of paragraphs.
+<ul>
+<li>If lots of people expand a particular pages preview, then just automatically do that for me.</li>
+</ul>
+</li>
+<li>Let me blacklist a domain from all my future web-searches. (Eg If I don&#8217;t like pintrist, let me remove it from my search results permanently).
+<ul>
+<li>If a lot of other people have blacklisted a domain, give me a warning icon.</li>
+</ul>
+</li>
+<li>Be like <a href="https://www.virustotal.com/">virustotal.com</a> and let me query how the site fairs against assorted virus checks.</li>
+<li>Don&#8217;t make me type in the address bar. Ending up at www,paint.net if I search &#8220;paint.net&#8221; is stupid. The whole thing is awkward and reaks of being overly dumbed-down.</li>
+<li>Bundle multiple results from the same domain into an expandable result. Eg &#8220;[+] 50 results for rubberducks in ebay.com&#8221;</li>
+<li>If the webpage is largely plagiarised&#8230; tell me and provide links to original sites(s) under the link.</li>
+<li>If other web pages address the page or website I am about to visit, let me expand a section to see what people are saying.</li>
+</ol>
+<p>&nbsp;</p>
+<h3>Conclusion</h3>
+<p>Web searching still remains very much the same as its was in the mid 90&#8217;s.</p>
+<p>The list I have created draws out certain underlying problems that were never addressed.</p>
+<ul>
+<li>When I follow a result to a new website, I just don&#8217;t know &#8220;what is behind the door&#8221;. I have to click an hope for the best. It&#8217;s 2015 and that this is still a problem seems odd.</li>
+<li>I lack control over what comes up in my results. SEO tactics dominate what I see, and my &#8220;intent&#8221; is often ignored.</li>
+<li>Websites exist in a context. They reference, each other and elaborate on each others information. We need to encapsulate this.</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>List of the best pages/software that empowers you to generate awesome procedural art.</title>
+		<link>/list-pages-to-generate-procedural-art-and-graphics/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Tue, 30 Jun 2015 08:57:03 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Fractal]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[List_of]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=444</guid>
+
+					<description><![CDATA[&#160; Firstly, you will find none of the &#8220;lets make homework cool&#8221; type stuff here. The Internet has become a much more stimulating place for maths, visualisation and generative images. This is in part driven by the death of those &#8220;java applets&#8221; as wonderful HTML5 based interactive maths content takes glorious hold. Trying to keep pace with &#8230;<br><a href="/list-pages-to-generate-procedural-art-and-graphics/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">List of the best pages/software that empowers you to generate awesome procedural art.</span></a>]]></description>
+										<content:encoded><![CDATA[<p>&nbsp;</p>
+<p>Firstly, you will find none of the &#8220;lets make homework cool&#8221; type stuff here. The Internet has become a much more stimulating place for maths, visualisation and generative images.<br />
+This is in part driven by the death of those &#8220;java applets&#8221; as wonderful HTML5 based interactive maths content takes glorious hold.</p>
+<p>Trying to keep pace with all that is emerging as the new generation of artistic maths geeks put their awesome skills to work.I decided to make this list of the best stuff around.</p>
+<p>&nbsp;</p>
+<h3>Google Julia Map:</h3>
+<h3 style="padding-left: 30px;"><img loading="lazy" class="alignnone wp-image-446 size-medium" src="/wp-content/uploads/2015/06/google_julia_small-300x262.jpg" alt="google_julia_small" width="300" height="262" srcset="/wp-content/uploads/2015/06/google_julia_small-300x262.jpg 300w, /wp-content/uploads/2015/06/google_julia_small.jpg 512w" sizes="(max-width: 300px) 100vw, 300px" /></h3>
+<ul>
+<li>&#8220;Google maps&#8221; for exploring different fractals.</li>
+<li>Allows custom palettes</li>
+<li>Highly interactive</li>
+<li>Lets you share your work.</li>
+<li><a href="http://juliamap.googlelabs.com/#c=-0.009144752822328128,0.08941031334500188$z=0.59$p=ff0000,ff8000,ffff00,ff00,ff,a000c0$f=julia3" target="_blank" rel="noopener">here </a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>Science vs. Magic</h3>
+<p><img loading="lazy" class="alignnone wp-image-447 size-medium" src="/wp-content/uploads/2015/06/svm-300x275.jpg" alt="svm" width="300" height="275" srcset="/wp-content/uploads/2015/06/svm-300x275.jpg 300w, /wp-content/uploads/2015/06/svm-768x703.jpg 768w, /wp-content/uploads/2015/06/svm.jpg 984w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<ul>
+<li>Awesome website that lets you customise and generate many cool things.</li>
+<li>Has animation options.</li>
+<li>Very interactive</li>
+<li>Highly recommend the fractal machine</li>
+<li><a href="http://sciencevsmagic.net/" target="_blank" rel="noopener">http://sciencevsmagic.net/</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>Mandelbulber</h3>
+<p style="padding-left: 30px;"><img loading="lazy" class="alignnone wp-image-451 size-medium" src="/wp-content/uploads/2015/06/mandelbulber-300x223.jpg" alt="mandelbulber" width="300" height="223" srcset="/wp-content/uploads/2015/06/mandelbulber-300x223.jpg 300w, /wp-content/uploads/2015/06/mandelbulber.jpg 395w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<ul>
+<li>3d Fractal rendering</li>
+<li>Free cross-platform software (GNU/GPL)</li>
+<li>Produces stunning results</li>
+<li>Website is <a href="https://sites.google.com/site/mandelbulber/home" target="_blank" rel="noopener">here</a></li>
+</ul>
+<h3></h3>
+<h3>Rainbow Smoke</h3>
+<p style="padding-left: 30px;"><img loading="lazy" class="alignnone wp-image-448 size-medium" src="/wp-content/uploads/2015/06/dn25167-3_1200-300x300.jpg" alt="dn25167-3_1200" width="300" height="300" srcset="/wp-content/uploads/2015/06/dn25167-3_1200-300x300.jpg 300w, /wp-content/uploads/2015/06/dn25167-3_1200-150x150.jpg 150w, /wp-content/uploads/2015/06/dn25167-3_1200.jpg 512w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<ul>
+<li>Algorithm by Jozsef Fejes that grew into a media and Internet sensation</li>
+<li>Creates images using one of every RGB24 colour (see our own <a href="http://busyducks.com/wp_4_1/2015/06/16/images-that-use-one-of-every-colour/" target="_blank" rel="noopener">application</a> for doing this to photos)</li>
+<li>Not interactive, but describes his algorithm, with an early version being downloadable.
+<ul>
+<li>This means get your coding pants on if you want to mess around with it!</li>
+</ul>
+</li>
+<li>Website is <a href="http://rainbowsmoke.hu/home" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>Terragen</h3>
+<h3 style="padding-left: 30px;"><img loading="lazy" class="alignnone wp-image-453 size-medium" src="/wp-content/uploads/2015/06/terragen-300x259.jpg" alt="terragen" width="300" height="259" srcset="/wp-content/uploads/2015/06/terragen-300x259.jpg 300w, /wp-content/uploads/2015/06/terragen.jpg 428w" sizes="(max-width: 300px) 100vw, 300px" /></h3>
+<ul>
+<li>Offering a free version for non-commercial use, terragen has long been an excellent way to generate quality terrains</li>
+<li>Windows / Mac support</li>
+<li>Has a learning curve</li>
+<li><a href="http://planetside.co.uk/" target="_blank" rel="noopener">http://planetside.co.uk/</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>Evolvotron</h3>
+<p style="padding-left: 30px;"><img loading="lazy" class="alignnone wp-image-454 size-medium" src="/wp-content/uploads/2015/06/i000003-300x300.jpg" alt="i000003" width="300" height="300" srcset="/wp-content/uploads/2015/06/i000003-300x300.jpg 300w, /wp-content/uploads/2015/06/i000003-150x150.jpg 150w, /wp-content/uploads/2015/06/i000003.jpg 512w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<ul>
+<li>Evolve your artistic vision.</li>
+<li>Creation by iteratively choosing what is closest to what you want.</li>
+<li>Great for colourful splashes / wallpapers</li>
+<li>Free and opensource</li>
+<li>Linux only</li>
+<li>Home page is <a href="http://www.bottlenose.net/share/evolvotron/index.htm" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The worlds best rubber duck collections&#8230; because awesome is not just for giant robot dinosaurs.</title>
+		<link>/the-worlds-best-rubber-duck-collections-because-awesome-is-not-just-for-giant-robot-dinosaurs/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Sun, 21 Jun 2015 08:15:35 +0000</pubDate>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Ducks]]></category>
+		<category><![CDATA[List_of]]></category>
+		<category><![CDATA[Rubber Ducks]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=334</guid>
+
+					<description><![CDATA[Welcome to the se-duck-tive world of duck collecting.]]></description>
+										<content:encoded><![CDATA[<p>Here Is the short list of the worlds best rubber duck collections&#8230;</p>
+<p>If I missed your collection, and you want to be in this (very much the most official) list of best collections, Drop me a line.</p>
+<p>&nbsp;</p>
+<h3>Asso­ciate Pro­fes­sor Charlotte Lee</h3>
+<p style="padding-left: 30px;">Guiness world record holder, Asso­ciate Pro­fes­sor Charlotte Lee &#8230; with 5,631 ducks.<br />
+More info <a href="http://www.guinnessworldrecords.com/world-records/largest-collection-of-rubber-ducks" target="_blank" rel="noopener">here</a></p>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/06/lee_room.jpg" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-335 " src="/wp-content/uploads/2015/06/lee_room-1024x681.jpg" alt="lee_room" width="538" height="357" /></a></p>
+<p class="biz-page-title embossed-text-white osolong" style="padding-left: 30px;"><em>[Image is from Lee&#8217;s website <a href="http://www.duckplanet.com/cgi-bin/dbb1/YaBB.pl?num=1249437852" target="_blank" rel="noopener">duckplanet.com</a>]</em></p>
+<p>&nbsp;</p>
+<h3>Runnymede Hotel</h3>
+<p style="padding-left: 30px;">A hotel with a duck obsession<br />
+More info <a href="https://www.runnymedehotel.com/" target="_blank" rel="noopener">here</a></p>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/06/the-runnymede-on-thames.jpg"><img loading="lazy" class="alignnone wp-image-336 size-full" src="/wp-content/uploads/2015/06/the-runnymede-on-thames.jpg" alt="the-runnymede-on-thames" width="550" height="412" srcset="/wp-content/uploads/2015/06/the-runnymede-on-thames.jpg 550w, /wp-content/uploads/2015/06/the-runnymede-on-thames-300x225.jpg 300w" sizes="(max-width: 550px) 100vw, 550px" /></a></p>
+<h3></h3>
+<p>&nbsp;</p>
+<h3 class="biz-page-title embossed-text-white osolong">Duckman (my own collection)</h3>
+<p style="padding-left: 30px;">My bathroom is dedicated to ducks&#8230;</p>
+
+<a href='/wp-content/uploads/2015/06/largeJPG.jpg'><img width="225" height="300" src="/wp-content/uploads/2015/06/largeJPG-225x300.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/largeJPG-225x300.jpg 225w, /wp-content/uploads/2015/06/largeJPG-768x1024.jpg 768w, /wp-content/uploads/2015/06/largeJPG.jpg 1024w" sizes="(max-width: 225px) 100vw, 225px" /></a>
+<a href='/wp-content/uploads/2015/06/P1000846.jpg'><img width="300" height="225" src="/wp-content/uploads/2015/06/P1000846-300x225.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/P1000846-300x225.jpg 300w, /wp-content/uploads/2015/06/P1000846-768x576.jpg 768w, /wp-content/uploads/2015/06/P1000846.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+<a href='/wp-content/uploads/2015/06/P1000849-scaled.jpg'><img width="300" height="184" src="/wp-content/uploads/2015/06/P1000849-300x184.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/P1000849-300x184.jpg 300w, /wp-content/uploads/2015/06/P1000849-1024x627.jpg 1024w, /wp-content/uploads/2015/06/P1000849-768x471.jpg 768w, /wp-content/uploads/2015/06/P1000849-1536x941.jpg 1536w, /wp-content/uploads/2015/06/P1000849-2048x1255.jpg 2048w, /wp-content/uploads/2015/06/P1000849-1568x961.jpg 1568w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+<a href='/wp-content/uploads/2015/06/P1000852.jpg'><img width="300" height="225" src="/wp-content/uploads/2015/06/P1000852-300x225.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/P1000852-300x225.jpg 300w, /wp-content/uploads/2015/06/P1000852-768x576.jpg 768w, /wp-content/uploads/2015/06/P1000852.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+<a href='/wp-content/uploads/2015/06/P1000854.jpg'><img width="300" height="225" src="/wp-content/uploads/2015/06/P1000854-300x225.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/P1000854-300x225.jpg 300w, /wp-content/uploads/2015/06/P1000854-768x576.jpg 768w, /wp-content/uploads/2015/06/P1000854.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+<a href='/wp-content/uploads/2015/06/P1000860.jpg'><img width="300" height="225" src="/wp-content/uploads/2015/06/P1000860-300x225.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/P1000860-300x225.jpg 300w, /wp-content/uploads/2015/06/P1000860-768x576.jpg 768w, /wp-content/uploads/2015/06/P1000860.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+<a href='/wp-content/uploads/2015/06/P1000861.jpg'><img width="300" height="225" src="/wp-content/uploads/2015/06/P1000861-300x225.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/P1000861-300x225.jpg 300w, /wp-content/uploads/2015/06/P1000861-768x576.jpg 768w, /wp-content/uploads/2015/06/P1000861.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+<a href='/wp-content/uploads/2015/06/P1000862.jpg'><img width="300" height="190" src="/wp-content/uploads/2015/06/P1000862-300x190.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="/wp-content/uploads/2015/06/P1000862-300x190.jpg 300w, /wp-content/uploads/2015/06/P1000862-768x486.jpg 768w, /wp-content/uploads/2015/06/P1000862.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+
+<p>&nbsp;</p>
+<h3 class="biz-page-title embossed-text-white osolong"></h3>
+<h3 class="biz-page-title embossed-text-white osolong">Keenan’s Cambria Village Pharmacy</h3>
+<p style="padding-left: 30px;">Sadly I am told this is now closed.<br />
+This store was probably THE hub for rubber duck collectors. Several Large shelves like the one in the window. It was more ducks than pharmacy, but the availability of medication did not detract from the effect in any way.</p>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/06/cambria.jpg" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-337" src="/wp-content/uploads/2015/06/cambria.jpg" alt="cambria" width="520" height="390" srcset="/wp-content/uploads/2015/06/cambria.jpg 1024w, /wp-content/uploads/2015/06/cambria-300x225.jpg 300w, /wp-content/uploads/2015/06/cambria-768x576.jpg 768w" sizes="(max-width: 520px) 100vw, 520px" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Dan Magee</h3>
+<p style="padding-left: 30px;">Another collector with a room dedicated to ducks.</p>
+<p style="padding-left: 30px;"><a href="/wp-content/uploads/2015/06/dan_duckroom.jpg"><img loading="lazy" class="alignnone wp-image-346 " src="/wp-content/uploads/2015/06/dan_duckroom.jpg" alt="dan_duckroom" width="556" height="417" srcset="/wp-content/uploads/2015/06/dan_duckroom.jpg 648w, /wp-content/uploads/2015/06/dan_duckroom-300x225.jpg 300w" sizes="(max-width: 556px) 100vw, 556px" /></a></p>
+<p style="padding-left: 30px;">More info, and photos, via <a href="http://www.duckplanet.com/submissions_main.html" target="_blank" rel="noopener">duckplanet</a></p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

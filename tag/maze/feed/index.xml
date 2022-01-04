@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Maze &#8211; Busy Ducks</title>
+	<atom:link href="/tag/maze/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Making You Pro&#039;duck&#039;tive</description>
+	<lastBuildDate>Fri, 03 Jul 2015 09:34:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
+	<title>Maze &#8211; Busy Ducks</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Maze Making Software</title>
+		<link>/maze-software/</link>
+		
+		<dc:creator><![CDATA[duckman]]></dc:creator>
+		<pubDate>Fri, 03 Jul 2015 09:34:35 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Edcucational]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Maze]]></category>
+		<category><![CDATA[Puzzle]]></category>
+		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=476</guid>
+
+					<description><![CDATA[This software creates mazes of different sizes and configurable appearance. It is designed for teachers. It can save the output as printable sheets or bitmap images.]]></description>
+										<content:encoded><![CDATA[<h3>Overview</h3>
+<p>This software creates mazes of different sizes and configurable appearance. It is designed for teachers and makers. It can save the output as printable sheets or bitmap images.</p>
+<p>[updated terms]</p>
+<ul>
+<li>This software is provided free to use for all commercial / non-commercial / educational, puzzle publication purposes.</li>
+<li>The code is licensed under the MIT licence</li>
+<li>see <a href="https://github.com/busyDuckman/MazeMaker">https://github.com/busyDuckman/MazeMaker</a></li>
+</ul>
+<p>[how to show appreciation]</p>
+<ul>
+<li>I super appreciate getting some credit for the work, especially if you are printing a book of puzzles. Something like &#8220;puzzles created using Maze Maker software, by Dr Warren Creemers&#8221;.</li>
+<li>If you make something cool with it, I would love to see a photo/link.</li>
+<li>If you make a kids book or something like that, I&#8217;d really get a kick out of getting a free copy. Gestures like that make my day <img src="https://s.w.org/images/core/emoji/13.1.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></li>
+</ul>
+<h3>Screenshot</h3>
+<p><a href="/wp-content/uploads/2015/07/maze.png"><img loading="lazy" class="alignnone wp-image-477 size-full" src="/wp-content/uploads/2015/07/maze.png" alt="maze" width="715" height="453" srcset="/wp-content/uploads/2015/07/maze.png 715w, /wp-content/uploads/2015/07/maze-300x190.png 300w" sizes="(max-width: 715px) 100vw, 715px" /></a></p>
+<h3>Examples of different types of output</h3>
+<p><img loading="lazy" class="alignnone wp-image-480 size-full" src="/wp-content/uploads/2015/07/output_examples1.png" alt="Example Maze" width="640" height="640" srcset="/wp-content/uploads/2015/07/output_examples1.png 640w, /wp-content/uploads/2015/07/output_examples1-300x300.png 300w, /wp-content/uploads/2015/07/output_examples1-150x150.png 150w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<p>Can it do large mazes, like really large mazes?&#8230; <a href="http://www.busyducks.com/Software/_relevant_downloads/big_maze.png" target="_blank" rel="noopener noreferrer">YES</a>.</p>
+<h3>Download</h3>
+<p style="padding-left: 30px;">Install from the latest <a href="https://github.com/busyDuckman/MazeMaker/releases">release on github</a></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Download <a href="https://github.com/busyDuckman/MazeMaker/releases/download/v_0.9/maze_v0.9.zip">zip file</a>.</li>
+<li>Unzip file</li>
+<li>run setup.exe</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 30px;">First created:  2016-9-29<br />
+First published to github: 2019-09-13</p>
+<h3>Limitations:</h3>
+<ul>
+<li>Beta software (minor bugs to iron out, but quite usable)</li>
+<li>Smooth edges when wall width is set to 1 are buggy.</li>
+<li>Even line widths produce a better output.</li>
+</ul>
+<h3>What is done:</h3>
+<ul>
+<li>Generates a valid maze.</li>
+<li>Appearance is configurable.</li>
+<li>Maze size is configurable.</li>
+<li>Printing is enabled (adjust blockSize to alter print output size)</li>
+<li>Zooming in, moving etc (few minor bugs still).</li>
+<li>Support for DPI / block size.</li>
+</ul>
+<h3>Next Release</h3>
+<ul>
+<li>Bug fixes</li>
+<li>Support for graphical inserts</li>
+<li>Ascii output</li>
+</ul>
+<h3>Road Map</h3>
+<ul>
+<li>Will probably combine this with other software I have written to create a puzzle creation suite.</li>
+</ul>
+<h3>Update:</h3>
+<p>I have tentatively started working (April 2019) on a online version of this software, to be open sourced.</p>
+<h3>Contact / Feedback</h3>
+<p>Please leave feedback and bug reports via: <a href="https://github.com/busyDuckman/MazeMaker/issues">https://github.com/busyDuckman/MazeMaker/issues</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
