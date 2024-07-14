@@ -18,7 +18,7 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.8.2</generator>
+	<generator>https://wordpress.org/?v=5.8.3</generator>
 
 <image>
 	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
@@ -46,11 +46,11 @@
 <p>This pipe crawler is equipped with a Teledyne-Dalsa line-scan camera on a rotary head which lets it make a high resolution 350° scan of a pipe&#8217;s weld.</p>
 <p>The controller accepts telnet control commands via the supplied Ethernet port and can transmit back the high speed image data on up to 100m of umbilical cable.</p>
 
-<a href='/wp-content/uploads/2015/08/head-scaled.jpg'><img width="150" height="150" src="/wp-content/uploads/2015/08/head-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
-<a href='/wp-content/uploads/2015/08/run-scaled.jpg'><img width="150" height="150" src="/wp-content/uploads/2015/08/run-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
 <a href='/wp-content/uploads/2015/08/panel-scaled.jpg'><img width="150" height="150" src="/wp-content/uploads/2015/08/panel-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
-<a href='/wp-content/uploads/2015/08/face-scaled.jpg'><img width="150" height="150" src="/wp-content/uploads/2015/08/face-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
 <a href='/wp-content/uploads/2015/08/beam-scaled.jpg'><img width="150" height="150" src="/wp-content/uploads/2015/08/beam-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
+<a href='/wp-content/uploads/2015/08/run-scaled.jpg'><img width="150" height="150" src="/wp-content/uploads/2015/08/run-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
+<a href='/wp-content/uploads/2015/08/face-scaled.jpg'><img width="150" height="150" src="/wp-content/uploads/2015/08/face-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
+<a href='/wp-content/uploads/2015/08/head-scaled.jpg'><img width="150" height="150" src="/wp-content/uploads/2015/08/head-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>

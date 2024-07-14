@@ -12,13 +12,13 @@
 	<atom:link href="/tag/linguistics/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>Making You Pro&#039;duck&#039;tive</description>
-	<lastBuildDate>Thu, 16 Nov 2017 10:28:29 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 05 Jan 2022 23:41:18 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.8.2</generator>
+	<generator>https://wordpress.org/?v=5.8.3</generator>
 
 <image>
 	<url>/wp-content/uploads/2015/07/cropped-favicon-55963284v1_site_icon-32x32.png</url>
@@ -41,23 +41,76 @@
 		<category><![CDATA[programming]]></category>
 		<guid isPermaLink="false">http://busyducks.com/wp_4_1/?p=896</guid>
 
-					<description><![CDATA[Developing multi-lingual applications in java seems a pain, to me anyway. There are resource bundles and a localisation API &#8211; which are well documented. I wanted to auto translate these bundles, and then have friends look over and refine the translations later. I did not want some heavy weight application to manage properties files etc. &#8230;<br><a href="/speakingduck-maven-plugin-for-java-resource-bundle-transitional/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">SpeakingDuck (Maven plugin for java resource bundle transition.)</span></a>]]></description>
-										<content:encoded><![CDATA[<p>Developing multi-lingual applications in java seems a pain, to me anyway.<br />
-There are resource bundles and a localisation API &#8211; which are <a href="https://docs.oracle.com/javase/tutorial/i18n/intro/steps.html">well documented</a>.</p>
-<p>I wanted to auto translate these bundles, and then have friends look over and refine the translations later.</p>
-<ul>
-<li>I did not want some heavy weight application to manage properties files etc.</li>
-<li>I found some simple auto translation tools, some free-ish, some pay-per-say. But they did not support java resource bundles.
-<ul>
-<li>I liked <a href="https://github.com/soimort/translate-shell">translate shell</a> a lot.</li>
-</ul>
-</li>
-<li>Few tools supported maven</li>
-<li>But nothing just worked</li>
-</ul>
-<p>So I created a quick maven plugin to translate resource bundles, by calling whatever tool you setup.</p>
-<p>Stuk it on github, will attempt to register it with maven.</p>
-<p><a href="https://github.com/busyDuckman/speakingDuck">https://github.com/busyDuckman/speakingDuck</a></p>
+					<description><![CDATA[Developing multi-lingual applications in java seems a pain, to me anyway.There are resource bundles and a localisation API &#8211; which are well documented. To speed things up, I wanted to auto translate these bundles, and then have others look over and refine the translations later. Looking at what already existed, I was not excited. I &#8230;<br><a href="/speakingduck-maven-plugin-for-java-resource-bundle-transitional/" class="more-link pen_button pen_element_default pen_icon_arrow_double">Continue reading <span class="screen-reader-text">SpeakingDuck (Maven plugin for java resource bundle transition.)</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>Developing multi-lingual applications in java seems a pain, to me anyway.<br>There are resource bundles and a localisation API &#8211; which are <a href="https://docs.oracle.com/javase/tutorial/i18n/intro/steps.html">well documented</a>.</p>
+
+
+
+<p>To speed things up, I wanted to auto translate these bundles, and then have others look over and refine the translations later.</p>
+
+
+
+<p>Looking at what already existed, I was not excited.</p>
+
+
+
+<ul><li>I did not want some heavy weight application.</li><li>I found some simple auto translation tools, some free-ish, some pay-per-say. But they did not support java resource bundles. </li><li>I did like <a href="https://github.com/soimort/translate-shell">translate shell</a> a lot, but it needed integration into the java resource bundle ecosystem</li><li>Very few tools supported maven</li><li>Nothing &#8220;just worked&#8221;</li></ul>
+
+
+
+<p>So I created a maven plugin (SpeakingDuck) to translate resource bundles. SpeakingDuck will use whatever translation tool you configure it to run with.</p>
+
+
+
+<p></p>
+
+
+
+<p>Find it on github: &nbsp; <a href="https://github.com/busyDuckman/speakingDuck">https://github.com/busyDuckman/speakingDuck</a></p>
+
+
+
+<p>or install via the&nbsp;<a rel="nofollow" href="https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22speakingDuck-maven-plugin%22">Maven Repository</a>, or via reference in your pom.xml.</p>
+
+
+
+<p></p>
+
+
+
+<p>The following <strong>pom.xml</strong> will cause German, Chinese, Spanish and Russian resource bundles to be maintained (updated for new keys) every compile. </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="xml" data-enlighter-theme="godzilla" data-enlighter-highlight="" data-enlighter-linenumbers="false" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">&lt;build>
+    &lt;plugins>
+        &lt;plugin>
+            &lt;groupId>com.busyducks&lt;/groupId>
+            &lt;artifactId>speakingDuck-maven-plugin&lt;/artifactId>
+            &lt;version>0.9.7&lt;/version>
+            &lt;configuration>
+                &lt;call>trans -b :$CALL_LANG $TEXT_ESCAPED_QUOTED&lt;/call>
+                &lt;translations>
+                    &lt;translation>
+                        &lt;bundlePattern>./src/main/resources/generalText_$FILE_LANG.properties&lt;/bundlePattern>
+                        &lt;sourceLang>en:en&lt;/sourceLang>
+                        &lt;destLangs>de:de, zh:zh, es:es, ru:ru&lt;/destLangs>
+                        &lt;replaceExistingKeys>false&lt;/replaceExistingKeys>
+                    &lt;/translation>
+                &lt;/translations>
+            &lt;/configuration>
+
+            &lt;executions>
+            &lt;execution>&lt;goals>&lt;goal>translate&lt;/goal>&lt;/goals>&lt;/execution>
+            &lt;/executions>
+        &lt;/plugin>
+    &lt;/plugins>
+&lt;/build></pre>
+
+
+
+<p>The translations are generated via translate shell (because of the call &#8220;trans -b&#8221;), you will need to install translate shell yourself for this to work.</p>
 ]]></content:encoded>
 					
 		
